@@ -14,7 +14,120 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      anchor_entries: {
+        Row: {
+          anchor_phrase: string
+          communion_awareness: number | null
+          created_at: string
+          emotion_tags: Json | null
+          id: string
+          meaning_conclusion: string | null
+          scene_text: string
+          session_count: number
+          user_id: string
+          where_is_god: string | null
+          widened_meaning: string | null
+        }
+        Insert: {
+          anchor_phrase: string
+          communion_awareness?: number | null
+          created_at?: string
+          emotion_tags?: Json | null
+          id?: string
+          meaning_conclusion?: string | null
+          scene_text: string
+          session_count?: number
+          user_id: string
+          where_is_god?: string | null
+          widened_meaning?: string | null
+        }
+        Update: {
+          anchor_phrase?: string
+          communion_awareness?: number | null
+          created_at?: string
+          emotion_tags?: Json | null
+          id?: string
+          meaning_conclusion?: string | null
+          scene_text?: string
+          session_count?: number
+          user_id?: string
+          where_is_god?: string | null
+          widened_meaning?: string | null
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          display_name: string | null
+          id: string
+        }
+        Insert: {
+          created_at?: string
+          display_name?: string | null
+          id: string
+        }
+        Update: {
+          created_at?: string
+          display_name?: string | null
+          id?: string
+        }
+        Relationships: []
+      }
+      reorient_templates: {
+        Row: {
+          created_at: string
+          id: string
+          line_1: string | null
+          line_2: string | null
+          line_3: string | null
+          line_4: string | null
+          line_5: string | null
+          line_6: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          line_1?: string | null
+          line_2?: string | null
+          line_3?: string | null
+          line_4?: string | null
+          line_5?: string | null
+          line_6?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          line_1?: string | null
+          line_2?: string | null
+          line_3?: string | null
+          line_4?: string | null
+          line_5?: string | null
+          line_6?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      usage_stats: {
+        Row: {
+          anchors_created: number
+          reorient_return_count: number
+          user_id: string
+        }
+        Insert: {
+          anchors_created?: number
+          reorient_return_count?: number
+          user_id: string
+        }
+        Update: {
+          anchors_created?: number
+          reorient_return_count?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
