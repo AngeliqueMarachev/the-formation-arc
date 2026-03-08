@@ -4,13 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .text-emphasis {
-    font-weight: 600;
-    color: var(--text-emphasis);
-  }
-}
-
 @layer base {
   :root {
     --background: 189 70% 15%;
@@ -43,11 +36,6 @@
 
     --radius: 0.9rem;
 
-    /* Text hierarchy */
-    --text-heading: #F8F7F2;
-    --text-body: rgba(248, 247, 242, 0.7);
-    --text-emphasis: #F8F7F2;
-
     --sidebar-background: 189 70% 12%;
     --sidebar-foreground: 40 30% 96%;
     --sidebar-primary: 74 100% 56%;
@@ -68,7 +56,7 @@
     font-family: 'Inter', sans-serif;
     background: linear-gradient(135deg, #0C4651 0%, #082E36 100%);
     position: relative;
-    color: var(--text-body);
+    color: hsl(var(--foreground));
   }
 
   body::before {
@@ -91,10 +79,5 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Cormorant Garamond', serif;
-    color: var(--text-heading);
-  }
-
-  p {
-    color: var(--text-body);
   }
 }
