@@ -98,6 +98,7 @@ const Activated = () => {
   const [customTexts, setCustomTexts] = useState<string[]>(Array(6).fill(""));
   const [useCustom, setUseCustom] = useState<boolean[]>(Array(6).fill(false));
   const [saving, setSaving] = useState(false);
+  const [activeStep, setActiveStep] = useState<number | null>(null);
 
   // Determine initial screen based on whether a script exists
   useEffect(() => {
@@ -238,29 +239,45 @@ const Activated = () => {
 
           {/* Vertical step flow */}
           <div className="relative mb-12">
-            {lines.map((line, i) => (
-              <div key={i} className="relative flex gap-4">
-                {/* Timeline column */}
-                <div className="flex flex-col items-center">
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-xs font-semibold text-primary">
-                    {i + 1}
+            {lines.map((line, i) => {
+              const isActive = activeStep === i;
+              return (
+                <div key={i} className="relative flex gap-4">
+                  {/* Timeline column */}
+                  <div className="flex flex-col items-center">
+                    <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-xs font-semibold transition-all duration-300 ${
+                      isActive
+                        ? "border-primary bg-primary text-primary-foreground scale-110"
+                        : "border-primary/40 bg-primary/10 text-primary"
+                    }`}>
+                      {i + 1}
+                    </div>
+                    {i < lines.length - 1 && (
+                      <div className="w-px flex-1 bg-border/50 my-1" />
+                    )}
                   </div>
-                  {i < lines.length - 1 && (
-                    <div className="w-px flex-1 bg-border/50 my-1" />
-                  )}
-                </div>
 
-                {/* Step card */}
-                <div className="pb-8 flex-1">
-                  <p className="text-[10px] font-semibold tracking-widest text-primary/70 uppercase mb-1">
-                    {stepLabels[i] || `Step ${i + 1}`}
-                  </p>
-                  <div className="rounded-lg border border-border bg-card/60 p-4 text-sm text-foreground/80 leading-relaxed backdrop-blur-sm">
-                    {line}
-                  </div>
+                  {/* Step card */}
+                  <button
+                    onClick={() => setActiveStep(isActive ? null : i)}
+                    className="pb-8 flex-1 text-left"
+                  >
+                    <p className={`text-[10px] font-semibold tracking-widest uppercase mb-1 transition-colors duration-300 ${
+                      isActive ? "text-primary" : "text-primary/70"
+                    }`}>
+                      {stepLabels[i] || `Step ${i + 1}`}
+                    </p>
+                    <div className={`rounded-lg border p-4 text-sm leading-relaxed backdrop-blur-sm transition-all duration-300 ${
+                      isActive
+                        ? "border-primary/60 bg-primary/10 text-foreground scale-[1.02] shadow-lg shadow-primary/5"
+                        : "border-border bg-card/60 text-foreground/60 hover:border-primary/30 hover:text-foreground/80"
+                    }`}>
+                      {line}
+                    </div>
+                  </button>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="space-y-3">
