@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/lib/auth";
 import { supabase } from "@/integrations/supabase/client";
+import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Progress } from "@/components/ui/progress";
@@ -70,17 +71,43 @@ const PHASES = [
   },
 ];
 
-type Screen = "entry" | "phase" | "complete";
+type Screen = "loading" | "use-script" | "entry" | "phase" | "complete";
 
 const Activated = () => {
   const navigate = useNavigate();
   const { user } = useAuth();
-  const [screen, setScreen] = useState<Screen>("entry");
+
+  // Check if user already has a saved reorientation script
+  const { data: existingScript, isLoading: scriptLoading } = useQuery({
+    queryKey: ["reorient_script", user?.id],
+    queryFn: async () => {
+      const { data } = await supabase
+        .from("reorient_templates")
+        .select("id, line_1, line_2, line_3, line_4, line_5, line_6")
+        .eq("user_id", user!.id)
+        .order("created_at", { ascending: false })
+        .limit(1);
+      return data && data.length > 0 ? data[0] : null;
+    },
+    enabled: !!user,
+  });
+
+  const [screen, setScreen] = useState<Screen>("loading");
   const [phaseIndex, setPhaseIndex] = useState(0);
   const [selections, setSelections] = useState<(string | null)[]>(Array(6).fill(null));
   const [customTexts, setCustomTexts] = useState<string[]>(Array(6).fill(""));
   const [useCustom, setUseCustom] = useState<boolean[]>(Array(6).fill(false));
   const [saving, setSaving] = useState(false);
+
+  // Determine initial screen based on whether a script exists
+  useEffect(() => {
+    if (scriptLoading) return;
+    if (existingScript) {
+      setScreen("use-script");
+    } else {
+      setScreen("entry");
+    }
+  }, [scriptLoading, existingScript]);
 
   const handleSelectOption = (option: string) => {
     const next = [...selections];
@@ -150,6 +177,90 @@ const Activated = () => {
     setSaving(false);
     navigate("/");
   };
+
+  // LOADING SCREEN
+  if (screen === "loading") {
+    return (
+      <div className="flex min-h-screen items-center justify-center text-muted-foreground">
+        Loading…
+      </div>
+    );
+  }
+
+  // USE EXISTING SCRIPT SCREEN
+  if (screen === "use-script" && existingScript) {
+    const lines = [
+      existingScript.line_1,
+      existingScript.line_2,
+      existingScript.line_3,
+      existingScript.line_4,
+      existingScript.line_5,
+      existingScript.line_6,
+    ].filter(Boolean) as string[];
+
+    const handleUseComplete = async () => {
+      if (!user) return;
+      setSaving(true);
+      // Increment reorient_return_count
+      const { data: stats } = await supabase
+        .from("usage_stats")
+        .select("reorient_return_count")
+        .eq("user_id", user.id)
+        .single();
+
+      await supabase
+        .from("usage_stats")
+        .update({ reorient_return_count: (stats?.reorient_return_count ?? 0) + 1 })
+        .eq("user_id", user.id);
+
+      setSaving(false);
+      navigate("/");
+    };
+
+    return (
+      <div className="flex min-h-screen flex-col pb-20">
+        <main className="flex flex-1 flex-col justify-center px-6 py-12">
+          <h1 className="text-3xl font-semibold tracking-tight mb-4">
+            Your Reorientation
+          </h1>
+          <p className="text-sm text-muted-foreground leading-relaxed mb-8">
+            Read each line slowly. Let each one interrupt the loop.
+          </p>
+
+          <div className="space-y-3 mb-10">
+            {lines.map((line, i) => (
+              <div
+                key={i}
+                className="rounded-lg border border-border bg-card p-4 text-sm text-muted-foreground"
+              >
+                {line}
+              </div>
+            ))}
+          </div>
+
+          <div className="space-y-3">
+            <Button
+              className="w-full"
+              size="lg"
+              onClick={handleUseComplete}
+              disabled={saving}
+            >
+              {saving ? "Saving…" : "I have returned"}
+            </Button>
+            <Button
+              className="w-full"
+              size="lg"
+              variant="secondary"
+              onClick={() => setScreen("entry")}
+            >
+              Create new script
+            </Button>
+          </div>
+        </main>
+        <BottomNav />
+      </div>
+    );
+  }
 
   // ENTRY SCREEN
   if (screen === "entry") {
