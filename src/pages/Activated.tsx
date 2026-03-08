@@ -98,7 +98,8 @@ const Activated = () => {
   const [customTexts, setCustomTexts] = useState<string[]>(Array(6).fill(""));
   const [useCustom, setUseCustom] = useState<boolean[]>(Array(6).fill(false));
   const [saving, setSaving] = useState(false);
-  const [activeStep, setActiveStep] = useState<number | null>(null);
+  const [revealedCount, setRevealedCount] = useState(1);
+  const [justRevealed, setJustRevealed] = useState<number | null>(null);
 
   // Determine initial screen based on whether a script exists
   useEffect(() => {
@@ -240,40 +241,62 @@ const Activated = () => {
           {/* Vertical step flow */}
           <div className="relative mb-12">
             {lines.map((line, i) => {
-              const isActive = activeStep === i;
+              if (i >= revealedCount) return null;
+              const isLatest = i === revealedCount - 1;
+              const isTappable = isLatest && revealedCount < lines.length;
+              const wasJustRevealed = justRevealed === i;
+
               return (
-                <div key={i} className="relative flex gap-4">
+                <div
+                  key={i}
+                  className={`relative flex gap-4 ${wasJustRevealed ? "animate-fade-in" : ""}`}
+                >
                   {/* Timeline column */}
                   <div className="flex flex-col items-center">
-                    <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-xs font-semibold transition-all duration-300 ${
-                      isActive
-                        ? "border-primary bg-primary text-primary-foreground scale-110"
-                        : "border-primary/40 bg-primary/10 text-primary"
+                    <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-xs font-semibold transition-all duration-500 ${
+                      isLatest
+                        ? "border-primary bg-primary text-primary-foreground"
+                        : "border-primary/30 bg-primary/10 text-primary/60"
                     }`}>
                       {i + 1}
                     </div>
-                    {i < lines.length - 1 && (
+                    {i < revealedCount - 1 && (
                       <div className="w-px flex-1 bg-border/50 my-1" />
+                    )}
+                    {isLatest && revealedCount < lines.length && (
+                      <div className="w-px flex-1 bg-border/20 my-1 animate-fade-in" />
                     )}
                   </div>
 
                   {/* Step card */}
                   <button
-                    onClick={() => setActiveStep(isActive ? null : i)}
-                    className="pb-8 flex-1 text-left"
+                    onClick={() => {
+                      if (!isTappable) return;
+                      setJustRevealed(revealedCount);
+                      setRevealedCount((c) => c + 1);
+                    }}
+                    disabled={!isTappable}
+                    className={`pb-8 flex-1 text-left transition-opacity duration-500 ${
+                      !isLatest ? "opacity-60" : "opacity-100"
+                    }`}
                   >
                     <p className={`text-[10px] font-semibold tracking-widest uppercase mb-1 transition-colors duration-300 ${
-                      isActive ? "text-primary" : "text-primary/70"
+                      isLatest ? "text-primary" : "text-primary/50"
                     }`}>
                       {stepLabels[i] || `Step ${i + 1}`}
                     </p>
-                    <div className={`rounded-lg border p-4 text-sm leading-relaxed backdrop-blur-sm transition-all duration-300 ${
-                      isActive
-                        ? "border-primary/60 bg-primary/10 text-foreground scale-[1.02] shadow-lg shadow-primary/5"
-                        : "border-border bg-card/60 text-foreground/60 hover:border-primary/30 hover:text-foreground/80"
+                    <div className={`rounded-lg border p-4 text-sm leading-relaxed backdrop-blur-sm transition-all duration-500 ${
+                      isLatest
+                        ? "border-primary/60 bg-primary/10 text-foreground shadow-lg shadow-primary/5"
+                        : "border-border/40 bg-card/40 text-foreground/60"
                     }`}>
                       {line}
                     </div>
+                    {isTappable && (
+                      <p className="text-[10px] text-muted-foreground/50 mt-2 text-center animate-fade-in">
+                        Tap to continue
+                      </p>
+                    )}
                   </button>
                 </div>
               );
