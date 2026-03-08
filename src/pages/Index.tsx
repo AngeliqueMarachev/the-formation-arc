@@ -141,26 +141,26 @@ const Index = () => {
             <div className="px-6 pb-5 pt-3">
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <p className="text-2xl font-semibold tracking-tight" style={{ color: 'hsl(var(--foreground))' }}>
+                  <p className="text-2xl font-medium tracking-tight" style={{ color: '#F8F7F2' }}>
                     {reorientations}
                   </p>
-                  <p className="text-xs mt-1" style={{ color: 'rgba(248, 247, 242, 0.55)' }}>
+                  <p className="text-xs mt-1" style={{ color: 'rgba(248, 247, 242, 0.52)' }}>
                     Returns
                   </p>
                 </div>
                 <div>
-                  <p className="text-2xl font-semibold tracking-tight" style={{ color: 'hsl(var(--foreground))' }}>
+                  <p className="text-2xl font-medium tracking-tight" style={{ color: '#F8F7F2' }}>
                     {anchorsCreated}
                   </p>
-                  <p className="text-xs mt-1" style={{ color: 'rgba(248, 247, 242, 0.55)' }}>
+                  <p className="text-xs mt-1" style={{ color: 'rgba(248, 247, 242, 0.52)' }}>
                     Anchors
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-medium tracking-tight" style={{ color: 'hsl(var(--foreground))' }}>
+                  <p className="text-sm font-medium tracking-tight" style={{ color: '#F8F7F2' }}>
                     {lastActivityLabel}
                   </p>
-                  <p className="text-xs mt-1" style={{ color: 'rgba(248, 247, 242, 0.55)' }}>
+                  <p className="text-xs mt-1" style={{ color: 'rgba(248, 247, 242, 0.52)' }}>
                     Last active
                   </p>
                 </div>
