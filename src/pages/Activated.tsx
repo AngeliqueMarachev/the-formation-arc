@@ -71,17 +71,43 @@ const PHASES = [
   },
 ];
 
-type Screen = "entry" | "phase" | "complete";
+type Screen = "loading" | "use-script" | "entry" | "phase" | "complete";
 
 const Activated = () => {
   const navigate = useNavigate();
   const { user } = useAuth();
-  const [screen, setScreen] = useState<Screen>("entry");
+
+  // Check if user already has a saved reorientation script
+  const { data: existingScript, isLoading: scriptLoading } = useQuery({
+    queryKey: ["reorient_script", user?.id],
+    queryFn: async () => {
+      const { data } = await supabase
+        .from("reorient_templates")
+        .select("id, line_1, line_2, line_3, line_4, line_5, line_6")
+        .eq("user_id", user!.id)
+        .order("created_at", { ascending: false })
+        .limit(1);
+      return data && data.length > 0 ? data[0] : null;
+    },
+    enabled: !!user,
+  });
+
+  const [screen, setScreen] = useState<Screen>("loading");
   const [phaseIndex, setPhaseIndex] = useState(0);
   const [selections, setSelections] = useState<(string | null)[]>(Array(6).fill(null));
   const [customTexts, setCustomTexts] = useState<string[]>(Array(6).fill(""));
   const [useCustom, setUseCustom] = useState<boolean[]>(Array(6).fill(false));
   const [saving, setSaving] = useState(false);
+
+  // Determine initial screen based on whether a script exists
+  useEffect(() => {
+    if (scriptLoading) return;
+    if (existingScript) {
+      setScreen("use-script");
+    } else {
+      setScreen("entry");
+    }
+  }, [scriptLoading, existingScript]);
 
   const handleSelectOption = (option: string) => {
     const next = [...selections];
