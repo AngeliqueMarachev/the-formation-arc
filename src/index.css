@@ -36,6 +36,11 @@
 
     --radius: 0.9rem;
 
+    /* Text hierarchy */
+    --text-heading: #F8F7F2;
+    --text-body: rgba(248, 247, 242, 0.7);
+    --text-emphasis: #F8F7F2;
+
     --sidebar-background: 189 70% 12%;
     --sidebar-foreground: 40 30% 96%;
     --sidebar-primary: 74 100% 56%;
