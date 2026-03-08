@@ -133,37 +133,40 @@ const Index = () => {
         {/* Formation Progress */}
         <div className="pt-4">
           <Card className="border-none">
-            <div className="px-6 pt-5 pb-1">
+            <div className="px-6 pt-5 pb-2 text-center">
               <h3 className="text-base font-medium tracking-tight" style={{ fontFamily: "'Fraunces', serif", fontSize: '18px', letterSpacing: '-0.01em' }}>
                 Formation Progress
               </h3>
             </div>
-            <div className="px-6 pb-5 pt-3">
-              <div className="grid grid-cols-3 gap-4 text-center">
-                <div>
-                  <p className="text-2xl font-medium tracking-tight" style={{ color: '#F8F7F2' }}>
-                    {reorientations}
-                  </p>
-                  <p className="text-xs mt-1" style={{ color: 'rgba(248, 247, 242, 0.52)' }}>
-                    Returns
-                  </p>
-                </div>
-                <div>
-                  <p className="text-2xl font-medium tracking-tight" style={{ color: '#F8F7F2' }}>
-                    {anchorsCreated}
-                  </p>
-                  <p className="text-xs mt-1" style={{ color: 'rgba(248, 247, 242, 0.52)' }}>
-                    Anchors
-                  </p>
-                </div>
-                <div>
-                  <p className="text-sm font-medium tracking-tight" style={{ color: '#F8F7F2' }}>
-                    {lastActivityLabel}
-                  </p>
-                  <p className="text-xs mt-1" style={{ color: 'rgba(248, 247, 242, 0.52)' }}>
-                    Last active
-                  </p>
-                </div>
+            <div className="px-6 pb-6 pt-4">
+              <div className="grid grid-cols-3 gap-5">
+                {[
+                  { value: String(reorientations), label: "Returns", large: true },
+                  { value: String(anchorsCreated), label: "Anchors", large: true },
+                  { value: lastActivityLabel, label: "Last active", large: false },
+                ].map((metric) => (
+                  <div key={metric.label} className="flex flex-col items-center gap-2">
+                    <div
+                      className="flex items-center justify-center rounded-full"
+                      style={{
+                        width: 72,
+                        height: 72,
+                        border: '1px solid rgba(168, 192, 168, 0.35)',
+                        background: 'rgba(248, 247, 242, 0.03)',
+                      }}
+                    >
+                      <span
+                        className={`font-medium tracking-tight ${metric.large ? 'text-2xl' : 'text-[11px] leading-tight text-center px-1'}`}
+                        style={{ color: '#F8F7F2' }}
+                      >
+                        {metric.value}
+                      </span>
+                    </div>
+                    <p className="text-xs" style={{ color: 'rgba(248, 247, 242, 0.52)' }}>
+                      {metric.label}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </Card>
