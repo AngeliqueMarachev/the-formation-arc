@@ -7,28 +7,28 @@
 @layer base {
   :root {
     --background: 189 70% 15%;
-    --foreground: 40 30% 96%;
+    --foreground: 48 33% 95%;
 
     --card: 189 60% 18%;
-    --card-foreground: 40 30% 96%;
+    --card-foreground: 48 33% 95%;
 
     --popover: 189 60% 18%;
-    --popover-foreground: 40 30% 96%;
+    --popover-foreground: 48 33% 95%;
 
     --primary: 74 100% 56%;
     --primary-foreground: 189 70% 15%;
 
     --secondary: 165 46% 38%;
-    --secondary-foreground: 40 30% 96%;
+    --secondary-foreground: 48 33% 95%;
 
     --muted: 189 40% 25%;
-    --muted-foreground: 40 20% 75%;
+    --muted-foreground: 48 15% 72%;
 
     --accent: 322 100% 50%;
-    --accent-foreground: 40 30% 96%;
+    --accent-foreground: 48 33% 95%;
 
     --destructive: 0 62% 45%;
-    --destructive-foreground: 40 30% 96%;
+    --destructive-foreground: 48 33% 95%;
 
     --border: 120 17% 67%;
     --input: 120 17% 67%;
@@ -37,11 +37,11 @@
     --radius: 0.9rem;
 
     --sidebar-background: 189 70% 12%;
-    --sidebar-foreground: 40 30% 96%;
+    --sidebar-foreground: 48 33% 95%;
     --sidebar-primary: 74 100% 56%;
     --sidebar-primary-foreground: 189 70% 15%;
     --sidebar-accent: 189 50% 28%;
-    --sidebar-accent-foreground: 40 30% 96%;
+    --sidebar-accent-foreground: 48 33% 95%;
     --sidebar-border: 165 30% 40%;
     --sidebar-ring: 74 100% 56%;
   }
@@ -54,9 +54,11 @@
 
   body {
     font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
     background: linear-gradient(135deg, #0C4651 0%, #082E36 100%);
     position: relative;
-    color: hsl(var(--foreground));
+    color: #F8F7F2;
   }
 
   body::before {
@@ -79,44 +81,40 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Fraunces', serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: #F8F7F2;
   }
 
   h1 {
     font-size: 34px;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    color: hsl(var(--foreground));
   }
 
   h2 {
     font-size: 24px;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    color: hsl(var(--foreground));
   }
 
   h3 {
     font-size: 22px;
-    font-weight: 500;
-    letter-spacing: -0.01em;
-    color: hsl(var(--foreground));
   }
 
   p {
     font-family: 'Inter', sans-serif;
+    font-weight: 400;
     font-size: 16px;
-    color: rgba(248, 247, 242, 0.75);
+    line-height: 1.6;
+    color: rgba(248, 247, 242, 0.72);
   }
 }
 
 @layer components {
   .text-secondary {
     font-size: 14px;
-    color: rgba(248, 247, 242, 0.55);
+    color: rgba(248, 247, 242, 0.52);
   }
 
   .text-muted-sm {
     font-size: 13px;
-    color: rgba(248, 247, 242, 0.45);
+    color: rgba(248, 247, 242, 0.52);
   }
 }
