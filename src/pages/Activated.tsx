@@ -100,6 +100,7 @@ const Activated = () => {
   const [saving, setSaving] = useState(false);
   const [revealedCount, setRevealedCount] = useState(1);
   const [justRevealed, setJustRevealed] = useState<number | null>(null);
+  const [scriptComplete, setScriptComplete] = useState(false);
 
   // Determine initial screen based on whether a script exists
   useEffect(() => {
@@ -243,28 +244,34 @@ const Activated = () => {
             {lines.map((line, i) => {
               if (i >= revealedCount) return null;
               const isLatest = i === revealedCount - 1;
-              const isTappable = isLatest && revealedCount < lines.length;
+              const isLastStep = i === lines.length - 1;
+              const isTappable = isLatest && !scriptComplete;
               const wasJustRevealed = justRevealed === i;
 
               return (
                 <div
                   key={i}
-                  className={`relative flex gap-4 ${wasJustRevealed ? "animate-fade-in" : ""}`}
+                  className="relative flex gap-4"
+                  style={wasJustRevealed ? {
+                    animation: "fade-in 300ms ease-out forwards"
+                  } : undefined}
                 >
                   {/* Timeline column */}
                   <div className="flex flex-col items-center">
                     <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-xs font-semibold transition-all duration-500 ${
-                      isLatest
+                      isLatest && !scriptComplete
                         ? "border-primary bg-primary text-primary-foreground"
-                        : "border-primary/30 bg-primary/10 text-primary/60"
+                        : scriptComplete
+                          ? "border-primary/40 bg-primary/20 text-primary/70"
+                          : "border-primary/30 bg-primary/10 text-primary/60"
                     }`}>
                       {i + 1}
                     </div>
                     {i < revealedCount - 1 && (
-                      <div className="w-px flex-1 bg-border/50 my-1" />
+                      <div className="w-px flex-1 bg-border/40 my-1" />
                     )}
-                    {isLatest && revealedCount < lines.length && (
-                      <div className="w-px flex-1 bg-border/20 my-1 animate-fade-in" />
+                    {isLatest && !scriptComplete && !isLastStep && (
+                      <div className="w-px flex-1 bg-border/20 my-1" />
                     )}
                   </div>
 
@@ -272,28 +279,36 @@ const Activated = () => {
                   <button
                     onClick={() => {
                       if (!isTappable) return;
-                      setJustRevealed(revealedCount);
-                      setRevealedCount((c) => c + 1);
+                      if (isLastStep) {
+                        setScriptComplete(true);
+                      } else {
+                        setJustRevealed(revealedCount);
+                        setRevealedCount((c) => c + 1);
+                      }
                     }}
                     disabled={!isTappable}
-                    className={`pb-8 flex-1 text-left transition-opacity duration-500 ${
-                      !isLatest ? "opacity-60" : "opacity-100"
+                    className={`pb-8 flex-1 text-left transition-all duration-500 ${
+                      scriptComplete
+                        ? "opacity-50"
+                        : !isLatest
+                          ? "opacity-50"
+                          : "opacity-100"
                     }`}
                   >
                     <p className={`text-[10px] font-semibold tracking-widest uppercase mb-1 transition-colors duration-300 ${
-                      isLatest ? "text-primary" : "text-primary/50"
+                      isLatest && !scriptComplete ? "text-primary" : "text-primary/40"
                     }`}>
                       {stepLabels[i] || `Step ${i + 1}`}
                     </p>
                     <div className={`rounded-lg border p-4 text-sm leading-relaxed backdrop-blur-sm transition-all duration-500 ${
-                      isLatest
-                        ? "border-primary/60 bg-primary/10 text-foreground shadow-lg shadow-primary/5"
-                        : "border-border/40 bg-card/40 text-foreground/60"
+                      isLatest && !scriptComplete
+                        ? "border-primary/50 bg-primary/10 text-foreground"
+                        : "border-border/30 bg-card/30 text-foreground/60"
                     }`}>
                       {line}
                     </div>
                     {isTappable && (
-                      <p className="text-[10px] text-muted-foreground/50 mt-2 text-center animate-fade-in">
+                      <p className="text-[10px] text-muted-foreground/40 mt-2.5 text-center">
                         Tap to continue
                       </p>
                     )}
@@ -303,24 +318,34 @@ const Activated = () => {
             })}
           </div>
 
-          {revealedCount >= lines.length && (
-            <div className="space-y-3 animate-fade-in">
-              <Button
-                className="w-full"
-                size="lg"
-                onClick={handleUseComplete}
-                disabled={saving}
-              >
-                {saving ? "Saving…" : "I have returned"}
-              </Button>
-              <Button
-                className="w-full"
-                size="lg"
-                variant="secondary"
-                onClick={() => setScreen("entry")}
-              >
-                Create new script
-              </Button>
+          {scriptComplete && (
+            <div className="space-y-6" style={{ animation: "fade-in 400ms ease-out forwards" }}>
+              <div className="text-center space-y-2 py-4">
+                <p className="text-lg font-medium text-foreground" style={{ fontFamily: "'Fraunces', serif" }}>
+                  You have returned.
+                </p>
+                <p className="text-xs text-muted-foreground/60">
+                  Each return strengthens this pathway.
+                </p>
+              </div>
+              <div className="space-y-3">
+                <Button
+                  className="w-full"
+                  size="lg"
+                  onClick={handleUseComplete}
+                  disabled={saving}
+                >
+                  {saving ? "Saving…" : "Continue"}
+                </Button>
+                <Button
+                  className="w-full"
+                  size="lg"
+                  variant="secondary"
+                  onClick={() => setScreen("entry")}
+                >
+                  Create new script
+                </Button>
+              </div>
             </div>
           )}
         </main>
