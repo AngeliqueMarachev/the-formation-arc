@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider, useAuth } from "@/lib/auth";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
+import CoreOrientation from "./pages/CoreOrientation";
 import Activated from "./pages/Activated";
 import DailyFormation from "./pages/DailyFormation";
 import Anchors from "./pages/Anchors";
