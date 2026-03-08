@@ -4,6 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .text-emphasis {
+    font-weight: 600;
+    color: var(--text-emphasis);
+  }
+}
+
 @layer base {
   :root {
     --background: 189 70% 15%;
