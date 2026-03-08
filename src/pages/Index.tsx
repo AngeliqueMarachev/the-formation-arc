@@ -3,7 +3,7 @@ import { useAuth } from "@/lib/auth";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Shield, Sun, Anchor } from "lucide-react";
+import { CloudDrizzle, AudioLines, Mountain } from "lucide-react";
 import BottomNav from "@/components/BottomNav";
 import { formatDistanceToNow } from "date-fns";
 
@@ -77,19 +77,19 @@ const Index = () => {
     {
       title: "I'm Activated",
       subtitle: "Fear rising. Begin reorientation.",
-      icon: Shield,
+      icon: CloudDrizzle,
       path: "/activated",
     },
     {
       title: "Daily Formation",
       subtitle: "Train stability before fear rises.",
-      icon: Sun,
+      icon: AudioLines,
       path: "/daily-formation",
     },
     {
       title: "Anchors",
       subtitle: "View your anchor library.",
-      icon: Anchor,
+      icon: Mountain,
       path: "/anchors",
     },
   ];
