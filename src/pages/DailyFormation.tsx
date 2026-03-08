@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import BottomNav from "@/components/BottomNav";
+import AnchorRecall from "@/components/AnchorRecall";
 
 type Screen =
   | "reorientation"
@@ -33,10 +34,8 @@ interface AnchorEntry {
   session_count: number;
 }
 
-const EMOTION_SUGGESTIONS = [
-  "Fear", "Shame", "Grief", "Anger", "Loneliness",
-  "Helplessness", "Abandonment", "Rejection", "Confusion",
-];
+// Negative emotions for the old flow are no longer needed here;
+// positive emotion tags are handled inside AnchorRecall.
 
 const DailyFormation = () => {
   const navigate = useNavigate();
@@ -59,7 +58,7 @@ const DailyFormation = () => {
   const [anchorPhrase, setAnchorPhrase] = useState("");
   const [communionAwareness, setCommunionAwareness] = useState("");
   const [whereIsGod, setWhereIsGod] = useState("");
-  const [createStep, setCreateStep] = useState(0); // 0=scene, 1=emotions, 2=meaning, 3=anchor phrase, 4=optional
+  const [createStep, setCreateStep] = useState(0); // 0=anchor-recall, 1=meaning, 2=anchor phrase, 3=optional
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
@@ -90,11 +89,6 @@ const DailyFormation = () => {
     fetchData();
   }, [user]);
 
-  const toggleEmotion = (tag: string) => {
-    setEmotionTags((prev) =>
-      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
-    );
-  };
 
   const handleDailyLoopDone = async () => {
     if (!user || anchors.length === 0) return;
@@ -335,13 +329,29 @@ const DailyFormation = () => {
 
   // ── CREATE NEW ANCHOR ──
   if (screen === "create-anchor") {
-    const totalSteps = 5;
+    const totalSteps = 4; // anchor-recall, meaning, anchor phrase, optional
+    
+    // Step 0 is handled by AnchorRecall component
+    if (createStep === 0) {
+      return (
+        <>
+          <AnchorRecall
+            sceneText={sceneText}
+            onSceneTextChange={setSceneText}
+            emotionTags={emotionTags}
+            onEmotionTagsChange={setEmotionTags}
+            onContinue={() => setCreateStep(1)}
+            totalSteps={totalSteps}
+          />
+          <BottomNav />
+        </>
+      );
+    }
+
     const canProceed = () => {
-      if (createStep === 0) return sceneText.trim().length > 0;
-      if (createStep === 1) return emotionTags.length > 0;
-      if (createStep === 2)
+      if (createStep === 1)
         return meaningConclusion.trim().length > 0 && widenedMeaning.trim().length > 0;
-      if (createStep === 3) return anchorPhrase.trim().length > 0;
+      if (createStep === 2) return anchorPhrase.trim().length > 0;
       return true; // optional step
     };
 
@@ -366,57 +376,8 @@ const DailyFormation = () => {
         </header>
 
         <main className="flex-1 px-6 pt-2">
-          {/* Step 0: Scene */}
-          {createStep === 0 && (
-            <div className="space-y-4">
-              <h1 className="text-2xl font-semibold tracking-tight">
-                Recall a scene.
-              </h1>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Describe a memory that still carries weight. It doesn't need to
-                be dramatic — just real.
-              </p>
-              <Textarea
-                placeholder="Describe the scene…"
-                value={sceneText}
-                onChange={(e) => setSceneText(e.target.value)}
-                className="min-h-[120px]"
-              />
-            </div>
-          )}
-
-          {/* Step 1: Emotions */}
+          {/* Step 1: Meaning */}
           {createStep === 1 && (
-            <div className="space-y-4">
-              <h1 className="text-2xl font-semibold tracking-tight">
-                Name the emotions.
-              </h1>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                What did you feel then? What do you feel recalling it now?
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {EMOTION_SUGGESTIONS.map((tag) => {
-                  const selected = emotionTags.includes(tag);
-                  return (
-                    <button
-                      key={tag}
-                      onClick={() => toggleEmotion(tag)}
-                      className={`rounded-full border px-3 py-1.5 text-xs transition-colors ${
-                        selected
-                          ? "border-primary bg-primary/10 text-foreground"
-                          : "border-border text-muted-foreground hover:border-primary/40"
-                      }`}
-                    >
-                      {tag}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
-          {/* Step 2: Meaning */}
-          {createStep === 2 && (
             <div className="space-y-4">
               <h1 className="text-2xl font-semibold tracking-tight">
                 Meaning conclusion.
@@ -444,8 +405,8 @@ const DailyFormation = () => {
             </div>
           )}
 
-          {/* Step 3: Anchor Phrase */}
-          {createStep === 3 && (
+          {/* Step 2: Anchor Phrase */}
+          {createStep === 2 && (
             <div className="space-y-4">
               <h1 className="text-2xl font-semibold tracking-tight">
                 Anchor Phrase
@@ -490,8 +451,8 @@ const DailyFormation = () => {
             </div>
           )}
 
-          {/* Step 4: Optional fields */}
-          {createStep === 4 && (
+          {/* Step 3: Optional fields */}
+          {createStep === 3 && (
             <div className="space-y-4">
               <h1 className="text-2xl font-semibold tracking-tight">
                 Optional reflection
@@ -530,16 +491,14 @@ const DailyFormation = () => {
         </main>
 
         <div className="px-6 pb-4 pt-2 space-y-2">
-          {createStep > 0 && (
-            <Button
-              className="w-full"
-              size="lg"
-              variant="secondary"
-              onClick={() => setCreateStep(createStep - 1)}
-            >
-              Back
-            </Button>
-          )}
+          <Button
+            className="w-full"
+            size="lg"
+            variant="secondary"
+            onClick={() => setCreateStep(createStep - 1)}
+          >
+            Back
+          </Button>
           <Button
             className="w-full"
             size="lg"
