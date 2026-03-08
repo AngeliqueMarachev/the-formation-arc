@@ -42,7 +42,7 @@ const DailyFormation = () => {
   const { user } = useAuth();
   const [screen, setScreen] = useState<Screen>("reorientation");
   const [loading, setLoading] = useState(true);
-  const [highlightedLine, setHighlightedLine] = useState<number | null>(null);
+  const [glowingLine, setGlowingLine] = useState<number | null>(null);
 
   // Reorientation lines
   const [lines, setLines] = useState<ReorientLines | null>(null);
@@ -150,50 +150,75 @@ const DailyFormation = () => {
     const hasLines = lines && Object.values(lines).some((v) => v);
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col justify-center px-6 py-12">
-          <h1 className="text-3xl font-semibold tracking-tight mb-8">
+        <main className="flex flex-1 flex-col px-6 pt-10 pb-12">
+          <h1 className="text-3xl font-semibold tracking-tight mb-3">
             Stabilize before you build.
           </h1>
-          <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+          <p className="text-sm text-muted-foreground leading-relaxed mb-10">
             Even when calm, you are rehearsing leadership.
-          </p>
-          <p className="text-sm text-foreground font-medium mb-8">
-            Return trains perception.
           </p>
 
           {hasLines ? (
-            <div className="space-y-3 mb-10">
-              {Object.values(lines!).map(
-                (line, i) =>
-                  line && (
-                    <button
-                      key={i}
-                      onClick={() => setHighlightedLine(highlightedLine === i ? null : i)}
-                      className={`w-full text-left rounded-lg border p-4 text-sm leading-relaxed transition-all duration-300 ${
-                        highlightedLine === i
-                          ? "border-primary/50 bg-primary/10 text-foreground shadow-md shadow-primary/5"
-                          : "border-border bg-card text-muted-foreground hover:border-primary/20"
-                      }`}
-                    >
-                      {line}
-                    </button>
-                  )
-              )}
-            </div>
-          ) : (
-            <p className="text-sm text-muted-foreground italic mb-10">
-              No saved reorientation yet. Complete a reorientation in the
-              Activated tab first.
-            </p>
-          )}
+            <>
+              {/* Section label */}
+              <p className="text-[10px] font-semibold tracking-widest text-primary/70 uppercase mb-1">
+                Reorientation Script
+              </p>
+              <p className="text-xs text-muted-foreground/50 mb-5">
+                Read slowly. You are rehearsing stability.
+              </p>
 
-          <Button
-            className="w-full"
-            size="lg"
-            onClick={() => setScreen("readiness")}
-          >
-            Continue
-          </Button>
+              <div className="space-y-3 mb-8">
+                {Object.values(lines!).map(
+                  (line, i) =>
+                    line && (
+                      <button
+                        key={i}
+                        onClick={() => {
+                          setGlowingLine(i);
+                          setTimeout(() => setGlowingLine((prev) => (prev === i ? null : prev)), 800);
+                        }}
+                        className={`w-full text-left rounded-lg border p-4 text-sm leading-relaxed transition-all duration-300 ${
+                          glowingLine === i
+                            ? "border-primary/50 bg-primary/8 text-foreground shadow-lg shadow-primary/10"
+                            : "border-border/60 bg-card/40 text-muted-foreground hover:border-border"
+                        }`}
+                      >
+                        {line}
+                      </button>
+                    )
+                )}
+              </div>
+
+              {/* Divider + affirmation + button */}
+              <div className="border-t border-border/30 pt-6 space-y-4">
+                <p className="text-sm text-foreground/70 text-center" style={{ fontFamily: "'Fraunces', serif" }}>
+                  You are steady enough to build.
+                </p>
+                <Button
+                  className="w-full"
+                  size="lg"
+                  onClick={() => setScreen("readiness")}
+                >
+                  Begin Anchor
+                </Button>
+              </div>
+            </>
+          ) : (
+            <>
+              <p className="text-sm text-muted-foreground italic mb-10">
+                No saved reorientation yet. Complete a reorientation in the
+                Activated tab first.
+              </p>
+              <Button
+                className="w-full"
+                size="lg"
+                onClick={() => setScreen("readiness")}
+              >
+                Continue
+              </Button>
+            </>
+          )}
         </main>
         <BottomNav />
       </div>
