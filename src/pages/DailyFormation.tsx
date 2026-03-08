@@ -148,6 +148,17 @@ const DailyFormation = () => {
   // ── STEP 1: REORIENTATION ──
   if (screen === "reorientation") {
     const hasLines = lines && Object.values(lines).some((v) => v);
+    
+    // Phase structure mapping line indices to phase titles
+    const phases = [
+      { title: "LINE IN THE SAND™", lineIndex: 0 },
+      { title: "INTERRUPT THE LOOP", lineIndex: 1 },
+      { title: "ORIENTATION", lineIndex: 2 },
+      { title: "GROUNDING", lineIndex: 3 },
+      { title: "RESOURCE", lineIndex: 4 },
+      { title: "RETURN", lineIndex: 5 },
+    ];
+    
     return (
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col px-6 pt-10 pb-12">
@@ -164,30 +175,37 @@ const DailyFormation = () => {
               <p className="text-[10px] font-semibold tracking-widest text-primary/70 uppercase mb-1">
                 Reorientation Script
               </p>
-              <p className="text-xs text-muted-foreground/50 mb-5">
-                Read slowly. You are rehearsing stability.
+              <p className="text-xs text-muted-foreground/50 mb-6">
+                Tap each step slowly.
               </p>
 
-              <div className="space-y-3 mb-8">
-                {Object.values(lines!).map(
-                  (line, i) =>
-                    line && (
-                      <button
-                        key={i}
-                        onClick={() => {
-                          setGlowingLine(i);
-                          setTimeout(() => setGlowingLine((prev) => (prev === i ? null : prev)), 800);
-                        }}
-                        className={`w-full text-left rounded-lg border p-4 text-sm leading-relaxed transition-all duration-300 ${
-                          glowingLine === i
-                            ? "border-primary/50 bg-primary/8 text-foreground shadow-lg shadow-primary/10"
-                            : "border-border/60 bg-card/40 text-muted-foreground hover:border-border"
-                        }`}
-                      >
+              <div className="space-y-6 mb-8">
+                {phases.map((phase) => {
+                  const line = Object.values(lines!)[phase.lineIndex];
+                  if (!line) return null;
+                  
+                  return (
+                    <button
+                      key={phase.lineIndex}
+                      onClick={() => {
+                        setGlowingLine(phase.lineIndex);
+                        setTimeout(() => setGlowingLine((prev) => (prev === phase.lineIndex ? null : prev)), 800);
+                      }}
+                      className={`w-full text-left rounded-lg border p-5 transition-all duration-300 ${
+                        glowingLine === phase.lineIndex
+                          ? "border-primary/50 bg-primary/10 text-foreground shadow-lg shadow-primary/10"
+                          : "border-border/50 bg-card/50 text-muted-foreground hover:border-primary/20"
+                      }`}
+                    >
+                      <p className="text-[10px] font-semibold tracking-widest text-primary/70 uppercase mb-2">
+                        {phase.title}
+                      </p>
+                      <p className="text-sm leading-relaxed text-foreground">
                         {line}
-                      </button>
-                    )
-                )}
+                      </p>
+                    </button>
+                  );
+                })}
               </div>
 
               {/* Divider + affirmation + button */}
