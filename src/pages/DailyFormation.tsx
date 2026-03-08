@@ -42,6 +42,7 @@ const DailyFormation = () => {
   const { user } = useAuth();
   const [screen, setScreen] = useState<Screen>("reorientation");
   const [loading, setLoading] = useState(true);
+  const [highlightedLine, setHighlightedLine] = useState<number | null>(null);
 
   // Reorientation lines
   const [lines, setLines] = useState<ReorientLines | null>(null);
@@ -165,12 +166,17 @@ const DailyFormation = () => {
               {Object.values(lines!).map(
                 (line, i) =>
                   line && (
-                    <div
+                    <button
                       key={i}
-                      className="rounded-lg border border-border bg-card p-4 text-sm text-muted-foreground"
+                      onClick={() => setHighlightedLine(highlightedLine === i ? null : i)}
+                      className={`w-full text-left rounded-lg border p-4 text-sm leading-relaxed transition-all duration-300 ${
+                        highlightedLine === i
+                          ? "border-primary/50 bg-primary/10 text-foreground shadow-md shadow-primary/5"
+                          : "border-border bg-card text-muted-foreground hover:border-primary/20"
+                      }`}
                     >
                       {line}
-                    </div>
+                    </button>
                   )
               )}
             </div>
