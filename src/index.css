@@ -117,4 +117,10 @@
     font-size: 13px;
     color: rgba(248, 247, 242, 0.52);
   }
+  }
+
+  /* Bottom nav hover: soft lime for inactive, keep full lime for active */
+  .nav-tab:not([data-active]):hover {
+    color: rgba(221, 255, 44, 0.65) !important;
+  }
 }
