@@ -27,13 +27,20 @@ const BottomNav = () => {
             <button
               key={tab.path}
               onClick={() => navigate(tab.path)}
-              className="flex flex-col items-center gap-1 text-xs transition-colors"
+              className="flex flex-col items-center gap-1 text-xs group"
               style={{
                 color: active ? "#DDFF2C" : "rgba(248, 247, 242, 0.45)",
+                transition: "transform 180ms ease, color 180ms ease",
               }}
             >
-              <tab.icon className="h-5 w-5" />
-              <span>{tab.label}</span>
+              <tab.icon
+                className="h-5 w-5 transition-transform duration-[180ms] ease-out group-hover:-translate-y-0.5 group-hover:scale-[1.04] group-active:scale-95"
+              />
+              <span className="transition-opacity duration-[180ms] ease-out group-hover:opacity-100"
+                style={{ opacity: active ? 1 : 0.85 }}
+              >
+                {tab.label}
+              </span>
             </button>
           );
         })}
