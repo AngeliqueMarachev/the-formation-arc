@@ -106,7 +106,7 @@ const Index = () => {
       {/* Header */}
       <header className="flex items-center justify-between px-6 pt-8 pb-4">
         <div className="flex items-center gap-3">
-          <img src={logo} alt="The Formation Arc" className="h-8 w-8" />
+          <img src={logo} alt="The Formation Arc" className="h-8 w-8" style={{ color: "#F8F7F2" }} />
           <h1 className="text-2xl font-semibold tracking-tight">The Formation Arc™</h1>
         </div>
         <button onClick={signOut} className="text-xs text-muted-foreground hover:text-foreground transition-colors">
