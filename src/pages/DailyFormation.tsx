@@ -179,10 +179,12 @@ const DailyFormation = () => {
                 Tap each step slowly.
               </p>
 
-              <div className="space-y-6 mb-8">
+              <div className="space-y-6 mb-12">
                 {phases.map((phase) => {
                   const line = Object.values(lines!)[phase.lineIndex];
                   if (!line) return null;
+                  
+                  const isReturnPhase = phase.lineIndex === 5;
                   
                   return (
                     <button
@@ -193,7 +195,11 @@ const DailyFormation = () => {
                       }}
                       className={`w-full text-left rounded-lg border p-5 transition-all duration-300 ${
                         glowingLine === phase.lineIndex
-                          ? "border-primary/50 bg-primary/10 text-foreground shadow-lg shadow-primary/10"
+                          ? isReturnPhase
+                            ? "border-primary bg-primary/15 text-foreground shadow-lg shadow-primary/20"
+                            : "border-primary/50 bg-primary/10 text-foreground shadow-lg shadow-primary/10"
+                          : isReturnPhase
+                          ? "border-primary/40 bg-primary/8 text-foreground"
                           : "border-border/50 bg-card/50 text-muted-foreground hover:border-primary/20"
                       }`}
                     >
@@ -208,11 +214,14 @@ const DailyFormation = () => {
                 })}
               </div>
 
-              {/* Divider + affirmation + button */}
-              <div className="border-t border-border/30 pt-6 space-y-4">
-                <p className="text-sm text-foreground/70 text-center" style={{ fontFamily: "'Fraunces', serif" }}>
-                  You are steady enough to build.
-                </p>
+              {/* Completion message and transition */}
+              <div className="pt-4 space-y-6">
+                <div className="text-center">
+                  <p className="text-sm text-foreground/80 mb-1">You returned.</p>
+                  <p className="text-sm text-foreground font-medium" style={{ fontFamily: "'Fraunces', serif" }}>
+                    You are steady enough to build.
+                  </p>
+                </div>
                 <Button
                   className="w-full"
                   size="lg"
