@@ -217,23 +217,48 @@ const Activated = () => {
       navigate("/");
     };
 
+    const stepLabels = [
+      "LINE IN THE SAND™",
+      "EXPOSE THE MECHANISM™",
+      "UNTANGLE TIME™",
+      "CHOOSE YOUR AGREEMENT™",
+      "SHEPHERD YOUR SOUL™",
+      "OCCUPY YOUR IDENTITY™",
+    ];
+
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col justify-center px-6 py-12">
-          <h1 className="text-3xl font-semibold tracking-tight mb-4">
+        <main className="flex flex-1 flex-col px-6 pt-10 pb-12">
+          <h1 className="text-3xl font-semibold tracking-tight mb-2">
             Your Reorientation
           </h1>
-          <p className="text-sm text-muted-foreground leading-relaxed mb-8">
+          <p className="text-sm text-muted-foreground leading-relaxed mb-10">
             Read each line slowly. Let each one interrupt the loop.
           </p>
 
-          <div className="space-y-3 mb-10">
+          {/* Vertical step flow */}
+          <div className="relative mb-12">
             {lines.map((line, i) => (
-              <div
-                key={i}
-                className="rounded-lg border border-border bg-card p-4 text-sm text-muted-foreground"
-              >
-                {line}
+              <div key={i} className="relative flex gap-4">
+                {/* Timeline column */}
+                <div className="flex flex-col items-center">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-xs font-semibold text-primary">
+                    {i + 1}
+                  </div>
+                  {i < lines.length - 1 && (
+                    <div className="w-px flex-1 bg-border/50 my-1" />
+                  )}
+                </div>
+
+                {/* Step card */}
+                <div className="pb-8 flex-1">
+                  <p className="text-[10px] font-semibold tracking-widest text-primary/70 uppercase mb-1">
+                    {stepLabels[i] || `Step ${i + 1}`}
+                  </p>
+                  <div className="rounded-lg border border-border bg-card/60 p-4 text-sm text-foreground/80 leading-relaxed backdrop-blur-sm">
+                    {line}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
