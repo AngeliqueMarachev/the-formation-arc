@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
-import { Card, CardContent } from "@/components/ui/card";
 import BottomNav from "@/components/BottomNav";
 import AnchorRecall from "@/components/AnchorRecall";
 
@@ -299,80 +298,45 @@ const DailyFormation = () => {
     return (
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col justify-center px-6 py-12">
-          {/* SECTION 1: ORIENTATION */}
-          <div className="mb-16">
-            <h1 className="text-3xl font-semibold tracking-tight mb-3" style={{ fontFamily: "'Fraunces', serif" }}>
-              The Anchor Layer™
-            </h1>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Anchors train the nervous system to expect steadiness.
+          <h1 className="text-3xl font-semibold tracking-tight mb-6">
+            The Anchor Layer™
+          </h1>
+          <div className="space-y-4 text-sm leading-relaxed text-muted-foreground mb-10">
+            <p>Anchors train the nervous system to expect steadiness.</p>
+            <p>
+              When a memory is recalled, the neural network briefly becomes
+              flexible.
+            </p>
+            <p>In that window:</p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>meaning can widen</li>
+              <li>prediction can update</li>
+              <li>identity detaches from fear</li>
+            </ul>
+            <p>We are not rewriting the past.</p>
+            <p className="text-foreground font-medium">
+              We are widening the meaning attached to it.
             </p>
           </div>
 
-          {/* SECTION 2: UNDERSTANDING */}
-          <div className="mb-16">
-            <Card className="border-border/50 bg-card/60">
-              <CardContent className="pt-6">
-                <h2 className="text-sm font-semibold tracking-tight mb-4 text-foreground">How Anchors Work</h2>
-                <div className="space-y-3 text-sm leading-relaxed text-muted-foreground">
-                  <p>
-                    When a memory is recalled, the neural network briefly becomes flexible.
-                  </p>
-                  <p>In that window:</p>
-                  <ul className="list-disc pl-5 space-y-1">
-                    <li>meaning can widen</li>
-                    <li>prediction can update</li>
-                    <li>identity detaches from fear</li>
-                  </ul>
-                  <p className="pt-2">We are not rewriting the past.</p>
-                  <p className="text-foreground font-medium">
-                    We are widening the meaning attached to it.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* SECTION 3: ACTION */}
-          <div>
-            <h2 className="text-sm font-semibold tracking-tight mb-6 text-foreground">
-              Choose your anchor practice
-            </h2>
-
-            {/* Button layout */}
-            <div className="flex gap-3 mb-8 max-w-md">
-              {anchors.length > 0 && (
-                <Button
-                  className="flex-1"
-                  size="lg"
-                  onClick={() => setScreen("daily-loop")}
-                >
-                  Daily Anchor Loop
-                </Button>
-              )}
+          <div className="space-y-3">
+            {anchors.length > 0 && (
               <Button
-                className="flex-1"
+                className="w-full"
                 size="lg"
-                variant={anchors.length > 0 ? "secondary" : "default"}
-                onClick={() => setScreen("create-anchor")}
+                onClick={() => setScreen("daily-loop")}
               >
-                Create New Anchor
+                Daily Anchor Loop
               </Button>
-            </div>
-
-            {/* Helper text */}
-            <div className="space-y-4 text-xs text-muted-foreground/80 max-w-md">
-              {anchors.length > 0 && (
-                <div>
-                  <p className="font-medium text-foreground/70 mb-1">Daily Anchor Loop</p>
-                  <p>Return to an existing anchor and strengthen it.</p>
-                </div>
-              )}
-              <div>
-                <p className="font-medium text-foreground/70 mb-1">Create New Anchor</p>
-                <p>Create a new memory anchor for future returns.</p>
-              </div>
-            </div>
+            )}
+            <Button
+              className="w-full"
+              size="lg"
+              variant={anchors.length > 0 ? "secondary" : "default"}
+              onClick={() => setScreen("create-anchor")}
+            >
+              Create New Anchor
+            </Button>
           </div>
         </main>
         <BottomNav />
