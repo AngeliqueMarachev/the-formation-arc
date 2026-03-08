@@ -298,7 +298,7 @@ const DailyFormation = () => {
     return (
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col justify-center px-6 py-12">
-          <h1 className="text-3xl font-semibold tracking-tight mb-6">
+          <h1 className="text-3xl font-semibold tracking-tight mb-6" style={{ fontFamily: "'Fraunces', serif" }}>
             The Anchor Layer™
           </h1>
           <div className="space-y-4 text-sm leading-relaxed text-muted-foreground mb-10">
@@ -319,24 +319,46 @@ const DailyFormation = () => {
             </p>
           </div>
 
-          <div className="space-y-3">
-            {anchors.length > 0 && (
+          {/* Anchor Practice Section */}
+          <div className="space-y-6">
+            <p className="text-[10px] font-semibold tracking-widest text-primary/70 uppercase">
+              Anchor Practice
+            </p>
+
+            {/* Button layout */}
+            <div className="flex gap-3 max-w-md">
+              {anchors.length > 0 && (
+                <Button
+                  className="flex-1"
+                  size="lg"
+                  onClick={() => setScreen("daily-loop")}
+                >
+                  Daily Anchor Loop
+                </Button>
+              )}
               <Button
-                className="w-full"
+                className="flex-1"
                 size="lg"
-                onClick={() => setScreen("daily-loop")}
+                variant={anchors.length > 0 ? "secondary" : "default"}
+                onClick={() => setScreen("create-anchor")}
               >
-                Daily Anchor Loop
+                Create New Anchor
               </Button>
-            )}
-            <Button
-              className="w-full"
-              size="lg"
-              variant={anchors.length > 0 ? "secondary" : "default"}
-              onClick={() => setScreen("create-anchor")}
-            >
-              Create New Anchor
-            </Button>
+            </div>
+
+            {/* Helper text */}
+            <div className="space-y-3 text-xs text-muted-foreground/80 max-w-md">
+              {anchors.length > 0 && (
+                <div>
+                  <p className="font-medium text-foreground/70 mb-1">Daily Anchor Loop</p>
+                  <p>Return to an existing anchor and strengthen it.</p>
+                </div>
+              )}
+              <div>
+                <p className="font-medium text-foreground/70 mb-1">Create New Anchor</p>
+                <p>Create a new anchor memory for future returns.</p>
+              </div>
+            </div>
           </div>
         </main>
         <BottomNav />
