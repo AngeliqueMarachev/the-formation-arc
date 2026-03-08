@@ -58,16 +58,19 @@ export type Database = {
       }
       profiles: {
         Row: {
+          core_orientation_seen: boolean
           created_at: string
           display_name: string | null
           id: string
         }
         Insert: {
+          core_orientation_seen?: boolean
           created_at?: string
           display_name?: string | null
           id: string
         }
         Update: {
+          core_orientation_seen?: boolean
           created_at?: string
           display_name?: string | null
           id?: string

@@ -10,6 +10,19 @@ const Index = () => {
   const navigate = useNavigate();
   const { user, signOut } = useAuth();
 
+  const { data: profile, isLoading: profileLoading } = useQuery({
+    queryKey: ["profile", user?.id],
+    queryFn: async () => {
+      const { data } = await supabase
+        .from("profiles")
+        .select("*")
+        .eq("id", user!.id)
+        .single();
+      return data;
+    },
+    enabled: !!user,
+  });
+
   const { data: stats } = useQuery({
     queryKey: ["usage_stats", user?.id],
     queryFn: async () => {
@@ -22,6 +35,12 @@ const Index = () => {
     },
     enabled: !!user,
   });
+
+  // Redirect to onboarding if not yet seen
+  if (!profileLoading && profile && !(profile as any).core_orientation_seen) {
+    navigate("/onboarding", { replace: true });
+    return null;
+  }
 
   const cards = [
     {
