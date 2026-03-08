@@ -131,34 +131,30 @@ const Index = () => {
         ))}
 
         {/* Formation Progress */}
-        <div className="pt-4">
+        <div className="pt-3">
           <Card className="border-none">
-            <div className="px-6 pt-5 pb-2 text-center">
-              <h3 className="text-base font-medium tracking-tight" style={{ fontFamily: "'Fraunces', serif", fontSize: '18px', letterSpacing: '-0.01em' }}>
+            <div className="px-5 pt-4 pb-1 text-center">
+              <h3 className="font-medium tracking-tight" style={{ fontFamily: "'Fraunces', serif", fontSize: '16px', letterSpacing: '-0.01em' }}>
                 Formation Progress
               </h3>
             </div>
-            <div className="px-6 pb-6 pt-4">
-              <div className="grid grid-cols-3 gap-5">
+            <div className="px-5 pb-4 pt-3">
+              <div className="flex justify-center gap-8">
                 {[
-                  { value: String(reorientations), label: "Returns", large: true },
-                  { value: String(anchorsCreated), label: "Anchors", large: true },
-                  { value: lastActivityLabel, label: "Last active", large: false },
+                  { value: String(reorientations), label: "Returns" },
+                  { value: String(anchorsCreated), label: "Anchors" },
                 ].map((metric) => (
-                  <div key={metric.label} className="flex flex-col items-center gap-2">
+                  <div key={metric.label} className="flex flex-col items-center gap-1.5">
                     <div
                       className="flex items-center justify-center rounded-full"
                       style={{
-                        width: 72,
-                        height: 72,
-                        border: '1px solid rgba(168, 192, 168, 0.35)',
-                        background: 'rgba(248, 247, 242, 0.03)',
+                        width: 60,
+                        height: 60,
+                        border: '1px solid rgba(51, 142, 127, 0.45)',
+                        background: 'rgba(51, 142, 127, 0.08)',
                       }}
                     >
-                      <span
-                        className={`font-medium tracking-tight ${metric.large ? 'text-2xl' : 'text-[11px] leading-tight text-center px-1'}`}
-                        style={{ color: '#F8F7F2' }}
-                      >
+                      <span className="text-xl font-medium tracking-tight" style={{ color: '#F8F7F2' }}>
                         {metric.value}
                       </span>
                     </div>
@@ -168,6 +164,9 @@ const Index = () => {
                   </div>
                 ))}
               </div>
+              <p className="text-center text-xs mt-3" style={{ color: 'rgba(248, 247, 242, 0.42)' }}>
+                Last active: {lastActivityLabel}
+              </p>
             </div>
           </Card>
         </div>
