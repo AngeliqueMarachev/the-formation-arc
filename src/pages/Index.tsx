@@ -6,7 +6,7 @@ import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/ca
 import { CloudDrizzle, AudioLines, Mountain } from "lucide-react";
 import BottomNav from "@/components/BottomNav";
 import { formatDistanceToNow } from "date-fns";
-import logo from "@/assets/logo.svg";
+import Logo from "@/assets/logo.svg?react";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -106,7 +106,7 @@ const Index = () => {
       {/* Header */}
       <header className="flex items-center justify-between px-6 pt-8 pb-4">
         <div className="flex items-center gap-3">
-          <img src={logo} alt="The Formation Arc" className="h-8 w-8" style={{ color: "#F8F7F2" }} />
+          <Logo className="h-8 w-8" style={{ color: "#F8F7F2" }} />
           <h1 className="text-2xl font-semibold tracking-tight">The Formation Arc™</h1>
         </div>
         <button onClick={signOut} className="text-xs text-muted-foreground hover:text-foreground transition-colors">
