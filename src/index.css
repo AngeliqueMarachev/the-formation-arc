@@ -61,7 +61,7 @@
     font-family: 'Inter', sans-serif;
     background: linear-gradient(135deg, #0C4651 0%, #082E36 100%);
     position: relative;
-    color: hsl(var(--foreground));
+    color: var(--text-body);
   }
 
   body::before {
@@ -84,5 +84,10 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Cormorant Garamond', serif;
+    color: var(--text-heading);
+  }
+
+  p {
+    color: var(--text-body);
   }
 }
