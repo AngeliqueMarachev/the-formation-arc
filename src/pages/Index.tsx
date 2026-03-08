@@ -5,6 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Shield, Sun, Anchor } from "lucide-react";
 import BottomNav from "@/components/BottomNav";
+import { formatDistanceToNow } from "date-fns";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -36,6 +37,36 @@ const Index = () => {
     enabled: !!user,
   });
 
+  // Get most recent activity date from anchor_entries or reorient_templates
+  const { data: lastActivity } = useQuery({
+    queryKey: ["last_activity", user?.id],
+    queryFn: async () => {
+      const [{ data: anchors }, { data: templates }] = await Promise.all([
+        supabase
+          .from("anchor_entries")
+          .select("created_at")
+          .eq("user_id", user!.id)
+          .order("created_at", { ascending: false })
+          .limit(1),
+        supabase
+          .from("reorient_templates")
+          .select("created_at")
+          .eq("user_id", user!.id)
+          .order("created_at", { ascending: false })
+          .limit(1),
+      ]);
+
+      const dates = [
+        anchors?.[0]?.created_at,
+        templates?.[0]?.created_at,
+      ].filter(Boolean) as string[];
+
+      if (dates.length === 0) return null;
+      return dates.sort().reverse()[0];
+    },
+    enabled: !!user,
+  });
+
   // Redirect to onboarding if not yet seen
   if (!profileLoading && profile && !(profile as any).core_orientation_seen) {
     navigate("/onboarding", { replace: true });
@@ -62,6 +93,12 @@ const Index = () => {
       path: "/anchors",
     },
   ];
+
+  const reorientations = stats?.reorient_return_count ?? 0;
+  const anchorsCreated = stats?.anchors_created ?? 0;
+  const lastActivityLabel = lastActivity
+    ? formatDistanceToNow(new Date(lastActivity), { addSuffix: true })
+    : "—";
 
   return (
     <div className="flex min-h-screen flex-col pb-20">
@@ -93,10 +130,43 @@ const Index = () => {
           </Card>
         ))}
 
-        {/* Stats */}
-        <div className="flex gap-6 pt-6 text-sm text-muted-foreground">
-          <span>Reorientations: <strong className="text-foreground">{stats?.reorient_return_count ?? 0}</strong></span>
-          <span>Anchors: <strong className="text-foreground">{stats?.anchors_created ?? 0}</strong></span>
+        {/* Formation Progress */}
+        <div className="pt-4">
+          <Card className="border-none">
+            <div className="px-6 pt-5 pb-1">
+              <h3 className="text-base font-medium tracking-tight" style={{ fontFamily: "'Fraunces', serif", fontSize: '18px', letterSpacing: '-0.01em' }}>
+                Formation Progress
+              </h3>
+            </div>
+            <div className="px-6 pb-5 pt-3">
+              <div className="grid grid-cols-3 gap-4 text-center">
+                <div>
+                  <p className="text-2xl font-semibold tracking-tight" style={{ color: 'hsl(var(--foreground))' }}>
+                    {reorientations}
+                  </p>
+                  <p className="text-xs mt-1" style={{ color: 'rgba(248, 247, 242, 0.55)' }}>
+                    Returns
+                  </p>
+                </div>
+                <div>
+                  <p className="text-2xl font-semibold tracking-tight" style={{ color: 'hsl(var(--foreground))' }}>
+                    {anchorsCreated}
+                  </p>
+                  <p className="text-xs mt-1" style={{ color: 'rgba(248, 247, 242, 0.55)' }}>
+                    Anchors
+                  </p>
+                </div>
+                <div>
+                  <p className="text-sm font-medium tracking-tight" style={{ color: 'hsl(var(--foreground))' }}>
+                    {lastActivityLabel}
+                  </p>
+                  <p className="text-xs mt-1" style={{ color: 'rgba(248, 247, 242, 0.55)' }}>
+                    Last active
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Card>
         </div>
       </main>
 
