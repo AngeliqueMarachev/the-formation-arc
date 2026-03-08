@@ -213,14 +213,17 @@ const DailyFormation = () => {
             <Button
               className="w-full"
               size="lg"
-              variant="secondary"
               onClick={() => navigate("/activated")}
+              style={{
+                boxShadow: "0 0 14px rgba(221, 255, 44, 0.25)",
+              }}
             >
               Return to Reorientation
             </Button>
             <Button
               className="w-full"
               size="lg"
+              variant="secondary"
               onClick={() => setScreen("anchor-choice")}
             >
               I am steady enough
