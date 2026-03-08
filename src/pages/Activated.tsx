@@ -303,24 +303,26 @@ const Activated = () => {
             })}
           </div>
 
-          <div className="space-y-3">
-            <Button
-              className="w-full"
-              size="lg"
-              onClick={handleUseComplete}
-              disabled={saving}
-            >
-              {saving ? "Saving…" : "I have returned"}
-            </Button>
-            <Button
-              className="w-full"
-              size="lg"
-              variant="secondary"
-              onClick={() => setScreen("entry")}
-            >
-              Create new script
-            </Button>
-          </div>
+          {revealedCount >= lines.length && (
+            <div className="space-y-3 animate-fade-in">
+              <Button
+                className="w-full"
+                size="lg"
+                onClick={handleUseComplete}
+                disabled={saving}
+              >
+                {saving ? "Saving…" : "I have returned"}
+              </Button>
+              <Button
+                className="w-full"
+                size="lg"
+                variant="secondary"
+                onClick={() => setScreen("entry")}
+              >
+                Create new script
+              </Button>
+            </div>
+          )}
         </main>
         <BottomNav />
       </div>
