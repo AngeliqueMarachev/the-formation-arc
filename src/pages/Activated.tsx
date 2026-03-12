@@ -232,14 +232,14 @@ const Activated = () => {
             Your Reorientation.
           </h1>
           <p className="text-supporting leading-relaxed mb-10">
-            Read each line slowly. 
+            Read each line slowly.
 Let each one interrupt the loop.
+          
+          
           </p>
 
           <div className="relative mb-12">
-            {lines.map((line, i) => {if (i >= revealedCount) return null;
-              const isLatest = i === revealedCount - 1;
-              const isLastStep = i === lines.length - 1;
+            {lines.map((line, i) => {if (i >= revealedCount) return null;const isLatest = i === revealedCount - 1;const isLastStep = i === lines.length - 1;
               const isTappable = isLatest && !scriptComplete;
               const wasJustRevealed = justRevealed === i;
 
