@@ -347,18 +347,18 @@ const DailyFormation = () => {
             <p className="text-xs text-text-supporting uppercase tracking-wider mb-2 text-primary">
               Scene
             </p>
-            <p className="text-sm text-text-heading leading-relaxed mb-4">
+            <p className="text-text-heading leading-relaxed mb-4 text-base">
               {anchor.scene_text}
             </p>
             <p className="text-xs text-text-supporting uppercase tracking-wider mb-2 text-primary">
               Anchor Phrase
             </p>
-            <p className="text-sm text-text-heading font-medium">
+            <p className="text-text-heading font-medium text-base">
               {anchor.anchor_phrase}
             </p>
           </div>
 
-          <p className="text-supporting leading-relaxed mb-10">
+          <p className="text-supporting leading-relaxed mb-10 text-base text-muted-foreground">
             Recall the scene for 10–20 seconds.
             <br />
             Then say the Anchor Phrase once.
