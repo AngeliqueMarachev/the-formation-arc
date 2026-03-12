@@ -103,23 +103,23 @@ const AnchorRecall = ({
 
   return (
     <div className="flex min-h-screen flex-col pb-20">
-      <header className="px-6 pt-8 pb-2">
-        <p className="text-xs text-muted-foreground mb-2">Step 1 of {totalSteps}</p>
+      <header className="px-6 pt-8 pb-2 content-container">
+        <p className="text-xs text-text-supporting mb-2">Step 1 of {totalSteps}</p>
         <Progress value={(1 / totalSteps) * 100} className="h-1.5 mb-6" />
       </header>
 
-      <main className="flex-1 px-6 pt-2 space-y-8 pb-4">
+      <main className="flex-1 px-6 pt-2 space-y-8 pb-4 content-container">
         {/* Header */}
         <div>
-          <h1 className="text-2xl font-semibold tracking-tight">
+          <h1 className="tracking-tight">
             Recall a Scene
             {selectedScene && selectedScene !== "Something else" && (
-              <span className="block text-lg font-normal text-muted-foreground mt-1">
+              <span className="block text-lg font-normal text-text-supporting mt-1">
                 {selectedScene}
               </span>
             )}
           </h1>
-          <p className="text-sm text-muted-foreground leading-relaxed mt-3">
+          <p className="text-supporting leading-relaxed mt-3">
             Describe a memory that still carries weight.
             <br />
             It does not need to be dramatic — just real.
@@ -135,10 +135,10 @@ const AnchorRecall = ({
                 onClick={() => setSelectedCategory(cat.id)}
                 className="w-full rounded-xl border border-border bg-card p-5 text-left transition-colors hover:border-primary/40 active:bg-accent/10"
               >
-                <p className="text-sm font-medium text-foreground leading-snug">
+                <p className="text-sm font-medium text-text-heading leading-snug">
                   {cat.label}
                 </p>
-                <p className="text-xs text-muted-foreground mt-1">
+                <p className="text-xs text-text-supporting mt-1">
                   {cat.description}
                 </p>
               </button>
@@ -151,7 +151,7 @@ const AnchorRecall = ({
           <div className="space-y-3">
             <button
               onClick={() => setSelectedCategory(null)}
-              className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+              className="text-xs text-text-supporting hover:text-text-heading transition-colors"
             >
               ← Back to categories
             </button>
@@ -160,7 +160,7 @@ const AnchorRecall = ({
                 <button
                   key={scene}
                   onClick={() => handleSceneSelect(scene)}
-                  className="rounded-full border border-border px-4 py-2 text-xs text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
+                  className="rounded-full border border-border px-4 py-2 text-xs text-text-supporting transition-colors hover:border-primary/40 hover:text-text-heading"
                 >
                   {scene}
                 </button>
@@ -172,21 +172,21 @@ const AnchorRecall = ({
         {/* Visualization guidance + writing field */}
         {selectedScene && (
           <>
-            <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
-              <p className="text-foreground font-medium">Slow this moment down.</p>
-              <p>
+            <div className="space-y-4 leading-relaxed">
+              <p className="text-text-heading font-medium">Slow this moment down.</p>
+              <p className="text-text-body">
                 You are not remembering an entire season of life.
                 <br />
                 Just one scene.
               </p>
-              <p>Where are you?</p>
-              <p>What time of day is it?</p>
-              <p>Notice the light.</p>
-              <p>What sounds are around you?</p>
-              <p>What does the air feel like on your skin?</p>
-              <p>What is your body doing in this moment?</p>
-              <p className="pt-2">You do not need to force detail.</p>
-              <p>
+              <p className="text-text-body">Where are you?</p>
+              <p className="text-text-body">What time of day is it?</p>
+              <p className="text-text-body">Notice the light.</p>
+              <p className="text-text-body">What sounds are around you?</p>
+              <p className="text-text-body">What does the air feel like on your skin?</p>
+              <p className="text-text-body">What is your body doing in this moment?</p>
+              <p className="text-text-body pt-2">You do not need to force detail.</p>
+              <p className="text-text-body">
                 Memory is stored in sensation.
                 <br />
                 Let sensation guide the memory.
@@ -202,7 +202,7 @@ const AnchorRecall = ({
 
             {/* Emotional layer */}
             <div className="space-y-3">
-              <p className="text-sm font-medium text-foreground">
+              <p className="text-sm font-medium text-text-heading">
                 How did you feel in this moment?
               </p>
               <div className="flex flex-wrap gap-2">
@@ -214,8 +214,8 @@ const AnchorRecall = ({
                       onClick={() => toggleEmotion(tag)}
                       className={`rounded-full border px-3 py-1.5 text-xs transition-colors ${
                         selected
-                          ? "border-primary bg-primary/10 text-foreground"
-                          : "border-border text-muted-foreground hover:border-primary/40"
+                          ? "border-primary bg-primary/10 text-text-heading"
+                          : "border-border text-text-supporting hover:border-primary/40"
                       }`}
                     >
                       {tag}
@@ -230,7 +230,7 @@ const AnchorRecall = ({
 
       {/* Continue */}
       {selectedScene && (
-        <div className="px-6 pb-4 pt-2">
+        <div className="px-6 pb-4 pt-2 content-container">
           <Button
             className="w-full"
             size="lg"

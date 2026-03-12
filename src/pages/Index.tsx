@@ -38,7 +38,6 @@ const Index = () => {
     enabled: !!user,
   });
 
-  // Get most recent activity date from anchor_entries or reorient_templates
   const { data: lastActivity } = useQuery({
     queryKey: ["last_activity", user?.id],
     queryFn: async () => {
@@ -68,7 +67,6 @@ const Index = () => {
     enabled: !!user,
   });
 
-  // Redirect to onboarding if not yet seen
   if (!profileLoading && profile && !(profile as any).core_orientation_seen) {
     navigate("/onboarding", { replace: true });
     return null;
@@ -103,19 +101,17 @@ const Index = () => {
 
   return (
     <div className="flex min-h-screen flex-col pb-20">
-      {/* Header */}
-      <header className="flex items-center justify-between px-6 pt-8 pb-4">
+      <header className="flex items-center justify-between px-6 pt-8 pb-4 content-container">
         <div className="flex items-center gap-3">
-          <Logo className="h-8 w-8" style={{ color: "#F8F7F2" }} />
-          <span style={{ fontFamily: "'Fraunces', serif", fontSize: '30px', fontWeight: 550, letterSpacing: '-0.015em', color: '#F8F7F2' }}>The Formation Arc™</span>
+          <Logo className="h-7 w-7" style={{ color: '#F8F7F2' }} />
+          <span className="text-text-heading" style={{ fontFamily: "'Fraunces', serif", fontSize: '26px', fontWeight: 600, letterSpacing: '-0.015em' }}>The Formation Arc™</span>
         </div>
-        <button onClick={signOut} className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+        <button onClick={signOut} className="text-xs text-text-supporting hover:text-text-heading transition-colors">
           Sign out
         </button>
       </header>
 
-      {/* Cards */}
-      <main className="flex-1 px-6 space-y-4 pt-4">
+      <main className="flex-1 px-6 space-y-4 pt-4 content-container">
         {cards.map((card) => (
           <Card
             key={card.path}
@@ -128,13 +124,12 @@ const Index = () => {
               </div>
               <div>
                 <CardTitle className="text-lg">{card.title}</CardTitle>
-                <CardDescription>{card.subtitle}</CardDescription>
+                <CardDescription className="text-text-supporting text-sm">{card.subtitle}</CardDescription>
               </div>
             </CardHeader>
           </Card>
         ))}
 
-        {/* Formation Progress */}
         <div className="pt-3">
           <Card className="border-none">
             <div className="px-5 pt-4 pb-1 text-center">
@@ -158,17 +153,17 @@ const Index = () => {
                         background: 'rgba(51, 142, 127, 0.08)',
                       }}
                     >
-                      <span className="text-xl font-medium tracking-tight" style={{ color: '#F8F7F2' }}>
+                      <span className="text-xl font-medium tracking-tight text-text-heading">
                         {metric.value}
                       </span>
                     </div>
-                    <p className="text-xs" style={{ color: 'rgba(248, 247, 242, 0.52)' }}>
+                    <p className="text-xs text-text-supporting">
                       {metric.label}
                     </p>
                   </div>
                 ))}
               </div>
-              <p className="text-center text-xs mt-3" style={{ color: 'rgba(248, 247, 242, 0.42)' }}>
+              <p className="text-center text-xs mt-3 text-text-supporting">
                 Last active: {lastActivityLabel}
               </p>
             </div>

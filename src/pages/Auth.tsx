@@ -39,12 +39,11 @@ const Auth = () => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center px-6">
       <div className="w-full max-w-sm space-y-10">
-        {/* Brand */}
         <div className="text-center space-y-6">
-          <h1 className="text-4xl font-semibold tracking-tight text-foreground">
+          <h1 className="text-4xl font-semibold tracking-tight">
             The Formation Arc™
           </h1>
-          <div className="space-y-1.5 text-sm italic text-muted-foreground leading-relaxed">
+          <div className="space-y-1.5 text-supporting italic leading-relaxed">
             <p>Fear conditions perception.</p>
             <p>Perception shapes chemistry.</p>
             <p>Chemistry reinforces expectation.</p>
@@ -52,7 +51,6 @@ const Auth = () => {
           </div>
         </div>
 
-        {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-5">
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
@@ -84,7 +82,7 @@ const Auth = () => {
           </Button>
         </form>
 
-        <p className="text-center text-sm text-muted-foreground">
+        <p className="text-center text-sm text-text-supporting">
           {isSignUp ? "Already have an account?" : "Don't have an account?"}{" "}
           <button
             type="button"

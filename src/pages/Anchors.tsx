@@ -65,11 +65,11 @@ const Anchors = () => {
   if (view === "recall-prompt" && selected) {
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col items-center justify-center px-6 text-center space-y-8">
-          <p className="text-sm leading-relaxed text-muted-foreground max-w-xs">
+        <main className="flex flex-1 flex-col items-center justify-center px-6 text-center space-y-8 content-container">
+          <p className="text-supporting leading-relaxed max-w-xs">
             Recall the scene for 10–20 seconds.{"\n"}Then say your Anchor Phrase once.
           </p>
-          <p className="font-serif text-lg italic text-foreground max-w-sm">
+          <p className="font-serif text-lg italic text-text-heading max-w-sm">
             "{selected.anchor_phrase}"
           </p>
           <Button onClick={handleRecallDone} className="w-full max-w-xs">
@@ -89,28 +89,26 @@ const Anchors = () => {
 
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <header className="px-6 pt-8 pb-2">
+        <header className="px-6 pt-8 pb-2 content-container">
           <button
             onClick={() => { setView("list"); setSelected(null); }}
-            className="text-sm text-muted-foreground mb-4 hover:text-foreground transition-colors"
+            className="text-sm text-text-supporting mb-4 hover:text-text-heading transition-colors"
           >
             ← Back
           </button>
-          <h1 className="text-2xl font-semibold tracking-tight font-serif">Anchor</h1>
+          <h1 className="tracking-tight font-serif">Anchor</h1>
         </header>
 
         <ScrollArea className="flex-1 px-6">
-          <div className="space-y-8 pb-8">
-            {/* Scene */}
+          <div className="space-y-8 pb-8 content-container">
             <section className="space-y-2">
-              <h2 className="text-xs font-medium uppercase tracking-widest text-muted-foreground">Scene</h2>
-              <p className="text-sm leading-relaxed text-foreground whitespace-pre-line">{selected.scene_text}</p>
+              <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting">Scene</h2>
+              <p className="text-sm leading-relaxed text-text-heading whitespace-pre-line">{selected.scene_text}</p>
             </section>
 
-            {/* Emotional Layer */}
             {tags.length > 0 && (
               <section className="space-y-2">
-                <h2 className="text-xs font-medium uppercase tracking-widest text-muted-foreground">Emotional Layer</h2>
+                <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting">Emotional Layer</h2>
                 <div className="flex flex-wrap gap-2">
                   {tags.map((t) => (
                     <Badge key={t} variant="secondary" className="text-xs">{t}</Badge>
@@ -119,41 +117,36 @@ const Anchors = () => {
               </section>
             )}
 
-            {/* Original Meaning */}
             {selected.meaning_conclusion && (
               <section className="space-y-2">
-                <h2 className="text-xs font-medium uppercase tracking-widest text-muted-foreground">Original Meaning</h2>
-                <p className="text-sm leading-relaxed text-foreground">{selected.meaning_conclusion}</p>
+                <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting">Original Meaning</h2>
+                <p className="text-sm leading-relaxed text-text-heading">{selected.meaning_conclusion}</p>
               </section>
             )}
 
-            {/* Widened Meaning */}
             {selected.widened_meaning && (
               <section className="space-y-2">
-                <h2 className="text-xs font-medium uppercase tracking-widest text-muted-foreground">Widened Meaning</h2>
-                <p className="text-sm leading-relaxed text-foreground">{selected.widened_meaning}</p>
+                <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting">Widened Meaning</h2>
+                <p className="text-sm leading-relaxed text-text-heading">{selected.widened_meaning}</p>
               </section>
             )}
 
-            {/* Anchor Phrase */}
             <section className="space-y-2">
-              <h2 className="text-xs font-medium uppercase tracking-widest text-muted-foreground">Anchor Phrase</h2>
-              <p className="font-serif text-lg italic text-foreground">"{selected.anchor_phrase}"</p>
+              <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting">Anchor Phrase</h2>
+              <p className="font-serif text-lg italic text-text-heading">"{selected.anchor_phrase}"</p>
             </section>
 
-            {/* Optional: Communion Awareness */}
             {selected.communion_awareness !== null && selected.communion_awareness !== undefined && (
               <section className="space-y-2">
-                <h2 className="text-xs font-medium uppercase tracking-widest text-muted-foreground">Communion Awareness</h2>
-                <p className="text-sm text-foreground">{selected.communion_awareness} / 10</p>
+                <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting">Communion Awareness</h2>
+                <p className="text-sm text-text-heading">{selected.communion_awareness} / 10</p>
               </section>
             )}
 
-            {/* Optional: Where Is God */}
             {selected.where_is_god && (
               <section className="space-y-2">
-                <h2 className="text-xs font-medium uppercase tracking-widest text-muted-foreground">Where Is God</h2>
-                <p className="text-sm leading-relaxed text-foreground">{selected.where_is_god}</p>
+                <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting">Where Is God</h2>
+                <p className="text-sm leading-relaxed text-text-heading">{selected.where_is_god}</p>
               </section>
             )}
 
@@ -175,27 +168,27 @@ const Anchors = () => {
 
   return (
     <div className="flex min-h-screen flex-col pb-20">
-      <header className="px-6 pt-8 pb-2">
-        <h1 className="text-2xl font-semibold tracking-tight font-serif">Anchor Library</h1>
-        <p className="text-sm text-muted-foreground mt-1">
+      <header className="px-6 pt-8 pb-2 content-container">
+        <h1 className="tracking-tight font-serif">Anchor Library</h1>
+        <p className="text-supporting mt-1">
           Stored scenes and phrases that stabilize perception.
         </p>
       </header>
 
       {isEmpty ? (
-        <main className="flex flex-1 flex-col items-center justify-center px-6 text-center space-y-4">
+        <main className="flex flex-1 flex-col items-center justify-center px-6 text-center space-y-4 content-container">
           <div className="flex h-16 w-16 items-center justify-center rounded-full bg-secondary">
             <Anchor className="h-8 w-8 text-primary" />
           </div>
-          <h2 className="text-xl font-semibold">Your Anchors</h2>
-          <p className="max-w-xs text-sm text-muted-foreground">
+          <h2 className="font-semibold">Your Anchors</h2>
+          <p className="max-w-xs text-supporting">
             Stored scenes and phrases that stabilize perception.{"\n"}Create your first Anchor inside Daily Formation.
           </p>
           <Button onClick={() => navigate("/daily-formation")}>Create Anchor</Button>
         </main>
       ) : (
         <ScrollArea className="flex-1 px-6">
-          <div className="space-y-4 pb-4">
+          <div className="space-y-4 pb-4 content-container">
             {anchors.map((anchor) => (
               <Card
                 key={anchor.id}
@@ -203,15 +196,15 @@ const Anchors = () => {
                 onClick={() => { setSelected(anchor); setView("detail"); }}
               >
                 <CardContent className="p-5 space-y-3">
-                  <p className="text-sm leading-relaxed text-foreground">
+                  <p className="text-sm leading-relaxed text-text-heading">
                     {anchor.scene_text.length > 120
                       ? anchor.scene_text.slice(0, 120) + "…"
                       : anchor.scene_text}
                   </p>
-                  <p className="font-serif text-base italic text-foreground/90">
+                  <p className="font-serif text-base italic text-text-body">
                     "{anchor.anchor_phrase}"
                   </p>
-                  <p className="text-xs text-muted-foreground">
+                  <p className="text-xs text-text-supporting">
                     Created {formatDistanceToNow(new Date(anchor.created_at), { addSuffix: true })}
                   </p>
                 </CardContent>

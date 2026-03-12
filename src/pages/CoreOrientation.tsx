@@ -21,49 +21,43 @@ const CoreOrientation = () => {
 
   return (
     <div className="flex min-h-screen flex-col justify-center px-8 py-16">
-      <div className="mx-auto max-w-md space-y-10">
-        {/* Header */}
-        <h1 className="text-3xl font-semibold tracking-tight text-foreground">
+      <div className="content-container space-y-10">
+        <h1 className="tracking-tight">
           Formation is cumulative.
         </h1>
 
-        {/* What this is not */}
-        <div className="space-y-1.5 text-base leading-relaxed text-muted-foreground">
+        <div className="space-y-1.5 leading-relaxed text-text-body">
           <p>This is not symptom tracking.</p>
           <p>This is not spiritual performance.</p>
           <p>This is not emotional management.</p>
         </div>
 
-        {/* What this is */}
-        <p className="text-base leading-relaxed text-foreground font-medium">
+        <p className="leading-relaxed text-text-heading font-medium">
           This is building capacity.
         </p>
 
-        <p className="text-base leading-relaxed text-muted-foreground">
+        <p className="leading-relaxed text-text-body">
           This is perception governance, memory reconsolidation, and identity
           stabilization over time.
         </p>
 
-        {/* Thesis */}
-        <div className="space-y-1 border-l-2 border-primary/40 pl-5 text-base leading-relaxed text-foreground">
+        <div className="space-y-1 border-l-2 border-primary/40 pl-5 leading-relaxed text-text-heading">
           <p>Fear conditions perception.</p>
           <p>Perception shapes chemistry.</p>
           <p>Chemistry reinforces expectation.</p>
           <p className="font-semibold">Return reshapes expectation.</p>
         </div>
 
-        {/* Systems */}
-        <div className="space-y-1.5 text-base leading-relaxed text-muted-foreground">
+        <div className="space-y-1.5 leading-relaxed text-text-body">
           <p>Use the script during spikes.</p>
           <p>Use the anchor for training.</p>
           <p>Use the tracking to reveal your formation.</p>
         </div>
 
-        <p className="text-base leading-relaxed text-muted-foreground">
+        <p className="leading-relaxed text-text-body">
           Every time you return, you add to your formation arc.
         </p>
 
-        {/* Enter */}
         <Button
           onClick={handleEnter}
           disabled={loading}

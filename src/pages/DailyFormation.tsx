@@ -34,9 +34,6 @@ interface AnchorEntry {
   session_count: number;
 }
 
-// Negative emotions for the old flow are no longer needed here;
-// positive emotion tags are handled inside AnchorRecall.
-
 const DailyFormation = () => {
   const navigate = useNavigate();
   const { user } = useAuth();
@@ -44,14 +41,10 @@ const DailyFormation = () => {
   const [loading, setLoading] = useState(true);
   const [glowingLine, setGlowingLine] = useState<number | null>(null);
 
-  // Reorientation lines
   const [lines, setLines] = useState<ReorientLines | null>(null);
-
-  // Existing anchors for daily loop
   const [anchors, setAnchors] = useState<AnchorEntry[]>([]);
   const [currentAnchorIndex, setCurrentAnchorIndex] = useState(0);
 
-  // Create anchor form
   const [sceneText, setSceneText] = useState("");
   const [emotionTags, setEmotionTags] = useState<string[]>([]);
   const [meaningConclusion, setMeaningConclusion] = useState("");
@@ -59,13 +52,12 @@ const DailyFormation = () => {
   const [anchorPhrase, setAnchorPhrase] = useState("");
   const [communionAwareness, setCommunionAwareness] = useState("");
   const [whereIsGod, setWhereIsGod] = useState("");
-  const [createStep, setCreateStep] = useState(0); // 0=anchor-recall, 1=meaning, 2=anchor phrase, 3=optional
+  const [createStep, setCreateStep] = useState(0);
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
     if (!user) return;
     const fetchData = async () => {
-      // Fetch latest reorientation template
       const { data: templates } = await supabase
         .from("reorient_templates")
         .select("line_1, line_2, line_3, line_4, line_5, line_6")
@@ -77,7 +69,6 @@ const DailyFormation = () => {
         setLines(templates[0]);
       }
 
-      // Fetch anchors
       const { data: anchorData } = await supabase
         .from("anchor_entries")
         .select("id, scene_text, anchor_phrase, session_count")
@@ -90,12 +81,10 @@ const DailyFormation = () => {
     fetchData();
   }, [user]);
 
-
   const handleDailyLoopDone = async () => {
     if (!user || anchors.length === 0) return;
     const anchor = anchors[currentAnchorIndex];
 
-    // Increment session_count
     await supabase
       .from("anchor_entries")
       .update({ session_count: anchor.session_count + 1 })
@@ -121,7 +110,6 @@ const DailyFormation = () => {
       where_is_god: whereIsGod.trim() || null,
     });
 
-    // Increment anchors_created
     const { data: stats } = await supabase
       .from("usage_stats")
       .select("anchors_created")
@@ -139,17 +127,16 @@ const DailyFormation = () => {
 
   if (loading) {
     return (
-      <div className="flex min-h-screen items-center justify-center text-muted-foreground">
+      <div className="flex min-h-screen items-center justify-center text-text-supporting">
         Loading…
       </div>
     );
   }
 
-  // ── STEP 1: REORIENTATION ──
+  // ── REORIENTATION ──
   if (screen === "reorientation") {
     const hasLines = lines && Object.values(lines).some((v) => v);
-    
-    // Phase structure mapping line indices to phase titles
+
     const phases = [
       { title: "LINE IN THE SAND™", lineIndex: 0 },
       { title: "INTERRUPT THE LOOP", lineIndex: 1 },
@@ -158,24 +145,23 @@ const DailyFormation = () => {
       { title: "RESOURCE", lineIndex: 4 },
       { title: "RETURN", lineIndex: 5 },
     ];
-    
+
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col px-6 pt-10 pb-12">
-          <h1 className="text-3xl font-semibold tracking-tight mb-3">
+        <main className="flex flex-1 flex-col px-6 pt-10 pb-12 content-container">
+          <h1 className="tracking-tight mb-3">
             Stabilize before you build.
           </h1>
-          <p className="text-sm text-muted-foreground leading-relaxed mb-10">
+          <p className="text-supporting leading-relaxed mb-10">
             Even when calm, you are rehearsing leadership.
           </p>
 
           {hasLines ? (
             <>
-              {/* Section label */}
               <p className="text-[10px] font-semibold tracking-widest text-primary/70 uppercase mb-1">
                 Reorientation Script
               </p>
-              <p className="text-xs text-muted-foreground/50 mb-6">
+              <p className="text-xs text-text-supporting mb-6">
                 Tap each step slowly.
               </p>
 
@@ -183,9 +169,9 @@ const DailyFormation = () => {
                 {phases.map((phase) => {
                   const line = Object.values(lines!)[phase.lineIndex];
                   if (!line) return null;
-                  
+
                   const isReturnPhase = phase.lineIndex === 5;
-                  
+
                   return (
                     <button
                       key={phase.lineIndex}
@@ -196,17 +182,17 @@ const DailyFormation = () => {
                       className={`w-full text-left rounded-lg border p-5 transition-all duration-300 ${
                         glowingLine === phase.lineIndex
                           ? isReturnPhase
-                            ? "border-primary bg-primary/15 text-foreground shadow-lg shadow-primary/20"
-                            : "border-primary/50 bg-primary/10 text-foreground shadow-lg shadow-primary/10"
+                            ? "border-primary bg-primary/15 text-text-heading shadow-lg shadow-primary/20"
+                            : "border-primary/50 bg-primary/10 text-text-heading shadow-lg shadow-primary/10"
                           : isReturnPhase
-                          ? "border-primary/40 bg-primary/8 text-foreground"
-                          : "border-border/50 bg-card/50 text-muted-foreground hover:border-primary/20"
+                          ? "border-primary/40 bg-primary/8 text-text-heading"
+                          : "border-border/50 bg-card/50 text-text-body hover:border-primary/20"
                       }`}
                     >
                       <p className="text-[10px] font-semibold tracking-widest text-primary/70 uppercase mb-2">
                         {phase.title}
                       </p>
-                      <p className="text-sm leading-relaxed text-foreground">
+                      <p className="text-sm leading-relaxed text-text-heading">
                         {line}
                       </p>
                     </button>
@@ -214,11 +200,10 @@ const DailyFormation = () => {
                 })}
               </div>
 
-              {/* Completion message and transition */}
               <div className="pt-4 space-y-6">
                 <div className="text-center">
-                  <p className="text-sm text-foreground/80 mb-1">You returned.</p>
-                  <p className="text-sm text-foreground font-medium" style={{ fontFamily: "'Fraunces', serif" }}>
+                  <p className="text-sm text-text-body mb-1">You returned.</p>
+                  <p className="text-sm text-text-heading font-medium" style={{ fontFamily: "'Fraunces', serif" }}>
                     You are steady enough to build.
                   </p>
                 </div>
@@ -233,7 +218,7 @@ const DailyFormation = () => {
             </>
           ) : (
             <>
-              <p className="text-sm text-muted-foreground italic mb-10">
+              <p className="text-supporting italic mb-10">
                 No saved reorientation yet. Complete a reorientation in the
                 Activated tab first.
               </p>
@@ -252,18 +237,18 @@ const DailyFormation = () => {
     );
   }
 
-  // ── STEP 2: READINESS GATE ──
+  // ── READINESS GATE ──
   if (screen === "readiness") {
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col justify-center px-6 py-12">
-          <h1 className="text-3xl font-semibold tracking-tight mb-8">
+        <main className="flex flex-1 flex-col justify-center px-6 py-12 content-container">
+          <h1 className="tracking-tight mb-8">
             Check your state.
           </h1>
-          <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+          <p className="text-supporting leading-relaxed mb-4">
             Memory work requires steadiness.
           </p>
-          <p className="text-sm text-muted-foreground leading-relaxed mb-10">
+          <p className="text-supporting leading-relaxed mb-10">
             If you are activated, return to the reorientation first.
           </p>
 
@@ -293,28 +278,28 @@ const DailyFormation = () => {
     );
   }
 
-  // ── STEP 3: ANCHOR LAYER CHOICE ──
+  // ── ANCHOR LAYER CHOICE ──
   if (screen === "anchor-choice") {
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col justify-center px-6 py-12">
-          <h1 className="text-3xl font-semibold tracking-tight mb-6">
+        <main className="flex flex-1 flex-col justify-center px-6 py-12 content-container">
+          <h1 className="tracking-tight mb-6">
             The Anchor Layer™
           </h1>
-          <div className="space-y-4 text-sm leading-relaxed text-muted-foreground mb-10">
-            <p>Anchors train the nervous system to expect steadiness.</p>
-            <p>
+          <div className="space-y-4 leading-relaxed mb-10">
+            <p className="text-text-body">Anchors train the nervous system to expect steadiness.</p>
+            <p className="text-text-body">
               When a memory is recalled, the neural network briefly becomes
               flexible.
             </p>
-            <p>In that window:</p>
-            <ul className="list-disc pl-5 space-y-1">
+            <p className="text-text-body">In that window:</p>
+            <ul className="list-disc pl-5 space-y-1 text-text-body">
               <li>meaning can widen</li>
               <li>prediction can update</li>
               <li>identity detaches from fear</li>
             </ul>
-            <p>We are not rewriting the past.</p>
-            <p className="text-foreground font-medium">
+            <p className="text-text-body">We are not rewriting the past.</p>
+            <p className="text-text-heading font-medium">
               We are widening the meaning attached to it.
             </p>
           </div>
@@ -353,27 +338,27 @@ const DailyFormation = () => {
     }
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col justify-center px-6 py-12">
-          <h1 className="text-3xl font-semibold tracking-tight mb-8">
+        <main className="flex flex-1 flex-col justify-center px-6 py-12 content-container">
+          <h1 className="tracking-tight mb-8">
             Daily Anchor Loop
           </h1>
 
           <div className="rounded-lg border border-border bg-card p-5 mb-6">
-            <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">
+            <p className="text-xs text-text-supporting uppercase tracking-wider mb-2">
               Scene
             </p>
-            <p className="text-sm text-foreground leading-relaxed mb-4">
+            <p className="text-sm text-text-heading leading-relaxed mb-4">
               {anchor.scene_text}
             </p>
-            <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">
+            <p className="text-xs text-text-supporting uppercase tracking-wider mb-2">
               Anchor Phrase
             </p>
-            <p className="text-sm text-foreground font-medium">
+            <p className="text-sm text-text-heading font-medium">
               {anchor.anchor_phrase}
             </p>
           </div>
 
-          <p className="text-sm text-muted-foreground leading-relaxed mb-10">
+          <p className="text-supporting leading-relaxed mb-10">
             Recall the scene for 10–20 seconds.
             <br />
             Then say the Anchor Phrase once.
@@ -390,9 +375,8 @@ const DailyFormation = () => {
 
   // ── CREATE NEW ANCHOR ──
   if (screen === "create-anchor") {
-    const totalSteps = 4; // anchor-recall, meaning, anchor phrase, optional
-    
-    // Step 0 is handled by AnchorRecall component
+    const totalSteps = 4;
+
     if (createStep === 0) {
       return (
         <>
@@ -413,7 +397,7 @@ const DailyFormation = () => {
       if (createStep === 1)
         return meaningConclusion.trim().length > 0 && widenedMeaning.trim().length > 0;
       if (createStep === 2) return anchorPhrase.trim().length > 0;
-      return true; // optional step
+      return true;
     };
 
     const handleNext = () => {
@@ -426,8 +410,8 @@ const DailyFormation = () => {
 
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <header className="px-6 pt-8 pb-2">
-          <p className="text-xs text-muted-foreground mb-2">
+        <header className="px-6 pt-8 pb-2 content-container">
+          <p className="text-xs text-text-supporting mb-2">
             Step {createStep + 1} of {totalSteps}
           </p>
           <Progress
@@ -436,14 +420,14 @@ const DailyFormation = () => {
           />
         </header>
 
-        <main className="flex-1 px-6 pt-2">
+        <main className="flex-1 px-6 pt-2 content-container">
           {/* Step 1: Meaning */}
           {createStep === 1 && (
             <div className="space-y-4">
-              <h1 className="text-2xl font-semibold tracking-tight">
+              <h2 className="font-semibold tracking-tight">
                 Meaning conclusion.
-              </h1>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              </h2>
+              <p className="text-supporting leading-relaxed">
                 What did your nervous system conclude from this experience?
               </p>
               <Textarea
@@ -454,7 +438,7 @@ const DailyFormation = () => {
               />
 
               <Label className="block pt-2">Widened meaning</Label>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-supporting leading-relaxed">
                 What is also true — a fuller reading of that moment?
               </p>
               <Textarea
@@ -469,32 +453,32 @@ const DailyFormation = () => {
           {/* Step 2: Anchor Phrase */}
           {createStep === 2 && (
             <div className="space-y-4">
-              <h1 className="text-2xl font-semibold tracking-tight">
+              <h2 className="font-semibold tracking-tight">
                 Anchor Phrase
-              </h1>
-              <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
-                <p>Your brain remembers stories.</p>
-                <p>But it stabilizes around summaries.</p>
-                <p>
+              </h2>
+              <div className="space-y-3 leading-relaxed">
+                <p className="text-text-body">Your brain remembers stories.</p>
+                <p className="text-text-body">But it stabilizes around summaries.</p>
+                <p className="text-text-body">
                   Many memories trained your nervous system to expect something.
                 </p>
-                <div className="space-y-1 italic">
+                <div className="space-y-1 italic text-text-body">
                   <p>"I am alone."</p>
                   <p>"I am not supported."</p>
                   <p>"I am not enough."</p>
                 </div>
-                <p className="text-foreground font-medium">
+                <p className="text-text-heading font-medium">
                   Your Anchor Phrase updates that template.
                 </p>
-                <p>It does not erase the memory.</p>
-                <p>It widens the meaning.</p>
+                <p className="text-text-body">It does not erase the memory.</p>
+                <p className="text-text-body">It widens the meaning.</p>
               </div>
 
               <div className="pt-2">
                 <Label className="block mb-2">
                   In that moment, I was ______ — but I ______.
                 </Label>
-                <div className="space-y-2 text-xs text-muted-foreground mb-4">
+                <div className="space-y-2 text-xs text-text-supporting mb-4">
                   <p>
                     I believed I was forgotten — but I was not as alone as I
                     thought.
@@ -515,10 +499,10 @@ const DailyFormation = () => {
           {/* Step 3: Optional fields */}
           {createStep === 3 && (
             <div className="space-y-4">
-              <h1 className="text-2xl font-semibold tracking-tight">
+              <h2 className="font-semibold tracking-tight">
                 Optional reflection
-              </h1>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              </h2>
+              <p className="text-supporting leading-relaxed">
                 These fields are not required. Skip if you prefer.
               </p>
 
@@ -534,7 +518,7 @@ const DailyFormation = () => {
 
               <div className="space-y-2">
                 <Label>Communion awareness (1–10)</Label>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-xs text-text-supporting">
                   How present did you feel God's nearness while recalling this
                   scene?
                 </p>
@@ -551,7 +535,7 @@ const DailyFormation = () => {
           )}
         </main>
 
-        <div className="px-6 pb-4 pt-2 space-y-2">
+        <div className="px-6 pb-4 pt-2 space-y-2 content-container">
           <Button
             className="w-full"
             size="lg"
@@ -579,25 +563,25 @@ const DailyFormation = () => {
     );
   }
 
-  // ── COMPLETION REINFORCEMENT ──
+  // ── COMPLETION ──
   if (screen === "completion") {
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col justify-center px-6 py-12">
-          <h1 className="text-3xl font-semibold tracking-tight mb-8">
+        <main className="flex flex-1 flex-col justify-center px-6 py-12 content-container">
+          <h1 className="tracking-tight mb-8">
             Formation accumulates.
           </h1>
-          <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
-            <p>Today you:</p>
-            <ul className="list-disc pl-5 space-y-1">
+          <div className="space-y-4 leading-relaxed">
+            <p className="text-text-body">Today you:</p>
+            <ul className="list-disc pl-5 space-y-1 text-text-body">
               <li>practiced perception governance</li>
               <li>reopened memory</li>
               <li>strengthened steadiness</li>
             </ul>
-            <p className="text-foreground font-medium pt-2">
+            <p className="text-text-heading font-medium pt-2">
               Each return trains your nervous system to expect stability.
             </p>
-            <p>Small returns create lasting formation.</p>
+            <p className="text-text-body">Small returns create lasting formation.</p>
           </div>
 
           <Button
