@@ -133,7 +133,7 @@ const Index = () => {
         <div className="pt-3">
           <Card className="border-none">
             <div className="px-5 pt-4 pb-1 text-center">
-              <h3 className="font-medium tracking-tight" style={{ fontFamily: "'Fraunces', serif", fontSize: '16px', letterSpacing: '-0.01em' }}>
+              <h3 className="font-medium tracking-tight text-base" style={{ fontFamily: "'Fraunces', serif", fontSize: '16px', letterSpacing: '-0.01em' }}>
                 Formation Progress
               </h3>
             </div>
@@ -157,13 +157,13 @@ const Index = () => {
                         {metric.value}
                       </span>
                     </div>
-                    <p className="text-xs text-text-supporting">
+                    <p className="text-text-supporting text-sm">
                       {metric.label}
                     </p>
                   </div>
                 )}
               </div>
-              <p className="text-center text-xs mt-3 text-text-supporting">
+              <p className="text-center mt-3 text-text-supporting text-sm font-semibold">
                 Last active: {lastActivityLabel}
               </p>
             </div>
