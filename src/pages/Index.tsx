@@ -106,8 +106,8 @@ const Index = () => {
           <Logo className="h-7 w-7" style={{ color: '#F8F7F2' }} />
           <span className="text-text-heading" style={{ fontFamily: "'Fraunces', serif", fontSize: '26px', fontWeight: 600, letterSpacing: '-0.015em' }}>The Formation Arc</span>
         </div>
-        <button onClick={signOut} className="text-xs text-text-supporting hover:text-text-heading transition-colors text-primary">
-          Sign out
+        <button onClick={signOut} className="text-xs text-text-supporting hover:text-text-heading transition-colors text-muted-foreground">
+          Sign out   
         </button>
       </header>
 
