@@ -344,13 +344,13 @@ const DailyFormation = () => {
           </h1>
 
           <div className="rounded-lg border border-border bg-card p-5 mb-6">
-            <p className="text-xs text-text-supporting uppercase tracking-wider mb-2">
+            <p className="text-xs text-text-supporting uppercase tracking-wider mb-2 text-primary">
               Scene
             </p>
             <p className="text-sm text-text-heading leading-relaxed mb-4">
               {anchor.scene_text}
             </p>
-            <p className="text-xs text-text-supporting uppercase tracking-wider mb-2">
+            <p className="text-xs text-text-supporting uppercase tracking-wider mb-2 text-primary">
               Anchor Phrase
             </p>
             <p className="text-sm text-text-heading font-medium">
