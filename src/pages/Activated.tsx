@@ -77,7 +77,6 @@ const Activated = () => {
   const navigate = useNavigate();
   const { user } = useAuth();
 
-  // Check if user already has a saved reorientation script
   const { data: existingScript, isLoading: scriptLoading } = useQuery({
     queryKey: ["reorient_script", user?.id],
     queryFn: async () => {
@@ -102,7 +101,6 @@ const Activated = () => {
   const [justRevealed, setJustRevealed] = useState<number | null>(null);
   const [scriptComplete, setScriptComplete] = useState(false);
 
-  // Determine initial screen based on whether a script exists
   useEffect(() => {
     if (scriptLoading) return;
     if (existingScript) {
@@ -165,7 +163,6 @@ const Activated = () => {
       ...lines,
     });
 
-    // Increment reorient_return_count
     const { data: stats } = await supabase
       .from("usage_stats")
       .select("reorient_return_count")
@@ -181,16 +178,16 @@ const Activated = () => {
     navigate("/");
   };
 
-  // LOADING SCREEN
+  // LOADING
   if (screen === "loading") {
     return (
-      <div className="flex min-h-screen items-center justify-center text-muted-foreground">
+      <div className="flex min-h-screen items-center justify-center text-text-supporting">
         Loading…
       </div>
     );
   }
 
-  // USE EXISTING SCRIPT SCREEN
+  // USE EXISTING SCRIPT
   if (screen === "use-script" && existingScript) {
     const lines = [
       existingScript.line_1,
@@ -204,7 +201,6 @@ const Activated = () => {
     const handleUseComplete = async () => {
       if (!user) return;
       setSaving(true);
-      // Increment reorient_return_count
       const { data: stats } = await supabase
         .from("usage_stats")
         .select("reorient_return_count")
@@ -231,15 +227,14 @@ const Activated = () => {
 
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col px-6 pt-10 pb-12">
-          <h1 className="text-3xl font-semibold tracking-tight mb-2">
+        <main className="flex flex-1 flex-col px-6 pt-10 pb-12 content-container">
+          <h1 className="tracking-tight mb-2">
             Your Reorientation
           </h1>
-          <p className="text-sm text-muted-foreground leading-relaxed mb-10">
+          <p className="text-supporting leading-relaxed mb-10">
             Read each line slowly. Let each one interrupt the loop.
           </p>
 
-          {/* Vertical step flow */}
           <div className="relative mb-12">
             {lines.map((line, i) => {
               if (i >= revealedCount) return null;
@@ -256,7 +251,6 @@ const Activated = () => {
                     animation: "fade-in 300ms ease-out forwards"
                   } : undefined}
                 >
-                  {/* Timeline column */}
                   <div className="flex flex-col items-center">
                     <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-xs font-semibold transition-all duration-500 ${
                       isLatest && !scriptComplete
@@ -275,7 +269,6 @@ const Activated = () => {
                     )}
                   </div>
 
-                  {/* Step card */}
                   <button
                     onClick={() => {
                       if (!isTappable) return;
@@ -302,13 +295,13 @@ const Activated = () => {
                     </p>
                     <div className={`rounded-lg border p-4 text-sm leading-relaxed backdrop-blur-sm transition-all duration-500 ${
                       isLatest && !scriptComplete
-                        ? "border-primary/50 bg-primary/10 text-foreground"
-                        : "border-border/30 bg-card/30 text-foreground/60"
+                        ? "border-primary/50 bg-primary/10 text-text-heading"
+                        : "border-border/30 bg-card/30 text-text-supporting"
                     }`}>
                       {line}
                     </div>
                     {isTappable && (
-                      <p className="text-[10px] text-muted-foreground/40 mt-2.5 text-center">
+                      <p className="text-[10px] text-text-supporting mt-2.5 text-center">
                         Tap to continue
                       </p>
                     )}
@@ -321,10 +314,10 @@ const Activated = () => {
           {scriptComplete && (
             <div className="space-y-6" style={{ animation: "fade-in 400ms ease-out forwards" }}>
               <div className="text-center space-y-2 py-4">
-                <p className="text-lg font-medium text-foreground" style={{ fontFamily: "'Fraunces', serif" }}>
+                <p className="text-lg font-medium text-text-heading" style={{ fontFamily: "'Fraunces', serif" }}>
                   You have returned.
                 </p>
-                <p className="text-xs text-muted-foreground/60">
+                <p className="text-xs text-text-supporting">
                   Each return strengthens this pathway.
                 </p>
               </div>
@@ -354,30 +347,30 @@ const Activated = () => {
     );
   }
 
-  // ENTRY SCREEN
+  // ENTRY
   if (screen === "entry") {
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col justify-center px-6 py-12">
-          <h1 className="text-3xl font-semibold tracking-tight mb-8">
+        <main className="flex flex-1 flex-col justify-center px-6 py-12 content-container">
+          <h1 className="tracking-tight mb-8">
             When activation rises
           </h1>
-          <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
-            <p>
+          <div className="space-y-4 leading-relaxed">
+            <p className="text-text-body">
               Fear accelerates perception.<br />
               It compresses time.<br />
               It predicts threat.<br />
               It prepares your body for survival.
             </p>
-            <p>
+            <p className="text-text-body">
               This is not spiritual failure.<br />
               It is learned prediction.
             </p>
-            <p>You are not here to calm your body.</p>
-            <p className="text-foreground font-medium">
+            <p className="text-text-body">You are not here to calm your body.</p>
+            <p className="text-text-heading font-medium">
               You are here to retrain perception.
             </p>
-            <p className="text-muted-foreground">
+            <p className="text-text-body">
               Each return interrupts reinforcement<br />
               and strengthens internal authority.
             </p>
@@ -395,25 +388,25 @@ const Activated = () => {
     );
   }
 
-  // COMPLETION SCREEN
+  // COMPLETE
   if (screen === "complete") {
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col justify-center px-6 py-12">
-          <h1 className="text-3xl font-semibold tracking-tight mb-8">
+        <main className="flex flex-1 flex-col justify-center px-6 py-12 content-container">
+          <h1 className="tracking-tight mb-8">
             Your Governance Declaration™
           </h1>
-          <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
-            <p>
+          <div className="space-y-4 leading-relaxed">
+            <p className="text-text-body">
               You did not eliminate activation.<br />
               You governed it.
             </p>
-            <p>
+            <p className="text-text-body">
               You interrupted reinforcement.<br />
               You updated prediction.<br />
               You reinforced identity.
             </p>
-            <p className="text-foreground font-medium">
+            <p className="text-text-heading font-medium">
               Each return strengthens this pathway.
             </p>
           </div>
@@ -446,18 +439,18 @@ const Activated = () => {
 
   return (
     <div className="flex min-h-screen flex-col pb-20">
-      <header className="px-6 pt-8 pb-2">
-        <p className="text-xs text-muted-foreground mb-2">
+      <header className="px-6 pt-8 pb-2 content-container">
+        <p className="text-xs text-text-supporting mb-2">
           Step {phaseIndex + 1} of 6
         </p>
         <Progress value={((phaseIndex + 1) / 6) * 100} className="h-1.5 mb-6" />
-        <h1 className="text-2xl font-semibold tracking-tight">
+        <h2 className="font-semibold tracking-tight">
           {phase.title}
-        </h1>
-        <p className="text-sm text-muted-foreground mt-1">{phase.purpose}</p>
+        </h2>
+        <p className="text-supporting mt-1">{phase.purpose}</p>
       </header>
 
-      <main className="flex-1 px-6 pt-4 space-y-3">
+      <main className="flex-1 px-6 pt-4 space-y-3 content-container">
         {phase.options.map((option) => {
           const isSelected = !useCustom[phaseIndex] && selections[phaseIndex] === option;
           return (
@@ -466,8 +459,8 @@ const Activated = () => {
               onClick={() => handleSelectOption(option)}
               className={`w-full rounded-lg border p-4 text-left text-sm transition-colors ${
                 isSelected
-                  ? "border-primary bg-primary/10 text-foreground"
-                  : "border-border bg-card text-muted-foreground hover:border-primary/40"
+                  ? "border-primary bg-primary/10 text-text-heading"
+                  : "border-border bg-card text-text-body hover:border-primary/40"
               }`}
             >
               {option}
@@ -475,7 +468,6 @@ const Activated = () => {
           );
         })}
 
-        {/* Write your own */}
         <div className="pt-2">
           {useCustom[phaseIndex] ? (
             <Textarea
@@ -488,7 +480,7 @@ const Activated = () => {
           ) : (
             <button
               onClick={handleCustomToggle}
-              className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+              className="text-xs text-text-supporting hover:text-text-heading transition-colors"
             >
               + Write your own
             </button>
@@ -496,7 +488,7 @@ const Activated = () => {
         </div>
       </main>
 
-      <div className="px-6 pb-4 pt-2">
+      <div className="px-6 pb-4 pt-2 content-container">
         <Button
           className="w-full"
           size="lg"
