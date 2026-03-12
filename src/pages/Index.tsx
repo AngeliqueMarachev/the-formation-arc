@@ -15,56 +15,56 @@ const Index = () => {
   const { data: profile, isLoading: profileLoading } = useQuery({
     queryKey: ["profile", user?.id],
     queryFn: async () => {
-      const { data } = await supabase
-        .from("profiles")
-        .select("*")
-        .eq("id", user!.id)
-        .single();
+      const { data } = await supabase.
+      from("profiles").
+      select("*").
+      eq("id", user!.id).
+      single();
       return data;
     },
-    enabled: !!user,
+    enabled: !!user
   });
 
   const { data: stats } = useQuery({
     queryKey: ["usage_stats", user?.id],
     queryFn: async () => {
-      const { data } = await supabase
-        .from("usage_stats")
-        .select("*")
-        .eq("user_id", user!.id)
-        .single();
+      const { data } = await supabase.
+      from("usage_stats").
+      select("*").
+      eq("user_id", user!.id).
+      single();
       return data;
     },
-    enabled: !!user,
+    enabled: !!user
   });
 
   const { data: lastActivity } = useQuery({
     queryKey: ["last_activity", user?.id],
     queryFn: async () => {
       const [{ data: anchors }, { data: templates }] = await Promise.all([
-        supabase
-          .from("anchor_entries")
-          .select("created_at")
-          .eq("user_id", user!.id)
-          .order("created_at", { ascending: false })
-          .limit(1),
-        supabase
-          .from("reorient_templates")
-          .select("created_at")
-          .eq("user_id", user!.id)
-          .order("created_at", { ascending: false })
-          .limit(1),
-      ]);
+      supabase.
+      from("anchor_entries").
+      select("created_at").
+      eq("user_id", user!.id).
+      order("created_at", { ascending: false }).
+      limit(1),
+      supabase.
+      from("reorient_templates").
+      select("created_at").
+      eq("user_id", user!.id).
+      order("created_at", { ascending: false }).
+      limit(1)]
+      );
 
       const dates = [
-        anchors?.[0]?.created_at,
-        templates?.[0]?.created_at,
-      ].filter(Boolean) as string[];
+      anchors?.[0]?.created_at,
+      templates?.[0]?.created_at].
+      filter(Boolean) as string[];
 
       if (dates.length === 0) return null;
       return dates.sort().reverse()[0];
     },
-    enabled: !!user,
+    enabled: !!user
   });
 
   if (!profileLoading && profile && !(profile as any).core_orientation_seen) {
@@ -73,38 +73,38 @@ const Index = () => {
   }
 
   const cards = [
-    {
-      title: "I'm Activated",
-      subtitle: "Fear rising. Begin reorientation.",
-      icon: CloudDrizzle,
-      path: "/activated",
-    },
-    {
-      title: "Daily Formation",
-      subtitle: "Train stability before fear rises.",
-      icon: AudioLines,
-      path: "/daily-formation",
-    },
-    {
-      title: "Anchors",
-      subtitle: "View your anchor library.",
-      icon: Mountain,
-      path: "/anchors",
-    },
-  ];
+  {
+    title: "I'm Activated",
+    subtitle: "Fear rising. Begin reorientation.",
+    icon: CloudDrizzle,
+    path: "/activated"
+  },
+  {
+    title: "Daily Formation",
+    subtitle: "Train stability before fear rises.",
+    icon: AudioLines,
+    path: "/daily-formation"
+  },
+  {
+    title: "Anchors",
+    subtitle: "View your anchor library.",
+    icon: Mountain,
+    path: "/anchors"
+  }];
+
 
   const reorientations = stats?.reorient_return_count ?? 0;
   const anchorsCreated = stats?.anchors_created ?? 0;
-  const lastActivityLabel = lastActivity
-    ? formatDistanceToNow(new Date(lastActivity), { addSuffix: true })
-    : "—";
+  const lastActivityLabel = lastActivity ?
+  formatDistanceToNow(new Date(lastActivity), { addSuffix: true }) :
+  "—";
 
   return (
     <div className="flex min-h-screen flex-col pb-20">
       <header className="flex items-center justify-between px-6 pt-8 pb-4 content-container">
         <div className="flex items-center gap-3">
           <Logo className="h-7 w-7" style={{ color: '#F8F7F2' }} />
-          <span className="text-text-heading" style={{ fontFamily: "'Fraunces', serif", fontSize: '26px', fontWeight: 600, letterSpacing: '-0.015em' }}>The Formation Arc™</span>
+          <span className="text-text-heading" style={{ fontFamily: "'Fraunces', serif", fontSize: '26px', fontWeight: 600, letterSpacing: '-0.015em' }}>The Formation Arc</span>
         </div>
         <button onClick={signOut} className="text-xs text-text-supporting hover:text-text-heading transition-colors">
           Sign out
@@ -112,12 +112,12 @@ const Index = () => {
       </header>
 
       <main className="flex-1 px-6 space-y-4 pt-4 content-container">
-        {cards.map((card) => (
-          <Card
-            key={card.path}
-            className="cursor-pointer transition-colors hover:border-primary/40"
-            onClick={() => navigate(card.path)}
-          >
+        {cards.map((card) =>
+        <Card
+          key={card.path}
+          className="cursor-pointer transition-colors hover:border-primary/40"
+          onClick={() => navigate(card.path)}>
+          
             <CardHeader className="flex-row items-center gap-4">
               <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-secondary">
                 <card.icon className="h-5 w-5 text-primary" />
@@ -128,7 +128,7 @@ const Index = () => {
               </div>
             </CardHeader>
           </Card>
-        ))}
+        )}
 
         <div className="pt-3">
           <Card className="border-none">
@@ -140,19 +140,19 @@ const Index = () => {
             <div className="px-5 pb-4 pt-3">
               <div className="flex justify-center gap-8">
                 {[
-                  { value: String(reorientations), label: "Returns" },
-                  { value: String(anchorsCreated), label: "Anchors" },
-                ].map((metric) => (
-                  <div key={metric.label} className="flex flex-col items-center gap-1.5">
+                { value: String(reorientations), label: "Returns" },
+                { value: String(anchorsCreated), label: "Anchors" }].
+                map((metric) =>
+                <div key={metric.label} className="flex flex-col items-center gap-1.5">
                     <div
-                      className="flex items-center justify-center rounded-full"
-                      style={{
-                        width: 60,
-                        height: 60,
-                        border: '1px solid rgba(51, 142, 127, 0.45)',
-                        background: 'rgba(51, 142, 127, 0.08)',
-                      }}
-                    >
+                    className="flex items-center justify-center rounded-full"
+                    style={{
+                      width: 60,
+                      height: 60,
+                      border: '1px solid rgba(51, 142, 127, 0.45)',
+                      background: 'rgba(51, 142, 127, 0.08)'
+                    }}>
+                    
                       <span className="text-xl font-medium tracking-tight text-text-heading">
                         {metric.value}
                       </span>
@@ -161,7 +161,7 @@ const Index = () => {
                       {metric.label}
                     </p>
                   </div>
-                ))}
+                )}
               </div>
               <p className="text-center text-xs mt-3 text-text-supporting">
                 Last active: {lastActivityLabel}
@@ -172,8 +172,8 @@ const Index = () => {
       </main>
 
       <BottomNav />
-    </div>
-  );
+    </div>);
+
 };
 
 export default Index;
