@@ -202,7 +202,7 @@ const DailyFormation = () => {
 
               <div className="pt-4 space-y-6">
                 <div className="text-center">
-                  <p className="text-sm text-text-body mb-1">You returned.</p>
+                  <p className="text-sm text-text-body mb-1">You have returned.</p>
                   <p className="text-sm text-text-heading font-medium" style={{ fontFamily: "'Fraunces', serif" }}>
                     You are steady enough to build.
                   </p>
