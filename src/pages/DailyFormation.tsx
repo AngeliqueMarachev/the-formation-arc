@@ -572,11 +572,11 @@ const DailyFormation = () => {
             Formation accumulates.
           </h1>
           <div className="space-y-4 leading-relaxed">
-            <p className="text-text-body">Today you:</p>
+            <p className="text-text-body text-base text-secondary-foreground">Today you:</p>
             <ul className="list-disc pl-5 space-y-1 text-text-body">
-              <li>practiced perception governance</li>
-              <li>reopened memory</li>
-              <li>strengthened steadiness</li>
+              <li>Practiced perception governance</li>
+              <li>Reopened memory</li>
+              <li>Strengthened steadiness</li>
             </ul>
             <p className="text-text-heading font-medium pt-2">
               Each return trains your nervous system to expect stability.
