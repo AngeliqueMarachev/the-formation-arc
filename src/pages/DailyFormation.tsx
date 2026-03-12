@@ -11,12 +11,12 @@ import BottomNav from "@/components/BottomNav";
 import AnchorRecall from "@/components/AnchorRecall";
 
 type Screen =
-  | "reorientation"
-  | "readiness"
-  | "anchor-choice"
-  | "daily-loop"
-  | "create-anchor"
-  | "completion";
+"reorientation" |
+"readiness" |
+"anchor-choice" |
+"daily-loop" |
+"create-anchor" |
+"completion";
 
 interface ReorientLines {
   line_1: string | null;
@@ -58,22 +58,22 @@ const DailyFormation = () => {
   useEffect(() => {
     if (!user) return;
     const fetchData = async () => {
-      const { data: templates } = await supabase
-        .from("reorient_templates")
-        .select("line_1, line_2, line_3, line_4, line_5, line_6")
-        .eq("user_id", user.id)
-        .order("created_at", { ascending: false })
-        .limit(1);
+      const { data: templates } = await supabase.
+      from("reorient_templates").
+      select("line_1, line_2, line_3, line_4, line_5, line_6").
+      eq("user_id", user.id).
+      order("created_at", { ascending: false }).
+      limit(1);
 
       if (templates && templates.length > 0) {
         setLines(templates[0]);
       }
 
-      const { data: anchorData } = await supabase
-        .from("anchor_entries")
-        .select("id, scene_text, anchor_phrase, session_count")
-        .eq("user_id", user.id)
-        .order("session_count", { ascending: true });
+      const { data: anchorData } = await supabase.
+      from("anchor_entries").
+      select("id, scene_text, anchor_phrase, session_count").
+      eq("user_id", user.id).
+      order("session_count", { ascending: true });
 
       if (anchorData) setAnchors(anchorData);
       setLoading(false);
@@ -85,10 +85,10 @@ const DailyFormation = () => {
     if (!user || anchors.length === 0) return;
     const anchor = anchors[currentAnchorIndex];
 
-    await supabase
-      .from("anchor_entries")
-      .update({ session_count: anchor.session_count + 1 })
-      .eq("id", anchor.id);
+    await supabase.
+    from("anchor_entries").
+    update({ session_count: anchor.session_count + 1 }).
+    eq("id", anchor.id);
 
     setScreen("completion");
   };
@@ -104,22 +104,22 @@ const DailyFormation = () => {
       meaning_conclusion: meaningConclusion.trim() || null,
       widened_meaning: widenedMeaning.trim() || null,
       anchor_phrase: anchorPhrase.trim(),
-      communion_awareness: communionAwareness.trim()
-        ? parseInt(communionAwareness) || null
-        : null,
-      where_is_god: whereIsGod.trim() || null,
+      communion_awareness: communionAwareness.trim() ?
+      parseInt(communionAwareness) || null :
+      null,
+      where_is_god: whereIsGod.trim() || null
     });
 
-    const { data: stats } = await supabase
-      .from("usage_stats")
-      .select("anchors_created")
-      .eq("user_id", user.id)
-      .single();
+    const { data: stats } = await supabase.
+    from("usage_stats").
+    select("anchors_created").
+    eq("user_id", user.id).
+    single();
 
-    await supabase
-      .from("usage_stats")
-      .update({ anchors_created: (stats?.anchors_created ?? 0) + 1 })
-      .eq("user_id", user.id);
+    await supabase.
+    from("usage_stats").
+    update({ anchors_created: (stats?.anchors_created ?? 0) + 1 }).
+    eq("user_id", user.id);
 
     setSaving(false);
     setScreen("completion");
@@ -129,8 +129,8 @@ const DailyFormation = () => {
     return (
       <div className="flex min-h-screen items-center justify-center text-text-supporting">
         Loading…
-      </div>
-    );
+      </div>);
+
   }
 
   // ── REORIENTATION ──
@@ -138,13 +138,13 @@ const DailyFormation = () => {
     const hasLines = lines && Object.values(lines).some((v) => v);
 
     const phases = [
-      { title: "LINE IN THE SAND™", lineIndex: 0 },
-      { title: "INTERRUPT THE LOOP", lineIndex: 1 },
-      { title: "ORIENTATION", lineIndex: 2 },
-      { title: "GROUNDING", lineIndex: 3 },
-      { title: "RESOURCE", lineIndex: 4 },
-      { title: "RETURN", lineIndex: 5 },
-    ];
+    { title: "LINE IN THE SAND™", lineIndex: 0 },
+    { title: "INTERRUPT THE LOOP", lineIndex: 1 },
+    { title: "ORIENTATION", lineIndex: 2 },
+    { title: "GROUNDING", lineIndex: 3 },
+    { title: "RESOURCE", lineIndex: 4 },
+    { title: "RETURN", lineIndex: 5 }];
+
 
     return (
       <div className="flex min-h-screen flex-col pb-20">
@@ -156,48 +156,48 @@ const DailyFormation = () => {
             Even when calm, you are rehearsing leadership.
           </p>
 
-          {hasLines ? (
-            <>
+          {hasLines ?
+          <>
               <p className="text-[10px] font-semibold tracking-widest text-primary/70 uppercase mb-1">
                 Reorientation Script
               </p>
               <p className="text-xs text-text-supporting mb-6">
-                Tap each step slowly.
+                Tap each step. Read it slowly.
               </p>
 
               <div className="space-y-6 mb-12">
                 {phases.map((phase) => {
-                  const line = Object.values(lines!)[phase.lineIndex];
-                  if (!line) return null;
+                const line = Object.values(lines!)[phase.lineIndex];
+                if (!line) return null;
 
-                  const isReturnPhase = phase.lineIndex === 5;
+                const isReturnPhase = phase.lineIndex === 5;
 
-                  return (
-                    <button
-                      key={phase.lineIndex}
-                      onClick={() => {
-                        setGlowingLine(phase.lineIndex);
-                        setTimeout(() => setGlowingLine((prev) => (prev === phase.lineIndex ? null : prev)), 800);
-                      }}
-                      className={`w-full text-left rounded-lg border p-5 transition-all duration-300 ${
-                        glowingLine === phase.lineIndex
-                          ? isReturnPhase
-                            ? "border-primary bg-primary/15 text-text-heading shadow-lg shadow-primary/20"
-                            : "border-primary/50 bg-primary/10 text-text-heading shadow-lg shadow-primary/10"
-                          : isReturnPhase
-                          ? "border-primary/40 bg-primary/8 text-text-heading"
-                          : "border-border/50 bg-card/50 text-text-body hover:border-primary/20"
-                      }`}
-                    >
+                return (
+                  <button
+                    key={phase.lineIndex}
+                    onClick={() => {
+                      setGlowingLine(phase.lineIndex);
+                      setTimeout(() => setGlowingLine((prev) => prev === phase.lineIndex ? null : prev), 800);
+                    }}
+                    className={`w-full text-left rounded-lg border p-5 transition-all duration-300 ${
+                    glowingLine === phase.lineIndex ?
+                    isReturnPhase ?
+                    "border-primary bg-primary/15 text-text-heading shadow-lg shadow-primary/20" :
+                    "border-primary/50 bg-primary/10 text-text-heading shadow-lg shadow-primary/10" :
+                    isReturnPhase ?
+                    "border-primary/40 bg-primary/8 text-text-heading" :
+                    "border-border/50 bg-card/50 text-text-body hover:border-primary/20"}`
+                    }>
+                    
                       <p className="text-[10px] font-semibold tracking-widest text-primary/70 uppercase mb-2">
                         {phase.title}
                       </p>
                       <p className="text-sm leading-relaxed text-text-heading">
                         {line}
                       </p>
-                    </button>
-                  );
-                })}
+                    </button>);
+
+              })}
               </div>
 
               <div className="pt-4 space-y-6">
@@ -208,33 +208,33 @@ const DailyFormation = () => {
                   </p>
                 </div>
                 <Button
-                  className="w-full"
-                  size="lg"
-                  onClick={() => setScreen("readiness")}
-                >
+                className="w-full"
+                size="lg"
+                onClick={() => setScreen("readiness")}>
+                
                   Begin Anchor
                 </Button>
               </div>
-            </>
-          ) : (
-            <>
+            </> :
+
+          <>
               <p className="text-supporting italic mb-10">
                 No saved reorientation yet. Complete a reorientation in the
                 Activated tab first.
               </p>
               <Button
-                className="w-full"
-                size="lg"
-                onClick={() => setScreen("readiness")}
-              >
+              className="w-full"
+              size="lg"
+              onClick={() => setScreen("readiness")}>
+              
                 Continue
               </Button>
             </>
-          )}
+          }
         </main>
         <BottomNav />
-      </div>
-    );
+      </div>);
+
   }
 
   // ── READINESS GATE ──
@@ -258,24 +258,24 @@ const DailyFormation = () => {
               size="lg"
               onClick={() => navigate("/activated")}
               style={{
-                boxShadow: "0 0 14px rgba(221, 255, 44, 0.25)",
-              }}
-            >
+                boxShadow: "0 0 14px rgba(221, 255, 44, 0.25)"
+              }}>
+              
               Return to Reorientation
             </Button>
             <Button
               className="w-full"
               size="lg"
               variant="secondary"
-              onClick={() => setScreen("anchor-choice")}
-            >
+              onClick={() => setScreen("anchor-choice")}>
+              
               I am steady enough
             </Button>
           </div>
         </main>
         <BottomNav />
-      </div>
-    );
+      </div>);
+
   }
 
   // ── ANCHOR LAYER CHOICE ──
@@ -305,28 +305,28 @@ const DailyFormation = () => {
           </div>
 
           <div className="space-y-3">
-            {anchors.length > 0 && (
-              <Button
-                className="w-full"
-                size="lg"
-                onClick={() => setScreen("daily-loop")}
-              >
+            {anchors.length > 0 &&
+            <Button
+              className="w-full"
+              size="lg"
+              onClick={() => setScreen("daily-loop")}>
+              
                 Daily Anchor Loop
               </Button>
-            )}
+            }
             <Button
               className="w-full"
               size="lg"
               variant={anchors.length > 0 ? "secondary" : "default"}
-              onClick={() => setScreen("create-anchor")}
-            >
+              onClick={() => setScreen("create-anchor")}>
+              
               Create New Anchor
             </Button>
           </div>
         </main>
         <BottomNav />
-      </div>
-    );
+      </div>);
+
   }
 
   // ── DAILY ANCHOR LOOP ──
@@ -369,8 +369,8 @@ const DailyFormation = () => {
           </Button>
         </main>
         <BottomNav />
-      </div>
-    );
+      </div>);
+
   }
 
   // ── CREATE NEW ANCHOR ──
@@ -386,16 +386,16 @@ const DailyFormation = () => {
             emotionTags={emotionTags}
             onEmotionTagsChange={setEmotionTags}
             onContinue={() => setCreateStep(1)}
-            totalSteps={totalSteps}
-          />
+            totalSteps={totalSteps} />
+          
           <BottomNav />
-        </>
-      );
+        </>);
+
     }
 
     const canProceed = () => {
       if (createStep === 1)
-        return meaningConclusion.trim().length > 0 && widenedMeaning.trim().length > 0;
+      return meaningConclusion.trim().length > 0 && widenedMeaning.trim().length > 0;
       if (createStep === 2) return anchorPhrase.trim().length > 0;
       return true;
     };
@@ -415,15 +415,15 @@ const DailyFormation = () => {
             Step {createStep + 1} of {totalSteps}
           </p>
           <Progress
-            value={((createStep + 1) / totalSteps) * 100}
-            className="h-1.5 mb-6"
-          />
+            value={(createStep + 1) / totalSteps * 100}
+            className="h-1.5 mb-6" />
+          
         </header>
 
         <main className="flex-1 px-6 pt-2 content-container">
           {/* Step 1: Meaning */}
-          {createStep === 1 && (
-            <div className="space-y-4">
+          {createStep === 1 &&
+          <div className="space-y-4">
               <h2 className="font-semibold tracking-tight">
                 Meaning conclusion.
               </h2>
@@ -431,28 +431,28 @@ const DailyFormation = () => {
                 What did your nervous system conclude from this experience?
               </p>
               <Textarea
-                placeholder="e.g. I am not safe. I am alone."
-                value={meaningConclusion}
-                onChange={(e) => setMeaningConclusion(e.target.value)}
-                className="min-h-[80px]"
-              />
+              placeholder="e.g. I am not safe. I am alone."
+              value={meaningConclusion}
+              onChange={(e) => setMeaningConclusion(e.target.value)}
+              className="min-h-[80px]" />
+            
 
               <Label className="block pt-2">Widened meaning</Label>
               <p className="text-supporting leading-relaxed">
                 What is also true — a fuller reading of that moment?
               </p>
               <Textarea
-                placeholder="e.g. I was not as alone as I believed."
-                value={widenedMeaning}
-                onChange={(e) => setWidenedMeaning(e.target.value)}
-                className="min-h-[80px]"
-              />
+              placeholder="e.g. I was not as alone as I believed."
+              value={widenedMeaning}
+              onChange={(e) => setWidenedMeaning(e.target.value)}
+              className="min-h-[80px]" />
+            
             </div>
-          )}
+          }
 
           {/* Step 2: Anchor Phrase */}
-          {createStep === 2 && (
-            <div className="space-y-4">
+          {createStep === 2 &&
+          <div className="space-y-4">
               <h2 className="font-semibold tracking-tight">
                 Anchor Phrase
               </h2>
@@ -487,18 +487,18 @@ const DailyFormation = () => {
                   <p>I felt abandoned — but I was still held.</p>
                 </div>
                 <Textarea
-                  placeholder="Write your anchor phrase…"
-                  value={anchorPhrase}
-                  onChange={(e) => setAnchorPhrase(e.target.value)}
-                  className="min-h-[80px]"
-                />
+                placeholder="Write your anchor phrase…"
+                value={anchorPhrase}
+                onChange={(e) => setAnchorPhrase(e.target.value)}
+                className="min-h-[80px]" />
+              
               </div>
             </div>
-          )}
+          }
 
           {/* Step 3: Optional fields */}
-          {createStep === 3 && (
-            <div className="space-y-4">
+          {createStep === 3 &&
+          <div className="space-y-4">
               <h2 className="font-semibold tracking-tight">
                 Optional reflection
               </h2>
@@ -509,11 +509,11 @@ const DailyFormation = () => {
               <div className="space-y-2">
                 <Label>Where was God in this scene?</Label>
                 <Textarea
-                  placeholder="Optional…"
-                  value={whereIsGod}
-                  onChange={(e) => setWhereIsGod(e.target.value)}
-                  className="min-h-[80px]"
-                />
+                placeholder="Optional…"
+                value={whereIsGod}
+                onChange={(e) => setWhereIsGod(e.target.value)}
+                className="min-h-[80px]" />
+              
               </div>
 
               <div className="space-y-2">
@@ -523,16 +523,16 @@ const DailyFormation = () => {
                   scene?
                 </p>
                 <Input
-                  type="number"
-                  min={1}
-                  max={10}
-                  placeholder="1–10"
-                  value={communionAwareness}
-                  onChange={(e) => setCommunionAwareness(e.target.value)}
-                />
+                type="number"
+                min={1}
+                max={10}
+                placeholder="1–10"
+                value={communionAwareness}
+                onChange={(e) => setCommunionAwareness(e.target.value)} />
+              
               </div>
             </div>
-          )}
+          }
         </main>
 
         <div className="px-6 pb-4 pt-2 space-y-2 content-container">
@@ -540,27 +540,27 @@ const DailyFormation = () => {
             className="w-full"
             size="lg"
             variant="secondary"
-            onClick={() => setCreateStep(createStep - 1)}
-          >
+            onClick={() => setCreateStep(createStep - 1)}>
+            
             Back
           </Button>
           <Button
             className="w-full"
             size="lg"
             disabled={!canProceed() || saving}
-            onClick={handleNext}
-          >
-            {saving
-              ? "Saving…"
-              : createStep === totalSteps - 1
-              ? "Save Anchor"
-              : "Continue"}
+            onClick={handleNext}>
+            
+            {saving ?
+            "Saving…" :
+            createStep === totalSteps - 1 ?
+            "Save Anchor" :
+            "Continue"}
           </Button>
         </div>
 
         <BottomNav />
-      </div>
-    );
+      </div>);
+
   }
 
   // ── COMPLETION ──
@@ -587,14 +587,14 @@ const DailyFormation = () => {
           <Button
             className="mt-10 w-full"
             size="lg"
-            onClick={() => navigate("/")}
-          >
+            onClick={() => navigate("/")}>
+            
             Return Home
           </Button>
         </main>
         <BottomNav />
-      </div>
-    );
+      </div>);
+
   }
 
   return null;
