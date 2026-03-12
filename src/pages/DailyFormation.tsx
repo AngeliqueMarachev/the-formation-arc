@@ -294,9 +294,9 @@ const DailyFormation = () => {
             </p>
             <p className="text-text-body">In that window:</p>
             <ul className="list-disc pl-5 space-y-1 text-text-body">
-              <li>Meaning can widen</li>
-              <li>Prediction can update</li>
-              <li>Identity detaches from fear</li>
+              <li className="text-lg">Meaning can widen</li>
+              <li className="text-lg">Prediction can update</li>
+              <li className="text-lg">Identity detaches from fear</li>
             </ul>
             <p className="text-text-body">We are not rewriting the past.</p>
             <p className="text-text-heading font-medium">
