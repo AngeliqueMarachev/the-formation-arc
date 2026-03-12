@@ -343,7 +343,7 @@ const DailyFormation = () => {
             Daily Anchor Loop
           </h1>
 
-          <div className="rounded-lg border bg-card p-5 mb-6 border-primary">
+          <div className="rounded-lg border bg-card p-5 mb-6 border-secondary">
             <p className="text-xs text-text-supporting uppercase tracking-wider mb-2 text-primary">
               Scene
             </p>
