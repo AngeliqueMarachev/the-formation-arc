@@ -159,7 +159,7 @@ const DailyFormation = () => {
           {hasLines ?
           <>
               <p className="text-[10px] font-semibold tracking-widest text-primary/70 uppercase mb-1">
-                Reorientation Script
+                Reorientation Engine 
               </p>
               <p className="text-xs text-text-supporting mb-6">
                 Tap each step. Read it slowly.
