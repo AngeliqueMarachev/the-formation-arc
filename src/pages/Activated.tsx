@@ -10,7 +10,7 @@ import BottomNav from "@/components/BottomNav";
 
 const PHASES = [
 {
-  title: "Line In The Sand™",
+  title: "Line In The Sand",
   purpose: "Interrupt escalation. Establish internal authority.",
   options: [
   "Breathe. Be calm.",
@@ -20,7 +20,7 @@ const PHASES = [
 
 },
 {
-  title: "Expose The Mechanism™",
+  title: "Expose The Mechanism",
   purpose: "Name what is happening.",
   options: [
   "My nervous system has shifted into hyper-vigilance.",
@@ -30,7 +30,7 @@ const PHASES = [
 
 },
 {
-  title: "Untangle Time™",
+  title: "Untangle Time",
   purpose: "Separate past learning from present reality.",
   options: [
   "The season that trained this response is in the past.",
@@ -40,7 +40,7 @@ const PHASES = [
 
 },
 {
-  title: "Choose Your Agreement™",
+  title: "Choose Your Agreement",
   purpose: "Consciously align with truth rather than fear.",
   options: [
   "I recognize this as a stress response and align with God instead of fear.",
@@ -50,7 +50,7 @@ const PHASES = [
 
 },
 {
-  title: "Shepherd Your Soul™",
+  title: "Shepherd Your Soul",
   purpose: "Lead yourself with gentleness.",
   options: [
   "You're not broken. Your body is protecting you.",
@@ -60,7 +60,7 @@ const PHASES = [
 
 },
 {
-  title: "Occupy Your Identity™",
+  title: "Occupy Your Identity",
   purpose: "Reinforce identity beyond state.",
   options: [
   "I am a child of God.",
