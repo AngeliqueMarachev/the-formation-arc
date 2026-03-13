@@ -285,7 +285,7 @@ const DailyFormation = () => {
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col justify-center px-6 py-12 content-container">
           <h1 className="tracking-tight mb-6">
-            The Anchor Layer™
+            The Anchor Layer
           </h1>
           <div className="space-y-4 leading-relaxed mb-10">
             <p className="text-text-body">Anchors train the nervous system to expect steadiness.</p>
