@@ -112,7 +112,7 @@ const AnchorRecall = ({
         {/* Header */}
         <div>
           <h1 className="tracking-tight">
-            Recall a Scene
+            Recall a Scene.
             {selectedScene && selectedScene !== "Something else" && (
               <span className="block text-lg font-normal text-text-supporting mt-1">
                 {selectedScene}
@@ -122,7 +122,7 @@ const AnchorRecall = ({
           <p className="text-supporting leading-relaxed mt-3">
             Describe a memory that still carries weight.
             <br />
-            It does not need to be dramatic — just real.
+            It does not need to be dramatic, just sincere.
           </p>
         </div>
 
