@@ -501,7 +501,7 @@ const DailyFormation = () => {
           {createStep === 3 &&
           <div className="space-y-4">
               <h2 className="font-semibold tracking-tight">
-                Optional reflection
+                Optional reflection.
               </h2>
               <p className="text-supporting leading-relaxed">
                 These fields are not required. Skip if you prefer.
