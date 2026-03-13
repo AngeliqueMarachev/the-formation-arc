@@ -440,13 +440,13 @@ const DailyFormation = () => {
 
               <Label className="block pt-2">Widened meaning</Label>
               <p className="text-supporting leading-relaxed">
-                What is also true — a fuller reading of that moment?
+                Was the conclusion I formed the only possible interpretation?
+
               </p>
-              <Textarea
-              placeholder="e.g. I was not as alone as I believed."
-              value={widenedMeaning}
-              onChange={(e) => setWidenedMeaning(e.target.value)}
-              className="min-h-[80px]" />
+              <Textarea placeholder="e.g. I was not as alone as I believed."
+            value={widenedMeaning}
+            onChange={(e) => setWidenedMeaning(e.target.value)}
+            className="min-h-[80px]" />
             
             </div>
           }
