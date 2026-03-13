@@ -204,8 +204,8 @@ const DailyFormation = () => {
               <div className="pt-4 space-y-6">
                 <div className="text-center">
                   <p className="text-text-body mb-1 font-serif text-xl font-bold">You have returned</p>
-                  <p className="text-sm text-text-heading font-medium" style={{ fontFamily: "'Fraunces', serif" }}>
-                    You are steady enough to build.
+                  <p className="text-sm text-text-heading font-sans font-normal" style={{ fontFamily: "'Fraunces', serif" }}>
+                    You are steady enough to build
                   </p>
                 </div>
                 <Button
