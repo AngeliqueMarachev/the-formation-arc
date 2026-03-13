@@ -217,12 +217,12 @@ const Activated = () => {
     };
 
     const stepLabels = [
-    "LINE IN THE SAND™",
-    "EXPOSE THE MECHANISM™",
-    "UNTANGLE TIME™",
-    "CHOOSE YOUR AGREEMENT™",
-    "SHEPHERD YOUR SOUL™",
-    "OCCUPY YOUR IDENTITY™"];
+    "LINE IN THE SAND",
+    "EXPOSE THE MECHANISM",
+    "UNTANGLE TIME",
+    "CHOOSE YOUR AGREEMENT",
+    "SHEPHERD YOUR SOUL",
+    "OCCUPY YOUR IDENTITY"];
 
 
     return (
