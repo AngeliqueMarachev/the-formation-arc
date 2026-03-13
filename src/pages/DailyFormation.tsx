@@ -455,7 +455,7 @@ const DailyFormation = () => {
           {createStep === 2 &&
           <div className="space-y-4">
               <h2 className="font-semibold tracking-tight">
-                Anchor Phrase
+                Anchor Phrase.
               </h2>
               <div className="space-y-3 leading-relaxed">
                 <p className="text-text-body">Your brain remembers stories.</p>
