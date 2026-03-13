@@ -20,7 +20,7 @@ const Auth = () => {
       const { error } = await supabase.auth.signUp({
         email,
         password,
-        options: { emailRedirectTo: window.location.origin },
+        options: { emailRedirectTo: window.location.origin }
       });
       if (error) {
         toast({ title: "Error", description: error.message, variant: "destructive" });
@@ -41,13 +41,13 @@ const Auth = () => {
       <div className="w-full max-w-sm space-y-10">
         <div className="text-center space-y-6">
           <h1 className="text-4xl font-semibold tracking-tight">
-            The Formation Arc™
+            The Formation Arc
           </h1>
           <div className="space-y-1.5 text-supporting italic leading-relaxed">
             <p>Fear conditions perception.</p>
             <p>Perception shapes chemistry.</p>
-            <p>Chemistry reinforces expectation.</p>
-            <p className="text-primary font-medium not-italic">Return reshapes expectation.</p>
+            <p className="text-base">Chemistry reinforces expectation.</p>
+            <p className="text-primary not-italic font-light">Return reshapes expectation.</p>
           </div>
         </div>
 
@@ -61,8 +61,8 @@ const Auth = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
               placeholder="you@example.com"
-              className="bg-secondary"
-            />
+              className="bg-secondary" />
+            
           </div>
           <div className="space-y-2">
             <Label htmlFor="password">Password</Label>
@@ -74,8 +74,8 @@ const Auth = () => {
               required
               minLength={6}
               placeholder="••••••••"
-              className="bg-secondary"
-            />
+              className="bg-secondary" />
+            
           </div>
           <Button type="submit" className="w-full" disabled={loading}>
             {loading ? "..." : isSignUp ? "Create Account" : "Sign In"}
@@ -87,14 +87,14 @@ const Auth = () => {
           <button
             type="button"
             onClick={() => setIsSignUp(!isSignUp)}
-            className="text-primary underline-offset-4 hover:underline"
-          >
+            className="text-primary underline-offset-4 hover:underline">
+            
             {isSignUp ? "Sign in" : "Sign up"}
           </button>
         </p>
       </div>
-    </div>
-  );
+    </div>);
+
 };
 
 export default Auth;
