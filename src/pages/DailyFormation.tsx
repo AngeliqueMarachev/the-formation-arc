@@ -138,12 +138,13 @@ const DailyFormation = () => {
     const hasLines = lines && Object.values(lines).some((v) => v);
 
     const phases = [
-    { title: "LINE IN THE SAND™", lineIndex: 0 },
-    { title: "INTERRUPT THE LOOP", lineIndex: 1 },
-    { title: "ORIENTATION", lineIndex: 2 },
-    { title: "GROUNDING", lineIndex: 3 },
-    { title: "RESOURCE", lineIndex: 4 },
-    { title: "RETURN", lineIndex: 5 }];
+      { title: "LINE IN THE SAND", lineIndex: 0 },
+      { title: "EXPOSE THE MECHANISM", lineIndex: 1 },
+      { title: "UNTANGLE TIME", lineIndex: 2 },
+      { title: "CHOOSE YOUR AGREEMENT", lineIndex: 3 },
+      { title: "SHEPHERD YOUR SOUL", lineIndex: 4 },
+      { title: "OCCUPY YOUR IDENTITY", lineIndex: 5 }
+    ];
 
 
     return (
