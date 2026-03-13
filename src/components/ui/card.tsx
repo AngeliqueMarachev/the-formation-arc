@@ -5,10 +5,17 @@ import { cn } from "@/lib/utils";
 const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(({ className, ...props }, ref) => (
   <div 
     ref={ref} 
-    className={cn("animate-fade-in rounded-lg border text-card-foreground shadow-sm", className)}
+    className={cn(
+      "animate-fade-in rounded-lg border text-card-foreground shadow-sm",
+      "transition-all duration-200 ease-out",
+      "hover:scale-[1.02] active:scale-[0.98]",
+      "cursor-pointer",
+      className
+    )}
     style={{ 
-      backgroundColor: "rgba(248, 247, 242, 0.05)",
-      backdropFilter: "blur(8px)"
+      background: "linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(0, 0, 0, 0.08) 100%), rgba(248, 247, 242, 0.05)",
+      backdropFilter: "blur(8px)",
+      boxShadow: "0 4px 24px -6px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1)"
     }}
     {...props} 
   />

@@ -101,23 +101,23 @@ const Index = () => {
 
   return (
     <div className="flex min-h-screen flex-col pb-20">
-      <header className="flex items-center justify-between px-6 pt-10 pb-4 content-container">
+      <header className="flex items-center justify-between px-6 pt-12 pb-8 content-container">
         <span className="text-text-heading" style={{ fontFamily: "'Fraunces', serif", fontSize: '26px', fontWeight: 600, letterSpacing: '-0.015em' }}>The Formation Arc</span>
         <button onClick={signOut} className="text-xs text-text-supporting hover:text-text-heading transition-colors border-primary text-primary">
           Sign out
         </button>
       </header>
 
-      <main className="flex-1 px-6 space-y-4 pt-4 content-container">
+      <main className="flex-1 px-6 space-y-5 content-container">
         {cards.map((card) =>
         <Card
           key={card.path}
-          className="cursor-pointer transition-colors hover:border-primary/40"
+          className="hover:border-primary/40"
           onClick={() => navigate(card.path)}>
           
-            <CardHeader className="flex-row items-center gap-4">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-secondary">
-                <card.icon className="h-5 w-5 text-primary" />
+            <CardHeader className="flex-row items-center gap-5">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-secondary">
+                <card.icon className="h-7 w-7 text-primary" />
               </div>
               <div>
                 <CardTitle className="text-lg">{card.title}</CardTitle>
