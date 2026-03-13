@@ -101,13 +101,10 @@ const Index = () => {
 
   return (
     <div className="flex min-h-screen flex-col pb-20">
-      <header className="flex items-center justify-between px-6 pt-8 pb-4 content-container">
-        <div className="flex items-center gap-3">
-          <Logo className="h-7 w-7" style={{ color: '#F8F7F2' }} />
-          <span className="text-text-heading" style={{ fontFamily: "'Fraunces', serif", fontSize: '26px', fontWeight: 600, letterSpacing: '-0.015em' }}>The Formation Arc</span>
-        </div>
+      <header className="flex items-center justify-between px-6 pt-10 pb-4 content-container">
+        <span className="text-text-heading" style={{ fontFamily: "'Fraunces', serif", fontSize: '26px', fontWeight: 600, letterSpacing: '-0.015em' }}>The Formation Arc</span>
         <button onClick={signOut} className="text-xs text-text-supporting hover:text-text-heading transition-colors border-primary text-primary">
-          Sign out   
+          Sign out
         </button>
       </header>
 
