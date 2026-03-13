@@ -429,7 +429,7 @@ const DailyFormation = () => {
                 Meaning conclusion.
               </h2>
               <p className="text-supporting leading-relaxed">
-                What did your nervous system conclude from this experience?
+                What did you conclude from this experience?
               </p>
               <Textarea
               placeholder="e.g. I am not safe. I am alone."
