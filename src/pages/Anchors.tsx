@@ -35,27 +35,27 @@ const Anchors = () => {
 
   useEffect(() => {
     if (!user) return;
-    supabase
-      .from("anchor_entries")
-      .select("*")
-      .eq("user_id", user.id)
-      .order("created_at", { ascending: false })
-      .then(({ data }) => {
-        setAnchors((data as AnchorEntry[]) ?? []);
-        setLoading(false);
-      });
+    supabase.
+    from("anchor_entries").
+    select("*").
+    eq("user_id", user.id).
+    order("created_at", { ascending: false }).
+    then(({ data }) => {
+      setAnchors(data as AnchorEntry[] ?? []);
+      setLoading(false);
+    });
   }, [user]);
 
   const handleRecallDone = async () => {
     if (!selected || !user) return;
-    await supabase
-      .from("anchor_entries")
-      .update({ session_count: selected.session_count + 1 })
-      .eq("id", selected.id);
+    await supabase.
+    from("anchor_entries").
+    update({ session_count: selected.session_count + 1 }).
+    eq("id", selected.id);
     setAnchors((prev) =>
-      prev.map((a) =>
-        a.id === selected.id ? { ...a, session_count: a.session_count + 1 } : a
-      )
+    prev.map((a) =>
+    a.id === selected.id ? { ...a, session_count: a.session_count + 1 } : a
+    )
     );
     setSelected(null);
     setView("list");
@@ -77,90 +77,90 @@ const Anchors = () => {
           </Button>
         </main>
         <BottomNav />
-      </div>
-    );
+      </div>);
+
   }
 
   // ── Detail View ──
   if (view === "detail" && selected) {
-    const tags: string[] = Array.isArray(selected.emotion_tags)
-      ? selected.emotion_tags
-      : [];
+    const tags: string[] = Array.isArray(selected.emotion_tags) ?
+    selected.emotion_tags :
+    [];
 
     return (
       <div className="flex min-h-screen flex-col pb-20">
         <header className="px-6 pt-8 pb-2 content-container">
           <button
-            onClick={() => { setView("list"); setSelected(null); }}
-            className="text-sm text-text-supporting mb-4 hover:text-text-heading transition-colors"
-          >
+            onClick={() => {setView("list");setSelected(null);}}
+            className="text-sm text-text-supporting mb-4 hover:text-text-heading transition-colors">
+            
             ← Back
           </button>
-          <h1 className="tracking-tight font-serif">Anchor</h1>
+          <h1 className="tracking-tight font-serif">Anchor.</h1>
         </header>
 
         <ScrollArea className="flex-1 px-6">
           <div className="space-y-8 pb-8 content-container">
             <section className="space-y-2">
-              <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting">Scene</h2>
+              <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting text-primary font-sans">Scene</h2>
               <p className="text-sm leading-relaxed text-text-heading whitespace-pre-line">{selected.scene_text}</p>
             </section>
 
-            {tags.length > 0 && (
-              <section className="space-y-2">
-                <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting">Emotional Layer</h2>
+            {tags.length > 0 &&
+            <section className="space-y-2">
+                <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting text-primary font-sans">Emotional Layer</h2>
                 <div className="flex flex-wrap gap-2">
-                  {tags.map((t) => (
-                    <Badge key={t} variant="secondary" className="text-xs">{t}</Badge>
-                  ))}
+                  {tags.map((t) =>
+                <Badge key={t} variant="secondary" className="text-xs">{t}</Badge>
+                )}
                 </div>
               </section>
-            )}
+            }
 
-            {selected.meaning_conclusion && (
-              <section className="space-y-2">
-                <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting">Original Meaning</h2>
+            {selected.meaning_conclusion &&
+            <section className="space-y-2">
+                <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting font-sans text-primary">Original Meaning</h2>
                 <p className="text-sm leading-relaxed text-text-heading">{selected.meaning_conclusion}</p>
               </section>
-            )}
+            }
 
-            {selected.widened_meaning && (
-              <section className="space-y-2">
-                <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting">Widened Meaning</h2>
+            {selected.widened_meaning &&
+            <section className="space-y-2">
+                <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting text-primary font-sans">Widened Meaning</h2>
                 <p className="text-sm leading-relaxed text-text-heading">{selected.widened_meaning}</p>
               </section>
-            )}
+            }
 
             <section className="space-y-2">
-              <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting">Anchor Phrase</h2>
+              <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting text-primary font-sans">Anchor Phrase</h2>
               <p className="font-serif text-lg italic text-text-heading">"{selected.anchor_phrase}"</p>
             </section>
 
-            {selected.communion_awareness !== null && selected.communion_awareness !== undefined && (
-              <section className="space-y-2">
+            {selected.communion_awareness !== null && selected.communion_awareness !== undefined &&
+            <section className="space-y-2">
                 <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting">Communion Awareness</h2>
                 <p className="text-sm text-text-heading">{selected.communion_awareness} / 10</p>
               </section>
-            )}
+            }
 
-            {selected.where_is_god && (
-              <section className="space-y-2">
+            {selected.where_is_god &&
+            <section className="space-y-2">
                 <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting">Where Is God</h2>
                 <p className="text-sm leading-relaxed text-text-heading">{selected.where_is_god}</p>
               </section>
-            )}
+            }
 
             <Button
               onClick={() => setView("recall-prompt")}
-              className="w-full"
-            >
+              className="w-full">
+              
               Recall This Anchor
             </Button>
           </div>
         </ScrollArea>
         <BottomNav />
-      </div>
-    );
+      </div>);
+
   }
 
   // ── List View ──
@@ -175,8 +175,8 @@ const Anchors = () => {
         </p>
       </header>
 
-      {isEmpty ? (
-        <main className="flex flex-1 flex-col items-center justify-center px-6 text-center space-y-4 content-container">
+      {isEmpty ?
+      <main className="flex flex-1 flex-col items-center justify-center px-6 text-center space-y-4 content-container">
           <div className="flex h-16 w-16 items-center justify-center rounded-full bg-secondary">
             <Anchor className="h-8 w-8 text-primary" />
           </div>
@@ -185,21 +185,21 @@ const Anchors = () => {
             Stored scenes and phrases that stabilize perception.{"\n"}Create your first Anchor inside Daily Formation.
           </p>
           <Button onClick={() => navigate("/daily-formation")}>Create Anchor</Button>
-        </main>
-      ) : (
-        <ScrollArea className="flex-1 px-6">
+        </main> :
+
+      <ScrollArea className="flex-1 px-6">
           <div className="space-y-4 pb-4 content-container">
-            {anchors.map((anchor) => (
-              <Card
-                key={anchor.id}
-                className="cursor-pointer transition-colors hover:bg-card/80"
-                onClick={() => { setSelected(anchor); setView("detail"); }}
-              >
+            {anchors.map((anchor) =>
+          <Card
+            key={anchor.id}
+            className="cursor-pointer transition-colors hover:bg-card/80"
+            onClick={() => {setSelected(anchor);setView("detail");}}>
+            
                 <CardContent className="p-5 space-y-3">
                   <p className="text-sm leading-relaxed text-text-heading">
-                    {anchor.scene_text.length > 120
-                      ? anchor.scene_text.slice(0, 120) + "…"
-                      : anchor.scene_text}
+                    {anchor.scene_text.length > 120 ?
+                anchor.scene_text.slice(0, 120) + "…" :
+                anchor.scene_text}
                   </p>
                   <p className="font-serif text-base italic text-text-body">
                     "{anchor.anchor_phrase}"
@@ -209,14 +209,14 @@ const Anchors = () => {
                   </p>
                 </CardContent>
               </Card>
-            ))}
+          )}
           </div>
         </ScrollArea>
-      )}
+      }
 
       <BottomNav />
-    </div>
-  );
+    </div>);
+
 };
 
 export default Anchors;
