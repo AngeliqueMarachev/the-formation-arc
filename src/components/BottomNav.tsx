@@ -1,11 +1,12 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { Heart, CloudSnow, AudioLines } from "lucide-react";
+import { Heart, CloudSnow, AudioLines, Mountain } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const tabs = [
   { label: "Home", icon: Heart, path: "/" },
   { label: "Activated", icon: CloudSnow, path: "/activated" },
   { label: "Daily Formation", icon: AudioLines, path: "/daily-formation" },
+  { label: "Anchors", icon: Mountain, path: "/anchors" },
 ];
 
 const BottomNav = () => {
