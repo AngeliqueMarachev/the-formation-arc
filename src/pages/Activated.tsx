@@ -394,7 +394,7 @@ Let each one interrupt the loop.
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col justify-center px-6 py-12 content-container">
           <h1 className="tracking-tight mb-8">
-            Your Governance Declaration™
+            Your Governance Declaration
           </h1>
           <div className="space-y-4 leading-relaxed">
             <p className="text-text-body">
