@@ -357,30 +357,37 @@ Let each one interrupt the loop.
           </h1>
           <div className="space-y-4 leading-relaxed">
             <p className="text-text-body">
-              Fear accelerates perception.<br />
-              It compresses time.<br />
-              It predicts threat.<br />
-              It prepares your body for survival.
+              Fear can accelerate perception.<br />
+             Your mind begins predicting danger.<br />
+              Your body prepares for survival.<br />
+              This can feel frightening, especially when it appears suddenly.
             </p>
             <p className="text-text-body">
-              This is not spiritual failure.<br />
-              It is learned prediction.
+              But what you are experiencing is often a learned protection pattern, 
+              not a present threat.
             </p>
             <p className="text-text-body">You are not here to calm your body.</p>
             <p className="text-text-heading font-medium">
-              You are here to retrain perception.
+              You are here to retrain how your brain interprets these moments.
             </p>
             <p className="text-text-body">
-              Each return interrupts reinforcement<br />
-              and strengthens internal authority.
+              Each time you move through this sequence you:<br />
+              interrupt reinforcement; <br> />
+              update prediction; </br> />
+             strengthen internal authority; </br> />
+            stablize your identity over time.
             </p>
+          <p className="text-text-body">
+            You do not need to rush.</p>
+        <p className="text-text-body">
+            Just begin.</p>
           </div>
           <Button
             className="mt-10 w-full"
             size="lg"
             onClick={() => setScreen("phase")}>
             
-            Begin
+            Begin Reorientation
           </Button>
         </main>
         <BottomNav />
