@@ -47,7 +47,7 @@ const Auth = () => {
             <p>Fear conditions perception.</p>
             <p>Perception shapes chemistry.</p>
             <p className="text-base">Chemistry reinforces expectation.</p>
-            <p className="text-primary not-italic font-light">Return reshapes expectation.</p>
+            <p className="text-primary not-italic font-light">Restore identity.    </p>
           </div>
         </div>
 
