@@ -590,7 +590,7 @@ const DailyFormation = () => {
             size="lg"
             onClick={() => navigate("/")}>
             
-            Return Home
+            Return home
           </Button>
         </main>
         <BottomNav />
