@@ -232,8 +232,8 @@ const Activated = () => {
             Your Reorientation.
           </h1>
           <p className="text-supporting leading-relaxed mb-10">
-            Read each line slowly.
-Let each one interrupt the loop.
+            Read each line slowly.<br />
+Let each statement interrupt the fear loop and reorient you to steadiness.<br> 
           
           
           </p>
