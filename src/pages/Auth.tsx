@@ -42,7 +42,7 @@ const Auth = () => {
         <div className="text-center space-y-6">
           <h1 className="text-4xl font-semibold tracking-tight">The Formation Arc</h1>
           <div className="space-y-1.5 text-supporting italic leading-relaxed">
-            <p className="text-base">Overcome fear.</p>
+            <p className="text-primary not-italic font-light">Overcome Fear.</p>
             <p className="text-primary not-italic font-light">Restore identity.</p>
             <p className="text-base">A practice for retraining fear and strengthening stability.</p>
           </div>
