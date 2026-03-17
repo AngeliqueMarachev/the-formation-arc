@@ -4,8 +4,8 @@ import { cn } from "@/lib/utils";
 
 const tabs = [
   { label: "Home", icon: Heart, path: "/" },
-  { label: "Activated", icon: CloudSnow, path: "/activated" },
-  { label: "Daily Formation", icon: AudioLines, path: "/daily-formation" },
+  { label: "Reorient", icon: CloudSnow, path: "/activated" },
+  { label: "Formation", icon: AudioLines, path: "/daily-formation" },
   { label: "Anchors", icon: Mountain, path: "/anchors" },
 ];
 
