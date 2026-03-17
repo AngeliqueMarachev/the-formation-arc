@@ -9,67 +9,67 @@ import { Progress } from "@/components/ui/progress";
 import BottomNav from "@/components/BottomNav";
 
 const PHASES = [
-  {
-    title: "Line In The Sand",
-    purpose: "Interrupt escalation. Establish internal authority.",
-    options: [
-      "Breathe. Be calm.",
-      "I speak peace to you, oh my soul.",
-      "Be still, of whom shall I be afraid?",
-      "Gently now, you're okay.",
-    ],
-  },
-  {
-    title: "Expose The Mechanism",
-    purpose: "Name what is happening.",
-    options: [
-      "My nervous system has shifted into hyper-vigilance.",
-      "My brain is running an old trauma prediction loop.",
-      "This is a protective pattern, not a present danger.",
-      "My body is misreading this moment as danger.",
-    ],
-  },
-  {
-    title: "Untangle Time",
-    purpose: "Separate past learning from present reality.",
-    options: [
-      "The season that trained this response is in the past.",
-      "I survived that chapter. This is a different moment.",
-      "My nervous system is remembering, but I am safe now.",
-      "I am not back there. I am here.",
-    ],
-  },
-  {
-    title: "Choose Your Agreement",
-    purpose: "Consciously align with truth rather than fear.",
-    options: [
-      "I recognize this as a stress response and align with God instead of fear.",
-      "My body is activated but I belong to a Kingdom of peace.",
-      "This is a trauma loop, not a prophecy.",
-      "I release agreement with threat and align with truth.",
-    ],
-  },
-  {
-    title: "Shepherd Your Soul",
-    purpose: "Lead yourself with gentleness.",
-    options: [
-      "You're not broken. Your body is protecting you.",
-      "You are allowed to need time.",
-      "You are learning to stand differently.",
-      "Activation does not remove your authority.",
-    ],
-  },
-  {
-    title: "Occupy Your Identity",
-    purpose: "Reinforce identity beyond state.",
-    options: [
-      "I am a child of God.",
-      "I belong to God. Fear is not my master.",
-      "I am not defined by this state.",
-      "The Spirit of God dwells in me.",
-    ],
-  },
-];
+{
+  title: "Line In The Sand",
+  purpose: "Interrupt escalation. Establish internal authority.",
+  options: [
+  "Breathe. Be calm.",
+  "I speak peace to you, oh my soul.",
+  "Be still, of whom shall I be afraid?",
+  "Gently now, you're okay."]
+
+},
+{
+  title: "Expose The Mechanism",
+  purpose: "Name what is happening.",
+  options: [
+  "My nervous system has shifted into hyper-vigilance.",
+  "My brain is running an old trauma prediction loop.",
+  "This is a protective pattern, not a present danger.",
+  "My body is misreading this moment as danger."]
+
+},
+{
+  title: "Untangle Time",
+  purpose: "Separate past learning from present reality.",
+  options: [
+  "The season that trained this response is in the past.",
+  "I survived that chapter. This is a different moment.",
+  "My nervous system is remembering, but I am safe now.",
+  "I am not back there. I am here."]
+
+},
+{
+  title: "Choose Your Agreement",
+  purpose: "Consciously align with truth rather than fear.",
+  options: [
+  "I recognize this as a stress response and align with God instead of fear.",
+  "My body is activated but I belong to a Kingdom of peace.",
+  "This is a trauma loop, not a prophecy.",
+  "I release agreement with threat and align with truth."]
+
+},
+{
+  title: "Shepherd Your Soul",
+  purpose: "Lead yourself with gentleness.",
+  options: [
+  "You're not broken. Your body is protecting you.",
+  "You are allowed to need time.",
+  "You are learning to stand differently.",
+  "Activation does not remove your authority."]
+
+},
+{
+  title: "Occupy Your Identity",
+  purpose: "Reinforce identity beyond state.",
+  options: [
+  "I am a child of God.",
+  "I belong to God. Fear is not my master.",
+  "I am not defined by this state.",
+  "The Spirit of God dwells in me."]
+
+}];
+
 
 type Screen = "loading" | "use-script" | "entry" | "phase" | "complete";
 
@@ -80,15 +80,15 @@ const Activated = () => {
   const { data: existingScript, isLoading: scriptLoading } = useQuery({
     queryKey: ["reorient_script", user?.id],
     queryFn: async () => {
-      const { data } = await supabase
-        .from("reorient_templates")
-        .select("id, line_1, line_2, line_3, line_4, line_5, line_6")
-        .eq("user_id", user!.id)
-        .order("created_at", { ascending: false })
-        .limit(1);
+      const { data } = await supabase.
+      from("reorient_templates").
+      select("id, line_1, line_2, line_3, line_4, line_5, line_6").
+      eq("user_id", user!.id).
+      order("created_at", { ascending: false }).
+      limit(1);
       return data && data.length > 0 ? data[0] : null;
     },
-    enabled: !!user,
+    enabled: !!user
   });
 
   const [screen, setScreen] = useState<Screen>("loading");
@@ -158,19 +158,19 @@ const Activated = () => {
 
     await supabase.from("reorient_templates").insert({
       user_id: user.id,
-      ...lines,
+      ...lines
     });
 
-    const { data: stats } = await supabase
-      .from("usage_stats")
-      .select("reorient_return_count")
-      .eq("user_id", user.id)
-      .single();
+    const { data: stats } = await supabase.
+    from("usage_stats").
+    select("reorient_return_count").
+    eq("user_id", user.id).
+    single();
 
-    await supabase
-      .from("usage_stats")
-      .update({ reorient_return_count: (stats?.reorient_return_count ?? 0) + 1 })
-      .eq("user_id", user.id);
+    await supabase.
+    from("usage_stats").
+    update({ reorient_return_count: (stats?.reorient_return_count ?? 0) + 1 }).
+    eq("user_id", user.id);
 
     setSaving(false);
     navigate("/");
@@ -184,40 +184,40 @@ const Activated = () => {
   // USE EXISTING SCRIPT
   if (screen === "use-script" && existingScript) {
     const lines = [
-      existingScript.line_1,
-      existingScript.line_2,
-      existingScript.line_3,
-      existingScript.line_4,
-      existingScript.line_5,
-      existingScript.line_6,
-    ].filter(Boolean) as string[];
+    existingScript.line_1,
+    existingScript.line_2,
+    existingScript.line_3,
+    existingScript.line_4,
+    existingScript.line_5,
+    existingScript.line_6].
+    filter(Boolean) as string[];
 
     const handleUseComplete = async () => {
       if (!user) return;
       setSaving(true);
-      const { data: stats } = await supabase
-        .from("usage_stats")
-        .select("reorient_return_count")
-        .eq("user_id", user.id)
-        .single();
+      const { data: stats } = await supabase.
+      from("usage_stats").
+      select("reorient_return_count").
+      eq("user_id", user.id).
+      single();
 
-      await supabase
-        .from("usage_stats")
-        .update({ reorient_return_count: (stats?.reorient_return_count ?? 0) + 1 })
-        .eq("user_id", user.id);
+      await supabase.
+      from("usage_stats").
+      update({ reorient_return_count: (stats?.reorient_return_count ?? 0) + 1 }).
+      eq("user_id", user.id);
 
       setSaving(false);
       navigate("/");
     };
 
     const stepLabels = [
-      "LINE IN THE SAND",
-      "EXPOSE THE MECHANISM",
-      "UNTANGLE TIME",
-      "CHOOSE YOUR AGREEMENT",
-      "SHEPHERD YOUR SOUL",
-      "OCCUPY YOUR IDENTITY",
-    ];
+    "LINE IN THE SAND",
+    "EXPOSE THE MECHANISM",
+    "UNTANGLE TIME",
+    "CHOOSE YOUR AGREEMENT",
+    "SHEPHERD YOUR SOUL",
+    "OCCUPY YOUR IDENTITY"];
+
 
     return (
       <div className="flex min-h-screen flex-col pb-20">
@@ -242,23 +242,23 @@ const Activated = () => {
                   key={i}
                   className="relative flex gap-4"
                   style={
-                    wasJustRevealed
-                      ? {
-                          animation: "fade-in 300ms ease-out forwards",
-                        }
-                      : undefined
-                  }
-                >
+                  wasJustRevealed ?
+                  {
+                    animation: "fade-in 300ms ease-out forwards"
+                  } :
+                  undefined
+                  }>
+                  
                   <div className="flex flex-col items-center">
                     <div
                       className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-xs font-semibold transition-all duration-500 ${
-                        isLatest && !scriptComplete
-                          ? "border-primary bg-primary text-primary-foreground"
-                          : scriptComplete
-                            ? "border-primary/40 bg-primary/20 text-primary/70"
-                            : "border-primary/30 bg-primary/10 text-primary/60"
-                      }`}
-                    >
+                      isLatest && !scriptComplete ?
+                      "border-primary bg-primary text-primary-foreground" :
+                      scriptComplete ?
+                      "border-primary/40 bg-primary/20 text-primary/70" :
+                      "border-primary/30 bg-primary/10 text-primary/60"}`
+                      }>
+                      
                       {i + 1}
                     </div>
                     {i < revealedCount - 1 && <div className="w-px flex-1 bg-border/40 my-1" />}
@@ -277,49 +277,49 @@ const Activated = () => {
                     }}
                     disabled={!isTappable}
                     className={`pb-8 flex-1 text-left transition-all duration-500 ${
-                      scriptComplete ? "opacity-50" : !isLatest ? "opacity-50" : "opacity-100"
-                    }`}
-                  >
+                    scriptComplete ? "opacity-50" : !isLatest ? "opacity-50" : "opacity-100"}`
+                    }>
+                    
                     <p
                       className={`text-[10px] font-semibold tracking-widest uppercase mb-1 transition-colors duration-300 ${
-                        isLatest && !scriptComplete ? "text-primary" : "text-primary/40"
-                      }`}
-                    >
+                      isLatest && !scriptComplete ? "text-primary" : "text-primary/40"}`
+                      }>
+                      
                       {stepLabels[i] || `Step ${i + 1}`}
                     </p>
                     <div
                       className={`rounded-lg border p-4 text-sm leading-relaxed backdrop-blur-sm transition-all duration-500 ${
-                        isLatest && !scriptComplete
-                          ? "border-primary/50 bg-primary/10 text-text-heading"
-                          : "border-border/30 bg-card/30 text-text-supporting"
-                      }`}
-                    >
+                      isLatest && !scriptComplete ?
+                      "border-primary/50 bg-primary/10 text-text-heading" :
+                      "border-border/30 bg-card/30 text-text-supporting"}`
+                      }>
+                      
                       {line}
                     </div>
-                    {isTappable && (
-                      <p className="text-[10px] text-text-supporting mt-2.5 text-center">Tap to continue</p>
-                    )}
+                    {isTappable &&
+                    <p className="text-[10px] text-text-supporting mt-2.5 text-center">Tap to continue</p>
+                    }
                   </button>
-                </div>
-              );
+                </div>);
+
             })}
           </div>
 
-          {scriptComplete && (
-            <div className="space-y-6" style={{ animation: "fade-in 400ms ease-out forwards" }}>
+          {scriptComplete &&
+          <div className="space-y-6" style={{ animation: "fade-in 400ms ease-out forwards" }}>
               <div className="text-center space-y-2 py-4">
-                <p className="text-lg font-medium text-text-heading" style={{ fontFamily: "'Fraunces', serif" }}>
+                <p className="font-medium text-text-heading text-xl font-serif" style={{ fontFamily: "'Fraunces', serif" }}>
                   You interrupted the spiral.
                 </p>
-                <p className="text-xs text-text-supporting">
+                <p className="text-text-supporting text-base">
                   Fear tried to take over the moment.
                   <br />
                   Instead of letting it lead, you returned and guided your system.
                 </p>
-                <p className="text-xs text-text-supporting">
+                <p className="text-text-supporting text-base font-thin text-primary">
                   Your nervous system just experienced a different response.
                 </p>
-                <p className="text-xs text-text-supporting">
+                <p className="text-text-supporting text-base">
                   Each time you return:
                   <br />
                   Recovery becomes faster.
@@ -328,8 +328,8 @@ const Activated = () => {
                   <br />
                   Your identity becomes more stable than the moment.
                 </p>
-                <p className="text-xs text-text-supporting">This is how formation happens.</p>
-                <p className="text-xs text-text-supporting">
+                <p className="text-text-supporting text-base font-thin text-primary">This is how formation happens.</p>
+                <p className="text-text-supporting text-base">
                   Not in dramatic breakthroughs.
                   <br />
                   But in quiet returns like this.
@@ -344,11 +344,11 @@ const Activated = () => {
                 </Button>
               </div>
             </div>
-          )}
+          }
         </main>
         <BottomNav />
-      </div>
-    );
+      </div>);
+
   }
 
   // ENTRY
@@ -393,8 +393,8 @@ const Activated = () => {
           </Button>
         </main>
         <BottomNav />
-      </div>
-    );
+      </div>);
+
   }
 
   // COMPLETE
@@ -428,8 +428,8 @@ const Activated = () => {
           </div>
         </main>
         <BottomNav />
-      </div>
-    );
+      </div>);
+
   }
 
   // PHASE SCREENS
@@ -439,7 +439,7 @@ const Activated = () => {
     <div className="flex min-h-screen flex-col pb-20">
       <header className="px-6 pt-8 pb-2 content-container">
         <p className="text-xs text-text-supporting mb-2">Step {phaseIndex + 1} of 6</p>
-        <Progress value={((phaseIndex + 1) / 6) * 100} className="h-1.5 mb-6" />
+        <Progress value={(phaseIndex + 1) / 6 * 100} className="h-1.5 mb-6" />
         <h2 className="font-semibold tracking-tight">{phase.title}</h2>
         <p className="text-supporting mt-1">{phase.purpose}</p>
       </header>
@@ -452,33 +452,33 @@ const Activated = () => {
               key={option}
               onClick={() => handleSelectOption(option)}
               className={`w-full rounded-lg border p-4 text-left text-sm transition-colors ${
-                isSelected
-                  ? "border-primary bg-primary/10 text-text-heading"
-                  : "border-border bg-card text-text-body hover:border-primary/40"
-              }`}
-            >
+              isSelected ?
+              "border-primary bg-primary/10 text-text-heading" :
+              "border-border bg-card text-text-body hover:border-primary/40"}`
+              }>
+              
               {option}
-            </button>
-          );
+            </button>);
+
         })}
 
         <div className="pt-2">
-          {useCustom[phaseIndex] ? (
-            <Textarea
-              placeholder="Write your own…"
-              value={customTexts[phaseIndex]}
-              onChange={(e) => handleCustomChange(e.target.value)}
-              className="min-h-[80px]"
-              autoFocus
-            />
-          ) : (
-            <button
-              onClick={handleCustomToggle}
-              className="text-xs text-text-supporting hover:text-text-heading transition-colors"
-            >
+          {useCustom[phaseIndex] ?
+          <Textarea
+            placeholder="Write your own…"
+            value={customTexts[phaseIndex]}
+            onChange={(e) => handleCustomChange(e.target.value)}
+            className="min-h-[80px]"
+            autoFocus /> :
+
+
+          <button
+            onClick={handleCustomToggle}
+            className="text-xs text-text-supporting hover:text-text-heading transition-colors">
+            
               + Write your own
             </button>
-          )}
+          }
         </div>
       </main>
 
@@ -489,8 +489,8 @@ const Activated = () => {
       </div>
 
       <BottomNav />
-    </div>
-  );
+    </div>);
+
 };
 
 export default Activated;
