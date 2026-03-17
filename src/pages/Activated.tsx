@@ -318,21 +318,20 @@ Let each statement interrupt the fear loop and reorient you to steadiness.
                   You interrupted the spiral.
                 </p>
                 <p className="text-xs text-text-supporting">
-                  Fear tried to take over the moment.<br> />
-                    Instead of letting it lead, you returned and guided your system.
+                  Fear tried to take over the moment.<br />
+                  Instead of letting it lead, you returned and guided your system.
                 </p>
-                    <p className="text-xs text-text-supporting">
-                  Your nervous system just experienced a different response.<br> />
-                    Each time you return:<br> />
-                      Recovery becomes faster.<br> />
-                        Your system learns steadiness.<br> />
-                          Your identity becomes more stable than the moment.<br>
-                            
+                <p className="text-xs text-text-supporting">
+                  Your nervous system just experienced a different response.<br />
+                  Each time you return:<br />
+                  Recovery becomes faster.<br />
+                  Your system learns steadiness.<br />
+                  Your identity becomes more stable than the moment.
                 </p>
-                           <p className="text-xs text-text-supporting">
-                  This is how formation happens.<br> />
-                    Not in dramatic breakthroughs.<br> />
-                      But in quiet returns like this.
+                <p className="text-xs text-text-supporting">
+                  This is how formation happens.<br />
+                  Not in dramatic breakthroughs.<br />
+                  But in quiet returns like this.
                 </p>
               </div>
               <div className="space-y-3">
