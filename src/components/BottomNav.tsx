@@ -5,8 +5,8 @@ import { cn } from "@/lib/utils";
 const tabs = [
   { label: "Home", icon: Heart, path: "/" },
   { label: "Reorient", icon: CloudSnow, path: "/activated" },
-  { label: "Formation", icon: AudioLines, path: "/daily-formation" },
-  { label: "Anchors", icon: Mountain, path: "/anchors" },
+  { label: "Daily Formation", icon: AudioLines, path: "/daily-formation" },
+  { label: "Anchor Library", icon: Mountain, path: "/anchors" },
 ];
 
 const BottomNav = () => {
