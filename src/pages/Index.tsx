@@ -74,20 +74,20 @@ const Index = () => {
 
   const cards = [
   {
-    title: "I'm Activated",
-    subtitle: "Fear rising. Begin reorientation.",
+    title: "Reorientation",
+    subtitle: "When fear or anxiety rises, use your Reorientation to interrupt the spiral and regain steadiness.",
     icon: CloudDrizzle,
     path: "/activated"
   },
   {
-    title: "Daily Formation",
-    subtitle: "Train stability before fear rises.",
+    title: "Formation",
+    subtitle: "When you are calm enough, begin your Formation to settle your system, and strengthen new patterns of safety.",
     icon: AudioLines,
     path: "/daily-formation"
   },
   {
-    title: "Anchor Library",
-    subtitle: "View your anchor library.",
+    title: "Anchors",
+    subtitle: "Return to your saved Anchors to reinforce stability and revisit what you have built.",
     icon: Mountain,
     path: "/anchors"
   }];
