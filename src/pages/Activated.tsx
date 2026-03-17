@@ -358,7 +358,7 @@ Let each one interrupt the loop.
           <div className="space-y-4 leading-relaxed">
             <p className="text-text-body">
               Fear can accelerate perception.<br />
-             Your mind begins predicting danger.<br />
+              Your mind begins predicting danger.<br />
               Your body prepares for survival.<br />
               This can feel frightening, especially when it appears suddenly.
             </p>
@@ -372,15 +372,17 @@ Let each one interrupt the loop.
             </p>
             <p className="text-text-body">
               Each time you move through this sequence you:<br />
-              interrupt reinforcement; <br> />
-              update prediction; </br> />
-             strengthen internal authority; </br> />
-            stablize your identity over time.
+              interrupt reinforcement;<br />
+              update prediction;<br />
+              strengthen internal authority;<br />
+              stabilize your identity over time.
             </p>
-          <p className="text-text-body">
-            You do not need to rush.</p>
-        <p className="text-text-body">
-            Just begin.</p>
+            <p className="text-text-body">
+              You do not need to rush.
+            </p>
+            <p className="text-text-body">
+              Just begin.
+            </p>
           </div>
           <Button
             className="mt-10 w-full"
