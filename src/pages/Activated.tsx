@@ -423,7 +423,7 @@ const Activated = () => {
               {saving ? "Saving…" : "Save Reorientation"}
             </Button>
             <Button className="w-full" size="lg" variant="secondary" onClick={() => navigate("/")}>
-              Return Home
+              Return home
             </Button>
           </div>
         </main>
