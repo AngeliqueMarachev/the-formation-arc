@@ -80,13 +80,13 @@ const Index = () => {
     path: "/activated"
   },
   {
-    title: "Formation",
+    title: "Daily Formation",
     subtitle: "When you are calm enough, begin your Formation to settle your system, and strengthen new patterns of safety.",
     icon: AudioLines,
     path: "/daily-formation"
   },
   {
-    title: "Anchors",
+    title: "Anchor Library",
     subtitle: "Return to your saved Anchors to reinforce stability and revisit what you have built.",
     icon: Mountain,
     path: "/anchors"
