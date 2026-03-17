@@ -20,7 +20,7 @@ const Auth = () => {
       const { error } = await supabase.auth.signUp({
         email,
         password,
-        options: { emailRedirectTo: window.location.origin },
+        options: { emailRedirectTo: window.location.origin }
       });
       if (error) {
         toast({ title: "Error", description: error.message, variant: "destructive" });
@@ -44,7 +44,7 @@ const Auth = () => {
           <div className="space-y-1.5 text-supporting italic leading-relaxed">
             <p className="text-primary not-italic font-light">Overcome Fear. Restore identity.</p>
             <p></p>
-            <p className="text-base">A practice for retraining fear and strengthening stability.</p>
+            <p className="text-base">A practice for retraining distress and strengthening stability.</p>
           </div>
         </div>
 
@@ -58,8 +58,8 @@ const Auth = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
               placeholder="you@example.com"
-              className="bg-secondary"
-            />
+              className="bg-secondary" />
+            
           </div>
           <div className="space-y-2">
             <Label htmlFor="password">Password</Label>
@@ -71,8 +71,8 @@ const Auth = () => {
               required
               minLength={6}
               placeholder="••••••••"
-              className="bg-secondary"
-            />
+              className="bg-secondary" />
+            
           </div>
           <Button type="submit" className="w-full" disabled={loading}>
             {loading ? "..." : isSignUp ? "Create Account" : "Sign In"}
@@ -84,14 +84,14 @@ const Auth = () => {
           <button
             type="button"
             onClick={() => setIsSignUp(!isSignUp)}
-            className="text-primary underline-offset-4 hover:underline"
-          >
+            className="text-primary underline-offset-4 hover:underline">
+            
             {isSignUp ? "Sign in" : "Sign up"}
           </button>
         </p>
       </div>
-    </div>
-  );
+    </div>);
+
 };
 
 export default Auth;
