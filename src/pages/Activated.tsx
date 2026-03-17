@@ -337,7 +337,7 @@ const Activated = () => {
               </div>
               <div className="space-y-3">
                 <Button className="w-full" size="lg" onClick={handleUseComplete} disabled={saving}>
-                  {saving ? "Saving…" : "Continue"}
+                  {saving ? "Saving…" : "Return home"}
                 </Button>
                 <Button className="w-full" size="lg" variant="secondary" onClick={() => setScreen("entry")}>
                   Refine my Reorientation
