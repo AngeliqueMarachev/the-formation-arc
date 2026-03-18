@@ -460,8 +460,9 @@ const Activated = () => {
         <p className="text-xs text-text-supporting mb-2">Step {phaseIndex + 1} of 6</p>
         <Progress value={(phaseIndex + 1) / 6 * 100} className="h-1.5 mb-6" />
         <h2 className="font-semibold tracking-tight">{phase.title}</h2>
-        <p className="text-supporting mt-1">{phase.purpose}</p>
-        <p className="text-supporting mt-1 text-sm">Choose a phrase that helps you pause and slow down the spiral.</p>
+        {phase.introduction.map((line, i) => (
+          <p key={i} className="text-supporting mt-1 text-sm">{line}</p>
+        ))}
       </header>
 
       <main className="flex-1 px-6 pt-4 space-y-3 content-container">
