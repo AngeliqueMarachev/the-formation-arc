@@ -180,21 +180,24 @@ const Activated = () => {
       lines[`line_${i + 1}`] = val?.trim() || null;
     }
 
+    // Upsert: delete old template then insert new one
+    await supabase.from("reorient_templates").delete().eq("user_id", user.id);
     await supabase.from("reorient_templates").insert({
       user_id: user.id,
-      ...lines
+      ...lines,
+      updated_at: new Date().toISOString()
     });
 
-    const { data: stats } = await supabase.
-    from("usage_stats").
-    select("reorient_return_count").
-    eq("user_id", user.id).
-    single();
+    const { data: stats } = await supabase
+      .from("usage_stats")
+      .select("reorient_return_count")
+      .eq("user_id", user.id)
+      .single();
 
-    await supabase.
-    from("usage_stats").
-    update({ reorient_return_count: (stats?.reorient_return_count ?? 0) + 1 }).
-    eq("user_id", user.id);
+    await supabase
+      .from("usage_stats")
+      .update({ reorient_return_count: (stats?.reorient_return_count ?? 0) + 1 })
+      .eq("user_id", user.id);
 
     setSaving(false);
     navigate("/");
