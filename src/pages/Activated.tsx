@@ -388,7 +388,11 @@ const Activated = () => {
                 <Button className="w-full" size="lg" onClick={handleUseComplete} disabled={saving}>
                   {saving ? "Saving…" : "Return home"}
                 </Button>
-                <Button className="w-full" size="lg" variant="secondary" onClick={() => setScreen("entry")}>
+                <Button className="w-full" size="lg" variant="secondary" onClick={() => {
+                  if (existingScript) prefillFromScript(existingScript);
+                  setPhaseIndex(0);
+                  setScreen("phase");
+                }}>
                   Refine my Reorientation
                 </Button>
               </div>
