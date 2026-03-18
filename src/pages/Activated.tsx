@@ -476,7 +476,7 @@ const Activated = () => {
             onClick={handleCustomToggle}
             className="text-xs text-text-supporting hover:text-text-heading transition-colors">
             
-              + Write your own
+              + Write your own interruption. 
             </button>
           }
         </div>
