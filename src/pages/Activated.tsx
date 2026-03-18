@@ -416,28 +416,63 @@ const Activated = () => {
 
   }
 
-  // COMPLETE
+  // COMPLETE — Reorientation Review
   if (screen === "complete") {
+    const stepTitles = [
+      "Line in the Sand",
+      "Expose the Mechanism",
+      "Untangle Time",
+      "Choose Your Agreement",
+      "Shepherd Your Soul",
+      "Occupy Your Identity"
+    ];
+
+    const userSelections = PHASES.map((_, i) =>
+      (useCustom[i] ? customTexts[i] : selections[i])?.trim() || "—"
+    );
+
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col justify-center px-6 py-12 content-container">
-          <h1 className="tracking-tight mb-8">Your Governance Declaration</h1>
-          <div className="space-y-4 leading-relaxed">
+        <main className="flex flex-1 flex-col px-6 pt-10 pb-12 content-container">
+          <h1 className="tracking-tight mb-2">Your Reorientation Engine</h1>
+          <div className="space-y-4 leading-relaxed mb-8">
             <p className="text-text-body">
-              You did not eliminate activation.
-              <br />
-              You governed it.
+              You built a sequence that helps interrupt fear and restore steadiness.
             </p>
             <p className="text-text-body">
-              You interrupted reinforcement.
-              <br />
-              You updated prediction.
-              <br />
-              You reinforced identity.
+              When activation rises, return to this script and read each line slowly.
             </p>
-            <p className="text-text-heading font-medium">Each return strengthens this pathway.</p>
+            <p className="text-text-body">
+              Over time, repeated returns help your brain expect steadiness instead of escalation.
+            </p>
           </div>
-          <div className="mt-10 space-y-3">
+
+          <div className="space-y-3 mb-8">
+            {stepTitles.map((title, i) => (
+              <div
+                key={i}
+                className="rounded-lg border bg-card p-5 border-secondary"
+              >
+                <p className="text-xs text-text-supporting uppercase tracking-wider mb-2 text-primary">
+                  {title}
+                </p>
+                <p className="text-text-heading text-base leading-relaxed">
+                  {userSelections[i]}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="space-y-4 leading-relaxed mb-10">
+            <p className="text-text-heading font-medium">
+              You have established Reorientation.
+            </p>
+            <p className="text-text-body">
+              Each time you return to these words, you strengthen the pathway that restores steadiness.
+            </p>
+          </div>
+
+          <div className="space-y-3">
             <Button className="w-full" size="lg" onClick={handleSave} disabled={saving}>
               {saving ? "Saving…" : "Save Reorientation"}
             </Button>
