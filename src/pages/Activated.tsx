@@ -11,63 +11,82 @@ import BottomNav from "@/components/BottomNav";
 const PHASES = [
 {
   title: "Line In The Sand",
-  purpose: "Interrupt escalation. Establish internal authority.",
+  introduction: [
+    "Interrupt escalation. Establish internal authority.",
+    "Choose a phrase that helps you pause and slow down the spiral."
+  ],
+  customLabel: "Write your own interruption",
   options: [
   "Breathe. Be calm.",
   "I speak peace to you, oh my soul.",
   "Be still, of whom shall I be afraid?",
   "Gently now, you're okay."]
-
 },
 {
   title: "Expose The Mechanism",
-  purpose: "Name what is happening.",
+  introduction: [
+    "What you feel is real.",
+    "This step names what your nervous system is doing behind the reaction.",
+    "Choose the explanation that fits best."
+  ],
+  customLabel: "Write your own explanation",
   options: [
   "My nervous system has shifted into hyper-vigilance.",
   "My brain is running an old trauma prediction loop.",
   "This is a protective pattern, not a present danger.",
   "My body is misreading this moment as danger."]
-
 },
 {
   title: "Untangle Time",
-  purpose: "Separate past learning from present reality.",
+  introduction: [
+    "Separate past learning from present reality.",
+    "Choose the statement that reminds your system that then is not now."
+  ],
+  customLabel: "Write your own statement",
   options: [
   "The season that trained this response is in the past.",
   "I survived that chapter. This is a different moment.",
   "My nervous system is remembering, but I am safe now.",
   "I am not back there. I am here."]
-
 },
 {
   title: "Choose Your Agreement",
-  purpose: "Consciously align with truth rather than fear.",
+  introduction: [
+    "Fear offers an interpretation of this moment.",
+    "Choose the statement that reflects what you want your mind to agree with."
+  ],
+  customLabel: "Write your own statement",
   options: [
   "I recognize this as a stress response and align with God instead of fear.",
   "My body is activated but I belong to a Kingdom of peace.",
   "This is a trauma loop, not a prophecy.",
   "I release agreement with threat and align with truth."]
-
 },
 {
   title: "Shepherd Your Soul",
-  purpose: "Lead yourself with gentleness.",
+  introduction: [
+    "Speak to yourself with steadiness and kindness.",
+    "Choose the words that will guide you right now."
+  ],
+  customLabel: "Write your own encouragement",
   options: [
   "You're not broken. Your body is protecting you.",
   "You are allowed to need time.",
   "You are learning to stand differently.",
   "Activation does not remove your authority."]
-
 },
 {
   title: "Occupy Your Identity",
-  purpose: "Reinforce identity beyond state.",
+  introduction: [
+    "Your current state does not define who you are.",
+    "Choose the identity that aligns with the truth of who God says you are."
+  ],
+  customLabel: "Write your true identity",
   options: [
   "I am a child of God.",
   "I belong to God. Fear is not my master.",
   "I am not defined by this state.",
   "The Spirit of God dwells in me."]
-
 }];
 
 
