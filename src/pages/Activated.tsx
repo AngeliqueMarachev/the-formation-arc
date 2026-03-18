@@ -440,7 +440,7 @@ const Activated = () => {
     );
 
     return (
-      <div className="flex min-h-screen flex-col pb-20">
+      <div className="flex min-h-screen flex-col pb-40">
         <main className="flex flex-1 flex-col px-6 pt-10 pb-12 content-container">
           <h1 className="tracking-tight mb-2">Your Reorientation Engine</h1>
           <div className="space-y-4 leading-relaxed mb-8">
@@ -479,17 +479,18 @@ const Activated = () => {
               Each time you return to these words, you strengthen the pathway that restores steadiness.
             </p>
           </div>
+        </main>
 
-          <div className="space-y-3">
+        <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border px-6 py-4 space-y-3 z-10">
+          <div className="content-container">
             <Button className="w-full" size="lg" onClick={handleSave} disabled={saving}>
               {saving ? "Saving…" : "Save Reorientation"}
             </Button>
-            <Button className="w-full" size="lg" variant="secondary" onClick={() => navigate("/")}>
-              Return home
+            <Button className="w-full mt-3" size="lg" variant="secondary" onClick={handleEdit}>
+              Edit Reorientation
             </Button>
           </div>
-        </main>
-        <BottomNav />
+        </div>
       </div>);
 
   }
