@@ -165,6 +165,28 @@ const Activated = () => {
     }
   };
 
+  const prefillFromScript = (script: { line_1: string | null; line_2: string | null; line_3: string | null; line_4: string | null; line_5: string | null; line_6: string | null }) => {
+    const lines = [script.line_1, script.line_2, script.line_3, script.line_4, script.line_5, script.line_6];
+    const newSelections: (string | null)[] = Array(6).fill(null);
+    const newCustomTexts = Array(6).fill("");
+    const newUseCustom = Array(6).fill(false);
+
+    lines.forEach((line, i) => {
+      if (!line) return;
+      const isPreset = PHASES[i].options.includes(line);
+      if (isPreset) {
+        newSelections[i] = line;
+      } else {
+        newUseCustom[i] = true;
+        newCustomTexts[i] = line;
+      }
+    });
+
+    setSelections(newSelections);
+    setCustomTexts(newCustomTexts);
+    setUseCustom(newUseCustom);
+  };
+
   const handleEdit = () => {
     setPhaseIndex(0);
     setScreen("phase");
