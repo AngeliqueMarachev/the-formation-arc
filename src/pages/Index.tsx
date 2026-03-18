@@ -74,20 +74,20 @@ const Index = () => {
 
   const cards = [
   {
-    title: "Reorientation",
-    subtitle: "When fear or anxiety rises, use your Reorientation to interrupt the spiral and regain steadiness.",
+    title: "Reorientation Engine",
+    subtitle: "When fear or anxiety rises, use The Reorientation Engine to interrupt the spiral and regain steadiness.",
     icon: CloudDrizzle,
     path: "/activated"
   },
   {
     title: "Daily Formation",
-    subtitle: "When you are calm enough, begin your Formation to settle your system, and strengthen new patterns of safety.",
+    subtitle: "When you are calm enough, use The Daily Formation to settle your system, and strengthen new patterns of safety.",
     icon: AudioLines,
     path: "/daily-formation"
   },
   {
     title: "Anchor Library",
-    subtitle: "Return to your saved Anchors to reinforce stability and revisit what you have built.",
+    subtitle: "When you want to reinforce stability, return to The Anchor Library and revisit what you have built.",
     icon: Mountain,
     path: "/anchors"
   }];
