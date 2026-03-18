@@ -486,7 +486,7 @@ const Activated = () => {
         <div className="pt-2">
           {useCustom[phaseIndex] ?
           <Textarea
-            placeholder="Write your own…"
+            placeholder={`${phase.customLabel}…`}
             value={customTexts[phaseIndex]}
             onChange={(e) => handleCustomChange(e.target.value)}
             className="min-h-[80px]"
