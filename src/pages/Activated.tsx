@@ -165,6 +165,33 @@ const Activated = () => {
     }
   };
 
+  const prefillFromScript = (script: { line_1: string | null; line_2: string | null; line_3: string | null; line_4: string | null; line_5: string | null; line_6: string | null }) => {
+    const lines = [script.line_1, script.line_2, script.line_3, script.line_4, script.line_5, script.line_6];
+    const newSelections: (string | null)[] = Array(6).fill(null);
+    const newCustomTexts = Array(6).fill("");
+    const newUseCustom = Array(6).fill(false);
+
+    lines.forEach((line, i) => {
+      if (!line) return;
+      const isPreset = PHASES[i].options.includes(line);
+      if (isPreset) {
+        newSelections[i] = line;
+      } else {
+        newUseCustom[i] = true;
+        newCustomTexts[i] = line;
+      }
+    });
+
+    setSelections(newSelections);
+    setCustomTexts(newCustomTexts);
+    setUseCustom(newUseCustom);
+  };
+
+  const handleEdit = () => {
+    setPhaseIndex(0);
+    setScreen("phase");
+  };
+
   const handleSave = async () => {
     if (!user) return;
     setSaving(true);
@@ -175,21 +202,24 @@ const Activated = () => {
       lines[`line_${i + 1}`] = val?.trim() || null;
     }
 
+    // Upsert: delete old template then insert new one
+    await supabase.from("reorient_templates").delete().eq("user_id", user.id);
     await supabase.from("reorient_templates").insert({
       user_id: user.id,
-      ...lines
+      ...lines,
+      updated_at: new Date().toISOString()
     });
 
-    const { data: stats } = await supabase.
-    from("usage_stats").
-    select("reorient_return_count").
-    eq("user_id", user.id).
-    single();
+    const { data: stats } = await supabase
+      .from("usage_stats")
+      .select("reorient_return_count")
+      .eq("user_id", user.id)
+      .single();
 
-    await supabase.
-    from("usage_stats").
-    update({ reorient_return_count: (stats?.reorient_return_count ?? 0) + 1 }).
-    eq("user_id", user.id);
+    await supabase
+      .from("usage_stats")
+      .update({ reorient_return_count: (stats?.reorient_return_count ?? 0) + 1 })
+      .eq("user_id", user.id);
 
     setSaving(false);
     navigate("/");
@@ -358,7 +388,11 @@ const Activated = () => {
                 <Button className="w-full" size="lg" onClick={handleUseComplete} disabled={saving}>
                   {saving ? "Saving…" : "Return home"}
                 </Button>
-                <Button className="w-full" size="lg" variant="secondary" onClick={() => setScreen("entry")}>
+                <Button className="w-full" size="lg" variant="secondary" onClick={() => {
+                  if (existingScript) prefillFromScript(existingScript);
+                  setPhaseIndex(0);
+                  setScreen("phase");
+                }}>
                   Refine my Reorientation
                 </Button>
               </div>
@@ -432,7 +466,7 @@ const Activated = () => {
     );
 
     return (
-      <div className="flex min-h-screen flex-col pb-20">
+      <div className="flex min-h-screen flex-col pb-40">
         <main className="flex flex-1 flex-col px-6 pt-10 pb-12 content-container">
           <h1 className="tracking-tight mb-2">Your Reorientation Engine</h1>
           <div className="space-y-4 leading-relaxed mb-8">
@@ -471,17 +505,18 @@ const Activated = () => {
               Each time you return to these words, you strengthen the pathway that restores steadiness.
             </p>
           </div>
+        </main>
 
-          <div className="space-y-3">
+        <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border px-6 py-4 space-y-3 z-10">
+          <div className="content-container">
             <Button className="w-full" size="lg" onClick={handleSave} disabled={saving}>
               {saving ? "Saving…" : "Save Reorientation"}
             </Button>
-            <Button className="w-full" size="lg" variant="secondary" onClick={() => navigate("/")}>
-              Return home
+            <Button className="w-full mt-3" size="lg" variant="secondary" onClick={handleEdit}>
+              Edit Reorientation
             </Button>
           </div>
-        </main>
-        <BottomNav />
+        </div>
       </div>);
 
   }
