@@ -165,6 +165,11 @@ const Activated = () => {
     }
   };
 
+  const handleEdit = () => {
+    setPhaseIndex(0);
+    setScreen("phase");
+  };
+
   const handleSave = async () => {
     if (!user) return;
     setSaving(true);
