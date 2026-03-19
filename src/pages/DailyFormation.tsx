@@ -141,6 +141,7 @@ const DailyFormation = () => {
   }
 
   // ── REORIENTATION ──
+  if (screen === "reorientation") {
     const hasLines = lines && Object.values(lines).some((v) => v);
 
     const phases = [
