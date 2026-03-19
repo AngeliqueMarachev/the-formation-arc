@@ -14,7 +14,6 @@ import AnchorIntro from "@/components/AnchorIntro";
 type Screen =
 "anchor-intro" |
 "reorientation" |
-"readiness" |
 "anchor-choice" |
 "daily-loop" |
 "create-anchor" |
@@ -157,12 +156,26 @@ const DailyFormation = () => {
     return (
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col px-6 pt-10 pb-12 content-container">
-          <h1 className="tracking-tight mb-3">
-            Stabilize before you build.
+          <h1 className="tracking-tight mb-1">
+            Daily Formation
           </h1>
-          <p className="text-supporting leading-relaxed mb-10">
-            Even when calm, you are rehearsing leadership.
+          <p className="text-primary font-semibold text-sm tracking-wide mb-6">
+            Stabilise before you build.
           </p>
+
+          <div className="space-y-4 leading-relaxed mb-10">
+            <p className="text-text-body">Settle your system before training.</p>
+            <p className="text-text-body">
+              Before entering the Anchor Layer, we first signal safety to the nervous system.
+            </p>
+            <p className="text-text-body">
+              Read your Reorientation slowly and allow your body to settle.
+              {" "}You do not need to feel completely calm, only safe enough to continue.
+            </p>
+            <p className="text-text-body">
+              After this sequence, you will move into the Anchor Layer, where we strengthen new expectations of safety.
+            </p>
+          </div>
 
           {hasLines ?
           <>
@@ -210,18 +223,29 @@ const DailyFormation = () => {
 
               <div className="pt-4 space-y-6">
                 <div className="text-center">
-                  <p className="text-text-body mb-1 font-serif text-xl font-bold">You have returned</p>
+                  <p className="text-text-body mb-1 font-serif text-xl font-bold">Your system has settled.</p>
                   <p className="text-sm text-text-heading font-normal font-sans" style={{ fontFamily: "'Fraunces', serif" }}>
-                    You are steady enough to build
+                    You are steady enough to continue.
+                  </p>
+                  <p className="text-sm text-text-body mt-3">
+                    Now you will begin with The Anchor Layer to expand your memories and strengthen your expectations of safety.
                   </p>
                 </div>
-                <Button
-                className="w-full"
-                size="lg"
-                onClick={() => setScreen("readiness")}>
-                
-                  Begin Anchor
-                </Button>
+                <div className="space-y-3">
+                  <Button
+                    className="w-full"
+                    size="lg"
+                    onClick={() => setScreen("anchor-choice")}>
+                    Find a Memory
+                  </Button>
+                  <Button
+                    className="w-full"
+                    size="lg"
+                    variant="secondary"
+                    onClick={() => navigate("/anchors")}>
+                    Browse Anchors
+                  </Button>
+                </div>
               </div>
             </> :
 
@@ -230,56 +254,23 @@ const DailyFormation = () => {
                 No saved reorientation yet. Complete a reorientation in the
                 Activated tab first.
               </p>
-              <Button
-              className="w-full"
-              size="lg"
-              onClick={() => setScreen("readiness")}>
-              
-                Continue
-              </Button>
+              <div className="space-y-3">
+                <Button
+                  className="w-full"
+                  size="lg"
+                  onClick={() => setScreen("anchor-choice")}>
+                  Find a Memory
+                </Button>
+                <Button
+                  className="w-full"
+                  size="lg"
+                  variant="secondary"
+                  onClick={() => navigate("/anchors")}>
+                  Browse Anchors
+                </Button>
+              </div>
             </>
           }
-        </main>
-        <BottomNav />
-      </div>);
-
-  }
-
-  // ── READINESS GATE ──
-  if (screen === "readiness") {
-    return (
-      <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col justify-center px-6 py-12 content-container">
-          <h1 className="tracking-tight mb-8">
-            Check your state.
-          </h1>
-          <p className="text-supporting leading-relaxed mb-4">
-            Memory work requires steadiness.
-          </p>
-          <p className="text-supporting leading-relaxed mb-10">
-            If you are activated, return to the reorientation first.
-          </p>
-
-          <div className="space-y-3">
-            <Button
-              className="w-full"
-              size="lg"
-              onClick={() => navigate("/activated")}
-              style={{
-                boxShadow: "0 0 14px rgba(221, 255, 44, 0.25)"
-              }}>
-              
-              Return to Reorientation
-            </Button>
-            <Button
-              className="w-full"
-              size="lg"
-              variant="secondary"
-              onClick={() => setScreen("anchor-choice")}>
-              
-              I am steady enough
-            </Button>
-          </div>
         </main>
         <BottomNav />
       </div>);
