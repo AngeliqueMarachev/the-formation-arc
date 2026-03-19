@@ -135,8 +135,12 @@ const DailyFormation = () => {
 
   }
 
+  // ── ANCHOR INTRO ──
+  if (screen === "anchor-intro") {
+    return <AnchorIntro onComplete={() => setScreen("reorientation")} />;
+  }
+
   // ── REORIENTATION ──
-  if (screen === "reorientation") {
     const hasLines = lines && Object.values(lines).some((v) => v);
 
     const phases = [
