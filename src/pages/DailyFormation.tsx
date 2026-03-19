@@ -276,56 +276,6 @@ const DailyFormation = () => {
 
   }
 
-  // ── ANCHOR LAYER CHOICE ──
-  if (screen === "anchor-choice") {
-    return (
-      <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col justify-center px-6 py-12 content-container">
-          <h1 className="tracking-tight mb-6">
-            The Anchor Layer
-          </h1>
-          <div className="space-y-4 leading-relaxed mb-10">
-            <p className="text-text-body">Anchors train the nervous system to expect steadiness.</p>
-            <p className="text-text-body">
-              When a memory is recalled, the neural network briefly becomes
-              flexible.
-            </p>
-            <p className="text-text-body">In that window:</p>
-            <ul className="list-disc pl-5 space-y-1 text-text-body">
-              <li className="text-lg">Meaning can widen</li>
-              <li className="text-lg">Prediction can update</li>
-              <li className="text-lg">Identity detaches from fear</li>
-            </ul>
-            <p className="text-text-body">We are not rewriting the past.</p>
-            <p className="text-text-heading font-medium">
-              We are widening the meaning attached to it.
-            </p>
-          </div>
-
-          <div className="space-y-3">
-            {anchors.length > 0 &&
-            <Button
-              className="w-full"
-              size="lg"
-              onClick={() => setScreen("daily-loop")}>
-              
-                Daily Anchor Loop
-              </Button>
-            }
-            <Button
-              className="w-full"
-              size="lg"
-              variant={anchors.length > 0 ? "secondary" : "default"}
-              onClick={() => setScreen("create-anchor")}>
-              
-              Create New Anchor
-            </Button>
-          </div>
-        </main>
-        <BottomNav />
-      </div>);
-
-  }
 
   // ── DAILY ANCHOR LOOP ──
   if (screen === "daily-loop") {
