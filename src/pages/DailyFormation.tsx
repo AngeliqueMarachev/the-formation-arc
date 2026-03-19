@@ -9,8 +9,10 @@ import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import BottomNav from "@/components/BottomNav";
 import AnchorRecall from "@/components/AnchorRecall";
+import AnchorIntro from "@/components/AnchorIntro";
 
 type Screen =
+"anchor-intro" |
 "reorientation" |
 "readiness" |
 "anchor-choice" |
@@ -37,7 +39,7 @@ interface AnchorEntry {
 const DailyFormation = () => {
   const navigate = useNavigate();
   const { user } = useAuth();
-  const [screen, setScreen] = useState<Screen>("reorientation");
+  const [screen, setScreen] = useState<Screen>("anchor-intro");
   const [loading, setLoading] = useState(true);
   const [glowingLine, setGlowingLine] = useState<number | null>(null);
 
@@ -131,6 +133,11 @@ const DailyFormation = () => {
         Loading…
       </div>);
 
+  }
+
+  // ── ANCHOR INTRO ──
+  if (screen === "anchor-intro") {
+    return <AnchorIntro onComplete={() => setScreen("reorientation")} />;
   }
 
   // ── REORIENTATION ──
