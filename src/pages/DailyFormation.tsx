@@ -14,7 +14,6 @@ import AnchorIntro from "@/components/AnchorIntro";
 type Screen =
 "anchor-intro" |
 "reorientation" |
-"anchor-choice" |
 "daily-loop" |
 "create-anchor" |
 "completion";
