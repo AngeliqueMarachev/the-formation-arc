@@ -235,7 +235,7 @@ const DailyFormation = () => {
                   <Button
                   className="w-full"
                   size="lg"
-                  onClick={() => setScreen("anchor-choice")}>
+                  onClick={() => setScreen("create-anchor")}>
                     Find a Memory
                   </Button>
                   <Button
