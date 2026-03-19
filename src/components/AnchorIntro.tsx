@@ -17,7 +17,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             Why the Anchor Layer exists
           </h1>
           <p className="text-text-body leading-relaxed mb-8">
-            This is where you build and strengthen your Anchors — memories that train your nervous system to expect steadiness.
+            This is where you build and strengthen your Anchors: Memories that train your nervous system to expect steadiness.
           </p>
 
           <div className="space-y-5 leading-relaxed text-text-body mb-12">
@@ -76,16 +76,16 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
               className="w-full"
               size="lg"
               variant="secondary"
-              onClick={onComplete}
-            >
+              onClick={onComplete}>
+              
               Skip
             </Button>
           </div>
         </div>
 
         <BottomNav />
-      </div>
-    );
+      </div>);
+
   }
 
   if (step === 1) {
@@ -151,8 +151,8 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
         </div>
 
         <BottomNav />
-      </div>
-    );
+      </div>);
+
   }
 
   // Step 2 — Screen 3
@@ -208,8 +208,8 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
       </div>
 
       <BottomNav />
-    </div>
-  );
+    </div>);
+
 };
 
 export default AnchorIntro;
