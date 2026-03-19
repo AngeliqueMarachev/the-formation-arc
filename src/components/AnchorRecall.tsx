@@ -102,9 +102,9 @@ const AnchorRecall = ({
   const canContinue = sceneText.trim().length > 0 && emotionTags.length > 0;
 
   return (
-    <div className="flex min-h-screen flex-col pb-20">
+    <div className="flex min-h-screen flex-col pb-20 text-foreground">
       <header className="px-6 pt-8 pb-2 content-container">
-        <h2 className="text-sm font-medium text-text-supporting mb-2">The Anchor Layer</h2>
+        <h2 className="text-text-supporting mb-2 text-6xl font-bold text-zinc-100">The Anchor Layer</h2>
         <p className="text-xs text-text-supporting mb-2">Step 1 of {totalSteps}</p>
         <Progress value={1 / totalSteps * 100} className="h-1.5 mb-6" />
       </header>
