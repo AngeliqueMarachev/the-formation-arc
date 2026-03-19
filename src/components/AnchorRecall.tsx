@@ -113,7 +113,7 @@ const AnchorRecall = ({
         {/* Header */}
         <div>
           <h1 className="tracking-tight">
-            Recall a Scene.
+            Recall a Scene
             {selectedScene && selectedScene !== "Something else" &&
             <span className="block text-lg font-normal text-text-supporting mt-1 text-secondary-foreground">
                 {selectedScene}
