@@ -38,7 +38,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             </p>
 
             <p>
-              At some point your body learned that life requires vigilance: Staying alert, bracing, anticipating what might go wrong.
+              At some point your body learned that life requires vigilance: Staying alert, bracing for difficulty, anticipating danger.
             </p>
 
             <p>
