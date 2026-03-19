@@ -281,7 +281,7 @@ const DailyFormation = () => {
   if (screen === "daily-loop") {
     const anchor = anchors[currentAnchorIndex];
     if (!anchor) {
-      setScreen("anchor-choice");
+      setScreen("create-anchor");
       return null;
     }
     return (
