@@ -104,6 +104,7 @@ const AnchorRecall = ({
   return (
     <div className="flex min-h-screen flex-col pb-20">
       <header className="px-6 pt-8 pb-2 content-container">
+        <h2 className="text-sm font-medium text-text-supporting mb-2">The Anchor Layer</h2>
         <p className="text-xs text-text-supporting mb-2">Step 1 of {totalSteps}</p>
         <Progress value={1 / totalSteps * 100} className="h-1.5 mb-6" />
       </header>
@@ -120,7 +121,12 @@ const AnchorRecall = ({
             }
           </h1>
           <p className="text-supporting leading-relaxed mt-3">
-            Describe a memory that still carries weight.
+            Let's begin gently.
+            <br />
+            You are simply accessing one small moment.
+          </p>
+          <p className="text-supporting leading-relaxed mt-3">
+            Bring to mind a moment that still feels meaningful.
             <br />
             It does not need to be dramatic, just sincere.
           </p>
