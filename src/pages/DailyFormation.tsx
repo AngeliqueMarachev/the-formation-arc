@@ -39,7 +39,7 @@ interface AnchorEntry {
 const DailyFormation = () => {
   const navigate = useNavigate();
   const { user } = useAuth();
-  const [screen, setScreen] = useState<Screen>("reorientation");
+  const [screen, setScreen] = useState<Screen>("anchor-intro");
   const [loading, setLoading] = useState(true);
   const [glowingLine, setGlowingLine] = useState<number | null>(null);
 
