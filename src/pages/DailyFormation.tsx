@@ -9,8 +9,10 @@ import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import BottomNav from "@/components/BottomNav";
 import AnchorRecall from "@/components/AnchorRecall";
+import AnchorIntro from "@/components/AnchorIntro";
 
 type Screen =
+"anchor-intro" |
 "reorientation" |
 "readiness" |
 "anchor-choice" |
