@@ -277,47 +277,6 @@ const DailyFormation = () => {
 
   }
 
-  // ── READINESS GATE ──
-  if (screen === "readiness") {
-    return (
-      <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col justify-center px-6 py-12 content-container">
-          <h1 className="tracking-tight mb-8">
-            Check your state.
-          </h1>
-          <p className="text-supporting leading-relaxed mb-4">
-            Memory work requires steadiness.
-          </p>
-          <p className="text-supporting leading-relaxed mb-10">
-            If you are activated, return to the reorientation first.
-          </p>
-
-          <div className="space-y-3">
-            <Button
-              className="w-full"
-              size="lg"
-              onClick={() => navigate("/activated")}
-              style={{
-                boxShadow: "0 0 14px rgba(221, 255, 44, 0.25)"
-              }}>
-              
-              Return to Reorientation
-            </Button>
-            <Button
-              className="w-full"
-              size="lg"
-              variant="secondary"
-              onClick={() => setScreen("anchor-choice")}>
-              
-              I am steady enough
-            </Button>
-          </div>
-        </main>
-        <BottomNav />
-      </div>);
-
-  }
-
   // ── ANCHOR LAYER CHOICE ──
   if (screen === "anchor-choice") {
     return (
