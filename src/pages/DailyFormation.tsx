@@ -233,16 +233,16 @@ const DailyFormation = () => {
                 </div>
                 <div className="space-y-3">
                   <Button
-                    className="w-full"
-                    size="lg"
-                    onClick={() => setScreen("anchor-choice")}>
+                  className="w-full"
+                  size="lg"
+                  onClick={() => setScreen("anchor-choice")}>
                     Find a Memory
                   </Button>
                   <Button
-                    className="w-full"
-                    size="lg"
-                    variant="secondary"
-                    onClick={() => navigate("/anchors")}>
+                  className="w-full"
+                  size="lg"
+                  variant="secondary"
+                  onClick={() => navigate("/anchors")}>
                     Browse Anchors
                   </Button>
                 </div>
@@ -256,16 +256,16 @@ const DailyFormation = () => {
               </p>
               <div className="space-y-3">
                 <Button
-                  className="w-full"
-                  size="lg"
-                  onClick={() => setScreen("anchor-choice")}>
+                className="w-full"
+                size="lg"
+                onClick={() => setScreen("anchor-choice")}>
                   Find a Memory
                 </Button>
                 <Button
-                  className="w-full"
-                  size="lg"
-                  variant="secondary"
-                  onClick={() => navigate("/anchors")}>
+                className="w-full"
+                size="lg"
+                variant="secondary"
+                onClick={() => navigate("/anchors")}>
                   Browse Anchors
                 </Button>
               </div>
