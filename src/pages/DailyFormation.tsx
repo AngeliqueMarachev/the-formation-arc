@@ -144,25 +144,25 @@ const DailyFormation = () => {
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col px-6 pt-10 pb-12 content-container">
           <h1 className="tracking-tight mb-1">Daily Formation</h1>
-          <p className="text-primary font-semibold tracking-wide mb-6 text-lg">Stabilise before you build.</p>
+          <p className="text-primary font-semibold tracking-wide mb-6 text-lg">​</p>
 
           <div className="space-y-4 leading-relaxed mb-10">
-            <p className="text-text-body">Settle your system before training.</p>
-            <p className="text-text-body">
-              Before entering the Anchor Layer, we first signal safety to the nervous system.
+            <p className="text-text-body text-base text-primary">Stabilise before you build. Settle your system before training.</p>
+            <p className="text-text-body text-base">
+              Before entering The Anchor Layer, we first signal safety to the nervous system by returning to your Reorientation Engine.        
             </p>
-            <p className="text-text-body">
-              Read your Reorientation slowly and allow your body to settle. You do not need to feel completely calm,
-              only safe enough to continue.
+            <p className="text-text-body text-base">
+              This immediately signals safety, allowing your body to settle.
+            
             </p>
-            <p className="text-text-body">
-              After this sequence, you will move into the Anchor Layer, where we strengthen new expectations of safety.
+            <p className="text-text-body text-base">
+              After this sequence, you will move into The Anchor Layer, where we strengthen new expectations of steadiness.
             </p>
           </div>
 
           {hasLines ?
           <>
-              <p className="font-semibold tracking-widest text-primary/70 uppercase mb-1 text-sm">
+              <p className="font-semibold tracking-widest uppercase mb-1 text-sm text-primary">
                 Your Reorientation Engine
               </p>
               <p className="text-text-supporting mb-6 text-sm">Tap each step. Read it slowly.</p>
@@ -191,7 +191,7 @@ const DailyFormation = () => {
                     "border-border/50 bg-card/50 text-text-body hover:border-primary/20"}`
                     }>
                     
-                      <p className="text-[10px] font-semibold tracking-widest text-primary/70 uppercase mb-2">
+                      <p className="text-[10px] font-semibold tracking-widest uppercase mb-2 text-primary">
                         {phase.title}
                       </p>
                       <p className="text-sm leading-relaxed text-text-heading">{line}</p>
@@ -207,12 +207,12 @@ const DailyFormation = () => {
                   className="text-sm text-text-heading font-normal font-sans"
                   style={{ fontFamily: "'Fraunces', serif" }}>
                   
-                    You are steady enough to continue.
+                    ​
                   </p>
-                  <p className="text-sm text-text-body mt-3">
-                    Now you will begin with The Anchor Layer to expand your memories and strengthen your expectations of
-                    safety.
-                  </p>
+                  <p className="text-text-body mt-3 text-base">
+                    You are steady enough to continue. Now you will begin with The Anchor Layer to expand your memories and strengthen your expectations of safety.
+                  
+                </p>
                 </div>
                 <div className="space-y-3">
                   <Button className="w-full" size="lg" onClick={() => setScreen("create-anchor")}>
