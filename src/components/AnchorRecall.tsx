@@ -121,7 +121,7 @@ const AnchorRecall = ({
             }
           </h1>
           <p className="text-supporting leading-relaxed mt-3 text-destructive-foreground">
-            Let's begin gently. Bring to mind a moment that feels meaningful.  
+            Bring to mind a moment that feels meaningful.  
           </p>
           <p className="text-supporting leading-relaxed mt-3 text-destructive-foreground">
             Use the suggestions below to recall a memory. Ask God to help you.             
