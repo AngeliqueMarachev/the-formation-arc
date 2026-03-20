@@ -162,7 +162,7 @@ const AnchorRecall = ({
             <button
               key={scene}
               onClick={() => handleSceneSelect(scene)}
-              className="rounded-full border border-border px-4 py-2 text-text-supporting transition-colors hover:border-primary/40 hover:text-text-heading text-base text-primary">
+              className="rounded-full border border-border px-4 py-2 text-primary transition-colors hover:border-primary/40 text-base">
               
                   {scene}
                 </button>
