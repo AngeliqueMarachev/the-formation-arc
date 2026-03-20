@@ -167,7 +167,7 @@ const DailyFormation = () => {
               </p>
               <p className="text-text-supporting mb-6 text-sm">Tap each step. Read it slowly.</p>
 
-              <div className="space-y-6 mb-12">
+              <div className="rounded-lg border border-border/50 bg-card/30 p-2 mb-12 space-y-1">
                 {phases.map((phase) => {
                 const line = Object.values(lines!)[phase.lineIndex];
                 if (!line) return null;
