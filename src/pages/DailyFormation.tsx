@@ -149,14 +149,14 @@ const DailyFormation = () => {
           <div className="space-y-4 leading-relaxed mb-10">
             <p className="text-primary text-base">Stabilise before you build. Settle your system before training.</p>
             <p className="text-text-body text-base">
-              Before entering The Anchor Layer, we first signal safety to the nervous system by returning to your Reorientation Engine.        
-            </p>
-            <p className="text-text-body text-base">
-              This immediately signals safety, allowing your body to settle.
-            
+              Before entering The Anchor Layer, rehearse your Reorientation Engine. This immediately signals safety, allowing your body to settle.         
             </p>
             <p className="text-text-body text-base">
               After this sequence, you will move into The Anchor Layer, where we strengthen new expectations of steadiness.
+            
+            </p>
+            <p className="text-text-body text-base">
+              ​
             </p>
           </div>
 
