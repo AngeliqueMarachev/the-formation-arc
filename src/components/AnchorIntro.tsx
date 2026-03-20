@@ -17,28 +17,30 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             Why the Anchor Layer exists
           </h1>
           <p className="text-text-body leading-relaxed mb-8 text-primary">
-            Build and strengthen the memories that train your nervous system to expect steadiness.
+            Build and strengthen the memories that anchor you. Train your nervous system to expect steadiness.
           </p>
 
           <div className="space-y-5 leading-relaxed text-text-body mb-12">
             <div className="space-y-1">
-              <p>Every believer experiences something painful at some point: </p>
+              <p>Every believer experiences the challenge at some point: </p>
               <p>We know the Truth. Personally, even.      </p>
-              <p>But then we enter a season where we feel overwhelmed, guarded, or lost.</p>
+              <p>But then we enter a season where we feel overwhelmed, guarded, lost.</p>
             </div>
 
             <div className="space-y-1">
               <p>We wonder if God has abandoned us.          </p>
-              <p>We scrutinize ourselves - we must have done something wrong.             </p>
-              <p>We fall into depression, addiction, self-pity, and spiral into hopelessness.              </p>
+              <p>We scrutinize ourselves. We must have done something wrong.             </p>
+              <p>We fall into self-pity, depression, addiction, spiralling into hopelessness.              </p>
             </div>
 
             <p>
-              This is not about your faith. It is about how your nervous system learned to operate. At some point your body learned that life requires vigilance: Staying alert, bracing for difficulty, anticipating danger. 
+              But this is not a question of displaced faith. This is how your nervous system learned to operate. At some point in the past, your body learned that life requires vigilance: stay alert, brace for difficulty, anticipate danger. 
             </p>
 
             <p>
-              Those patterns can continue running long after the original circumstances ended.  
+              Those patterns can continue long after the original circumstances ended.  
+            
+            
             </p>
 
             <p>
@@ -72,11 +74,9 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             <Button className="w-full" size="lg" onClick={() => setStep(1)}>
               Continue
             </Button>
-            <Button
-              className="w-full"
-              size="lg"
-              variant="secondary"
-              onClick={onComplete}>
+            <Button className="w-full" size="lg"
+            variant="secondary"
+            onClick={onComplete}>
               
               Skip
             </Button>
