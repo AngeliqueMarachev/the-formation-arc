@@ -113,7 +113,7 @@ const AnchorRecall = ({
         {/* Header */}
         <div>
           <h1 className="tracking-tight">
-            Recall a Scene
+            Recall a scene
             {selectedScene && selectedScene !== "Something else" &&
             <span className="block text-lg font-normal text-text-supporting mt-1 text-secondary-foreground">
                 {selectedScene}
@@ -121,14 +121,10 @@ const AnchorRecall = ({
             }
           </h1>
           <p className="text-supporting leading-relaxed mt-3 text-destructive-foreground">
-            Let's begin gently. Bring to mind a moment that feels meaningful. 
-            <br />
-            You are simply accessing one small moment.
+            Let's begin gently.
           </p>
           <p className="text-supporting leading-relaxed mt-3 text-destructive-foreground">
-            Use the suggestions below to help you let that moment appear. Ask God to help you.                            
-            <br />
-            It does not need to be dramatic, just sincere.
+            Bring to mind a moment that feels meaningful. 
           </p>
         </div>
 
