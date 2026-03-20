@@ -104,7 +104,7 @@ const AnchorRecall = ({
   return (
     <div className="flex min-h-screen flex-col pb-20 text-foreground">
       <header className="px-6 pt-8 pb-2 content-container">
-        <h2 className="text-text-supporting mb-2 text-6xl font-bold text-zinc-100">​</h2>
+        <div className="mb-2 h-8" />
         <p className="text-xs text-text-supporting mb-2">Step 1 of {totalSteps}</p>
         <Progress value={1 / totalSteps * 100} className="h-1.5 mb-6" />
       </header>
@@ -182,10 +182,10 @@ const AnchorRecall = ({
                 Just one scene.
               </p>
               <p className="text-text-body">Notice where you are, and what you're doing.        </p>
-              <p className="text-text-body">​Let the experience become alive and vivid.                        </p>
+              <p className="text-text-body">Let the experience become alive and vivid.</p>
               <p className="text-text-body">Notice the light. Is it a sunny, or stormy, glowing or dim?                                    </p>
               <p className="text-text-body">What sounds can you hear?</p>
-              <p className="text-text-body">​Is the sun touching your skin, or do you feel a breeze? </p>
+              <p className="text-text-body">Is the sun touching your skin, or do you feel a breeze?</p>
               <p className="text-text-body">How do you feel here, in this moment?        </p>
               <p className="text-text-body pt-2">You do not need to force detail.</p>
               <p className="text-text-body">

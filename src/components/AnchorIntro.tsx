@@ -57,15 +57,9 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
               The Anchor Layer facilitates you in this process.
             </p>
 
-            <p className="text-text-heading font-medium">
-              ​
-            </p>
-
-            <p className="text-text-heading font-medium">
-              ​
-            </p>
-
-            <p>​</p>
+            <div className="h-6" />
+            <div className="h-6" />
+            <div className="h-6" />
           </div>
         </main>
 
@@ -127,18 +121,9 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
               This process helps the nervous system anticipate steadiness rather than contraction over time.
             </p>
 
-            <p>
-              ​
-            </p>
-
-            <div className="space-y-1">
-              <p>​</p>
-              <p>​</p>
-            </div>
-
-            <p className="text-text-heading font-medium">
-              ​
-            </p>
+            <div className="h-6" />
+            <div className="h-6" />
+            <div className="h-6" />
           </div>
         </main>
 

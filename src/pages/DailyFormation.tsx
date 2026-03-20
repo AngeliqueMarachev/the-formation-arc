@@ -144,7 +144,7 @@ const DailyFormation = () => {
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col px-6 pt-10 pb-12 content-container">
           <h1 className="tracking-tight mb-1">Daily Formation</h1>
-          <p className="text-primary font-semibold tracking-wide mb-6 text-lg">​</p>
+          <div className="mb-6" />
 
           <div className="space-y-4 leading-relaxed mb-10">
             <p className="text-text-body text-base text-primary">Stabilise before you build. Settle your system before training.</p>
@@ -203,12 +203,7 @@ const DailyFormation = () => {
               <div className="pt-4 space-y-6">
                 <div className="text-center">
                   <p className="text-text-body mb-1 font-serif text-xl font-bold">Your system has settled.</p>
-                  <p
-                  className="text-sm text-text-heading font-normal font-sans"
-                  style={{ fontFamily: "'Fraunces', serif" }}>
-                  
-                    ​
-                  </p>
+                  <div className="h-2" />
                   <p className="text-text-body mt-3 text-base">
                     You are steady enough to continue. Now you will expand your memories and strengthen your expectations of safety.
                   
