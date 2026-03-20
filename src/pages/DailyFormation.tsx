@@ -210,7 +210,7 @@ const DailyFormation = () => {
                     ​
                   </p>
                   <p className="text-text-body mt-3 text-base">
-                    You are steady enough to continue. Now you will begin with The Anchor Layer to expand your memories and strengthen your expectations of safety.
+                    You are steady enough to continue. Now you will expand your memories and strengthen your expectations of safety.
                   
                 </p>
                 </div>
