@@ -16,7 +16,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
           <h1 className="tracking-tight mb-3">
             Why the Anchor Layer exists
           </h1>
-          <p className="text-text-body leading-relaxed mb-8 text-primary">
+          <p className="leading-relaxed mb-8 text-primary">
             Build and strengthen the memories that anchor you. Train your nervous system to expect steadiness.
           </p>
 
