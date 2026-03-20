@@ -145,14 +145,14 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
     <div className="flex min-h-screen flex-col pb-20">
       <main className="flex flex-1 flex-col px-6 pt-10 pb-32 content-container">
         <h1 className="tracking-tight mb-8">
-          Memories to anchor          
+          The nervous system learns safety through moments               
         </h1>
 
         <div className="space-y-5 leading-relaxed text-text-body">
-          <p>You are not searching for the perfect memory. You do not need the whole story. Just a glimpse. </p>
+          <p className="text-primary">You are looking for access to one small moment from your life that brought you joy. </p>
 
-          <p className="text-primary">
-            You are looking for access to one small moment from your life that brought you joy.
+          <p className="text-secondary-foreground">
+            You are not searching for the perfect memory. You do not need the whole story. Just a glimpse
           </p>
 
           <div>
