@@ -149,10 +149,10 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
         </h1>
 
         <div className="space-y-5 leading-relaxed text-text-body">
-          <p>You are not searching for the perfect memory.</p>
+          <p>You are not searching for the perfect memory. You do not need the whole story. Just a glimpse. </p>
 
-          <p>
-            You are simply looking for access to one small moment from your life that brought you joy.
+          <p className="text-primary">
+            You are looking for access to one small moment from your life that brought you joy.
           </p>
 
           <div>
@@ -165,21 +165,21 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             </ul>
           </div>
 
-          <p>You do not need the whole story.</p>
-          <p className="text-text-heading font-medium">Just a glimpse.</p>
+          <p>​If nothing comes to mind right away, that is normal. When the nervous system has been under pressure, access to memory can narrow. </p>
+          <p className="text-text-heading font-medium">​If nothing comes to mind right away, that is normal. When the nervous system has been under pressure, access to memory can narrow. </p>
 
-          <p>If nothing comes to mind right away, that is normal.</p>
+          <p>We will  help you access memories along the way. And your memory will widen with practice.</p>
 
           <p>
-            When the nervous system has been under pressure, access to memory can narrow.
+            For now, simply allow one moment to appear.​ 
           </p>
 
           <p>
-            We will  help to access memories along the way. And your memory will widen with practice.
+            ​
           </p>
 
           <p className="text-text-heading font-medium">
-            For now, simply allow one moment to appear.
+            ​
           </p>
         </div>
       </main>
