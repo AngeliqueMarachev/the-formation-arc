@@ -16,54 +16,54 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
           <h1 className="tracking-tight mb-3">
             Why the Anchor Layer exists
           </h1>
-          <p className="text-text-body leading-relaxed mb-8">
-            This is where you build and strengthen your Anchors: Memories that train your nervous system to expect steadiness.
+          <p className="text-text-body leading-relaxed mb-8 text-primary">
+            Build and strengthen the memories that train your nervous system to expect steadiness.
           </p>
 
           <div className="space-y-5 leading-relaxed text-text-body mb-12">
             <div className="space-y-1">
-              <p>Many thoughtful believers experience something confusing.</p>
-              <p>They still believe Truth.</p>
-              <p>But they feel tense, guarded, or distant.</p>
+              <p>Every believer experiences something painful at some point: </p>
+              <p>We know the Truth. Personally, even.      </p>
+              <p>But then we enter a season where we feel overwhelmed, guarded, or lost.</p>
             </div>
 
             <div className="space-y-1">
-              <p>Connection can trigger anxiety.</p>
-              <p>Prayer can become elusive.</p>
-              <p>Quiet moments seeking God can feel lonely.</p>
+              <p>We wonder if God has abandoned us.          </p>
+              <p>We scrutinize ourselves - we must have done something wrong.             </p>
+              <p>We fall into depression, addiction, self-pity, and spiral into hopelessness.              </p>
             </div>
 
             <p>
-              This often has less to do with belief and more to do with how the nervous system learned to operate.
+              This is not about your faith. It is about how your nervous system learned to operate. At some point your body learned that life requires vigilance: Staying alert, bracing for difficulty, anticipating danger. 
             </p>
 
             <p>
-              At some point your body learned that life requires vigilance: Staying alert, bracing for difficulty, anticipating danger.
+              Those patterns can continue running long after the original circumstances ended.  
             </p>
 
             <p>
-              Those patterns can continue running long after the original circumstances ended.
+              When the nervous system stays oriented toward threat, it becomes difficult to experience flow, as the brain constantly scans for signs of danger. Over time this expectation quietly shapes how the body responds to life.  
             </p>
 
             <p>
-              When the nervous system stays oriented toward threat, it becomes difficult to experience flow.
-            </p>
-
-            <p>The brain begins scanning the present for signs of danger.</p>
-
-            <p>
-              Over time this expectation quietly shapes how the body responds to life.
-            </p>
-
-            <p className="text-text-heading font-medium">
               But these expectations are not permanent.
             </p>
 
-            <p className="text-text-heading font-medium">
-              The brain can update what it predicts.
+            <p>The brain can update what it predicts.</p>
+
+            <p>
+              The Anchor Layer facilitates you in this process.
             </p>
 
-            <p>The Anchor Layer facilitates you in this process.</p>
+            <p className="text-text-heading font-medium">
+              ​
+            </p>
+
+            <p className="text-text-heading font-medium">
+              ​
+            </p>
+
+            <p>​</p>
           </div>
         </main>
 
