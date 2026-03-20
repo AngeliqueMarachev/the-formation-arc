@@ -145,7 +145,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
     <div className="flex min-h-screen flex-col pb-20">
       <main className="flex flex-1 flex-col px-6 pt-10 pb-32 content-container">
         <h1 className="tracking-tight mb-8">
-          Choose one moment
+          Build your anchors 
         </h1>
 
         <div className="space-y-5 leading-relaxed text-text-body">
