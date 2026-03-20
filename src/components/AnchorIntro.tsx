@@ -190,7 +190,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
           </p>
 
           <p>
-            We will give you help to access memories along the way. And your memory will widen with practice.
+            We will  help to access memories along the way. And your memory will widen with practice.
           </p>
 
           <p className="text-text-heading font-medium">
