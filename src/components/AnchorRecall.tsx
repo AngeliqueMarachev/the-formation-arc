@@ -121,10 +121,10 @@ const AnchorRecall = ({
             }
           </h1>
           <p className="text-supporting leading-relaxed mt-3 text-destructive-foreground">
-            Let's begin gently.
+            Let's begin gently. Bring to mind a moment that feels meaningful.  
           </p>
           <p className="text-supporting leading-relaxed mt-3 text-destructive-foreground">
-            Bring to mind a moment that feels meaningful. 
+            Use the suggestions below to recall a memory. Ask God to help you.             
           </p>
         </div>
 
@@ -137,10 +137,10 @@ const AnchorRecall = ({
             onClick={() => setSelectedCategory(cat.id)}
             className="w-full rounded-xl border border-border bg-card p-5 text-left transition-colors hover:border-primary/40 active:bg-accent/10">
             
-                <p className="text-sm font-medium text-text-heading leading-snug">
+                <p className="font-medium text-text-heading leading-snug text-base text-primary">
                   {cat.label}
                 </p>
-                <p className="text-xs text-text-supporting mt-1">
+                <p className="text-text-supporting mt-1 text-base">
                   {cat.description}
                 </p>
               </button>
