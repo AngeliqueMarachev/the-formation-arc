@@ -97,7 +97,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
           </h1>
 
           <div className="space-y-5 leading-relaxed text-text-body">
-            <p>Your brain stores experiences as networks of meaning.</p>
+            <p className="text-primary">Your brain stores experiences as networks of meaning.</p>
 
             <div>
               <p className="mb-2">Moments in life quietly taught your body things like:</p>
@@ -109,35 +109,35 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             </div>
 
             <div className="space-y-1">
-              <p>Those conclusions became prediction templates.</p>
-              <p>Your nervous system begins preparing for life according to a negativity bias.</p>
+              <p>Those conclusions became prediction templates, and your nervous system begins preparing for life according to this negativity bias. </p>
+              <p className="text-primary">Memory plays an important role in how those expectations are maintained.</p>
             </div>
 
-            <p>Memory plays an important role in how those expectations are maintained.</p>
+            <p className="text-secondary-foreground">When a memory is recalled with attention, the neural network connected to it briefly becomes flexible. It also releases chemistry associated with safety and connection, which helps strengthen new emotional associations. </p>
 
             <p>
-              When a memory is recalled with attention, the neural network connected to it briefly becomes flexible.
+              As new meanings attach to memories over time, the brain gradually updates what it expects from life. Experiences that once trained the body to expect threat lose their influence as steadier pathways are repeated. 
             </p>
 
             <p>
-              It also releases chemistry associated with safety and connection, which helps strengthen new emotional associations.
+              This does not rewrite the past. But it allows the memory to hold more than the conclusion it formed at the time. 
+            </p>
+
+            <p className="text-primary">
+              This process helps the nervous system anticipate steadiness rather than contraction over time.
             </p>
 
             <p>
-              As new meanings attach to memories over time, the brain gradually updates what it expects from life.
-            </p>
-
-            <p>
-              Experiences that once trained the body to expect threat lose their influence as steadier pathways are repeated.
+              ​
             </p>
 
             <div className="space-y-1">
-              <p>This does not rewrite the past.</p>
-              <p>But it allows the memory to hold more than the conclusion it formed at the time.</p>
+              <p>​</p>
+              <p>​</p>
             </div>
 
             <p className="text-text-heading font-medium">
-              Over time this process helps the nervous system anticipate steadiness rather than contraction.
+              ​
             </p>
           </div>
         </main>
