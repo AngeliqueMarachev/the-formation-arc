@@ -137,7 +137,7 @@ const AnchorRecall = ({
             onClick={() => setSelectedCategory(cat.id)}
             className="w-full rounded-xl border border-border bg-card p-5 text-left transition-colors hover:border-primary/40 active:bg-accent/10">
             
-                <p className="font-medium text-text-heading leading-snug text-base text-primary">
+                <p className="font-medium text-primary leading-snug text-base">
                   {cat.label}
                 </p>
                 <p className="text-text-supporting mt-1 text-base">
