@@ -44,14 +44,14 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             </p>
 
             <p>
-              When the nervous system stays oriented toward threat, it becomes difficult to experience flow. The brain constantly scans for signs of danger. Over time this expectation quietly shapes how the body responds to life.
+              When the nervous system stays oriented toward threat, it becomes difficult to experience flow, as the brain constantly scans for signs of danger. Over time this expectation quietly shapes how the body responds to life.  
             </p>
 
             <p>
-              But this is only a perceived reality, and expectations are not permanent.
+              But these expectations are not permanent.
             </p>
 
-            <p>The brain can update what it predicts.</p>
+            <p className="text-primary">The brain can update what it predicts.</p>
 
             <p>
               The Anchor Layer facilitates you in this process.
