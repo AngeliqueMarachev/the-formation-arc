@@ -102,7 +102,7 @@ const AnchorRecall = ({
   const canContinue = sceneText.trim().length > 0 && emotionTags.length > 0;
 
   return (
-    <div className="flex min-h-screen flex-col pb-20 text-foreground">
+    <div className="flex min-h-screen flex-col pb-20 text-secondary-foreground">
       <header className="px-6 pt-8 pb-2 content-container">
         <div className="mb-2 h-8" />
         <p className="text-xs text-text-supporting mb-2">Step 1 of {totalSteps}</p>
@@ -153,7 +153,7 @@ const AnchorRecall = ({
         <div className="space-y-3">
             <button
             onClick={() => setSelectedCategory(null)}
-            className="text-xs text-text-supporting hover:text-text-heading transition-colors">
+            className="text-text-supporting hover:text-text-heading transition-colors text-sm">
             
               ← Back to categories
             </button>
@@ -162,7 +162,7 @@ const AnchorRecall = ({
             <button
               key={scene}
               onClick={() => handleSceneSelect(scene)}
-              className="rounded-full border border-border px-4 py-2 text-xs text-text-supporting transition-colors hover:border-primary/40 hover:text-text-heading">
+              className="rounded-full border border-border px-4 py-2 text-text-supporting transition-colors hover:border-primary/40 hover:text-text-heading text-base text-primary">
               
                   {scene}
                 </button>
