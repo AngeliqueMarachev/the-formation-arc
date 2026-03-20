@@ -167,7 +167,7 @@ const DailyFormation = () => {
               </p>
               <p className="text-text-supporting mb-6 text-sm">Tap each step. Read it slowly.</p>
 
-              <div className="rounded-lg border border-border/50 bg-card/30 p-2 mb-12 space-y-1">
+              <div className="space-y-6 mb-12">
                 {phases.map((phase) => {
                 const line = Object.values(lines!)[phase.lineIndex];
                 if (!line) return null;
@@ -181,10 +181,14 @@ const DailyFormation = () => {
                       setGlowingLine(phase.lineIndex);
                       setTimeout(() => setGlowingLine((prev) => prev === phase.lineIndex ? null : prev), 800);
                     }}
-                    className={`w-full text-left rounded-lg p-4 transition-all duration-300 ${
+                    className={`w-full text-left rounded-lg border p-5 transition-all duration-300 ${
                     glowingLine === phase.lineIndex ?
-                    "bg-primary/10 text-text-heading" :
-                    "text-text-body"}`
+                    isReturnPhase ?
+                    "border-primary bg-primary/15 text-text-heading shadow-lg shadow-primary/20" :
+                    "border-primary/50 bg-primary/10 text-text-heading shadow-lg shadow-primary/10" :
+                    isReturnPhase ?
+                    "border-primary/40 bg-primary/8 text-text-heading" :
+                    "border-border/50 bg-card/50 text-text-body hover:border-primary/20"}`
                     }>
                     
                       <p className="text-[10px] font-semibold tracking-widest uppercase mb-2 text-primary">
