@@ -351,15 +351,16 @@ const DailyFormation = () => {
           {/* Step 2: Anchor Phrase */}
           {createStep === 2 &&
           <div className="space-y-4">
-              <h2 className="font-semibold tracking-tight">Anchor Phrase.</h2>
+              <h2 className="font-semibold tracking-tight text-3xl">Create an Anchor Phrase</h2>
               <div className="space-y-3 leading-relaxed">
-                <p className="text-text-body">Your brain remembers stories.</p>
-                <p className="text-text-body">But it stabilizes around summaries.</p>
-                <p className="text-text-body">Many memories trained your nervous system to expect something.</p>
+                <p className="text-text-body">Your brain remembers stories. But it stabilizes around summaries. </p>
+                <p className="text-text-body">​Many memories trained your nervous system to expect something.</p>
+                <p className="text-text-body">
+</p>
                 <div className="space-y-1 italic text-text-body">
-                  <p>"I am alone."</p>
-                  <p>"I am not supported."</p>
-                  <p>"I am not enough."</p>
+                  <p>I am alone.</p>
+                  <p>I am not supported.</p>
+                  <p>I am not enough.</p>
                 </div>
                 <p className="text-text-heading font-medium">Your Anchor Phrase updates that template.</p>
                 <p className="text-text-body">It does not erase the memory.</p>
@@ -373,11 +374,10 @@ const DailyFormation = () => {
                   <p>I felt afraid, yet I endured.</p>
                   <p>I felt abandoned, but I was being championed.</p>
                 </div>
-                <Textarea
-                placeholder="Write your anchor phrase…"
-                value={anchorPhrase}
-                onChange={(e) => setAnchorPhrase(e.target.value)}
-                className="min-h-[80px]" />
+                <Textarea placeholder="Write your anchor phrase…"
+              value={anchorPhrase}
+              onChange={(e) => setAnchorPhrase(e.target.value)}
+              className="min-h-[80px]" />
               
               </div>
             </div>
