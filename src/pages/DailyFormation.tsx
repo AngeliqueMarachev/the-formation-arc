@@ -358,21 +358,21 @@ const DailyFormation = () => {
                 <p className="text-text-body">
 </p>
                 <div className="space-y-1 italic text-text-body">
-                  <p>I am alone.</p>
-                  <p>I am not supported.</p>
-                  <p>I am not enough.</p>
+                  <p className="text-sm">I am alone.</p>
+                  <p className="text-sm">I am not supported.</p>
+                  <p className="text-sm">I am not enough.</p>
                 </div>
                 <p className="text-text-heading font-medium text-primary">Your Anchor Phrase updates that template.</p>
                 <p className="text-text-body">It does not erase the memory. It widens the meaning. </p>
-                <p className="text-text-body text-sm">​For example:</p>
+                <p className="text-text-body text-sm">Examples of Anchor Phrases:    </p>
               </div>
 
               <div className="pt-2">
                 
                 <div className="space-y-2 text-xs text-text-supporting mb-4">
-                  <p>I believed I was forgotten, but I was not as alone.</p>
-                  <p>I felt afraid, yet I endured.</p>
-                  <p>I felt abandoned, but I was being championed.</p>
+                  <p className="text-sm">I believed I was forgotten, but I was not as alone.</p>
+                  <p className="text-sm">I felt afraid, yet I endured.</p>
+                  <p className="text-sm">I felt abandoned, but I was being championed.</p>
                 </div>
                 <Textarea placeholder="Write your anchor phrase…"
               value={anchorPhrase}
