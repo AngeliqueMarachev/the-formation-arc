@@ -199,20 +199,18 @@ const AnchorRecall = ({
         {/* Visualization guidance + writing field */}
         {selectedScene &&
         <>
-            <div className="space-y-4 leading-relaxed">
+            <div className="space-y-1 leading-relaxed">
               <p className="text-text-body">Where are you?</p>
               <p className="text-text-body">How old are you?</p>
               <p className="text-text-body">Who is with you?</p>
-              <p className="text-text-body pt-2">What time of day is it?</p>
+              <p className="text-text-body">What time of day is it?</p>
               <p className="text-text-body">What are you doing?</p>
-              <p className="text-text-body pt-2">Notice the light.</p>
+              <p className="text-text-body">Notice the light.</p>
               <p className="text-text-body">Notice the temperature.</p>
               <p className="text-text-body">Notice any sounds or smells.</p>
-              <p className="text-text-body pt-2">What are you doing, thinking, and feeling in this moment?</p>
-              <p className="text-text-body pt-2">
-                Memory is stored in sensation. Let sensation guide the memory.
-              </p>
-              <p className="text-text-body pt-2">Allow the details to come naturally. Nothing needs to be forced.</p>
+              <p className="text-text-body">What are you doing, thinking, and feeling in this moment?</p>
+              <p className="text-text-body">Memory is stored in sensation. Let sensation guide the memory.</p>
+              <p className="text-text-body">Allow the details to come naturally. Nothing needs to be forced.</p>
             </div>
 
             <Textarea
