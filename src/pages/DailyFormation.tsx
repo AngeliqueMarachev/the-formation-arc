@@ -466,7 +466,7 @@ const DailyFormation = () => {
     return (
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col justify-center px-6 py-12 content-container">
-          <h1 className="tracking-tight mb-8">Formation accumulates.</h1>
+          <h1 className="tracking-tight mb-8">Formation accumulates</h1>
           <div className="space-y-4 leading-relaxed">
             <p className="text-text-body text-base text-secondary-foreground">Today you:</p>
             <ul className="list-disc pl-5 space-y-1 text-text-body">
