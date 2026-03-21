@@ -209,8 +209,8 @@ const AnchorRecall = ({
               <p className="text-text-body">Notice the temperature.</p>
               <p className="text-text-body">Notice any sounds or smells.</p>
               <p className="text-text-body">What are you doing, thinking, and feeling in this moment?</p>
-              <p className="text-text-body">Memory is stored in sensation. Let sensation guide the memory.</p>
-              <p className="text-text-body">Allow the details to come naturally. Nothing needs to be forced.</p>
+              <p className="text-text-body">​</p>
+              <p className="text-text-body">Memory is stored in sensation. Let sensation guide the memory. Allow the details to come naturally. Nothing needs to be forced.</p>
             </div>
 
             <Textarea
