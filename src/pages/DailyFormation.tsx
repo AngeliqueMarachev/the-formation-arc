@@ -386,7 +386,7 @@ const DailyFormation = () => {
           {/* Step 3: Optional fields */}
           {createStep === 3 &&
           <div className="space-y-4">
-              <h2 className="font-semibold tracking-tight">Optional reflection.</h2>
+              <h2 className="font-semibold tracking-tight text-3xl">Optional reflection</h2>
               <p className="text-supporting leading-relaxed">These fields are not required. Skip if you prefer.</p>
 
               <div className="space-y-2">
