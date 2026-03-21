@@ -357,7 +357,7 @@ const DailyFormation = () => {
                 <p className="text-text-body">​Many memories trained your nervous system to expect something.</p>
                 <p className="text-text-body">
 </p>
-                <div className="space-y-1 italic text-text-body">
+                <div className="space-y-1 text-text-body">
                   <p className="text-sm">I am alone.</p>
                   <p className="text-sm">I am not supported.</p>
                   <p className="text-sm">I am not enough.</p>
