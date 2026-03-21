@@ -122,8 +122,8 @@ const AnchorRecall = ({
           </h1>
 
           {/* Screen 1 — Category selection */}
-          {!selectedScene && !selectedCategory && (
-            <>
+          {!selectedScene && !selectedCategory &&
+          <>
               <p className="text-supporting leading-relaxed mt-3 text-destructive-foreground">
                 Bring to mind a moment that feels meaningful.  
               </p>
@@ -131,11 +131,11 @@ const AnchorRecall = ({
                 Use the suggestions below to recall a memory. Ask God to help you.             
               </p>
             </>
-          )}
+          }
 
           {/* Screen 2 — Scene suggestions */}
-          {!selectedScene && selectedCategory && (
-            <>
+          {!selectedScene && selectedCategory &&
+          <>
               <p className="text-supporting leading-relaxed mt-3 text-destructive-foreground">
                 Let your mind wander back to a moment that naturally carries a sense of ease, enjoyment, or simple goodness.
               </p>
@@ -143,14 +143,14 @@ const AnchorRecall = ({
                 Slow this moment down as you let yourself step into it.
               </p>
             </>
-          )}
+          }
 
           {/* Screen 3 — Writing field */}
-          {selectedScene && (
-            <p className="text-supporting leading-relaxed mt-3 text-destructive-foreground">
+          {selectedScene &&
+          <p className="text-supporting leading-relaxed mt-3 text-base text-primary">
               Hold the scene gently. Use your senses to let the moment come alive.
             </p>
-          )}
+          }
         </div>
 
         {/* Memory Gateway — category cards */}
