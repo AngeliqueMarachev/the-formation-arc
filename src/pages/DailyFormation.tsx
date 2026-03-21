@@ -362,9 +362,9 @@ const DailyFormation = () => {
                   <p>I am not supported.</p>
                   <p>I am not enough.</p>
                 </div>
-                <p className="text-text-heading font-medium">Your Anchor Phrase updates that template.</p>
-                <p className="text-text-body">It does not erase the memory.</p>
-                <p className="text-text-body">It widens the meaning.</p>
+                <p className="text-text-heading font-medium text-primary">Your Anchor Phrase updates that template.</p>
+                <p className="text-text-body">It does not erase the memory. It widens the meaning. </p>
+                <p className="text-text-body text-sm">​For example:</p>
               </div>
 
               <div className="pt-2">
