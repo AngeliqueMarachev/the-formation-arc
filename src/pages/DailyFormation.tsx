@@ -322,7 +322,7 @@ const DailyFormation = () => {
           {/* Step 1: Meaning */}
           {createStep === 1 &&
           <div className="space-y-4">
-              <h2 className="font-semibold tracking-tight">Expand your conclusion.</h2>
+              <h2 className="font-semibold tracking-tight text-3xl">Expand your conclusion</h2>
               <p className="text-supporting leading-relaxed">
                 Widen your experience. Is there something in this scene, maybe even something about yourself, that you
                 didn't notice before?
