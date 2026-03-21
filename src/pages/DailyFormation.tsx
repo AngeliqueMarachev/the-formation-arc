@@ -481,7 +481,7 @@ const DailyFormation = () => {
           </div>
 
           <Button className="mt-10 w-full" size="lg" onClick={() => navigate("/")}>
-            Return home
+            Carry this forward
           </Button>
         </main>
         <BottomNav />
