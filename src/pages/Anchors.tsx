@@ -169,7 +169,7 @@ const Anchors = () => {
   return (
     <div className="flex min-h-screen flex-col pb-20">
       <header className="px-6 pt-8 pb-2 content-container">
-        <h1 className="tracking-tight font-serif">Anchor Library</h1>
+        <h1 className="tracking-tight font-serif">The Anchor Library</h1>
         <p className="text-supporting mt-1">
           Stored scenes and phrases that stabilize perception.
         </p>
