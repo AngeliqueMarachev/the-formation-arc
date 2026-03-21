@@ -120,12 +120,37 @@ const AnchorRecall = ({
               </span>
             }
           </h1>
-          <p className="text-supporting leading-relaxed mt-3 text-destructive-foreground">
-            Bring to mind a moment that feels meaningful.  
-          </p>
-          <p className="text-supporting leading-relaxed mt-3 text-destructive-foreground">
-            Use the suggestions below to recall a memory. Ask God to help you.             
-          </p>
+
+          {/* Screen 1 — Category selection */}
+          {!selectedScene && !selectedCategory && (
+            <>
+              <p className="text-supporting leading-relaxed mt-3 text-destructive-foreground">
+                Bring to mind a moment that feels meaningful.  
+              </p>
+              <p className="text-supporting leading-relaxed mt-3 text-destructive-foreground">
+                Use the suggestions below to recall a memory. Ask God to help you.             
+              </p>
+            </>
+          )}
+
+          {/* Screen 2 — Scene suggestions */}
+          {!selectedScene && selectedCategory && (
+            <>
+              <p className="text-supporting leading-relaxed mt-3 text-destructive-foreground">
+                Let your mind wander back to a moment that naturally carries a sense of ease, enjoyment, or simple goodness.
+              </p>
+              <p className="text-supporting leading-relaxed mt-3 text-destructive-foreground">
+                Slow this moment down as you let yourself step into it.
+              </p>
+            </>
+          )}
+
+          {/* Screen 3 — Writing field */}
+          {selectedScene && (
+            <p className="text-supporting leading-relaxed mt-3 text-destructive-foreground">
+              Hold the scene gently. Use your senses to let the moment come alive.
+            </p>
+          )}
         </div>
 
         {/* Memory Gateway — category cards */}
@@ -175,24 +200,19 @@ const AnchorRecall = ({
         {selectedScene &&
         <>
             <div className="space-y-4 leading-relaxed">
-              <p className="text-text-heading font-medium">Slow this moment down.</p>
-              <p className="text-text-body">
-                You are not remembering an entire season of life.
-                <br />
-                Just one scene.
+              <p className="text-text-body">Where are you?</p>
+              <p className="text-text-body">How old are you?</p>
+              <p className="text-text-body">Who is with you?</p>
+              <p className="text-text-body pt-2">What time of day is it?</p>
+              <p className="text-text-body">What are you doing?</p>
+              <p className="text-text-body pt-2">Notice the light.</p>
+              <p className="text-text-body">Notice the temperature.</p>
+              <p className="text-text-body">Notice any sounds or smells.</p>
+              <p className="text-text-body pt-2">What are you doing, thinking, and feeling in this moment?</p>
+              <p className="text-text-body pt-2">
+                Memory is stored in sensation. Let sensation guide the memory.
               </p>
-              <p className="text-text-body">Notice where you are, and what you're doing.        </p>
-              <p className="text-text-body">Let the experience become alive and vivid.</p>
-              <p className="text-text-body">Notice the light. Is it a sunny, or stormy, glowing or dim?                                    </p>
-              <p className="text-text-body">What sounds can you hear?</p>
-              <p className="text-text-body">Is the sun touching your skin, or do you feel a breeze?</p>
-              <p className="text-text-body">How do you feel here, in this moment?        </p>
-              <p className="text-text-body pt-2">You do not need to force detail.</p>
-              <p className="text-text-body">
-                Memory is stored in sensation.
-                <br />
-                Let sensation guide the memory.
-              </p>
+              <p className="text-text-body pt-2">Allow the details to come naturally. Nothing needs to be forced.</p>
             </div>
 
             <Textarea
