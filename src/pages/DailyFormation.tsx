@@ -143,7 +143,7 @@ const DailyFormation = () => {
     return (
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col px-6 pt-10 pb-12 content-container">
-          <h1 className="tracking-tight mb-1">Daily Formation requires flow   </h1>
+          <h1 className="tracking-tight mb-1">The Daily Formation requires flow   </h1>
           <div className="mb-6" />
 
           <div className="space-y-4 leading-relaxed mb-10">

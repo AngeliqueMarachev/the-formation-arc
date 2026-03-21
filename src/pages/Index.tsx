@@ -74,19 +74,19 @@ const Index = () => {
 
   const cards = [
   {
-    title: "Reorientation Engine",
+    title: "The Reorientation Engine",
     subtitle: "When fear or anxiety rises, use The Reorientation Engine to interrupt the spiral and regain steadiness.",
     icon: CloudDrizzle,
     path: "/activated"
   },
   {
-    title: "Daily Formation",
+    title: "The Daily Formation",
     subtitle: "When you are calm enough, use The Daily Formation to settle your system and strengthen new patterns of safety.",
     icon: AudioLines,
     path: "/daily-formation"
   },
   {
-    title: "Anchor Library",
+    title: "The Anchor Library",
     subtitle: "When you want to reinforce stability, return to The Anchor Library and revisit what you have built.",
     icon: Mountain,
     path: "/anchors"
@@ -138,7 +138,7 @@ const Index = () => {
               <div className="flex justify-center gap-8">
                 {[
                 { value: String(reorientations), label: "Returns" },
-                { value: String(anchorsCreated), label: "Anchor Library" }].
+                { value: String(anchorsCreated), label: "The Anchor Library" }].
                 map((metric) =>
                 <div key={metric.label} className="flex flex-col items-center gap-1.5">
                     <div
