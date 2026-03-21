@@ -353,7 +353,7 @@ const DailyFormation = () => {
           <div className="space-y-4">
               <h2 className="font-semibold tracking-tight text-3xl">Create an Anchor Phrase</h2>
               <div className="space-y-3 leading-relaxed">
-                <p className="text-text-body">Your brain remembers stories. But it stabilizes around summaries. </p>
+                <p className="text-text-body text-primary">Your brain remembers stories. But it stabilizes around summaries. </p>
                 <p className="text-text-body">​Many memories trained your nervous system to expect something.</p>
                 <p className="text-text-body">
 </p>
