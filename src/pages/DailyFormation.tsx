@@ -474,7 +474,7 @@ const DailyFormation = () => {
               <li>Stabilized a meaningful memory</li>
               <li>Strengthened steadiness</li>
             </ul>
-            <p className="text-text-heading font-medium pt-2">
+            <p className="text-primary font-medium pt-2">
               Each return trains your nervous system to expect stability.
             </p>
             <p className="text-text-body">Small returns create lasting formation.</p>
