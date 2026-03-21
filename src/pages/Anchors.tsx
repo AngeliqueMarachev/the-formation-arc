@@ -182,7 +182,7 @@ const Anchors = () => {
           </div>
           <h2 className="font-semibold">Your Anchors</h2>
           <p className="max-w-xs text-supporting">
-            Stored scenes and phrases that stabilize perception.{"\n"}Create your first Anchor inside Daily Formation.
+            Stored scenes and phrases that stabilize perception.{"\n"}Create your first Anchor inside The Daily Formation.
           </p>
           <Button onClick={() => navigate("/daily-formation")}>Create Anchor</Button>
         </main> :
