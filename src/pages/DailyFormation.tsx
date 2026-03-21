@@ -405,7 +405,7 @@ const DailyFormation = () => {
               </div>
 
               <div className="space-y-2">
-                <p className="text-primary font-semibold">1. Attach it to one daily moment</p>
+                <p className="text-primary font-semibold">Attach it to one daily moment</p>
                 <p className="text-text-body leading-relaxed">Choose one part of your day that already happens.</p>
                 <div className="text-text-body text-sm space-y-1 pl-1">
                   <p>For example:</p>
@@ -416,12 +416,12 @@ const DailyFormation = () => {
               </div>
 
               <div className="space-y-2">
-                <p className="text-primary font-semibold">2. During moments of contraction</p>
+                <p className="text-primary font-semibold">During moments of contraction</p>
                 <p className="text-text-body leading-relaxed">When you notice fear, tension, shame, or sudden loneliness.</p>
               </div>
 
               <div className="space-y-2">
-                <p className="text-primary font-semibold">3. When old narratives resurface</p>
+                <p className="text-primary font-semibold">When old narratives resurface</p>
                 <p className="text-text-body leading-relaxed">If familiar thoughts appear:</p>
                 <div className="text-text-body text-sm space-y-1 pl-1">
                   <p>I am alone.</p>
