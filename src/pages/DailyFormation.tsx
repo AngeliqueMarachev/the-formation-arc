@@ -355,7 +355,7 @@ const DailyFormation = () => {
 
               <div className="pt-2">
                 <div className="relative flex items-center justify-between">
-                  <div className="absolute left-[10px] right-[10px] top-1/2 -translate-y-1/2 h-px bg-border/30" />
+                  <div className="absolute left-[10px] right-[10px] top-1/2 -translate-y-1/2 h-[2px] bg-border/50 rounded-full" />
                   {Array.from({ length: 10 }, (_, i) => {
                     const val = String(i + 1);
                     const numVal = i + 1;
