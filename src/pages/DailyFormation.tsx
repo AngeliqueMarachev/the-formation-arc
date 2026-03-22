@@ -354,10 +354,6 @@ const DailyFormation = () => {
               </p>
 
               <div className="pt-2">
-                <div className="flex justify-between mb-2">
-                  <span className="text-xs text-text-supporting">Distant</span>
-                  <span className="text-xs text-text-supporting">Deeply present</span>
-                </div>
                 <div className="flex justify-between gap-1">
                   {Array.from({ length: 10 }, (_, i) => {
                     const val = String(i + 1);
@@ -367,20 +363,22 @@ const DailyFormation = () => {
                         key={val}
                         type="button"
                         onClick={() => setCommunionAwareness(val)}
-                        className={`flex flex-col items-center gap-1 group`}
+                        className="flex flex-col items-center group"
                       >
                         <div
-                          className={`w-9 h-9 rounded-full border-2 flex items-center justify-center transition-all ${
+                          className={`w-7 h-7 rounded-full border transition-all duration-200 ${
                             isSelected
-                              ? "border-primary bg-primary text-primary-foreground"
-                              : "border-border bg-card text-text-supporting hover:border-primary/50"
+                              ? "border-primary/70 bg-primary/40"
+                              : "border-border/40 bg-muted/30 hover:border-primary/30 hover:bg-muted/50"
                           }`}
-                        >
-                          <span className="text-xs font-medium">{val}</span>
-                        </div>
+                        />
                       </button>
                     );
                   })}
+                </div>
+                <div className="flex justify-between mt-2">
+                  <span className="text-xs text-muted-foreground/60">Distant</span>
+                  <span className="text-xs text-muted-foreground/60">Deeply present</span>
                 </div>
               </div>
             </div>
