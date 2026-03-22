@@ -347,16 +347,42 @@ const DailyFormation = () => {
 
               <h2 className="font-semibold tracking-tight text-3xl">Sense of nearness</h2>
               <p className="text-supporting leading-relaxed">
-                How present did you feel God's nearness while recalling this scene?
+                As you stayed with this memory, how present did God feel?
               </p>
-              <Input
-                type="number"
-                min={1}
-                max={10}
-                placeholder="1–10"
-                value={communionAwareness}
-                onChange={(e) => setCommunionAwareness(e.target.value)}
-              />
+              <p className="text-text-supporting text-sm">
+                There is no right answer. Just notice what felt true.
+              </p>
+
+              <div className="pt-2">
+                <div className="flex justify-between mb-2">
+                  <span className="text-xs text-text-supporting">Distant</span>
+                  <span className="text-xs text-text-supporting">Deeply present</span>
+                </div>
+                <div className="flex justify-between gap-1">
+                  {Array.from({ length: 10 }, (_, i) => {
+                    const val = String(i + 1);
+                    const isSelected = communionAwareness === val;
+                    return (
+                      <button
+                        key={val}
+                        type="button"
+                        onClick={() => setCommunionAwareness(val)}
+                        className={`flex flex-col items-center gap-1 group`}
+                      >
+                        <div
+                          className={`w-9 h-9 rounded-full border-2 flex items-center justify-center transition-all ${
+                            isSelected
+                              ? "border-primary bg-primary text-primary-foreground"
+                              : "border-border bg-card text-text-supporting hover:border-primary/50"
+                          }`}
+                        >
+                          <span className="text-xs font-medium">{val}</span>
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           )}
 
