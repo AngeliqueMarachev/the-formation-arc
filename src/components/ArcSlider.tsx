@@ -25,9 +25,9 @@ const ArcSlider = ({ value, onChange, min = 1, max = 10 }: ArcSliderProps) => {
   const [dragging, setDragging] = useState(false);
 
   const width = 300;
-  const height = 170;
+  const height = 160;
   const cx = width / 2;
-  const cy = height - 10;
+  const cy = height - 6;
   const radius = 130;
   const startAngle = Math.PI * 0.85;
   const endAngle = Math.PI * 0.15;
@@ -114,16 +114,16 @@ const ArcSlider = ({ value, onChange, min = 1, max = 10 }: ArcSliderProps) => {
   const rightEnd = pointOnArc(endAngle);
 
   return (
-    <div className="flex flex-col items-center select-none">
+    <div className="flex flex-col items-center select-none py-4">
       {/* Live label */}
-      <p className="text-primary font-semibold text-lg mb-1 min-h-[28px] transition-all duration-200">
+      <p className="text-foreground font-medium text-base mb-3 min-h-[24px] transition-all duration-200">
         {currentLabel}
       </p>
 
       <svg
         ref={svgRef}
         viewBox={`0 0 ${width} ${height}`}
-        className="w-full max-w-[300px] cursor-pointer"
+        className="w-full max-w-[280px] cursor-pointer"
         onMouseDown={(e) => {
           setDragging(true);
           handleInteraction(e.clientX, e.clientY);
@@ -138,8 +138,8 @@ const ArcSlider = ({ value, onChange, min = 1, max = 10 }: ArcSliderProps) => {
         <path
           d={trackPath}
           fill="none"
-          stroke="hsl(189 40% 25%)"
-          strokeWidth="6"
+          stroke="hsl(189 40% 25% / 0.4)"
+          strokeWidth="3"
           strokeLinecap="round"
         />
 
@@ -147,44 +147,37 @@ const ArcSlider = ({ value, onChange, min = 1, max = 10 }: ArcSliderProps) => {
         <path
           d={filledPath}
           fill="none"
-          stroke="hsl(74 100% 56%)"
-          strokeWidth="6"
+          stroke="hsl(165 46% 38%)"
+          strokeWidth="3"
           strokeLinecap="round"
-          className="transition-[d] duration-75"
         />
 
         {/* Thumb */}
         <circle
           cx={thumb.x}
           cy={thumb.y}
-          r={dragging ? 14 : 12}
-          fill="hsl(74 100% 56%)"
+          r={dragging ? 9 : 8}
+          fill="hsl(165 46% 38%)"
           stroke="hsl(189 70% 15%)"
-          strokeWidth="3"
+          strokeWidth="2"
           className="transition-[r] duration-150"
-          style={{ filter: "drop-shadow(0 2px 6px rgba(198, 255, 46, 0.3))" }}
-        />
-        <circle
-          cx={thumb.x}
-          cy={thumb.y}
-          r={4}
-          fill="hsl(189 70% 15%)"
+          style={{ filter: "drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2))" }}
         />
 
         {/* End labels */}
         <text
-          x={leftEnd.x - 4}
-          y={leftEnd.y + 20}
+          x={leftEnd.x}
+          y={leftEnd.y + 18}
           textAnchor="middle"
-          className="fill-muted-foreground text-[11px]"
+          className="fill-muted-foreground text-[10px]"
         >
           Distant
         </text>
         <text
-          x={rightEnd.x + 4}
-          y={rightEnd.y + 20}
+          x={rightEnd.x}
+          y={rightEnd.y + 18}
           textAnchor="middle"
-          className="fill-muted-foreground text-[11px]"
+          className="fill-muted-foreground text-[10px]"
         >
           Deeply present
         </text>
