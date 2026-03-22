@@ -104,7 +104,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
 
             <div className="space-y-1">
               <p>Those conclusions became prediction templates. This conditioned your nervous system to prepare for life according to this negativity bias.​ Memory plays an important role in how those expectations are maintained. </p>
-              
+              <p className="text-primary">​</p>
             </div>
 
             <p className="text-secondary-foreground">When a memory is recalled with attention, the neural network connected to it briefly becomes flexible.  </p>
@@ -114,18 +114,14 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             </p>
 
             <p>
-              When a memory widens in meaning, your body releases chemistry associated with safety and connection, which helps strengthen new emotional associations.  
+              As a memory widens in meaning, your body releases chemistry associated with safety and connection, which helps strengthen new emotional associations.  
             </p>
 
             <p className="text-primary">
               This process anchors the nervous system, as it learns to anticipate steadiness rather than contraction over time.
             </p>
 
-            <p className="text-secondary-foreground">
-              This does not rewrite the past. But it allows the memory to hold more than the conclusion it formed at the time.
-            </p>
-
-            <div className="h-6" />
+            <div className="h-6 text-secondary-foreground" />
             <div className="h-6" />
             <div className="h-6" />
           </div>
