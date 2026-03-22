@@ -34,27 +34,27 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             </div>
 
             <p>
-              But this is not a question of displaced faith. This is how your nervous system learned to operate. At some point in the past, your body learned that life requires vigilance: stay alert, brace for difficulty, anticipate danger. 
+              But this is not a question of displaced faith. This is how your nervous system learned to operate. At some point in the past, your body learned that life requires vigilance: stay alert, brace for difficulty, anticipate danger. And those patterns can continue long after the original circumstances ended.   
             </p>
 
             <p>
-              Those patterns can continue long after the original circumstances ended.  
+              ​When the nervous system stays oriented toward threat, it becomes difficult to experience flow, as the brain constantly scans for signs of danger. Over time this expectation quietly shapes how the body responds to life.  
             
             
             </p>
 
             <p>
-              When the nervous system stays oriented toward threat, it becomes difficult to experience flow, as the brain constantly scans for signs of danger. Over time this expectation quietly shapes how the body responds to life.  
+              ​But these expectations are not permanent.  
             </p>
 
-            <p>
-              But these expectations are not permanent.
+            <p className="text-primary">
+              ​The brain can update what it predicts.
             </p>
 
-            <p className="text-primary">The brain can update what it predicts.</p>
+            <p className="text-secondary-foreground">​The Anchor Layer facilitates you in this process.</p>
 
             <p>
-              The Anchor Layer facilitates you in this process.
+              ​
             </p>
 
             <div className="h-6" />
