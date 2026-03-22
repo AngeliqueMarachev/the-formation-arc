@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
-import ArcSlider from "@/components/ArcSlider";
 import BottomNav from "@/components/BottomNav";
 import AnchorRecall from "@/components/AnchorRecall";
 import AnchorIntro from "@/components/AnchorIntro";
@@ -346,17 +345,18 @@ const DailyFormation = () => {
                 className="min-h-[80px] text-lg"
               />
 
-              <h2 className="font-semibold tracking-tight text-3xl pt-2">Sense of God's nearness</h2>
+              <h2 className="font-semibold tracking-tight text-3xl pt-2">Sense of nearness</h2>
               <p className="text-supporting leading-relaxed">
-                As you stayed with this memory, how present did God feel?
+                How present did you feel God's nearness while recalling this scene?
               </p>
-              <ArcSlider
-                value={communionAwareness ? parseInt(communionAwareness) || 5 : 5}
-                onChange={(v) => setCommunionAwareness(String(v))}
+              <Input
+                type="number"
+                min={1}
+                max={10}
+                placeholder="1–10"
+                value={communionAwareness}
+                onChange={(e) => setCommunionAwareness(e.target.value)}
               />
-              <p className="text-muted-foreground text-xs text-center">
-                There is no right answer. Just notice what felt true.
-              </p>
             </div>
           )}
 
