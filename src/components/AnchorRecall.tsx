@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -82,6 +82,10 @@ const AnchorRecall = ({
 }: AnchorRecallProps) => {
   const [selectedCategory, setSelectedCategory] = useState<MemoryCategory>(null);
   const [selectedScene, setSelectedScene] = useState<string | null>(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [selectedCategory]);
 
   const toggleEmotion = (tag: string) => {
     onEmotionTagsChange(

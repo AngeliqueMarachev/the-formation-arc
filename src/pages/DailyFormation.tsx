@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/lib/auth";
 import { supabase } from "@/integrations/supabase/client";
@@ -49,6 +49,10 @@ const DailyFormation = () => {
   const [whereIsGod, setWhereIsGod] = useState("");
   const [createStep, setCreateStep] = useState(0);
   const [saving, setSaving] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [screen, createStep]);
 
   useEffect(() => {
     if (!user) return;
