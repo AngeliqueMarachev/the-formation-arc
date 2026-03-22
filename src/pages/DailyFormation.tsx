@@ -355,7 +355,15 @@ const DailyFormation = () => {
 
               <div className="pt-2">
                 <div className="relative flex items-center justify-between">
+                  {/* Base line */}
                   <div className="absolute left-[10px] right-[10px] top-1/2 -translate-y-1/2 h-[2px] bg-border/50 rounded-full" />
+                  {/* Filled line */}
+                  {communionAwareness && parseInt(communionAwareness) > 1 && (
+                    <div
+                      className="absolute left-[10px] top-1/2 -translate-y-1/2 h-[2px] bg-primary/50 rounded-full transition-all duration-200"
+                      style={{ width: `${((parseInt(communionAwareness) - 1) / 9) * (100 - (20 / 3.6))}%` }}
+                    />
+                  )}
                   {Array.from({ length: 10 }, (_, i) => {
                     const val = String(i + 1);
                     const numVal = i + 1;
@@ -372,7 +380,7 @@ const DailyFormation = () => {
                           className={`w-5 h-5 rounded-full transition-all duration-200 ${
                             isFilled
                               ? "bg-primary/50 border border-primary/60"
-                              : "bg-muted/40 border border-border/30 hover:border-primary/30 hover:bg-muted/60"
+                              : "bg-card border border-border/40 hover:border-primary/30"
                           }`}
                         />
                       </button>
