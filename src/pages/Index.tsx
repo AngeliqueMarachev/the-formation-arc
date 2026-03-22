@@ -86,8 +86,8 @@ const Index = () => {
     path: "/daily-formation"
   },
   {
-    title: "The Anchor Library",
-    subtitle: "When you want to reinforce stability, return to The Anchor Library and revisit what you have built.",
+    title: "Anchors",
+    subtitle: "When you want to reinforce stability, return to Anchors and revisit what you have built.",
     icon: Mountain,
     path: "/anchors"
   }];
@@ -138,7 +138,7 @@ const Index = () => {
               <div className="flex justify-center gap-8">
                 {[
                 { value: String(reorientations), label: "Returns" },
-                { value: String(anchorsCreated), label: "The Anchor Library" }].
+                { value: String(anchorsCreated), label: "Anchors" }].
                 map((metric) =>
                 <div key={metric.label} className="flex flex-col items-center gap-1.5">
                     <div
