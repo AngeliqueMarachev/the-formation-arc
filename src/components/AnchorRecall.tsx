@@ -204,15 +204,17 @@ const AnchorRecall = ({
         {selectedScene &&
         <>
             <div className="space-y-1 leading-relaxed">
-              <p className="text-text-body text-sm">Where are you?</p>
-              <p className="text-text-body text-sm">How old are you?</p>
-              <p className="text-text-body text-sm">Who is with you?</p>
-              <p className="text-text-body text-sm">What time of day is it?</p>
-              <p className="text-text-body text-sm">What are you doing?</p>
-              <p className="text-text-body text-sm">Notice the light.</p>
-              <p className="text-text-body text-sm">Notice the temperature.</p>
-              <p className="text-text-body text-sm">Notice any sounds or smells.</p>
-              <p className="text-text-body text-sm">What are you doing, thinking, and feeling in this moment?</p>
+              <ul className="list-disc pl-5 space-y-1 text-text-body text-base">
+                <li>Where are you?</li>
+                <li>How old are you?</li>
+                <li>Who is with you?</li>
+                <li>What time of day is it?</li>
+                <li>What are you doing?</li>
+                <li>Notice the light.</li>
+                <li>Notice the temperature.</li>
+                <li>Notice any sounds or smells.</li>
+                <li>What are you doing, thinking, and feeling in this moment?</li>
+              </ul>
               <p className="text-text-body">​</p>
               <p className="text-text-body">Memory is stored in sensation. Let sensation guide the memory. Allow the details to come naturally. Nothing needs to be forced.</p>
             </div>
