@@ -360,7 +360,7 @@ const DailyFormation = () => {
                   {/* Filled line */}
                   {communionAwareness && parseInt(communionAwareness) > 1 && (
                     <div
-                      className="absolute left-[10px] top-1/2 -translate-y-1/2 h-[2px] bg-primary/50 rounded-full transition-all duration-200"
+                      className="absolute left-[10px] top-1/2 -translate-y-1/2 h-[2px] bg-primary rounded-full transition-all duration-200"
                       style={{ width: `${((parseInt(communionAwareness) - 1) / 9) * (100 - (20 / 3.6))}%` }}
                     />
                   )}
@@ -379,7 +379,7 @@ const DailyFormation = () => {
                         <div
                           className={`w-5 h-5 rounded-full transition-all duration-200 ${
                             isFilled
-                              ? "bg-primary/50 border border-primary/60"
+                              ? "bg-primary border border-primary"
                               : "bg-card border border-border/40 hover:border-primary/30"
                           }`}
                         />
