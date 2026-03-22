@@ -53,22 +53,22 @@ const DailyFormation = () => {
   useEffect(() => {
     if (!user) return;
     const fetchData = async () => {
-      const { data: templates } = await supabase.
-      from("reorient_templates").
-      select("line_1, line_2, line_3, line_4, line_5, line_6").
-      eq("user_id", user.id).
-      order("created_at", { ascending: false }).
-      limit(1);
+      const { data: templates } = await supabase
+        .from("reorient_templates")
+        .select("line_1, line_2, line_3, line_4, line_5, line_6")
+        .eq("user_id", user.id)
+        .order("created_at", { ascending: false })
+        .limit(1);
 
       if (templates && templates.length > 0) {
         setLines(templates[0]);
       }
 
-      const { data: anchorData } = await supabase.
-      from("anchor_entries").
-      select("id, scene_text, anchor_phrase, session_count").
-      eq("user_id", user.id).
-      order("session_count", { ascending: true });
+      const { data: anchorData } = await supabase
+        .from("anchor_entries")
+        .select("id, scene_text, anchor_phrase, session_count")
+        .eq("user_id", user.id)
+        .order("session_count", { ascending: true });
 
       if (anchorData) setAnchors(anchorData);
       setLoading(false);
@@ -80,10 +80,10 @@ const DailyFormation = () => {
     if (!user || anchors.length === 0) return;
     const anchor = anchors[currentAnchorIndex];
 
-    await supabase.
-    from("anchor_entries").
-    update({ session_count: anchor.session_count + 1 }).
-    eq("id", anchor.id);
+    await supabase
+      .from("anchor_entries")
+      .update({ session_count: anchor.session_count + 1 })
+      .eq("id", anchor.id);
 
     setScreen("completion");
   };
@@ -100,19 +100,19 @@ const DailyFormation = () => {
       widened_meaning: widenedMeaning.trim() || null,
       anchor_phrase: anchorPhrase.trim(),
       communion_awareness: communionAwareness.trim() ? parseInt(communionAwareness) || null : null,
-      where_is_god: whereIsGod.trim() || null
+      where_is_god: whereIsGod.trim() || null,
     });
 
-    const { data: stats } = await supabase.
-    from("usage_stats").
-    select("anchors_created").
-    eq("user_id", user.id).
-    single();
+    const { data: stats } = await supabase
+      .from("usage_stats")
+      .select("anchors_created")
+      .eq("user_id", user.id)
+      .single();
 
-    await supabase.
-    from("usage_stats").
-    update({ anchors_created: (stats?.anchors_created ?? 0) + 1 }).
-    eq("user_id", user.id);
+    await supabase
+      .from("usage_stats")
+      .update({ anchors_created: (stats?.anchors_created ?? 0) + 1 })
+      .eq("user_id", user.id);
 
     setSaving(false);
     setScreen("completion");
@@ -132,36 +132,35 @@ const DailyFormation = () => {
     const hasLines = lines && Object.values(lines).some((v) => v);
 
     const phases = [
-    { title: "LINE IN THE SAND", lineIndex: 0 },
-    { title: "EXPOSE THE MECHANISM", lineIndex: 1 },
-    { title: "UNTANGLE TIME", lineIndex: 2 },
-    { title: "CHOOSE YOUR AGREEMENT", lineIndex: 3 },
-    { title: "SHEPHERD YOUR SOUL", lineIndex: 4 },
-    { title: "OCCUPY YOUR IDENTITY", lineIndex: 5 }];
-
+      { title: "LINE IN THE SAND", lineIndex: 0 },
+      { title: "EXPOSE THE MECHANISM", lineIndex: 1 },
+      { title: "UNTANGLE TIME", lineIndex: 2 },
+      { title: "CHOOSE YOUR AGREEMENT", lineIndex: 3 },
+      { title: "SHEPHERD YOUR SOUL", lineIndex: 4 },
+      { title: "OCCUPY YOUR IDENTITY", lineIndex: 5 },
+    ];
 
     return (
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col px-6 pt-10 pb-12 content-container">
-          <h1 className="tracking-tight mb-1">The Daily Formation requires flow   </h1>
+          <h1 className="tracking-tight mb-1">The Daily Formation requires flow </h1>
           <div className="mb-6" />
 
           <div className="space-y-4 leading-relaxed mb-10">
             <p className="text-primary text-base">Stabilise before you build. Settle your system before training.</p>
             <p className="text-text-body text-base">
-              Before entering The Anchor Layer, rehearse your Reorientation Engine. This immediately signals safety, allowing your body to settle.         
+              Before entering The Anchor Layer, rehearse your Reorientation Engine. This immediately signals safety,
+              allowing your body to settle.
             </p>
             <p className="text-text-body text-base">
-              After this sequence, you will move into The Anchor Layer, where we strengthen new expectations of steadiness.
-            
+              After this sequence, you will move into The Anchor Layer, where we strengthen new expectations of
+              steadiness.
             </p>
-            <p className="text-text-body text-base">
-              ​
-            </p>
+            <p className="text-text-body text-base">​</p>
           </div>
 
-          {hasLines ?
-          <>
+          {hasLines ? (
+            <>
               <p className="font-semibold tracking-widest uppercase mb-1 text-sm text-primary">
                 Your Reorientation Engine
               </p>
@@ -169,35 +168,35 @@ const DailyFormation = () => {
 
               <div className="space-y-6 mb-12">
                 {phases.map((phase) => {
-                const line = Object.values(lines!)[phase.lineIndex];
-                if (!line) return null;
+                  const line = Object.values(lines!)[phase.lineIndex];
+                  if (!line) return null;
 
-                const isReturnPhase = phase.lineIndex === 5;
+                  const isReturnPhase = phase.lineIndex === 5;
 
-                return (
-                  <button
-                    key={phase.lineIndex}
-                    onClick={() => {
-                      setGlowingLine(phase.lineIndex);
-                      setTimeout(() => setGlowingLine((prev) => prev === phase.lineIndex ? null : prev), 800);
-                    }}
-                    className={`w-full text-left rounded-lg border p-5 transition-all duration-300 ${
-                    glowingLine === phase.lineIndex ?
-                    isReturnPhase ?
-                    "border-primary bg-primary/15 text-text-heading shadow-lg shadow-primary/20" :
-                    "border-primary/50 bg-primary/10 text-text-heading shadow-lg shadow-primary/10" :
-                    isReturnPhase ?
-                    "border-primary/40 bg-primary/8 text-text-heading" :
-                    "border-border/50 bg-card/50 text-text-body hover:border-primary/20"}`
-                    }>
-                    
+                  return (
+                    <button
+                      key={phase.lineIndex}
+                      onClick={() => {
+                        setGlowingLine(phase.lineIndex);
+                        setTimeout(() => setGlowingLine((prev) => (prev === phase.lineIndex ? null : prev)), 800);
+                      }}
+                      className={`w-full text-left rounded-lg border p-5 transition-all duration-300 ${
+                        glowingLine === phase.lineIndex
+                          ? isReturnPhase
+                            ? "border-primary bg-primary/15 text-text-heading shadow-lg shadow-primary/20"
+                            : "border-primary/50 bg-primary/10 text-text-heading shadow-lg shadow-primary/10"
+                          : isReturnPhase
+                            ? "border-primary/40 bg-primary/8 text-text-heading"
+                            : "border-border/50 bg-card/50 text-text-body hover:border-primary/20"
+                      }`}
+                    >
                       <p className="text-[10px] font-semibold tracking-widest uppercase mb-2 text-primary">
                         {phase.title}
                       </p>
                       <p className="text-sm leading-relaxed text-text-heading">{line}</p>
-                    </button>);
-
-              })}
+                    </button>
+                  );
+                })}
               </div>
 
               <div className="pt-4 space-y-6">
@@ -205,9 +204,9 @@ const DailyFormation = () => {
                   <p className="text-text-body mb-1 font-serif text-xl font-bold">Your system has settled.</p>
                   <div className="h-2" />
                   <p className="text-text-body mt-3 text-base">
-                    You are steady enough to continue. Now you will expand your memories and strengthen your expectations of safety.
-                  
-                </p>
+                    You are steady enough to continue. Now you will expand your memories and strengthen your
+                    expectations of safety.
+                  </p>
                 </div>
                 <div className="space-y-3">
                   <Button className="w-full" size="lg" onClick={() => setScreen("create-anchor")}>
@@ -218,9 +217,9 @@ const DailyFormation = () => {
                   </Button>
                 </div>
               </div>
-            </> :
-
-          <>
+            </>
+          ) : (
+            <>
               <p className="text-supporting italic mb-10">
                 No saved reorientation yet. Complete a reorientation in the Activated tab first.
               </p>
@@ -233,11 +232,11 @@ const DailyFormation = () => {
                 </Button>
               </div>
             </>
-          }
+          )}
         </main>
         <BottomNav />
-      </div>);
-
+      </div>
+    );
   }
 
   // ── DAILY ANCHOR LOOP ──
@@ -270,8 +269,8 @@ const DailyFormation = () => {
           </Button>
         </main>
         <BottomNav />
-      </div>);
-
+      </div>
+    );
   }
 
   // ── CREATE NEW ANCHOR ──
@@ -287,12 +286,12 @@ const DailyFormation = () => {
             emotionTags={emotionTags}
             onEmotionTagsChange={setEmotionTags}
             onContinue={() => setCreateStep(1)}
-            totalSteps={totalSteps} />
-          
+            totalSteps={totalSteps}
+          />
 
           <BottomNav />
-        </>);
-
+        </>
+      );
     }
 
     const canProceed = () => {
@@ -315,59 +314,62 @@ const DailyFormation = () => {
           <p className="text-xs text-text-supporting mb-2">
             Step {createStep + 1} of {totalSteps}
           </p>
-          <Progress value={(createStep + 1) / totalSteps * 100} className="h-1.5 mb-6" />
+          <Progress value={((createStep + 1) / totalSteps) * 100} className="h-1.5 mb-6" />
         </header>
 
         <main className="flex-1 px-6 pt-2 content-container">
           {/* Step 1: Meaning */}
-          {createStep === 1 &&
-          <div className="space-y-4">
+          {createStep === 1 && (
+            <div className="space-y-4">
               <h2 className="font-semibold tracking-tight text-3xl">Expand your conclusion</h2>
               <p className="text-supporting leading-relaxed">
                 Widen your experience. Is there something in this scene, maybe even something about yourself, that you
                 didn't notice before?
               </p>
               <Textarea
-              placeholder="e.g. I thought I was a sad child, but I was full of life."
-              value={meaningConclusion}
-              onChange={(e) => setMeaningConclusion(e.target.value)}
-              className="min-h-[80px] text-lg text-muted-foreground" />
-            
+                placeholder="e.g. I thought I was a sad child, but I was full of life."
+                value={meaningConclusion}
+                onChange={(e) => setMeaningConclusion(e.target.value)}
+                className="min-h-[80px] text-lg text-muted-foreground"
+              />
 
-              <h2 className="tracking-tight text-3xl pt-2 font-medium text-destructive-foreground">Open your heart</h2>
+              <h2 className="font-semibold tracking-tight text-3xl">Open your heart</h2>
               <p className="text-supporting leading-relaxed">
                 If God was there with you, what would He be doing? How would you feel if you sensed Him in that moment?
                 Is there any kind of exchange between the two of you? Do you want to ask Him anything?
               </p>
               <Textarea
-              placeholder="e.g. I saw Jesus thanking God for me!"
-              value={widenedMeaning}
-              onChange={(e) => setWidenedMeaning(e.target.value)}
-              className="min-h-[80px] text-lg" />
-            
+                placeholder="e.g. I saw Jesus thanking God for me!"
+                value={widenedMeaning}
+                onChange={(e) => setWidenedMeaning(e.target.value)}
+                className="min-h-[80px] text-lg"
+              />
+
               <h2 className="font-semibold tracking-tight text-3xl pt-2">Sense of nearness</h2>
-              <p className="text-xs text-text-supporting">
+              <p className="text-supporting leading-relaxed">
                 How present did you feel God's nearness while recalling this scene?
               </p>
               <Input
-              type="number"
-              min={1}
-              max={10}
-              placeholder="1–10"
-              value={communionAwareness}
-              onChange={(e) => setCommunionAwareness(e.target.value)} />
+                type="number"
+                min={1}
+                max={10}
+                placeholder="1–10"
+                value={communionAwareness}
+                onChange={(e) => setCommunionAwareness(e.target.value)}
+              />
             </div>
-          }
+          )}
 
           {/* Step 2: Anchor Phrase */}
-          {createStep === 2 &&
-          <div className="space-y-4">
+          {createStep === 2 && (
+            <div className="space-y-4">
               <h2 className="font-semibold tracking-tight text-3xl">Create an Anchor Phrase</h2>
               <div className="space-y-3 leading-relaxed">
-                <p className="text-text-body text-primary">Your brain remembers stories. But it stabilizes around summaries. </p>
+                <p className="text-text-body text-primary">
+                  Your brain remembers stories. But it stabilizes around summaries.{" "}
+                </p>
                 <p className="text-text-body">​Many memories trained your nervous system to expect something.</p>
-                <p className="text-text-body">
-</p>
+                <p className="text-text-body"></p>
                 <div className="space-y-1 text-text-body">
                   <p className="text-sm">I am alone.</p>
                   <p className="text-sm">I am not supported.</p>
@@ -375,31 +377,33 @@ const DailyFormation = () => {
                 </div>
                 <p className="font-normal text-primary">Your Anchor Phrase updates that template.</p>
                 <p className="text-text-body">It does not erase the memory. It widens the meaning. </p>
-                <p className="text-text-body text-sm">Examples of Anchor Phrases:    </p>
+                <p className="text-text-body text-sm">Examples of Anchor Phrases: </p>
               </div>
 
               <div className="pt-2">
-                
                 <div className="space-y-2 text-xs text-text-supporting mb-4">
                   <p className="text-sm">I believed I was forgotten, but I was not as alone.</p>
                   <p className="text-sm">I felt afraid, yet I endured.</p>
                   <p className="text-sm">I felt abandoned, but I was being championed.</p>
                 </div>
-                <Textarea placeholder="Write your anchor phrase…"
-              value={anchorPhrase}
-              onChange={(e) => setAnchorPhrase(e.target.value)}
-              className="min-h-[80px]" />
-              
+                <Textarea
+                  placeholder="Write your anchor phrase…"
+                  value={anchorPhrase}
+                  onChange={(e) => setAnchorPhrase(e.target.value)}
+                  className="min-h-[80px]"
+                />
               </div>
             </div>
-          }
+          )}
 
           {/* Step 3: Use your Anchor Phrase */}
-          {createStep === 3 &&
-          <div className="space-y-6">
+          {createStep === 3 && (
+            <div className="space-y-6">
               <h2 className="font-semibold tracking-tight text-3xl">Use your Anchor Phrase</h2>
               <div className="space-y-3">
-                <p className="text-text-body leading-relaxed">This phrase will help your nervous system remember what this moment meant.</p>
+                <p className="text-text-body leading-relaxed">
+                  This phrase will help your nervous system remember what this moment meant.
+                </p>
                 <p className="text-text-body leading-relaxed">It isn't something you repeat all day.</p>
                 <p className="text-text-body leading-relaxed">It has three specific uses.</p>
               </div>
@@ -417,7 +421,9 @@ const DailyFormation = () => {
 
               <div className="space-y-2">
                 <p className="text-primary font-semibold">During moments of contraction</p>
-                <p className="text-text-body leading-relaxed">When you notice fear, tension, shame, or sudden loneliness.</p>
+                <p className="text-text-body leading-relaxed">
+                  When you notice fear, tension, shame, or sudden loneliness.
+                </p>
               </div>
 
               <div className="space-y-2">
@@ -440,11 +446,16 @@ const DailyFormation = () => {
               </div>
 
               <div className="space-y-3">
-                <p className="text-text-body leading-relaxed">This allows a wider meaning to sit inside a narrow moment and empowers the updated meaning to compete with the old one.</p>
-                <p className="text-text-heading font-medium">Over time, the nervous system begins to expect steadiness.</p>
+                <p className="text-text-body leading-relaxed">
+                  This allows a wider meaning to sit inside a narrow moment and empowers the updated meaning to compete
+                  with the old one.
+                </p>
+                <p className="text-text-heading font-medium">
+                  Over time, the nervous system begins to expect steadiness.
+                </p>
               </div>
             </div>
-          }
+          )}
         </main>
 
         <div className="px-6 pb-4 pt-2 space-y-2 content-container">
@@ -457,8 +468,8 @@ const DailyFormation = () => {
         </div>
 
         <BottomNav />
-      </div>);
-
+      </div>
+    );
   }
 
   // ── COMPLETION ──
@@ -474,9 +485,7 @@ const DailyFormation = () => {
               <li>Stabilized a meaningful memory</li>
               <li>Strengthened steadiness</li>
             </ul>
-            <p className="text-primary font-medium pt-2">
-              Each return trains your nervous system to expect stability.
-            </p>
+            <p className="text-primary font-medium pt-2">Each return trains your nervous system to expect stability.</p>
             <p className="text-text-body">Small returns create lasting formation.</p>
           </div>
 
@@ -485,8 +494,8 @@ const DailyFormation = () => {
           </Button>
         </main>
         <BottomNav />
-      </div>);
-
+      </div>
+    );
   }
 
   return null;
