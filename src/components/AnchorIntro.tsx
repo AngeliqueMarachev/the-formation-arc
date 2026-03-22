@@ -104,7 +104,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
 
             <div className="space-y-1">
               <p>Those conclusions became prediction templates. This conditioned your nervous system to prepare for life according to this negativity bias.​ Memory plays an important role in how those expectations are maintained. </p>
-              <p className="text-primary">​</p>
+             
             </div>
 
             <p className="text-secondary-foreground">When a memory is recalled with attention, the neural network connected to it briefly becomes flexible.  </p>
@@ -121,12 +121,10 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
               This process anchors the nervous system, as it learns to anticipate steadiness rather than contraction over time.
             </p>
 
-            <p className="text-secondary-foreground">
-              This does not rewrite the past. But it allows the memory to hold more than the conclusion it formed at the time.
-            </p>
-            <div className="h-6" />
-            <div className="h-6" />
-          </div>
+            <div className="h-6 text-secondary-foreground" >
+              <p> This does not rewrite the past. But it allows the memory to hold more than the conclusion it formed at the time.</p>
+            </div>
+         
         </main>
 
         <div className="fixed bottom-16 left-0 right-0 px-6 pb-4 pt-2 bg-background/95 backdrop-blur-sm">
