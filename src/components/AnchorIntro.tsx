@@ -146,42 +146,33 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
     <div className="flex min-h-screen flex-col pb-20">
       <main className="flex flex-1 flex-col px-6 pt-10 pb-32 content-container">
         <h1 className="tracking-tight mb-8">
-          The nervous system learns safety through moments               
+          The nervous system responds to experience, real or remembered
         </h1>
 
         <div className="space-y-5 leading-relaxed text-text-body">
-          <p className="text-primary">You are looking for access to one small moment from your life that brought you joy. </p>
+          <p>When a moment becomes vivid in your mind, the body begins to respond as if the experience is happening now.</p>
 
-          <p className="text-secondary-foreground">
-            You are not searching for the perfect memory. You do not need the whole story. Just a glimpse
-          </p>
+          <p>Heart rate, muscle tone, emotional chemistry, and expectation all shift according to what the brain perceives.</p>
+
+          <p className="text-primary">This means imagined moments can still train the nervous system.</p>
+
+          <p>Look for access to one small moment that carries even a trace of ease, enjoyment, or aliveness.</p>
 
           <div>
             <p className="mb-2">It might be:</p>
             <ul className="list-disc pl-5 space-y-1">
               <li>a place you once enjoyed</li>
               <li>a quiet moment from childhood</li>
-              <li>an activity that once felt easy</li>
-              <li>a place where your body felt relaxed</li>
+              <li>an activity that once felt natural</li>
+              <li>a time where your body felt more like itself</li>
             </ul>
           </div>
 
-          <p>​If nothing comes to mind right away, that is normal. When the nervous system has been under pressure, access to memory can narrow. </p>
-          <p className="text-text-heading font-medium">​If nothing comes to mind right away, that is normal. When the nervous system has been under pressure, access to memory can narrow. </p>
+          <p>If nothing comes immediately, that is normal. When the nervous system has been under strain, access to memory can narrow. With practice, access widens.</p>
 
-          <p>We will  help you access memories along the way. And your memory will widen with practice.</p>
+          <p className="text-secondary-foreground">We are not trying to escape reality or recreate the past. We are allowing the brain to experience something steady, so it can update what it predicts.</p>
 
-          <p>
-            For now, simply allow one moment to appear.​ 
-          </p>
-
-          <p>
-            ​
-          </p>
-
-          <p className="text-text-heading font-medium">
-            ​
-          </p>
+          <p>For now, simply allow one moment to appear.</p>
         </div>
       </main>
 
