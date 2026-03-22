@@ -347,51 +347,16 @@ const DailyFormation = () => {
 
               <h2 className="font-semibold tracking-tight text-3xl">Sense of nearness</h2>
               <p className="text-supporting leading-relaxed">
-                As you stayed with this memory, how present did God feel?
+                How present did you feel God's nearness while recalling this scene?
               </p>
-              <p className="text-text-supporting text-sm">
-                There is no right answer. Just notice what felt true.
-              </p>
-
-              <div className="pt-2">
-                <div className="relative flex items-center justify-between">
-                  {/* Base line */}
-                  <div className="absolute left-[10px] right-[10px] top-1/2 -translate-y-1/2 h-[2px] bg-border/50 rounded-full" />
-                  {/* Filled line */}
-                  {communionAwareness && parseInt(communionAwareness) > 1 && (
-                    <div
-                      className="absolute left-[10px] top-1/2 -translate-y-1/2 h-[2px] bg-primary rounded-full transition-all duration-200"
-                      style={{ width: `${((parseInt(communionAwareness) - 1) / 9) * (100 - (20 / 3.6))}%` }}
-                    />
-                  )}
-                  {Array.from({ length: 10 }, (_, i) => {
-                    const val = String(i + 1);
-                    const numVal = i + 1;
-                    const selectedNum = communionAwareness ? parseInt(communionAwareness) : 0;
-                    const isFilled = numVal <= selectedNum;
-                    return (
-                      <button
-                        key={val}
-                        type="button"
-                        onClick={() => setCommunionAwareness(val)}
-                        className="relative z-10 flex items-center justify-center"
-                      >
-                        <div
-                          className={`w-5 h-5 rounded-full transition-all duration-200 ${
-                            isFilled
-                              ? "bg-primary border border-primary"
-                              : "bg-card border border-border/40 hover:border-primary/30"
-                          }`}
-                        />
-                      </button>
-                    );
-                  })}
-                </div>
-                <div className="flex justify-between mt-2">
-                  <span className="text-xs text-muted-foreground/60">Distant</span>
-                  <span className="text-xs text-muted-foreground/60">Deeply present</span>
-                </div>
-              </div>
+              <Input
+                type="number"
+                min={1}
+                max={10}
+                placeholder="1–10"
+                value={communionAwareness}
+                onChange={(e) => setCommunionAwareness(e.target.value)}
+              />
             </div>
           )}
 
@@ -406,20 +371,20 @@ const DailyFormation = () => {
                 <p className="text-text-body">​Many memories trained your nervous system to expect something.</p>
                 <p className="text-text-body"></p>
                 <div className="space-y-1 text-text-body">
-                  <p className="text-sm">I am alone.</p>
-                  <p className="text-sm">I am not supported.</p>
-                  <p className="text-sm">I am not enough.</p>
+                  <p className="text-text-body">I am alone.</p>
+                  <p className="text-text-body">I am not supported.</p>
+                  <p className="text-text-body">I am not enough.</p>
                 </div>
                 <p className="font-normal text-primary">Your Anchor Phrase updates that template.</p>
                 <p className="text-text-body">It does not erase the memory. It widens the meaning. </p>
-                <p className="text-text-body text-sm">Examples of Anchor Phrases: </p>
+                <p className="text-text-body"">Examples of Anchor Phrases: </p>
               </div>
 
               <div className="pt-2">
-                <div className="space-y-2 text-base text-text-supporting mb-4">
-                  <p className="text-sm">I believed I was forgotten, but I was not as alone.</p>
-                  <p className="text-sm">I felt afraid, yet I endured.</p>
-                  <p className="text-sm">I felt abandoned, but I was being championed.</p>
+                <div className="space-y-2 text-xs text-text-supporting mb-4">
+                  <p className="text-text-body">I believed I was forgotten, but I was not as alone.</p>
+                  <p className="text-text-body">I felt afraid, yet I endured.</p>
+                  <p className="text-text-body"I felt abandoned, but I was being championed.</p>
                 </div>
                 <Textarea
                   placeholder="Write your anchor phrase…"
