@@ -416,7 +416,7 @@ const DailyFormation = () => {
               </div>
 
               <div className="pt-2">
-                <div className="space-y-2 text-xs text-text-supporting mb-4">
+                <div className="space-y-2 text-base text-text-supporting mb-4">
                   <p className="text-sm">I believed I was forgotten, but I was not as alone.</p>
                   <p className="text-sm">I felt afraid, yet I endured.</p>
                   <p className="text-sm">I felt abandoned, but I was being championed.</p>
