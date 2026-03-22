@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/lib/auth";
 import { supabase } from "@/integrations/supabase/client";
@@ -49,10 +49,6 @@ const DailyFormation = () => {
   const [whereIsGod, setWhereIsGod] = useState("");
   const [createStep, setCreateStep] = useState(0);
   const [saving, setSaving] = useState(false);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [screen, createStep]);
 
   useEffect(() => {
     if (!user) return;
@@ -335,7 +331,7 @@ const DailyFormation = () => {
               placeholder="e.g. I thought I was a sad child, but I was full of life."
               value={meaningConclusion}
               onChange={(e) => setMeaningConclusion(e.target.value)}
-              className="min-h-[80px]" />
+              className="min-h-[80px] text-lg text-muted-foreground" />
             
 
               <h2 className="tracking-tight text-3xl pt-2 font-medium text-destructive-foreground">Open your heart</h2>
@@ -347,19 +343,19 @@ const DailyFormation = () => {
               placeholder="e.g. I saw Jesus thanking God for me!"
               value={widenedMeaning}
               onChange={(e) => setWidenedMeaning(e.target.value)}
-              className="min-h-[80px]" />
+              className="min-h-[80px] text-lg" />
             
               <h2 className="font-semibold tracking-tight text-3xl pt-2">Sense of nearness</h2>
               <p className="text-xs text-text-supporting">
                 How present did you feel God's nearness while recalling this scene?
               </p>
               <Input
-                type="number"
-                min={1}
-                max={10}
-                placeholder="1–10"
-                value={communionAwareness}
-                onChange={(e) => setCommunionAwareness(e.target.value)} />
+              type="number"
+              min={1}
+              max={10}
+              placeholder="1–10"
+              value={communionAwareness}
+              onChange={(e) => setCommunionAwareness(e.target.value)} />
             </div>
           }
 
