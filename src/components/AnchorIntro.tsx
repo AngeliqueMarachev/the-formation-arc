@@ -121,7 +121,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
               This process anchors the nervous system, as it learns to anticipate steadiness rather than contraction over time.
             </p>
 
-            <p className="text-primary">
+            <p className="text-secondary-foreground">
               This does not rewrite the past. But it allows the memory to hold more than the conclusion it formed at the time.
             </p>
 
