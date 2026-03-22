@@ -103,22 +103,22 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             </div>
 
             <div className="space-y-1">
-              <p>Those conclusions became prediction templates, and your nervous system begins preparing for life according to this negativity bias. </p>
-              <p className="text-primary">Memory plays an important role in how those expectations are maintained.</p>
+              <p>Those conclusions became prediction templates. This conditioned your nervous system to prepare for life according to this negativity bias.​ Memory plays an important role in how those expectations are maintained. </p>
+              <p className="text-primary">​</p>
             </div>
 
-            <p className="text-secondary-foreground">When a memory is recalled with attention, the neural network connected to it briefly becomes flexible. It also releases chemistry associated with safety and connection, which helps strengthen new emotional associations. </p>
+            <p className="text-secondary-foreground">When a memory is recalled with attention, the neural network connected to it briefly becomes flexible.  </p>
 
             <p>
               As new meanings attach to memories over time, the brain gradually updates what it expects from life. Experiences that once trained the body to expect threat lose their influence as steadier pathways are repeated. 
             </p>
 
             <p>
-              This does not rewrite the past. But it allows the memory to hold more than the conclusion it formed at the time. 
+              When a memory widens in meaning, your body releases chemistry associated with safety and connection, which helps strengthen new emotional associations.  
             </p>
 
             <p className="text-primary">
-              This process helps the nervous system anticipate steadiness rather than contraction over time.
+              This process anchors the nervous system, as it learns to anticipate steadiness rather than contraction over time.
             </p>
 
             <div className="h-6" />
