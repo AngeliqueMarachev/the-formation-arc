@@ -86,7 +86,7 @@ const Index = () => {
     path: "/daily-formation"
   },
   {
-    title: "Anchors",
+    title: "The Anchor Library",
     subtitle: "When you want to reinforce stability, return to Anchors and revisit what you have built.",
     icon: Mountain,
     path: "/anchors"
