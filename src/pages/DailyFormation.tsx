@@ -349,9 +349,6 @@ const DailyFormation = () => {
               <p className="text-supporting leading-relaxed">
                 As you stayed with this memory, how present did God feel?
               </p>
-              <p className="text-text-supporting text-sm">
-                There is no right answer. Just notice what felt true.
-              </p>
 
               <div className="pt-2">
                 <div className="flex justify-between mb-2">
@@ -382,6 +379,9 @@ const DailyFormation = () => {
                     );
                   })}
                 </div>
+                <p className="text-text-supporting text-sm mt-3">
+                  There is no right answer. Just notice what felt true.
+                </p>
               </div>
             </div>
           )}
