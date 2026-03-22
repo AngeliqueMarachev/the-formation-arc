@@ -124,6 +124,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             <div className="h-6 text-secondary-foreground" >
               <p> This does not rewrite the past. But it allows the memory to hold more than the conclusion it formed at the time.</p>
             </div>
+          </div>
          
         </main>
 
