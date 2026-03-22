@@ -354,22 +354,25 @@ const DailyFormation = () => {
               </p>
 
               <div className="pt-2">
-                <div className="flex justify-between gap-1">
+                <div className="relative flex items-center justify-between">
+                  <div className="absolute left-[10px] right-[10px] top-1/2 -translate-y-1/2 h-px bg-border/30" />
                   {Array.from({ length: 10 }, (_, i) => {
                     const val = String(i + 1);
-                    const isSelected = communionAwareness === val;
+                    const numVal = i + 1;
+                    const selectedNum = communionAwareness ? parseInt(communionAwareness) : 0;
+                    const isFilled = numVal <= selectedNum;
                     return (
                       <button
                         key={val}
                         type="button"
                         onClick={() => setCommunionAwareness(val)}
-                        className="flex flex-col items-center group"
+                        className="relative z-10 flex items-center justify-center"
                       >
                         <div
-                          className={`w-7 h-7 rounded-full border transition-all duration-200 ${
-                            isSelected
-                              ? "border-primary/70 bg-primary/40"
-                              : "border-border/40 bg-muted/30 hover:border-primary/30 hover:bg-muted/50"
+                          className={`w-5 h-5 rounded-full transition-all duration-200 ${
+                            isFilled
+                              ? "bg-primary/50 border border-primary/60"
+                              : "bg-muted/40 border border-border/30 hover:border-primary/30 hover:bg-muted/60"
                           }`}
                         />
                       </button>
