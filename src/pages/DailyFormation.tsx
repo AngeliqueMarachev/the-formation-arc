@@ -377,14 +377,14 @@ const DailyFormation = () => {
                 </div>
                 <p className="font-normal text-primary">Your Anchor Phrase updates that template.</p>
                 <p className="text-text-body">It does not erase the memory. It widens the meaning. </p>
-                <p className="text-text-body"">Examples of Anchor Phrases: </p>
+                <p className="text-text-body">Examples of Anchor Phrases: </p>
               </div>
 
               <div className="pt-2">
                 <div className="space-y-2 text-xs text-text-supporting mb-4">
                   <p className="text-text-body">I believed I was forgotten, but I was not as alone.</p>
                   <p className="text-text-body">I felt afraid, yet I endured.</p>
-                  <p className="text-text-body"I felt abandoned, but I was being championed.</p>
+                  <p className="text-text-body">I felt abandoned, but I was being championed.</p>
                 </div>
                 <Textarea
                   placeholder="Write your anchor phrase…"
