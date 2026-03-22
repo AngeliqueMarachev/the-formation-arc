@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import BottomNav from "@/components/BottomNav";
 
@@ -8,6 +8,10 @@ interface AnchorIntroProps {
 
 const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
   const [step, setStep] = useState(0);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [step]);
 
   if (step === 0) {
     return (
