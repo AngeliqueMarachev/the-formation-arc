@@ -178,7 +178,7 @@ const Anchors = () => {
         <h1 className="tracking-tight font-serif">The Anchor Library</h1>
         <p className="text-supporting mt-1 text-primary">Moments that remind your nervous system what is safe and true.</p>
         <p className="text-supporting mt-1">Anchors deepen with repetition.</p>
-        <p className="text-supporting mt-1">Tap an anchor to revisit the memory.</p>
+        <p className="text-supporting mt-1 text-xs">Tap an anchor to revisit the memory.</p>
       </header>
 
       {isEmpty ?
