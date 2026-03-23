@@ -77,11 +77,14 @@ const Anchors = () => {
   }
 
   // ── Detail View ──
+  const [sceneExpanded, setSceneExpanded] = useState(false);
+
   if (view === "detail" && selected) {
-    const scenePreview = selected.scene_text.length > 280
-      ? selected.scene_text.slice(0, 280)
+    const maxChars = 260;
+    const isTruncated = selected.scene_text.length > maxChars;
+    const scenePreview = isTruncated
+      ? selected.scene_text.slice(0, maxChars)
       : selected.scene_text;
-    const isTruncated = selected.scene_text.length > 280;
 
     return (
       <div className="flex min-h-screen flex-col pb-20">
