@@ -77,10 +77,9 @@ const Anchors = () => {
   }
 
   // ── Detail View ──
-  const [sceneExpanded, setSceneExpanded] = useState(false);
-
   if (view === "detail" && selected) {
     const maxChars = 260;
+    const isTruncated = selected.scene_text.length > maxChars;
     const isTruncated = selected.scene_text.length > maxChars;
     const scenePreview = isTruncated
       ? selected.scene_text.slice(0, maxChars)
