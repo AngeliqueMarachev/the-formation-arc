@@ -17,6 +17,7 @@ export type Database = {
       anchor_entries: {
         Row: {
           anchor_phrase: string
+          anchor_title: string | null
           communion_awareness: number | null
           created_at: string
           emotion_tags: Json | null
@@ -30,6 +31,7 @@ export type Database = {
         }
         Insert: {
           anchor_phrase: string
+          anchor_title?: string | null
           communion_awareness?: number | null
           created_at?: string
           emotion_tags?: Json | null
@@ -43,6 +45,7 @@ export type Database = {
         }
         Update: {
           anchor_phrase?: string
+          anchor_title?: string | null
           communion_awareness?: number | null
           created_at?: string
           emotion_tags?: Json | null

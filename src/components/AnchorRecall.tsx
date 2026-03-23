@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 
 interface AnchorRecallProps {
+  anchorTitle: string;
+  onAnchorTitleChange: (val: string) => void;
   sceneText: string;
   onSceneTextChange: (val: string) => void;
   emotionTags: string[];
@@ -73,6 +76,8 @@ const EMOTION_OPTIONS = [
 
 
 const AnchorRecall = ({
+  anchorTitle,
+  onAnchorTitleChange,
   sceneText,
   onSceneTextChange,
   emotionTags,
@@ -103,7 +108,7 @@ const AnchorRecall = ({
     }
   };
 
-  const canContinue = sceneText.trim().length > 0 && emotionTags.length > 0;
+  const canContinue = anchorTitle.trim().length > 0 && sceneText.trim().length > 0 && emotionTags.length > 0;
 
   return (
     <div className="flex min-h-screen flex-col pb-20 text-secondary-foreground">
@@ -217,6 +222,22 @@ const AnchorRecall = ({
               </ul>
               <p className="text-text-body">​</p>
               <p className="text-text-body">Memory is stored in sensation. Let sensation guide the memory. Allow the details to come naturally. Nothing needs to be forced.</p>
+            </div>
+
+            <div className="space-y-2">
+              <label className="text-sm font-medium text-text-heading">
+                Give this memory a short title
+              </label>
+              <p className="text-xs text-text-supporting">
+                A few words that help you recognize this moment later.
+              </p>
+              <Input
+                placeholder="Seeing the ocean for the first time"
+                value={anchorTitle}
+                onChange={(e) => onAnchorTitleChange(e.target.value.slice(0, 60))}
+                maxLength={60}
+              />
+              <p className="text-xs text-text-supporting text-right">{anchorTitle.length}/60</p>
             </div>
 
             <Textarea
