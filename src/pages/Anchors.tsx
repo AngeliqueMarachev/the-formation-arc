@@ -78,7 +78,10 @@ const Anchors = () => {
 
   // ── Detail View ──
   if (view === "detail" && selected) {
-    const tags: string[] = Array.isArray(selected.emotion_tags) ? selected.emotion_tags : [];
+    const scenePreview = selected.scene_text.length > 280
+      ? selected.scene_text.slice(0, 280)
+      : selected.scene_text;
+    const isTruncated = selected.scene_text.length > 280;
 
     return (
       <div className="flex min-h-screen flex-col pb-20">
@@ -92,77 +95,58 @@ const Anchors = () => {
           >
             ← Back
           </button>
-          <h1 className="tracking-tight font-serif">Anchor</h1>
         </header>
 
         <ScrollArea className="flex-1 px-6">
-          <div className="space-y-8 pb-8 content-container">
-            <section className="space-y-2">
-              <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting text-primary font-sans">
+          <div className="pb-8 content-container">
+            {/* Title */}
+            <h1 className="tracking-tight font-serif text-primary">
+              {selected.anchor_title || "Anchor"}
+            </h1>
+
+            {/* Scene Snapshot */}
+            <div className="mt-4">
+              <h2 className="text-xs font-medium uppercase tracking-widest text-primary font-sans mb-2">
                 Scene
               </h2>
-              <p className="text-sm leading-relaxed text-text-heading whitespace-pre-line">{selected.scene_text}</p>
-            </section>
+              <div className="relative">
+                <p className="text-sm leading-relaxed text-text-heading whitespace-pre-line">
+                  {scenePreview}
+                </p>
+                {isTruncated && (
+                  <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-background to-transparent" />
+                )}
+              </div>
+            </div>
 
-            {tags.length > 0 && (
-              <section className="space-y-2">
-                <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting text-primary font-sans">
-                  Emotional Layer
-                </h2>
-                <div className="flex flex-wrap gap-2">
-                  {tags.map((t) => (
-                    <Badge key={t} variant="secondary" className="text-xs">
-                      {t}
-                    </Badge>
-                  ))}
-                </div>
-              </section>
-            )}
-
-            {selected.meaning_conclusion && (
-              <section className="space-y-2">
-                <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting font-sans text-primary">
-                  Original Meaning
-                </h2>
-                <p className="text-sm leading-relaxed text-text-heading">{selected.meaning_conclusion}</p>
-              </section>
-            )}
-
+            {/* Widened Meaning */}
             {selected.widened_meaning && (
-              <section className="space-y-2">
-                <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting text-primary font-sans">
+              <div className="mt-5">
+                <h2 className="text-xs font-medium uppercase tracking-widest text-primary font-sans mb-2">
                   Widened Meaning
                 </h2>
-                <p className="text-sm leading-relaxed text-text-heading">{selected.widened_meaning}</p>
-              </section>
+                <p className="text-sm leading-relaxed text-text-heading">
+                  {selected.widened_meaning}
+                </p>
+              </div>
             )}
 
-            <section className="space-y-2">
-              <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting text-primary font-sans">
+            {/* Anchor Phrase */}
+            <div className="mt-5">
+              <h2 className="text-xs font-medium uppercase tracking-widest text-primary font-sans mb-2">
                 Anchor Phrase
               </h2>
-              <p className="font-serif text-lg italic text-text-heading">"{selected.anchor_phrase}"</p>
-            </section>
+              <p className="font-serif text-lg italic text-text-heading">
+                "{selected.anchor_phrase}"
+              </p>
+            </div>
 
-            {selected.communion_awareness !== null && selected.communion_awareness !== undefined && (
-              <section className="space-y-2">
-                <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting">
-                  Communion Awareness
-                </h2>
-                <p className="text-sm text-text-heading">{selected.communion_awareness} / 10</p>
-              </section>
-            )}
-
-            {selected.where_is_god && (
-              <section className="space-y-2">
-                <h2 className="text-xs font-medium uppercase tracking-widest text-text-supporting">Where Is God</h2>
-                <p className="text-sm leading-relaxed text-text-heading">{selected.where_is_god}</p>
-              </section>
-            )}
-
-            <Button onClick={() => setView("recall-prompt")} className="w-full">
-              Recall This Anchor
-            </Button>
+            {/* CTA */}
+            <div className="mt-8">
+              <Button onClick={() => setView("recall-prompt")} className="w-full">
+                Recall This Anchor
+              </Button>
+            </div>
           </div>
         </ScrollArea>
         <BottomNav />
