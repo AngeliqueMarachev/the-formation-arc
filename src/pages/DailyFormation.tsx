@@ -45,6 +45,7 @@ const DailyFormation = () => {
   const [meaningConclusion, setMeaningConclusion] = useState("");
   const [widenedMeaning, setWidenedMeaning] = useState("");
   const [anchorPhrase, setAnchorPhrase] = useState("");
+  const [anchorTitle, setAnchorTitle] = useState("");
   const [communionAwareness, setCommunionAwareness] = useState("");
   const [whereIsGod, setWhereIsGod] = useState("");
   const [createStep, setCreateStep] = useState(0);
@@ -94,6 +95,7 @@ const DailyFormation = () => {
 
     await supabase.from("anchor_entries").insert({
       user_id: user.id,
+      anchor_title: anchorTitle.trim() || null,
       scene_text: sceneText.trim(),
       emotion_tags: emotionTags,
       meaning_conclusion: meaningConclusion.trim() || null,
@@ -281,6 +283,8 @@ const DailyFormation = () => {
       return (
         <>
           <AnchorRecall
+            anchorTitle={anchorTitle}
+            onAnchorTitleChange={setAnchorTitle}
             sceneText={sceneText}
             onSceneTextChange={setSceneText}
             emotionTags={emotionTags}
