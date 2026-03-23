@@ -62,12 +62,18 @@ const Anchors = () => {
   if (view === "recall-prompt" && selected) {
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col items-center justify-center px-6 text-center space-y-8 content-container">
-          <p className="text-supporting leading-relaxed max-w-xs">
-            Take 10–20 seconds to return to this moment. Let the feeling become familiar again.
-          </p>
-          <p className="font-serif text-lg italic text-text-heading max-w-sm">"{selected.anchor_phrase}"</p>
-          <Button onClick={handleRecallDone} className="w-full max-w-xs">
+        <main className="flex flex-1 flex-col items-center justify-center px-6 text-center content-container">
+          <div>
+            <p className="text-supporting leading-relaxed max-w-xs">
+              Take 10–20 seconds to return to this moment.
+            </p>
+            <p className="text-supporting leading-relaxed max-w-xs">
+              Let the feeling become familiar again.
+            </p>
+          </div>
+          <p className="font-serif text-lg italic text-text-heading max-w-sm mt-8">"{selected.anchor_phrase}"</p>
+          <p className="text-sm text-text-supporting mt-4">Each return makes this pathway easier to access.</p>
+          <Button onClick={handleRecallDone} className="w-full max-w-xs mt-7">
             Done
           </Button>
         </main>
