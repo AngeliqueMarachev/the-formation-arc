@@ -33,7 +33,7 @@ const Anchors = () => {
   const [loading, setLoading] = useState(true);
   const [view, setView] = useState<View>("list");
   const [selected, setSelected] = useState<AnchorEntry | null>(null);
-
+  const [sceneExpanded, setSceneExpanded] = useState(false);
   useEffect(() => {
     if (!user) return;
     supabase
@@ -78,10 +78,8 @@ const Anchors = () => {
 
   // ── Detail View ──
   if (view === "detail" && selected) {
-    const scenePreview = selected.scene_text.length > 280
-      ? selected.scene_text.slice(0, 280)
-      : selected.scene_text;
-    const isTruncated = selected.scene_text.length > 280;
+    const maxChars = 260;
+    const canTruncate = selected.scene_text.length > maxChars;
 
     return (
       <div className="flex min-h-screen flex-col pb-20">
@@ -90,6 +88,7 @@ const Anchors = () => {
             onClick={() => {
               setView("list");
               setSelected(null);
+              setSceneExpanded(false);
             }}
             className="text-sm text-text-supporting mb-4 hover:text-text-heading transition-colors"
           >
@@ -110,13 +109,23 @@ const Anchors = () => {
                 Scene
               </h2>
               <div className="relative">
-                <p className="text-sm leading-relaxed text-text-heading whitespace-pre-line">
-                  {scenePreview}
-                </p>
-                {isTruncated && (
-                  <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-background to-transparent" />
-                )}
+                <div
+                  className="overflow-hidden transition-all duration-200 ease-out"
+                  style={!sceneExpanded && canTruncate ? { maxHeight: '6.5em', maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)' } : {}}
+                >
+                  <p className="text-sm leading-relaxed text-text-heading whitespace-pre-line">
+                    {selected.scene_text}
+                  </p>
+                </div>
               </div>
+              {canTruncate && (
+                <button
+                  onClick={() => setSceneExpanded(!sceneExpanded)}
+                  className="text-sm text-text-supporting mt-1 hover:text-text-heading transition-colors"
+                >
+                  {sceneExpanded ? "Show less" : "Read more"}
+                </button>
+              )}
             </div>
 
             {/* Widened Meaning */}
