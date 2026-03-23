@@ -177,7 +177,7 @@ const Anchors = () => {
       <header className="px-6 pt-8 pb-2 content-container">
         <h1 className="tracking-tight font-serif">The Anchor Library</h1>
         <p className="text-supporting mt-1 text-primary">
-          Moments that remind your nervous system what is safe and true.
+          Return to anchors that help you expect steadiness.
         </p>
         <p className="text-supporting mt-1">Anchors deepen with repetition. Tap an anchor to revisit the memory. </p>
         <p className="text-supporting mt-1 text-xs">​</p>
@@ -185,13 +185,18 @@ const Anchors = () => {
 
       {isEmpty ?
       <main className="flex flex-1 flex-col items-center justify-center px-6 text-center space-y-4 content-container">
-          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-secondary">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-secondary/60">
             <Anchor className="h-8 w-8 text-primary" />
           </div>
-          <h2 className="font-semibold">You have no Anchors yet</h2>
+          <h2 className="font-semibold">No anchors yet</h2>
           <p className="max-w-xs text-supporting">
-            Anchors are memories and phrases that help your nervous system remember steadiness. You can create your
-            first Anchor in Daily Formation.
+            Anchors are memories and phrases that help your nervous system remember steadiness.
+          </p>
+          <p className="max-w-xs text-supporting">
+            Create your first anchor in Daily Formation.
+          </p>
+          <p className="max-w-xs text-supporting">
+            Your Anchor Library will grow over time.
           </p>
           <Button onClick={() => navigate("/daily-formation")}>Create your first Anchor</Button>
         </main> :
