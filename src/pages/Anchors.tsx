@@ -64,10 +64,7 @@ const Anchors = () => {
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col items-center justify-center px-6 text-center space-y-8 content-container">
           <p className="text-supporting leading-relaxed max-w-xs">
-            Take 10–20 seconds to return to this moment.
-          </p>
-          <p className="text-supporting leading-relaxed max-w-xs">
-            Let the feeling become familiar again.
+            Take 10–20 seconds to return to this moment. Let the feeling become familiar again.
           </p>
           <p className="font-serif text-lg italic text-text-heading max-w-sm">"{selected.anchor_phrase}"</p>
           <Button onClick={handleRecallDone} className="w-full max-w-xs">
@@ -102,23 +99,25 @@ const Anchors = () => {
         <ScrollArea className="flex-1 px-6">
           <div className="pb-8 content-container">
             {/* Title */}
-            <h1 className="tracking-tight font-serif text-primary">
-              {selected.anchor_title || "Anchor"}
-            </h1>
+            <h1 className="tracking-tight font-serif text-primary">{selected.anchor_title || "Anchor"}</h1>
 
             {/* Scene Snapshot */}
             <div className="mt-4">
-              <h2 className="text-xs font-medium uppercase tracking-widest text-primary font-sans mb-2">
-                Scene
-              </h2>
+              <h2 className="text-xs font-medium uppercase tracking-widest text-primary font-sans mb-2">Scene</h2>
               <div className="relative">
                 <div
                   className="overflow-hidden transition-all duration-200 ease-out"
-                  style={!sceneExpanded && canTruncate ? { maxHeight: '6.5em', maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)' } : {}}
+                  style={
+                    !sceneExpanded && canTruncate
+                      ? {
+                          maxHeight: "6.5em",
+                          maskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
+                          WebkitMaskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
+                        }
+                      : {}
+                  }
                 >
-                  <p className="text-sm leading-relaxed text-text-heading whitespace-pre-line">
-                    {selected.scene_text}
-                  </p>
+                  <p className="text-sm leading-relaxed text-text-heading whitespace-pre-line">{selected.scene_text}</p>
                 </div>
               </div>
               {canTruncate && (
@@ -137,9 +136,7 @@ const Anchors = () => {
                 <h2 className="text-xs font-medium uppercase tracking-widest text-primary font-sans mb-2">
                   Widened Meaning
                 </h2>
-                <p className="text-sm leading-relaxed text-text-heading">
-                  {selected.widened_meaning}
-                </p>
+                <p className="text-sm leading-relaxed text-text-heading">{selected.widened_meaning}</p>
               </div>
             )}
 
@@ -148,9 +145,7 @@ const Anchors = () => {
               <h2 className="text-xs font-medium uppercase tracking-widest text-primary font-sans mb-2">
                 Anchor Phrase
               </h2>
-              <p className="font-serif text-lg italic text-text-heading">
-                "{selected.anchor_phrase}"
-              </p>
+              <p className="font-serif text-lg italic text-text-heading">"{selected.anchor_phrase}"</p>
             </div>
 
             {/* CTA */}
@@ -205,7 +200,8 @@ const Anchors = () => {
               >
                 <CardContent className="p-5 space-y-3">
                   <p className="text-base leading-relaxed text-primary">
-                    {anchor.anchor_title || (anchor.scene_text.length > 120 ? anchor.scene_text.slice(0, 120) + "…" : anchor.scene_text)}
+                    {anchor.anchor_title ||
+                      (anchor.scene_text.length > 120 ? anchor.scene_text.slice(0, 120) + "…" : anchor.scene_text)}
                   </p>
                   <p className="font-serif text-base italic text-text-body">"{anchor.anchor_phrase}"</p>
                   <p className="text-xs text-text-supporting">
