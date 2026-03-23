@@ -170,7 +170,7 @@ const Anchors = () => {
   }
 
   // ── List View ──
-  const isEmpty = !loading && anchors.length === 0;
+  const isEmpty = true; // temporarily forced for design review
 
   return (
     <div className="flex min-h-screen flex-col pb-20">
