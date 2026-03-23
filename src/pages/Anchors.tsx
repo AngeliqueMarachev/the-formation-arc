@@ -224,7 +224,7 @@ const Anchors = () => {
               </Card>
           )}
             <div className="mt-7">
-              <Button variant="outline" className="w-full" onClick={() => navigate("/daily-formation")}>
+              <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/10" onClick={() => navigate("/daily-formation")}>
                 Create new anchor
               </Button>
             </div>
