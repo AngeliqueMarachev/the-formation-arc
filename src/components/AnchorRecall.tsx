@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 
 interface AnchorRecallProps {
+  anchorTitle: string;
+  onAnchorTitleChange: (val: string) => void;
   sceneText: string;
   onSceneTextChange: (val: string) => void;
   emotionTags: string[];
@@ -73,6 +75,8 @@ const EMOTION_OPTIONS = [
 
 
 const AnchorRecall = ({
+  anchorTitle,
+  onAnchorTitleChange,
   sceneText,
   onSceneTextChange,
   emotionTags,
@@ -103,7 +107,7 @@ const AnchorRecall = ({
     }
   };
 
-  const canContinue = sceneText.trim().length > 0 && emotionTags.length > 0;
+  const canContinue = anchorTitle.trim().length > 0 && sceneText.trim().length > 0 && emotionTags.length > 0;
 
   return (
     <div className="flex min-h-screen flex-col pb-20 text-secondary-foreground">
