@@ -36,24 +36,24 @@ const Anchors = () => {
   const [sceneExpanded, setSceneExpanded] = useState(false);
   useEffect(() => {
     if (!user) return;
-    supabase
-      .from("anchor_entries")
-      .select("*")
-      .eq("user_id", user.id)
-      .order("created_at", { ascending: false })
-      .then(({ data }) => {
-        setAnchors((data as AnchorEntry[]) ?? []);
-        setLoading(false);
-      });
+    supabase.
+    from("anchor_entries").
+    select("*").
+    eq("user_id", user.id).
+    order("created_at", { ascending: false }).
+    then(({ data }) => {
+      setAnchors(data as AnchorEntry[] ?? []);
+      setLoading(false);
+    });
   }, [user]);
 
   const handleRecallDone = async () => {
     if (!selected || !user) return;
-    await supabase
-      .from("anchor_entries")
-      .update({ session_count: selected.session_count + 1 })
-      .eq("id", selected.id);
-    setAnchors((prev) => prev.map((a) => (a.id === selected.id ? { ...a, session_count: a.session_count + 1 } : a)));
+    await supabase.
+    from("anchor_entries").
+    update({ session_count: selected.session_count + 1 }).
+    eq("id", selected.id);
+    setAnchors((prev) => prev.map((a) => a.id === selected.id ? { ...a, session_count: a.session_count + 1 } : a));
     setSelected(null);
     setView("list");
   };
@@ -64,10 +64,7 @@ const Anchors = () => {
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col items-center justify-center px-6 text-center space-y-8 content-container">
           <p className="text-supporting leading-relaxed max-w-xs">
-            Take 10–20 seconds to return to this moment.
-          </p>
-          <p className="text-supporting leading-relaxed max-w-xs">
-            Let the feeling become familiar again.
+            Take 10–20 seconds to return to this moment. Then say your Anchor Phrase once 
           </p>
           <p className="font-serif text-lg italic text-text-heading max-w-sm">"{selected.anchor_phrase}"</p>
           <Button onClick={handleRecallDone} className="w-full max-w-xs">
@@ -75,8 +72,8 @@ const Anchors = () => {
           </Button>
         </main>
         <BottomNav />
-      </div>
-    );
+      </div>);
+
   }
 
   // ── Detail View ──
@@ -93,8 +90,8 @@ const Anchors = () => {
               setSelected(null);
               setSceneExpanded(false);
             }}
-            className="text-sm text-text-supporting mb-4 hover:text-text-heading transition-colors"
-          >
+            className="text-sm text-text-supporting mb-4 hover:text-text-heading transition-colors">
+            
             ← Back
           </button>
         </header>
@@ -114,26 +111,26 @@ const Anchors = () => {
               <div className="relative">
                 <div
                   className="overflow-hidden transition-all duration-200 ease-out"
-                  style={!sceneExpanded && canTruncate ? { maxHeight: '6.5em', maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)' } : {}}
-                >
+                  style={!sceneExpanded && canTruncate ? { maxHeight: '6.5em', maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)' } : {}}>
+                  
                   <p className="text-sm leading-relaxed text-text-heading whitespace-pre-line">
                     {selected.scene_text}
                   </p>
                 </div>
               </div>
-              {canTruncate && (
-                <button
-                  onClick={() => setSceneExpanded(!sceneExpanded)}
-                  className="text-sm text-text-supporting mt-1 hover:text-text-heading transition-colors"
-                >
+              {canTruncate &&
+              <button
+                onClick={() => setSceneExpanded(!sceneExpanded)}
+                className="text-sm text-text-supporting mt-1 hover:text-text-heading transition-colors">
+                
                   {sceneExpanded ? "Show less" : "Read more"}
                 </button>
-              )}
+              }
             </div>
 
             {/* Widened Meaning */}
-            {selected.widened_meaning && (
-              <div className="mt-5">
+            {selected.widened_meaning &&
+            <div className="mt-5">
                 <h2 className="text-xs font-medium uppercase tracking-widest text-primary font-sans mb-2">
                   Widened Meaning
                 </h2>
@@ -141,7 +138,7 @@ const Anchors = () => {
                   {selected.widened_meaning}
                 </p>
               </div>
-            )}
+            }
 
             {/* Anchor Phrase */}
             <div className="mt-5">
@@ -162,8 +159,8 @@ const Anchors = () => {
           </div>
         </ScrollArea>
         <BottomNav />
-      </div>
-    );
+      </div>);
+
   }
 
   // ── List View ──
@@ -178,8 +175,8 @@ const Anchors = () => {
         <p className="text-supporting mt-1 text-xs">​</p>
       </header>
 
-      {isEmpty ? (
-        <main className="flex flex-1 flex-col items-center justify-center px-6 text-center space-y-4 content-container">
+      {isEmpty ?
+      <main className="flex flex-1 flex-col items-center justify-center px-6 text-center space-y-4 content-container">
           <div className="flex h-16 w-16 items-center justify-center rounded-full bg-secondary/60">
             <Anchor className="h-8 w-8 text-primary" />
           </div>
@@ -190,19 +187,19 @@ const Anchors = () => {
           <p className="max-w-xs text-supporting">Create your first anchor in Daily Formation.</p>
           <p className="max-w-xs text-supporting">Your Anchor Library will grow over time.</p>
           <Button onClick={() => navigate("/daily-formation")}>Create your first Anchor</Button>
-        </main>
-      ) : (
-        <ScrollArea className="flex-1 px-6">
+        </main> :
+
+      <ScrollArea className="flex-1 px-6">
           <div className="space-y-4 pb-4 content-container">
-            {anchors.map((anchor) => (
-              <Card
-                key={anchor.id}
-                className="cursor-pointer transition-colors hover:bg-card/80"
-                onClick={() => {
-                  setSelected(anchor);
-                  setView("detail");
-                }}
-              >
+            {anchors.map((anchor) =>
+          <Card
+            key={anchor.id}
+            className="cursor-pointer transition-colors hover:bg-card/80"
+            onClick={() => {
+              setSelected(anchor);
+              setView("detail");
+            }}>
+            
                 <CardContent className="p-5 space-y-3">
                   <p className="text-base leading-relaxed text-primary">
                     {anchor.anchor_title || (anchor.scene_text.length > 120 ? anchor.scene_text.slice(0, 120) + "…" : anchor.scene_text)}
@@ -213,23 +210,23 @@ const Anchors = () => {
                   </p>
                 </CardContent>
               </Card>
-            ))}
+          )}
             <div className="mt-7">
               <Button
-                variant="outline"
-                className="w-full border-primary text-primary hover:bg-primary/10"
-                onClick={() => navigate("/daily-formation")}
-              >
+              variant="outline"
+              className="w-full border-primary text-primary hover:bg-primary/10"
+              onClick={() => navigate("/daily-formation")}>
+              
                 Create new anchor
               </Button>
             </div>
           </div>
         </ScrollArea>
-      )}
+      }
 
       <BottomNav />
-    </div>
-  );
+    </div>);
+
 };
 
 export default Anchors;
