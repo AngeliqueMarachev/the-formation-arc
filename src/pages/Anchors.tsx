@@ -33,7 +33,7 @@ const Anchors = () => {
   const [loading, setLoading] = useState(true);
   const [view, setView] = useState<View>("list");
   const [selected, setSelected] = useState<AnchorEntry | null>(null);
-
+  const [sceneExpanded, setSceneExpanded] = useState(false);
   useEffect(() => {
     if (!user) return;
     supabase
