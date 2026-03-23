@@ -66,6 +66,9 @@ const Anchors = () => {
           <p className="text-supporting leading-relaxed max-w-xs">
             Take 10–20 seconds to return to this moment.
           </p>
+          <p className="text-supporting leading-relaxed max-w-xs">
+            Let the feeling become familiar again.
+          </p>
           <p className="font-serif text-lg italic text-text-heading max-w-sm">"{selected.anchor_phrase}"</p>
           <Button onClick={handleRecallDone} className="w-full max-w-xs">
             Done
