@@ -53,9 +53,7 @@ const Anchors = () => {
       .from("anchor_entries")
       .update({ session_count: selected.session_count + 1 })
       .eq("id", selected.id);
-    setAnchors((prev) => prev.map((a) => (a.id === selected.id ? { ...a, session_count: a.session_count + 1 } : a)));
-    setSelected(null);
-    setView("list");
+    navigate("/");
   };
 
   // ── Recall Prompt ──
