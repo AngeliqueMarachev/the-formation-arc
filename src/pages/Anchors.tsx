@@ -12,6 +12,7 @@ import { formatDistanceToNow } from "date-fns";
 
 interface AnchorEntry {
   id: string;
+  anchor_title: string | null;
   scene_text: string;
   emotion_tags: string[] | null;
   meaning_conclusion: string | null;
@@ -208,7 +209,7 @@ const Anchors = () => {
               >
                 <CardContent className="p-5 space-y-3">
                   <p className="text-base leading-relaxed text-primary">
-                    {anchor.scene_text.length > 120 ? anchor.scene_text.slice(0, 120) + "…" : anchor.scene_text}
+                    {anchor.anchor_title || (anchor.scene_text.length > 120 ? anchor.scene_text.slice(0, 120) + "…" : anchor.scene_text)}
                   </p>
                   <p className="font-serif text-base italic text-text-body">"{anchor.anchor_phrase}"</p>
                   <p className="text-xs text-text-supporting">
