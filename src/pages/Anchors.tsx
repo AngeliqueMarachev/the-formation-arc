@@ -223,6 +223,11 @@ const Anchors = () => {
                 </CardContent>
               </Card>
           )}
+            <div className="mt-7">
+              <Button variant="outline" className="w-full" onClick={() => navigate("/daily-formation")}>
+                Create new anchor
+              </Button>
+            </div>
           </div>
         </ScrollArea>
       }
