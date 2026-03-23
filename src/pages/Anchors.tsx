@@ -12,6 +12,7 @@ import { formatDistanceToNow } from "date-fns";
 
 interface AnchorEntry {
   id: string;
+  anchor_title: string | null;
   scene_text: string;
   emotion_tags: string[] | null;
   meaning_conclusion: string | null;
