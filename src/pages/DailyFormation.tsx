@@ -355,18 +355,25 @@ const DailyFormation = () => {
               </p>
               <div>
                 <div className="relative flex items-center justify-between px-4 w-full">
-                  {/* Background line */}
+                  {/* Background line - center to center of first/last circles */}
                   <div
-                    className="absolute top-1/2 left-4 right-4 -translate-y-1/2"
-                    style={{ height: "3px", backgroundColor: "rgba(248,247,242,0.25)" }}
+                    className="absolute top-1/2 -translate-y-1/2"
+                    style={{
+                      height: "2px",
+                      backgroundColor: "rgba(248,247,242,0.25)",
+                      left: "calc(1rem + 16px)",
+                      right: "calc(1rem + 16px)",
+                    }}
                   />
                   {/* Active fill line */}
                   {communionAwareness && Number(communionAwareness) >= 1 && (
                     <div
-                      className="absolute top-1/2 left-4 -translate-y-1/2 bg-primary transition-all duration-300"
+                      className="absolute top-1/2 -translate-y-1/2 transition-all duration-300"
                       style={{
-                        height: "3px",
-                        width: `${((Number(communionAwareness) - 1) / 9) * 100}%`,
+                        height: "2px",
+                        backgroundColor: "hsl(var(--primary) / 0.9)",
+                        left: "calc(1rem + 16px)",
+                        width: `calc((100% - 2rem - 32px) * ${(Number(communionAwareness) - 1) / 9})`,
                       }}
                     />
                   )}
@@ -381,12 +388,16 @@ const DailyFormation = () => {
                         className="relative z-10 flex items-center justify-center w-8 h-8"
                       >
                         <span
-                          className={`block w-4 h-4 rounded-full transition-all duration-200 ${
+                          className={`block rounded-full transition-all duration-200 ${
                             isFilled
                               ? "bg-primary border-2 border-primary"
                               : "bg-background border-2"
                           }`}
-                          style={!isFilled ? { borderColor: "rgba(248,247,242,0.35)" } : undefined}
+                          style={{
+                            width: "18px",
+                            height: "18px",
+                            ...(!isFilled ? { borderColor: "rgba(248,247,242,0.45)" } : {}),
+                          }}
                         />
                       </button>
                     );
