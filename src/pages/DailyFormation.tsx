@@ -501,13 +501,11 @@ const DailyFormation = () => {
                 className="mt-10 rounded-2xl p-5 border border-border/30"
                 style={{ background: "hsla(var(--card), 0.04)" }}
               >
-                <p className="text-muted-foreground font-semibold text-base mb-4">
-                  USE YOUR ANCHOR PHRASE TO REINFORCE STEADINESS
-                </p>
+                <p className="text-muted-foreground font-semibold text-base mb-4">IN THAT MOMENT:</p>
                 <div className="text-text-body space-y-2.5" style={{ lineHeight: "1.7" }}>
                   <p>Pause for 10 seconds.</p>
                   <p>Recall the memory briefly.</p>
-                  <p>Say the phrase once.</p>
+                  <p>Say your phrase once.</p>
                 </div>
                 <div className="mt-7">
                   <p className="text-text-body leading-relaxed">A wider meaning sits inside a narrow moment.</p>
