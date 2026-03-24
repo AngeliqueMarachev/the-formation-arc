@@ -500,19 +500,21 @@ const DailyFormation = () => {
               </div>
 
               {/* HOW TO USE IT */}
-              <div>
-                <p className="text-primary font-semibold mb-4">How to use it</p>
-                <div className="text-text-body leading-relaxed space-y-4 mb-8">
+              <div className="mt-10 rounded-2xl p-5 border border-border/30" style={{ background: 'hsla(var(--card), 0.04)' }}>
+                <p className="text-muted-foreground font-semibold text-base mb-4">Using your Anchor Phrase to reinforce steadiness</p>
+                <div className="text-text-body space-y-2.5" style={{ lineHeight: '1.7' }}>
                   <p>Pause for 10 seconds.</p>
                   <p>Recall the memory briefly.</p>
                   <p>Say the phrase once.</p>
                 </div>
-                <p className="text-text-body leading-relaxed mb-4">
-                  A wider meaning sits inside a narrow moment.
-                </p>
-                <p className="text-text-heading font-medium">
-                  Over time, the nervous system begins to expect steadiness.
-                </p>
+                <div className="mt-7">
+                  <p className="text-text-body leading-relaxed mb-4">
+                    A wider meaning sits inside a narrow moment.
+                  </p>
+                  <p className="text-text-heading font-medium">
+                    Over time, the nervous system begins to expect steadiness.
+                  </p>
+                </div>
               </div>
             </div>
           )}
