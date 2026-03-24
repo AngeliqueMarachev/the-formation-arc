@@ -465,7 +465,7 @@ const DailyFormation = () => {
 
               {/* WHEN TO USE IT */}
               <div className="mb-10">
-                <p className="text-primary font-semibold mb-4">When to use it</p>
+                
 
                 <div className="mb-8">
                   <p className="text-primary font-semibold text-base uppercase mt-8 mb-3">DAILY MOMENT</p>
