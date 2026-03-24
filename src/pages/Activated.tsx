@@ -511,7 +511,7 @@ const Activated = () => {
             {stepTitles.map((title, i) => (
               <div key={i} className="rounded-lg border bg-card p-5 border-secondary">
                 <p className="text-xs text-text-supporting uppercase tracking-wider mb-2 text-primary">{title}</p>
-                <p className="text-text-heading text-base leading-relaxed">{userSelections[i]}</p>
+                <p className="text-text-heading text-base leading-relaxed text-primary">{userSelections[i]}</p>
               </div>
             ))}
           </div>
