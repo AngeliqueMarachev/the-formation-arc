@@ -74,16 +74,16 @@ const Index = () => {
 
   const cards = [
   {
-    title: "The Reorientation Engine",
-    subtitle: "When fear or anxiety rises, use The Reorientation Engine to interrupt the spiral and regain steadiness.",
-    icon: CloudDrizzle,
-    path: "/activated"
-  },
-  {
     title: "The Daily Formation",
     subtitle: "When you are calm enough, use The Daily Formation to settle your system and strengthen new patterns of safety.",
     icon: AudioLines,
     path: "/daily-formation"
+  },
+  {
+    title: "The Reorientation Engine",
+    subtitle: "When fear or anxiety rises, use The Reorientation Engine to interrupt the spiral and regain steadiness.",
+    icon: CloudDrizzle,
+    path: "/activated"
   },
   {
     title: "The Anchor Library",
