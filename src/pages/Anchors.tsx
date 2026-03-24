@@ -196,7 +196,7 @@ const Anchors = () => {
             {anchors.map((anchor) => (
               <Card
                 key={anchor.id}
-                className="cursor-pointer transition-colors hover:bg-card/80"
+                className="hover:border-primary/40"
                 onClick={() => {
                   setSelected(anchor);
                   setView("detail");
