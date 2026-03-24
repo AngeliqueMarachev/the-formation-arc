@@ -334,7 +334,7 @@ const DailyFormation = () => {
                 placeholder="e.g. I thought I was a sad child, but I was full of life."
                 value={meaningConclusion}
                 onChange={(e) => setMeaningConclusion(e.target.value)}
-                className="min-h-[80px] text-lg text-muted-foreground"
+                className="min-h-[80px] text-sm text-muted-foreground"
               />
 
               <h2 className="font-semibold tracking-tight text-3xl">Open your heart</h2>
@@ -346,7 +346,7 @@ const DailyFormation = () => {
                 placeholder="e.g. I saw Jesus thanking God for me!"
                 value={widenedMeaning}
                 onChange={(e) => setWidenedMeaning(e.target.value)}
-                className="min-h-[80px] text-lg"
+                className="min-h-[80px] text-sm"
               />
 
               <h2 className="font-semibold tracking-tight text-3xl">Sense of nearness</h2>
