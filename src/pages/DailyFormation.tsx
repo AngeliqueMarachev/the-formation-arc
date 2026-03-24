@@ -353,14 +353,29 @@ const DailyFormation = () => {
               <p className="text-supporting leading-relaxed">
                 How present did you feel God's nearness while recalling this scene?
               </p>
-              <Input
-                type="number"
-                min={1}
-                max={10}
-                placeholder="1–10"
-                value={communionAwareness}
-                onChange={(e) => setCommunionAwareness(e.target.value)}
-              />
+              <div className="flex items-center justify-between px-4 w-full">
+                {Array.from({ length: 10 }, (_, i) => {
+                  const value = i + 1;
+                  const isSelected = communionAwareness === String(value);
+                  return (
+                    <button
+                      key={value}
+                      type="button"
+                      onClick={() => setCommunionAwareness(String(value))}
+                      className="flex items-center justify-center w-8 h-8"
+                    >
+                      <span
+                        className={`block w-4 h-4 rounded-full transition-all duration-200 ${
+                          isSelected
+                            ? "bg-primary border-2 border-primary"
+                            : "bg-background border-2"
+                        }`}
+                        style={!isSelected ? { borderColor: "rgba(248,247,242,0.35)" } : undefined}
+                      />
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           )}
 
