@@ -140,6 +140,16 @@ const Auth = () => {
               ? "Create Account"
               : "Sign In"}
           </Button>
+
+          {!isForgotPassword && !isSignUp && (
+            <button
+              type="button"
+              onClick={() => setIsForgotPassword(true)}
+              className="w-full text-center text-xs text-muted-foreground hover:text-primary transition-colors underline-offset-4 hover:underline mt-3"
+            >
+              Forgot password?
+            </button>
+          )}
         </form>
 
         {isForgotPassword ? (
