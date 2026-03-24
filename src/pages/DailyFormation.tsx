@@ -449,37 +449,43 @@ const DailyFormation = () => {
 
           {/* Step 3: Use your Anchor Phrase */}
           {createStep === 3 && (
-            <div className="space-y-6">
-              <h2 className="font-semibold tracking-tight text-3xl">Use your Anchor Phrase</h2>
-              <div className="space-y-3">
-                <p className="text-text-body leading-relaxed">
-                  This phrase will help your nervous system remember what this moment meant.
+            <div>
+              <h2 className="font-semibold tracking-tight text-3xl mb-6">Use your Anchor Phrase</h2>
+
+              {/* WHAT THIS IS FOR */}
+              <div className="mb-8">
+                <p className="text-primary font-semibold mb-3">What this is for</p>
+                <p className="text-text-body leading-relaxed mb-2">
+                  This phrase helps your nervous system remember what this moment meant.
                 </p>
-                <p className="text-text-body leading-relaxed">It isn't something you repeat all day.</p>
-                <p className="text-text-body leading-relaxed">It has three specific uses.</p>
+                <p className="text-text-body leading-relaxed">
+                  It isn't something you repeat all day. It has three specific uses.
+                </p>
               </div>
 
-              <div className="space-y-2">
-                <p className="text-primary font-semibold">Attach it to one daily moment</p>
-                <p className="text-text-body leading-relaxed">Choose one part of your day that already happens.</p>
-                <div className="text-text-body text-sm space-y-1 pl-1">
-                  <p>For example:</p>
-                  <p>– before you brush your teeth</p>
-                  <p>– when you close your laptop for the day</p>
-                  <p>– after you get into bed</p>
+              {/* WHEN TO USE IT */}
+              <div className="mb-8">
+                <p className="text-primary font-semibold mb-3">When to use it</p>
+
+                <p className="text-text-body leading-relaxed mb-2">
+                  Attach it to one daily moment that already happens.
+                </p>
+                <div className="text-text-body text-sm space-y-1 pl-1 mb-7">
+                  <p>– Before you brush your teeth</p>
+                  <p>– When you close your laptop</p>
+                  <p>– After you get into bed</p>
                 </div>
-              </div>
 
-              <div className="space-y-2">
-                <p className="text-primary font-semibold">During moments of contraction</p>
-                <p className="text-text-body leading-relaxed">
-                  When you notice fear, tension, shame, or sudden loneliness.
+                <p className="text-text-body leading-relaxed mb-2">
+                  During moments of contraction.
                 </p>
-              </div>
+                <p className="text-text-body text-sm pl-1 mb-7">
+                  Fear, tension, shame, or sudden loneliness.
+                </p>
 
-              <div className="space-y-2">
-                <p className="text-primary font-semibold">When old narratives resurface</p>
-                <p className="text-text-body leading-relaxed">If familiar thoughts appear:</p>
+                <p className="text-text-body leading-relaxed mb-2">
+                  When old narratives resurface.
+                </p>
                 <div className="text-text-body text-sm space-y-1 pl-1">
                   <p>I am alone.</p>
                   <p>I am not enough.</p>
@@ -487,19 +493,16 @@ const DailyFormation = () => {
                 </div>
               </div>
 
-              <div className="space-y-3 pt-2">
-                <p className="text-primary font-semibold">In all these scenarios:</p>
-                <div className="text-text-body leading-relaxed space-y-1">
+              {/* HOW TO USE IT */}
+              <div>
+                <p className="text-primary font-semibold mb-3">How to use it</p>
+                <div className="text-text-body leading-relaxed space-y-1 mb-7">
                   <p>Pause for 10 seconds.</p>
                   <p>Recall the memory briefly.</p>
                   <p>Say the phrase once.</p>
                 </div>
-              </div>
-
-              <div className="space-y-3">
-                <p className="text-text-body leading-relaxed">
-                  This allows a wider meaning to sit inside a narrow moment and empowers the updated meaning to compete
-                  with the old one.
+                <p className="text-text-body leading-relaxed mb-2">
+                  A wider meaning sits inside a narrow moment.
                 </p>
                 <p className="text-text-heading font-medium">
                   Over time, the nervous system begins to expect steadiness.
