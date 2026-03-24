@@ -240,12 +240,16 @@ const AnchorRecall = ({
               <p className="text-xs text-text-supporting text-right">{anchorTitle.length}/60</p>
             </div>
 
-            <Textarea
-            placeholder={`Describe the scene…\n\ne.g. I'm standing in my grandmother's garden.\nThe sun is warm and the air smells like soil and roses.`}
-            value={sceneText}
-            onChange={(e) => onSceneTextChange(e.target.value)}
-            className="min-h-[140px]" />
-          
+            <div className="space-y-2">
+              <label className="text-sm font-medium text-text-heading text-primary">
+                Describe the scene
+              </label>
+              <Textarea
+              placeholder={`e.g. I'm standing in my grandmother's garden.\nThe sun is warm and the air smells like soil and roses.`}
+              value={sceneText}
+              onChange={(e) => onSceneTextChange(e.target.value)}
+              className="min-h-[140px]" />
+            </div>
 
             {/* Emotional layer */}
             <div className="space-y-3">
