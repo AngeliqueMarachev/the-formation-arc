@@ -512,7 +512,7 @@ const DailyFormation = () => {
                 </div>
               </div>
 
-              <p className="text-text-heading font-medium mt-8">
+              <p className="text-text-heading font-medium mt-8 py-0 my-[33px]">
                 Over time, the nervous system begins to expect steadiness.
               </p>
             </div>
