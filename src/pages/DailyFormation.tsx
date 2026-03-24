@@ -353,14 +353,61 @@ const DailyFormation = () => {
               <p className="text-supporting leading-relaxed">
                 How present did you feel God's nearness while recalling this scene?
               </p>
-              <Input
-                type="number"
-                min={1}
-                max={10}
-                placeholder="1–10"
-                value={communionAwareness}
-                onChange={(e) => setCommunionAwareness(e.target.value)}
-              />
+              <div>
+                <div className="relative flex items-center justify-between px-4 w-full">
+                  {/* Background line - center to center of first/last circles */}
+                  <div
+                    className="absolute top-1/2 -translate-y-1/2"
+                    style={{
+                      height: "2px",
+                      backgroundColor: "rgba(248,247,242,0.25)",
+                      left: "calc(1rem + 16px)",
+                      right: "calc(1rem + 16px)",
+                    }}
+                  />
+                  {/* Active fill line */}
+                  {communionAwareness && Number(communionAwareness) >= 1 && (
+                    <div
+                      className="absolute top-1/2 -translate-y-1/2 transition-all duration-300"
+                      style={{
+                        height: "2px",
+                        backgroundColor: "hsl(var(--primary) / 0.9)",
+                        left: "calc(1rem + 16px)",
+                        width: `calc((100% - 2rem - 32px) * ${(Number(communionAwareness) - 1) / 9})`,
+                      }}
+                    />
+                  )}
+                  {Array.from({ length: 10 }, (_, i) => {
+                    const value = i + 1;
+                    const isFilled = communionAwareness !== "" && value <= Number(communionAwareness);
+                    return (
+                      <button
+                        key={value}
+                        type="button"
+                        onClick={() => setCommunionAwareness(String(value))}
+                        className="relative z-10 flex items-center justify-center w-8 h-8"
+                      >
+                        <span
+                          className={`block rounded-full transition-all duration-200 ${
+                            isFilled
+                              ? "bg-primary border-2 border-primary"
+                              : "bg-background border-2"
+                          }`}
+                          style={{
+                            width: "18px",
+                            height: "18px",
+                            ...(!isFilled ? { borderColor: "rgba(248,247,242,0.45)" } : {}),
+                          }}
+                        />
+                      </button>
+                    );
+                  })}
+                </div>
+                <div className="flex justify-between px-4 mt-2">
+                  <span className="text-sm text-text-supporting">Distant</span>
+                  <span className="text-sm text-text-supporting">Deeply present</span>
+                </div>
+              </div>
             </div>
           )}
 
@@ -402,57 +449,63 @@ const DailyFormation = () => {
 
           {/* Step 3: Use your Anchor Phrase */}
           {createStep === 3 && (
-            <div className="space-y-6">
-              <h2 className="font-semibold tracking-tight text-3xl">Use your Anchor Phrase</h2>
-              <div className="space-y-3">
+            <div>
+              <h2 className="font-semibold tracking-tight text-3xl mb-6">Use your Anchor Phrase</h2>
+
+              {/* WHAT THIS IS FOR */}
+              <div className="mb-10">
+                <p className="text-primary font-semibold mb-4">What this is for</p>
+                <p className="text-text-body leading-relaxed mb-4">
+                  This phrase helps your nervous system remember what this moment meant.
+                </p>
                 <p className="text-text-body leading-relaxed">
-                  This phrase will help your nervous system remember what this moment meant.
-                </p>
-                <p className="text-text-body leading-relaxed">It isn't something you repeat all day.</p>
-                <p className="text-text-body leading-relaxed">It has three specific uses.</p>
-              </div>
-
-              <div className="space-y-2">
-                <p className="text-primary font-semibold">ATTACH IT TO ONE DAILY MOMENT</p>
-                <p className="text-text-body leading-relaxed">Choose one part of your day that already happens.</p>
-                <div className="text-text-body text-sm space-y-1 pl-1">
-                  <p>For example:</p>
-                  <p>– before you brush your teeth</p>
-                  <p>– when you close your laptop for the day</p>
-                  <p>– after you get into bed</p>
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <p className="text-primary font-semibold">DURING MOMENTS OF CONTRACTION</p>
-                <div className="text-text-body text-sm space-y-1 pl-1">
-                  When you notice fear, tension, shame, or sudden loneliness.
+                  It isn't something you repeat all day. It has three specific uses.
                 </p>
               </div>
 
-              <div className="space-y-2">
-                <p className="text-primary font-semibold">WHEN OLD THOUGHTS RETURN</p>
-                <p className="text-text-body leading-relaxed">If familiar thoughts appear:</p>
-                <div className="text-text-body text-sm space-y-1 pl-1">
-                  <p>I am alone.</p>
-                  <p>I am not enough.</p>
-                  <p>This will end badly.</p>
+              {/* WHEN TO USE IT */}
+              <div className="mb-10">
+                <p className="text-primary font-semibold mb-4">When to use it</p>
+
+                <div className="mb-8">
+                  <p className="text-text-heading font-medium text-base mb-3">Daily moment</p>
+                  <p className="text-text-body leading-relaxed mb-4">
+                    Attach it to one daily moment that already happens.
+                  </p>
+                  <div className="text-text-body text-sm space-y-1 pl-1">
+                    <p>– Before you brush your teeth</p>
+                    <p>– When you close your laptop</p>
+                    <p>– After you get into bed</p>
+                  </div>
+                </div>
+
+                <div className="mb-8">
+                  <p className="text-text-heading font-medium text-base mb-3">Moments of contraction</p>
+                  <p className="text-text-body text-sm pl-1">
+                    Fear, tension, shame, or sudden loneliness.
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-text-heading font-medium text-base mb-3">WHEN OLD THOUGHTS RETURN</p>
+                  <div className="text-text-body text-sm space-y-1 pl-1">
+                    <p>I am alone.</p>
+                    <p>I am not enough.</p>
+                    <p>This will end badly.</p>
+                  </div>
                 </div>
               </div>
 
-              <div className="space-y-3 pt-2">
-                <p className="text-primary font-semibold">In all these scenarios:</p>
-                <div className="text-text-body leading-relaxed space-y-1">
+              {/* HOW TO USE IT */}
+              <div>
+                <p className="text-primary font-semibold mb-4">How to use it</p>
+                <div className="text-text-body leading-relaxed space-y-4 mb-8">
                   <p>Pause for 10 seconds.</p>
                   <p>Recall the memory briefly.</p>
                   <p>Say the phrase once.</p>
                 </div>
-              </div>
-
-              <div className="space-y-3">
-                <p className="text-text-body leading-relaxed">
-                  This allows a wider meaning to sit inside a narrow moment and empowers the updated meaning to compete
-                  with the old one.
+                <p className="text-text-body leading-relaxed mb-4">
+                  A wider meaning sits inside a narrow moment.
                 </p>
                 <p className="text-text-heading font-medium">
                   Over time, the nervous system begins to expect steadiness.
@@ -481,7 +534,7 @@ const DailyFormation = () => {
     return (
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col justify-center px-6 py-12 content-container">
-          <h1 className="tracking-tight mb-8">Formation accumulates</h1>
+          <h1 className="tracking-tight mb-8 text-lg">Such as fear, tension, shame, or sudden loneliness.</h1>
           <div className="space-y-4 leading-relaxed">
             <p className="text-text-body text-base text-secondary-foreground">Today you:</p>
             <ul className="list-disc pl-5 space-y-1 text-text-body">
