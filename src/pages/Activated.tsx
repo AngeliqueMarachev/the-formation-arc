@@ -500,7 +500,7 @@ const Activated = () => {
         <main className="flex flex-1 flex-col px-6 pt-10 pb-12 content-container">
           <h1 className="tracking-tight mb-2">Your Reorientation Engine</h1>
           <div className="space-y-4 leading-relaxed mb-8">
-            <p className="text-text-body">You built a sequence that helps interrupt fear and restore steadiness.</p>
+            <p className="text-primary">You built a sequence that helps interrupt fear and restore steadiness.</p>
             <p className="text-text-body">When activation rises, return to this script and read each line slowly.</p>
             <p className="text-text-body">
               Over time, repeated returns help your brain expect steadiness instead of escalation.
