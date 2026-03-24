@@ -162,5 +162,11 @@
   input::placeholder,
   textarea::placeholder {
     color: hsl(var(--text-supporting) / 0.6);
+    transition: opacity 0.15s ease;
+  }
+
+  input:focus::placeholder,
+  textarea:focus::placeholder {
+    opacity: 0;
   }
 }
