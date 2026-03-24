@@ -158,7 +158,7 @@ const DailyFormation = () => {
               After this sequence, you will move into The Anchor Layer, where we strengthen new expectations of
               steadiness.
             </p>
-            <p className="text-text-body text-base">​</p>
+            
           </div>
 
           {hasLines ? (
