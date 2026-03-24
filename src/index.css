@@ -157,4 +157,10 @@
     margin-right: auto;
     width: 100%;
   }
+
+  /* Softer placeholder text */
+  input::placeholder,
+  textarea::placeholder {
+    color: hsl(var(--text-supporting) / 0.6);
+  }
 }
