@@ -453,9 +453,9 @@ const DailyFormation = () => {
               <h2 className="font-semibold tracking-tight text-3xl mb-6">Use your Anchor Phrase</h2>
 
               {/* WHAT THIS IS FOR */}
-              <div className="mb-8">
-                <p className="text-primary font-semibold mb-3">What this is for</p>
-                <p className="text-text-body leading-relaxed mb-2">
+              <div className="mb-10">
+                <p className="text-primary font-semibold mb-4">What this is for</p>
+                <p className="text-text-body leading-relaxed mb-4">
                   This phrase helps your nervous system remember what this moment meant.
                 </p>
                 <p className="text-text-body leading-relaxed">
@@ -464,44 +464,47 @@ const DailyFormation = () => {
               </div>
 
               {/* WHEN TO USE IT */}
-              <div className="mb-8">
-                <p className="text-primary font-semibold mb-3">When to use it</p>
+              <div className="mb-10">
+                <p className="text-primary font-semibold mb-4">When to use it</p>
 
-                <p className="text-text-body leading-relaxed mb-2">
-                  Attach it to one daily moment that already happens.
-                </p>
-                <div className="text-text-body text-sm space-y-1 pl-1 mb-7">
-                  <p>– Before you brush your teeth</p>
-                  <p>– When you close your laptop</p>
-                  <p>– After you get into bed</p>
+                <div className="mb-8">
+                  <p className="text-text-heading font-medium text-base mb-3">Daily moment</p>
+                  <p className="text-text-body leading-relaxed mb-4">
+                    Attach it to one daily moment that already happens.
+                  </p>
+                  <div className="text-text-body text-sm space-y-1 pl-1">
+                    <p>– Before you brush your teeth</p>
+                    <p>– When you close your laptop</p>
+                    <p>– After you get into bed</p>
+                  </div>
                 </div>
 
-                <p className="text-text-body leading-relaxed mb-2">
-                  During moments of contraction.
-                </p>
-                <p className="text-text-body text-sm pl-1 mb-7">
-                  Fear, tension, shame, or sudden loneliness.
-                </p>
+                <div className="mb-8">
+                  <p className="text-text-heading font-medium text-base mb-3">Moments of contraction</p>
+                  <p className="text-text-body text-sm pl-1">
+                    Fear, tension, shame, or sudden loneliness.
+                  </p>
+                </div>
 
-                <p className="text-text-body leading-relaxed mb-2">
-                  When old narratives resurface.
-                </p>
-                <div className="text-text-body text-sm space-y-1 pl-1">
-                  <p>I am alone.</p>
-                  <p>I am not enough.</p>
-                  <p>This will end badly.</p>
+                <div>
+                  <p className="text-text-heading font-medium text-base mb-3">When old thoughts return</p>
+                  <div className="text-text-body text-sm space-y-1 pl-1">
+                    <p>I am alone.</p>
+                    <p>I am not enough.</p>
+                    <p>This will end badly.</p>
+                  </div>
                 </div>
               </div>
 
               {/* HOW TO USE IT */}
               <div>
-                <p className="text-primary font-semibold mb-3">How to use it</p>
-                <div className="text-text-body leading-relaxed space-y-1 mb-7">
+                <p className="text-primary font-semibold mb-4">How to use it</p>
+                <div className="text-text-body leading-relaxed space-y-4 mb-8">
                   <p>Pause for 10 seconds.</p>
                   <p>Recall the memory briefly.</p>
                   <p>Say the phrase once.</p>
                 </div>
-                <p className="text-text-body leading-relaxed mb-2">
+                <p className="text-text-body leading-relaxed mb-4">
                   A wider meaning sits inside a narrow moment.
                 </p>
                 <p className="text-text-heading font-medium">
