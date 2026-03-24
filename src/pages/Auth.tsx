@@ -100,7 +100,7 @@ const Auth = () => {
               className="bg-secondary"
             />
             {emailTouched && emailError && (
-              <p className="text-sm text-destructive mt-1">{emailError}</p>
+              <p className="text-sm text-muted-foreground mt-1">{emailError}</p>
             )}
           </div>
 
