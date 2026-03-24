@@ -510,12 +510,13 @@ const DailyFormation = () => {
                   <p>Say the phrase once.</p>
                 </div>
                 <div className="mt-7">
-                  <p className="text-text-body leading-relaxed mb-4">A wider meaning sits inside a narrow moment.</p>
-                  <p className="text-text-heading font-medium">
-                    Over time, the nervous system begins to expect steadiness.
-                  </p>
+                  <p className="text-text-body leading-relaxed">A wider meaning sits inside a narrow moment.</p>
                 </div>
               </div>
+
+              <p className="text-text-heading font-medium mt-8">
+                Over time, the nervous system begins to expect steadiness.
+              </p>
             </div>
           )}
         </main>
