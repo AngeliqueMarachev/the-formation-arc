@@ -1,35 +1,22 @@
 
 
-## Plan: Add label above textarea in AnchorRecall
+## Plan: Hide placeholder text on focus
 
-**What changes:**
+Standard HTML placeholders only disappear when the user starts typing. To make them disappear on focus, we need to add CSS that targets the `:focus::placeholder` pseudo-element.
 
-Wrap the `Textarea` (lines 243-247) in a `div` with the same structure as the "Give this memory a short title" field above it (lines 226-241):
-- Add a `<label>` with classes `text-sm font-medium text-text-heading text-primary` containing "Describe the scene"
-- Update the textarea placeholder to remove "Describe the scene…" and keep only the example text as placeholder
+### Change
 
-**File:** `src/components/AnchorRecall.tsx` (lines 243-247)
+**File: `src/index.css`** — Add a rule to hide placeholders on focus:
 
-**Before:**
-```tsx
-<Textarea
-  placeholder={`Describe the scene…\n\ne.g. I'm standing in my grandmother's garden.\nThe sun is warm and the air smells like soil and roses.`}
-  ...
-/>
+```css
+input:focus::placeholder,
+textarea:focus::placeholder {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
 ```
 
-**After:**
-```tsx
-<div className="space-y-2">
-  <label className="text-sm font-medium text-text-heading text-primary">
-    Describe the scene
-  </label>
-  <Textarea
-    placeholder={`e.g. I'm standing in my grandmother's garden.\nThe sun is warm and the air smells like soil and roses.`}
-    ...
-  />
-</div>
-```
+This will also add `transition: opacity 0.15s ease` to the existing `input::placeholder, textarea::placeholder` rule for a smooth fade-out effect.
 
-Single file, minimal edit.
+Single file, two lines added. Applies globally to all input and textarea fields.
 
