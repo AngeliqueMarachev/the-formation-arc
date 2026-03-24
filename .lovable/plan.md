@@ -1,14 +1,35 @@
 
 
-## Plan: Temporarily Force Empty State in Anchor Library
+## Plan: Add label above textarea in AnchorRecall
 
-**Goal**: Temporarily modify `src/pages/Anchors.tsx` to force the empty state to display, so you can review the design in the preview.
+**What changes:**
 
-### Steps
+Wrap the `Textarea` (lines 243-247) in a `div` with the same structure as the "Give this memory a short title" field above it (lines 226-241):
+- Add a `<label>` with classes `text-sm font-medium text-text-heading text-primary` containing "Describe the scene"
+- Update the textarea placeholder to remove "Describe the scene…" and keep only the example text as placeholder
 
-1. **Force empty state** — In `src/pages/Anchors.tsx`, temporarily override the `isEmpty` condition to always be `true` (e.g., `const isEmpty = true;`).
+**File:** `src/components/AnchorRecall.tsx` (lines 243-247)
 
-2. **Review in preview** — You'll be able to see the empty state live.
+**Before:**
+```tsx
+<Textarea
+  placeholder={`Describe the scene…\n\ne.g. I'm standing in my grandmother's garden.\nThe sun is warm and the air smells like soil and roses.`}
+  ...
+/>
+```
 
-3. **Revert** — Once you've reviewed it, revert the change back to the original logic (`const isEmpty = !loading && anchors.length === 0;`).
+**After:**
+```tsx
+<div className="space-y-2">
+  <label className="text-sm font-medium text-text-heading text-primary">
+    Describe the scene
+  </label>
+  <Textarea
+    placeholder={`e.g. I'm standing in my grandmother's garden.\nThe sun is warm and the air smells like soil and roses.`}
+    ...
+  />
+</div>
+```
+
+Single file, minimal edit.
 
