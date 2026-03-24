@@ -192,7 +192,7 @@ const Anchors = () => {
         </main>
       ) : (
         <ScrollArea className="flex-1 px-6">
-          <div className="space-y-4 pb-4 content-container">
+          <div className="space-y-4 pt-1 pb-4 content-container">
             {anchors.map((anchor) => (
               <Card
                 key={anchor.id}
