@@ -13,10 +13,33 @@ const Auth = () => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [emailTouched, setEmailTouched] = useState(false);
+  const [emailError, setEmailError] = useState("");
   const { toast } = useToast();
+
+  const validateEmail = (value: string): string => {
+    const trimmed = value.trim();
+    if (!trimmed) return "Enter a valid email address";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed)) return "Enter a valid email address";
+    return "";
+  };
+
+  const handleEmailBlur = () => {
+    setEmailTouched(true);
+    setEmailError(validateEmail(email));
+  };
+
+  const handleEmailChange = (value: string) => {
+    setEmail(value);
+    if (emailTouched) setEmailError(validateEmail(value));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setEmailTouched(true);
+    const error = validateEmail(email);
+    setEmailError(error);
+    if (error) return;
     setLoading(true);
 
     if (isForgotPassword) {
@@ -64,18 +87,21 @@ const Auth = () => {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form onSubmit={handleSubmit} className="space-y-5" noValidate>
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
             <Input
               id="email"
               type="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
+              onChange={(e) => handleEmailChange(e.target.value)}
+              onBlur={handleEmailBlur}
               placeholder="you@example.com"
               className="bg-secondary"
             />
+            {emailTouched && emailError && (
+              <p className="text-sm text-destructive mt-1">{emailError}</p>
+            )}
           </div>
 
           {!isForgotPassword && (
