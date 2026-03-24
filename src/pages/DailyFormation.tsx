@@ -487,7 +487,7 @@ const DailyFormation = () => {
                 </div>
 
                 <div>
-                  <p className="text-text-heading font-medium text-base mb-3">When old thoughts return</p>
+                  <p className="text-text-heading font-medium text-base mb-3">WHEN OLD THOUGHTS RETURN</p>
                   <div className="text-text-body text-sm space-y-1 pl-1">
                     <p>I am alone.</p>
                     <p>I am not enough.</p>
