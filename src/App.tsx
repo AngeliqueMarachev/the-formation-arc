@@ -12,6 +12,7 @@ import Activated from "./pages/Activated";
 import DailyFormation from "./pages/DailyFormation";
 import Anchors from "./pages/Anchors";
 import NotFound from "./pages/NotFound";
+import ResetPassword from "./pages/ResetPassword";
 
 const queryClient = new QueryClient();
 
@@ -44,6 +45,7 @@ const App = () => (
             <Route path="/activated" element={<ProtectedRoute><Activated /></ProtectedRoute>} />
             <Route path="/daily-formation" element={<ProtectedRoute><DailyFormation /></ProtectedRoute>} />
             <Route path="/anchors" element={<ProtectedRoute><Anchors /></ProtectedRoute>} />
+            <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>
