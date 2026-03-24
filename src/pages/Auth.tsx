@@ -128,13 +128,6 @@ const Auth = () => {
                   {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                 </button>
               </div>
-              <button
-                type="button"
-                onClick={() => setIsForgotPassword(true)}
-                className="text-xs text-muted-foreground hover:text-primary transition-colors underline-offset-4 hover:underline"
-              >
-                Forgot password?
-              </button>
             </div>
           )}
 
