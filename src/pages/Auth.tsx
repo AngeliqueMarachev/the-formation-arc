@@ -30,8 +30,9 @@ const Auth = () => {
   };
 
   const handleEmailChange = (value: string) => {
-    setEmail(value);
-    if (emailTouched) setEmailError(validateEmail(value));
+    const lower = value.toLowerCase();
+    setEmail(lower);
+    if (emailTouched) setEmailError(validateEmail(lower));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -98,6 +99,10 @@ const Auth = () => {
               onBlur={handleEmailBlur}
               placeholder="you@example.com"
               className="bg-secondary"
+              autoCapitalize="none"
+              autoCorrect="off"
+              spellCheck={false}
+              inputMode="email"
             />
             {emailTouched && emailError && (
               <p className="text-sm text-muted-foreground mt-1">{emailError}</p>
