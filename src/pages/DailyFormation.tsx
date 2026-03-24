@@ -353,32 +353,49 @@ const DailyFormation = () => {
               <p className="text-supporting leading-relaxed">
                 How present did you feel God's nearness while recalling this scene?
               </p>
-              <div className="relative flex items-center justify-between px-4 w-full">
-                <div
-                  className="absolute top-1/2 left-4 right-4 -translate-y-1/2"
-                  style={{ height: "3px", backgroundColor: "rgba(248,247,242,0.25)" }}
-                />
-                {Array.from({ length: 10 }, (_, i) => {
-                  const value = i + 1;
-                  const isSelected = communionAwareness === String(value);
-                  return (
-                    <button
-                      key={value}
-                      type="button"
-                      onClick={() => setCommunionAwareness(String(value))}
-                      className="relative z-10 flex items-center justify-center w-8 h-8"
-                    >
-                      <span
-                        className={`block w-4 h-4 rounded-full transition-all duration-200 ${
-                          isSelected
-                            ? "bg-primary border-2 border-primary"
-                            : "bg-background border-2"
-                        }`}
-                        style={!isSelected ? { borderColor: "rgba(248,247,242,0.35)" } : undefined}
-                      />
-                    </button>
-                  );
-                })}
+              <div>
+                <div className="relative flex items-center justify-between px-4 w-full">
+                  {/* Background line */}
+                  <div
+                    className="absolute top-1/2 left-4 right-4 -translate-y-1/2"
+                    style={{ height: "3px", backgroundColor: "rgba(248,247,242,0.25)" }}
+                  />
+                  {/* Active fill line */}
+                  {communionAwareness && Number(communionAwareness) >= 1 && (
+                    <div
+                      className="absolute top-1/2 left-4 -translate-y-1/2 bg-primary transition-all duration-300"
+                      style={{
+                        height: "3px",
+                        width: `${((Number(communionAwareness) - 1) / 9) * 100}%`,
+                      }}
+                    />
+                  )}
+                  {Array.from({ length: 10 }, (_, i) => {
+                    const value = i + 1;
+                    const isFilled = communionAwareness !== "" && value <= Number(communionAwareness);
+                    return (
+                      <button
+                        key={value}
+                        type="button"
+                        onClick={() => setCommunionAwareness(String(value))}
+                        className="relative z-10 flex items-center justify-center w-8 h-8"
+                      >
+                        <span
+                          className={`block w-4 h-4 rounded-full transition-all duration-200 ${
+                            isFilled
+                              ? "bg-primary border-2 border-primary"
+                              : "bg-background border-2"
+                          }`}
+                          style={!isFilled ? { borderColor: "rgba(248,247,242,0.35)" } : undefined}
+                        />
+                      </button>
+                    );
+                  })}
+                </div>
+                <div className="flex justify-between px-4 mt-2">
+                  <span className="text-sm text-text-supporting">Distant</span>
+                  <span className="text-sm text-text-supporting">Deeply present</span>
+                </div>
               </div>
             </div>
           )}
