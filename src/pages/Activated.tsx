@@ -369,36 +369,47 @@ const Activated = () => {
 
           {scriptComplete && (
             <div className="space-y-6" style={{ animation: "fade-in 400ms ease-out forwards" }}>
-              <div className="text-center space-y-2 py-4">
+              <div className="text-center py-4 max-w-md mx-auto">
                 <p
-                  className="font-medium text-text-heading text-xl font-serif"
+                  className="font-semibold text-text-heading text-xl font-serif mb-8"
                   style={{ fontFamily: "'Fraunces', serif" }}
                 >
                   You interrupted the spiral.
                 </p>
-                <p className="text-text-supporting text-base">
-                  Fear tried to take over the moment.
-                  <br />
-                  Instead of letting it lead, you returned and guided your system.
-                </p>
-                <p className="text-text-supporting text-base font-thin text-primary">
-                  Your nervous system just experienced a different response.
-                </p>
-                <p className="text-text-supporting text-base">
-                  Each time you return:
-                  <br />
-                  Recovery becomes faster.
-                  <br />
-                  Your system learns steadiness.
-                  <br />
-                  Your identity becomes more stable than the moment.
-                </p>
-                <p className="text-text-supporting text-base font-thin text-primary">This is how formation happens.</p>
-                <p className="text-text-supporting text-base">
-                  Not in dramatic breakthroughs.
-                  <br />
-                  But in quiet returns like this.
-                </p>
+
+                {/* Section 1 */}
+                <div className="mb-9 space-y-1.5">
+                  <p className="text-text-body text-base leading-relaxed">
+                    Fear tried to take over the moment.
+                  </p>
+                  <p className="text-text-body text-base leading-relaxed">
+                    Instead of letting it lead,
+                    <br />
+                    you returned and guided your system.
+                  </p>
+                </div>
+
+                {/* Section 2 */}
+                <div className="mb-9">
+                  <p className="text-primary text-base leading-relaxed font-thin mb-4">
+                    Your nervous system just experienced a different response.
+                  </p>
+                  <p className="text-text-body text-base leading-relaxed mb-3">
+                    Each time you return:
+                  </p>
+                  <div className="space-y-2.5">
+                    <p className="text-text-body text-base leading-relaxed">Recovery becomes faster.</p>
+                    <p className="text-text-body text-base leading-relaxed">Your system learns steadiness.</p>
+                    <p className="text-text-body text-base leading-relaxed">Your identity becomes more stable than the moment.</p>
+                  </div>
+                </div>
+
+                {/* Section 3 */}
+                <div>
+                  <p className="text-primary text-base leading-relaxed font-thin mb-1.5">This is how formation happens.</p>
+                  <p className="text-text-body text-base leading-relaxed mb-1.5">Not in dramatic breakthroughs.</p>
+                  <p className="text-text-body text-base leading-relaxed">But in quiet returns like this.</p>
+                </div>
               </div>
               <div className="space-y-3">
                 <Button className="w-full" size="lg" onClick={handleUseComplete} disabled={saving}>
