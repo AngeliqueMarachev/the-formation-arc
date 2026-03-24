@@ -454,7 +454,7 @@ const DailyFormation = () => {
 
               {/* WHAT THIS IS FOR */}
               <div className="mb-10">
-                <p className="text-primary font-semibold mb-4">What this is for</p>
+                
                 <p className="text-text-body leading-relaxed mb-4">
                   This phrase helps your nervous system remember what this moment meant.
                 </p>
