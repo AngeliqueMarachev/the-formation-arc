@@ -468,7 +468,7 @@ const DailyFormation = () => {
                 <p className="text-primary font-semibold mb-4">When to use it</p>
 
                 <div className="mb-8">
-                  <p className="text-text-heading font-medium text-base mb-3">Daily moment</p>
+                  <p className="text-primary font-semibold text-base uppercase mt-8 mb-3">DAILY MOMENT</p>
                   <p className="text-text-body leading-relaxed mb-4">
                     Attach it to one daily moment that already happens.
                   </p>
@@ -480,15 +480,18 @@ const DailyFormation = () => {
                 </div>
 
                 <div className="mb-8">
-                  <p className="text-text-heading font-medium text-base mb-3">Moments of contraction</p>
-                  <p className="text-text-body text-sm pl-1">
-                    Fear, tension, shame, or sudden loneliness.
-                  </p>
+                  <p className="text-primary font-semibold text-base uppercase mt-8 mb-3">DURING MOMENTS OF CONTRACTION</p>
+                  <div className="text-text-body space-y-1.5 pl-1">
+                    <p>Fear</p>
+                    <p>tension</p>
+                    <p>shame</p>
+                    <p>sudden loneliness</p>
+                  </div>
                 </div>
 
                 <div>
-                  <p className="text-text-heading font-medium text-base mb-3">WHEN OLD THOUGHTS RETURN</p>
-                  <div className="text-text-body text-sm space-y-1 pl-1">
+                  <p className="text-primary font-semibold text-base uppercase mt-8 mb-3">WHEN OLD THOUGHTS RETURN</p>
+                  <div className="text-text-body space-y-1.5 pl-1">
                     <p>I am alone.</p>
                     <p>I am not enough.</p>
                     <p>This will end badly.</p>
