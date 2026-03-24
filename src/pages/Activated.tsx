@@ -506,7 +506,7 @@ const Activated = () => {
           </div>
 
           <div className="space-y-4 leading-relaxed mb-10">
-            <p className="text-text-heading font-medium">You have established Reorientation.</p>
+            <p className="text-text-heading font-serif font-semibold">You have established Reorientation.</p>
             <p className="text-text-body">
               Each time you return to these words, you strengthen the pathway that restores steadiness.
             </p>
