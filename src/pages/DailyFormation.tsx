@@ -389,9 +389,7 @@ const DailyFormation = () => {
                       >
                         <span
                           className={`block rounded-full transition-all duration-200 ${
-                            isFilled
-                              ? "bg-primary border-2 border-primary"
-                              : "bg-background border-2"
+                            isFilled ? "bg-primary border-2 border-primary" : "bg-background border-2"
                           }`}
                           style={{
                             width: "18px",
@@ -454,7 +452,6 @@ const DailyFormation = () => {
 
               {/* WHAT THIS IS FOR */}
               <div className="mb-10">
-                
                 <p className="text-text-body leading-relaxed mb-4">
                   This phrase helps your nervous system remember what this moment meant.
                 </p>
@@ -465,8 +462,6 @@ const DailyFormation = () => {
 
               {/* WHEN TO USE IT */}
               <div className="mb-10">
-                
-
                 <div className="mb-8">
                   <p className="text-primary font-semibold text-base uppercase mt-8 mb-3">DAILY MOMENT</p>
                   <p className="text-text-body leading-relaxed mb-4">
@@ -480,7 +475,9 @@ const DailyFormation = () => {
                 </div>
 
                 <div className="mb-8">
-                  <p className="text-primary font-semibold text-base uppercase mt-8 mb-3">DURING MOMENTS OF CONTRACTION</p>
+                  <p className="text-primary font-semibold text-base uppercase mt-8 mb-3">
+                    DURING MOMENTS OF CONTRACTION
+                  </p>
                   <div className="text-text-body space-y-1.5 pl-1">
                     <p>Fear</p>
                     <p>tension</p>
@@ -500,17 +497,20 @@ const DailyFormation = () => {
               </div>
 
               {/* HOW TO USE IT */}
-              <div className="mt-10 rounded-2xl p-5 border border-border/30" style={{ background: 'hsla(var(--card), 0.04)' }}>
-                <p className="text-muted-foreground font-semibold text-base mb-4">Using your Anchor Phrase to reinforce steadiness</p>
-                <div className="text-text-body space-y-2.5" style={{ lineHeight: '1.7' }}>
+              <div
+                className="mt-10 rounded-2xl p-5 border border-border/30"
+                style={{ background: "hsla(var(--card), 0.04)" }}
+              >
+                <p className="text-muted-foreground font-semibold text-base mb-4">
+                  USE YOUR ANCHOR PHRASE TO REINFORCE STEADINESS
+                </p>
+                <div className="text-text-body space-y-2.5" style={{ lineHeight: "1.7" }}>
                   <p>Pause for 10 seconds.</p>
                   <p>Recall the memory briefly.</p>
                   <p>Say the phrase once.</p>
                 </div>
                 <div className="mt-7">
-                  <p className="text-text-body leading-relaxed mb-4">
-                    A wider meaning sits inside a narrow moment.
-                  </p>
+                  <p className="text-text-body leading-relaxed mb-4">A wider meaning sits inside a narrow moment.</p>
                   <p className="text-text-heading font-medium">
                     Over time, the nervous system begins to expect steadiness.
                   </p>
