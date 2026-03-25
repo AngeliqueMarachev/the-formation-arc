@@ -465,7 +465,7 @@ const DailyFormation = () => {
                 <div className="mb-8">
                   <p className="text-primary font-semibold text-base uppercase mt-8 mb-3">DAILY MOMENT</p>
                   <p className="text-text-body leading-relaxed mb-4">
-                    Attach it to one daily moment that already happens.
+                    Attach it to one daily moment that already happens, for example:
                   </p>
                   <div className="text-text-body text-sm space-y-1 pl-1">
                     <p>– Before you brush your teeth</p>
@@ -479,10 +479,10 @@ const DailyFormation = () => {
                     DURING MOMENTS OF CONTRACTION
                   </p>
                   <div className="text-text-body space-y-1.5 pl-1">
-                    <p>Fear</p>
-                    <p>tension</p>
-                    <p>shame</p>
-                    <p>sudden loneliness</p>
+                    <p>Use your phrase when your system begins to tighten, for example:</p>
+                    <p>– Tension</p>
+                    <p>– Shame</p>
+                    <p>– Fear</p>
                   </div>
                 </div>
 
