@@ -3,7 +3,7 @@ import { useAuth } from "@/lib/auth";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Compass, AudioLines, Mountain } from "lucide-react";
+import { Compass, AudioLines, LibraryBig } from "lucide-react";
 import BottomNav from "@/components/BottomNav";
 import { formatDistanceToNow } from "date-fns";
 import Logo from "@/assets/logo.svg?react";
@@ -88,7 +88,7 @@ const Index = () => {
   {
     title: "The Anchor Library",
     subtitle: "When you want to reinforce stability, return to Anchors and revisit what you have built.",
-    icon: Mountain,
+    icon: LibraryBig,
     path: "/anchors"
   }];
 
