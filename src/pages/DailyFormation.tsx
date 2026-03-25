@@ -337,9 +337,9 @@ const DailyFormation = () => {
                 className="min-h-[80px] text-sm text-muted-foreground"
               />
 
-              <h2 className="font-semibold tracking-tight text-3xl">Open your heart</h2>
+              <h2 className="font-semibold tracking-tight text-3xl">Consider presence</h2>
               <p className="text-supporting leading-relaxed">
-                If God was there with you, what would He be doing? How would you feel if you sensed Him in that moment?
+                If God felt near in this moment, what might that have been like? How would you feel if you sensed Him in that moment?
                 Is there any kind of exchange between the two of you? Do you want to ask Him anything?
               </p>
               <Textarea
