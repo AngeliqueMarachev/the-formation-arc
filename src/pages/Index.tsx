@@ -3,7 +3,7 @@ import { useAuth } from "@/lib/auth";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { CloudDrizzle, AudioLines, Mountain } from "lucide-react";
+import { Compass, AudioLines, Mountain } from "lucide-react";
 import BottomNav from "@/components/BottomNav";
 import { formatDistanceToNow } from "date-fns";
 import Logo from "@/assets/logo.svg?react";
@@ -82,7 +82,7 @@ const Index = () => {
   {
     title: "The Reorientation Engine",
     subtitle: "When fear or anxiety rises, use The Reorientation Engine to interrupt the spiral and regain steadiness.",
-    icon: CloudDrizzle,
+    icon: Compass,
     path: "/activated"
   },
   {
