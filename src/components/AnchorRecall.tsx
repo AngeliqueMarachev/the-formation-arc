@@ -287,16 +287,16 @@ const AnchorRecall = ({
           <Button
           className="w-full"
           size="lg"
-          disabled={!canContinue}
-          onClick={onContinue}>
-            Continue
+          variant="secondary"
+          onClick={() => setSelectedScene(null)}>
+            Back
           </Button>
           <Button
           className="w-full"
           size="lg"
-          variant="ghost"
-          onClick={() => setSelectedScene(null)}>
-            Back
+          disabled={!canContinue}
+          onClick={onContinue}>
+            Continue
           </Button>
         </div>
       }
