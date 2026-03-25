@@ -478,9 +478,10 @@ const DailyFormation = () => {
                   <p className="text-primary font-semibold text-base uppercase mt-8 mb-3">
                     DURING MOMENTS OF CONTRACTION
                   </p>
-                 <p className="text-text-body leading-relaxed mb-4">
-                    <p>Use your phrase when your system begins to tighten, for example:</p>
-                    <div className="text-text-body text-sm space-y-1 pl-1">
+                  <p className="text-text-body leading-relaxed mb-4">
+                    Use your phrase when your system begins to tighten, for example:
+                  </p>
+                  <div className="text-text-body text-sm space-y-1 pl-1">
                     <p>– Tension</p>
                     <p>– Shame</p>
                     <p>– Fear</p>
@@ -489,9 +490,10 @@ const DailyFormation = () => {
 
                 <div>
                   <p className="text-primary font-semibold text-base uppercase mt-8 mb-3">WHEN OLD THOUGHTS RETURN</p>
-                   <p className="text-text-body leading-relaxed mb-4">
-                    <p>Use your phrase when old thinking patterns arise, for example:</p>
-                   <div className="text-text-body text-sm space-y-1 pl-1">
+                  <p className="text-text-body leading-relaxed mb-4">
+                    Use your phrase when old thinking patterns arise, for example:
+                  </p>
+                  <div className="text-text-body text-sm space-y-1 pl-1">
                     <p>– I am alone.</p>
                     <p>– I am not enough.</p>
                     <p>– This will end badly.</p>
