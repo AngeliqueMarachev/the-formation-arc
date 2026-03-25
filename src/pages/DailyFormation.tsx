@@ -503,7 +503,7 @@ const DailyFormation = () => {
 
               {/* HOW TO USE IT */}
               <div
-                className="mt-10 rounded-2xl p-6 border border-border/20 bg-card/60"
+                className="mt-10 rounded-2xl p-6 border border-solid bg-muted border-secondary"
               >
                 <p className="text-muted-foreground font-semibold text-base mb-5">IN THAT MOMENT</p>
                 <div className="text-text-body space-y-4" style={{ lineHeight: "1.7" }}>
