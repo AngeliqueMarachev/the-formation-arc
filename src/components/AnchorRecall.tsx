@@ -72,7 +72,8 @@ const SCENE_SUGGESTIONS: Record<string, string[]> = {
 
 const EMOTION_OPTIONS = [
 "Relaxed", "Free", "Curious", "Safe", "Excited",
-"Peaceful", "Small", "Strong", "Seen"];
+"Peaceful", "Small", "Strong", "Seen",
+"Joy", "Loved", "Accepted", "Connected"];
 
 
 const AnchorRecall = ({
@@ -156,9 +157,14 @@ const AnchorRecall = ({
 
           {/* Screen 3 — Writing field */}
           {selectedScene &&
-          <p className="text-supporting leading-relaxed mt-3 text-base text-primary">
+          <>
+            <p className="text-supporting leading-relaxed mt-3 text-base text-primary">
               Hold the scene gently. Use your senses to let the moment come alive.
             </p>
+            <p className="text-text-body mt-4 leading-relaxed text-base">
+              Memory is stored in sensation. Let sensation guide the memory. Allow the details to come naturally. Nothing needs to be forced.
+            </p>
+          </>
           }
         </div>
 
@@ -208,20 +214,16 @@ const AnchorRecall = ({
         {/* Visualization guidance + writing field */}
         {selectedScene &&
         <>
-            <div className="space-y-1 leading-relaxed">
-              <ul className="list-disc pl-5 space-y-1 text-text-body text-base">
-                <li>Where are you?</li>
-                <li>How old are you?</li>
-                <li>Who is with you?</li>
-                <li>What time of day is it?</li>
-                <li>What are you doing?</li>
-                <li>Notice the light.</li>
-                <li>Notice the temperature.</li>
-                <li>Notice any sounds or smells.</li>
-                <li>What are you doing, thinking, and feeling in this moment?</li>
-              </ul>
-              <p className="text-text-body">​</p>
-              <p className="text-text-body">Memory is stored in sensation. Let sensation guide the memory. Allow the details to come naturally. Nothing needs to be forced.</p>
+            <div className="flex flex-col gap-2.5 leading-relaxed">
+              <p className="text-text-body text-base">Where are you?</p>
+              <p className="text-text-body text-base">How old are you?</p>
+              <p className="text-text-body text-base">Who is with you?</p>
+              <p className="text-text-body text-base">What time of day is it?</p>
+              <p className="text-text-body text-base">What are you doing?</p>
+              <p className="text-text-body text-base">Notice the light.</p>
+              <p className="text-text-body text-base">Notice the temperature.</p>
+              <p className="text-text-body text-base">Notice any sounds or smells.</p>
+              <p className="text-text-body text-base">What are you doing, thinking, and feeling in this moment?</p>
             </div>
 
             <div className="space-y-2">
