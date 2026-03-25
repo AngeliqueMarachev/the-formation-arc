@@ -1,9 +1,9 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { HouseHeart, Compass, AudioLines, LibraryBig } from "lucide-react";
+import { House, Compass, AudioLines, LibraryBig } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const tabs = [
-  { label: "Home", icon: HouseHeart, path: "/" },
+  { label: "Home", icon: House, path: "/" },
   { label: "Formation", icon: AudioLines, path: "/daily-formation" },
   { label: "Reorient", icon: Compass, path: "/activated" },
   { label: "Anchors", icon: LibraryBig, path: "/anchors" },
