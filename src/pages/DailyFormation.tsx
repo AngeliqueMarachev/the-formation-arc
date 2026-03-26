@@ -63,6 +63,10 @@ const DailyFormation = () => {
 
       if (templates && templates.length > 0) {
         setLines(templates[0]);
+      } else {
+        // No script exists — route to builder directly
+        navigate("/activated", { state: { skipEntry: true } });
+        return;
       }
 
       const { data: anchorData } = await supabase
@@ -220,21 +224,7 @@ const DailyFormation = () => {
                 </div>
               </div>
             </>
-          ) : (
-            <>
-              <p className="text-supporting italic mb-10">
-                No saved reorientation yet. Complete a reorientation in the Activated tab first.
-              </p>
-              <div className="space-y-3">
-                <Button className="w-full" size="lg" onClick={() => setScreen("create-anchor")}>
-                  Find a Memory
-                </Button>
-                <Button className="w-full" size="lg" variant="secondary" onClick={() => navigate("/anchors")}>
-                  Browse Anchors
-                </Button>
-              </div>
-            </>
-          )}
+          ) : null}
         </main>
         <BottomNav />
       </div>
