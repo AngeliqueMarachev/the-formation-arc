@@ -30,7 +30,7 @@ const CoreOrientation = () => {
         {/* Path cards */}
         <div className="space-y-4">
           {/* Card 1 */}
-          <div className="rounded-lg border border-border/30 bg-card p-5 sm:p-6">
+          <div className="rounded-lg border bg-card p-5 sm:p-6 border-secondary">
             <p className="mb-2 font-fraunces text-lg font-medium text-text-heading">When you feel activated</p>
             <p className="text-base leading-relaxed text-text-body">
               Use <span className="font-medium text-text-heading">The Reorientation Engine</span>.
@@ -41,7 +41,7 @@ const CoreOrientation = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="rounded-lg border border-border/30 bg-card p-5 sm:p-6">
+          <div className="rounded-lg border bg-card p-5 sm:p-6 border-secondary">
             <p className="mb-2 font-fraunces text-lg font-medium text-text-heading">
               When you feel calm enough to train
             </p>
