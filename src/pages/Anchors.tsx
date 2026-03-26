@@ -182,13 +182,14 @@ const Anchors = () => {
           <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-secondary/60">
             <LibraryBig className="h-7 w-7 text-primary" />
           </div>
-          <h2 className="font-semibold">No anchors yet</h2>
+          <h2 className="font-semibold">Create an Anchor</h2>
           <p className="max-w-xs text-supporting">
-            Anchors are memories and phrases that help your nervous system remember steadiness.
+            Anchors are memories and phrases that help your nervous system learn steadiness.
           </p>
-          <p className="max-w-xs text-supporting">Create your first anchor in Daily Formation.</p>
-          <p className="max-w-xs text-supporting">Your Anchor Library will grow over time.</p>
-          <Button onClick={() => navigate("/daily-formation")}>Create your first Anchor</Button>
+          <p className="max-w-xs text-supporting">Anchors are created during The Daily Formation.</p>
+          <p className="max-w-xs text-supporting">Your library will grow over time as you create new anchors.</p>
+          <p className="max-w-xs text-supporting">Each time you return to an anchor, the pathway becomes easier to access and safety is reinforced.</p>
+          <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/10" onClick={() => navigate("/daily-formation")}>Create an Anchor</Button>
         </main>
       ) : (
         <ScrollArea className="flex-1 px-6">
