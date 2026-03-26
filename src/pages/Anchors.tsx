@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/lib/auth";
 import { supabase } from "@/integrations/supabase/client";
-import { Anchor } from "lucide-react";
+import { LibraryBig } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -179,8 +179,8 @@ const Anchors = () => {
 
       {isEmpty ? (
         <main className="flex flex-1 flex-col items-center justify-center px-6 text-center space-y-4 content-container">
-          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-secondary/60">
-            <Anchor className="h-8 w-8 text-primary" />
+          <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-secondary/60">
+            <LibraryBig className="h-7 w-7 text-primary" />
           </div>
           <h2 className="font-semibold">No anchors yet</h2>
           <p className="max-w-xs text-supporting">
