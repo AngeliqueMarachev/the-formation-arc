@@ -23,7 +23,7 @@ const CoreOrientation = () => {
         <div className="space-y-4 text-base leading-relaxed text-text-body sm:text-lg">
           <p>Your nervous system can learn fear, tension, and urgency.</p>
           <p>That does not mean you are broken.</p>
-          <p>This app was developed to help you interrupt those patterns and build steadiness over time.</p>
+          <p className="text-primary">This app was developed to help you interrupt those patterns and build steadiness over time.</p>
           <p>There are 2 ways to use this space:</p>
         </div>
 
