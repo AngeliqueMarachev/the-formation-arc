@@ -22,16 +22,31 @@ const AuthContext = createContext<AuthContextType>({
 
 export const useAuth = () => useContext(AuthContext);
 
+const SESSION_KEY = "orientation_seen_this_session";
+
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
-  const [orientationSeen, setOrientationSeen] = useState(false);
+  const [, forceUpdate] = useState(0);
+
+  const orientationSeen = sessionStorage.getItem(SESSION_KEY) === "true";
+
+  const setOrientationSeen = (v: boolean) => {
+    if (v) {
+      sessionStorage.setItem(SESSION_KEY, "true");
+    } else {
+      sessionStorage.removeItem(SESSION_KEY);
+    }
+    forceUpdate((n) => n + 1);
+  };
 
   useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (_event, session) => {
+      (event, session) => {
         setSession(session);
-        setOrientationSeen(false);
+        if (event === "SIGNED_OUT") {
+          sessionStorage.removeItem(SESSION_KEY);
+        }
         setLoading(false);
       }
     );
@@ -45,6 +60,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const signOut = async () => {
+    sessionStorage.removeItem(SESSION_KEY);
     await supabase.auth.signOut();
   };
 

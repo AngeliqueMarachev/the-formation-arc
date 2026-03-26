@@ -23,6 +23,12 @@ function ProtectedRoute({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
 
+function OrientationGate({ children }: { children: React.ReactNode }) {
+  const { orientationSeen } = useAuth();
+  if (!orientationSeen) return <Navigate to="/onboarding" replace />;
+  return <>{children}</>;
+}
+
 function AuthRoute({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
   if (loading) return null;
@@ -41,7 +47,7 @@ const App = () => (
           <Routes>
             <Route path="/auth" element={<AuthRoute><Auth /></AuthRoute>} />
             <Route path="/onboarding" element={<ProtectedRoute><CoreOrientation /></ProtectedRoute>} />
-            <Route path="/" element={<ProtectedRoute><Index /></ProtectedRoute>} />
+            <Route path="/" element={<ProtectedRoute><OrientationGate><Index /></OrientationGate></ProtectedRoute>} />
             <Route path="/activated" element={<ProtectedRoute><Activated /></ProtectedRoute>} />
             <Route path="/daily-formation" element={<ProtectedRoute><DailyFormation /></ProtectedRoute>} />
             <Route path="/anchors" element={<ProtectedRoute><Anchors /></ProtectedRoute>} />

@@ -67,11 +67,6 @@ const Index = () => {
     enabled: !!user
   });
 
-  const { orientationSeen } = useAuth();
-  if (!orientationSeen) {
-    navigate("/onboarding", { replace: true });
-    return null;
-  }
 
   const cards = [
   {
