@@ -76,7 +76,7 @@ const CoreOrientation = () => {
         {/* CTA */}
         <Button
           onClick={handleEnter}
-          className="h-12 w-full text-base sm:w-auto sm:min-w-[160px]"
+          className="w-full"
           size="lg"
         >
           Begin
