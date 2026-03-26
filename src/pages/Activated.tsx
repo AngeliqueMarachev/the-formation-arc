@@ -100,6 +100,8 @@ type Screen = "loading" | "use-script" | "entry" | "phase" | "complete";
 
 const Activated = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const skipEntry = (location.state as { skipEntry?: boolean })?.skipEntry ?? false;
   const { user } = useAuth();
 
   const { data: existingScript, isLoading: scriptLoading } = useQuery({
@@ -130,10 +132,12 @@ const Activated = () => {
     if (scriptLoading) return;
     if (existingScript) {
       setScreen("use-script");
+    } else if (skipEntry) {
+      setScreen("phase");
     } else {
       setScreen("entry");
     }
-  }, [scriptLoading, existingScript]);
+  }, [scriptLoading, existingScript, skipEntry]);
 
   const handleSelectOption = (option: string) => {
     const next = [...selections];
