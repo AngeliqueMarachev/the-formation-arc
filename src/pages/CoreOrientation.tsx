@@ -32,7 +32,7 @@ const CoreOrientation = () => {
           {/* Card 1 */}
           <div className="rounded-lg border bg-card p-5 sm:p-6 border-secondary">
             <p className="mb-2 font-fraunces text-lg font-medium text-text-heading">When you feel activated</p>
-            <p className="text-base leading-relaxed text-text-body">
+            <p className="text-base leading-relaxed text-text-body font-medium">
               Use <span className="text-text-heading font-normal">The Reorientation Engine</span>.
             </p>
             <p className="mt-1.5 text-sm leading-relaxed text-text-supporting">
@@ -45,7 +45,7 @@ const CoreOrientation = () => {
             <p className="mb-2 font-fraunces text-lg font-medium text-text-heading">
               When you feel calm enough to train
             </p>
-            <p className="text-base leading-relaxed text-text-body">
+            <p className="text-base leading-relaxed text-text-body font-medium">
               Use <span className="text-text-heading font-normal">The Daily Formation</span>.
             </p>
             <p className="mt-1.5 text-sm leading-relaxed text-text-supporting">
