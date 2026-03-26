@@ -21,46 +21,35 @@ const CoreOrientation = () => {
 
         {/* Intro text */}
         <div className="space-y-4 text-base leading-relaxed text-text-body sm:text-lg">
-          <p>
-            Your nervous system can learn fear, tension, and urgency.
-          </p>
+          <p>Your nervous system can learn fear, tension, and urgency.</p>
           <p>That does not mean you are broken.</p>
-          <p>
-            The Formation Arc was developed to help you interrupt those patterns
-            and build steadiness over time.
-          </p>
+          <p>This app was developed to help you interrupt those patterns and build steadiness over time.</p>
+          <p>There are 2 ways to use this space:</p>
         </div>
-
-
-
 
         {/* Path cards */}
         <div className="space-y-4">
           {/* Card 1 */}
           <div className="rounded-lg border border-border/30 bg-card p-5 sm:p-6">
-            <p className="mb-2 font-fraunces text-lg font-medium text-text-heading">
-              When you feel activated
-            </p>
+            <p className="mb-2 font-fraunces text-lg font-medium text-text-heading">When you feel activated</p>
             <p className="text-base leading-relaxed text-text-body">
               Use <span className="font-medium text-text-heading">The Reorientation Engine</span>.
             </p>
             <p className="mt-1.5 text-sm leading-relaxed text-text-supporting">
-              This practice guides you step by step to interrupt the spiral and
-              regain steadiness.
+              This practice guides you step by step to interrupt the spiral and regain steadiness.
             </p>
           </div>
 
           {/* Card 2 */}
           <div className="rounded-lg border border-border/30 bg-card p-5 sm:p-6">
             <p className="mb-2 font-fraunces text-lg font-medium text-text-heading">
-              When you feel calm to train
+              When you feel calm enough to train
             </p>
             <p className="text-base leading-relaxed text-text-body">
               Use <span className="font-medium text-text-heading">The Daily Formation</span>.
             </p>
             <p className="mt-1.5 text-sm leading-relaxed text-text-supporting">
-              This practice helps your nervous system learn to expect steadiness,
-              making it easier to return over time.
+              This practice helps your nervous system learn to expect steadiness, making it easier to return over time.
             </p>
           </div>
         </div>
@@ -72,11 +61,7 @@ const CoreOrientation = () => {
         </div>
 
         {/* CTA */}
-        <Button
-          onClick={handleEnter}
-          className="w-full"
-          size="lg"
-        >
+        <Button onClick={handleEnter} className="w-full" size="lg">
           Begin
         </Button>
       </div>
