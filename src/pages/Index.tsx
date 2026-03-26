@@ -67,7 +67,8 @@ const Index = () => {
     enabled: !!user
   });
 
-  if (!profileLoading && profile && !(profile as any).core_orientation_seen) {
+  const { orientationSeen } = useAuth();
+  if (!orientationSeen) {
     navigate("/onboarding", { replace: true });
     return null;
   }

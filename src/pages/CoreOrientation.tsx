@@ -1,21 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/lib/auth";
-import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
 
 const CoreOrientation = () => {
   const navigate = useNavigate();
-  const { user } = useAuth();
-  const [loading, setLoading] = useState(false);
+  const { setOrientationSeen } = useAuth();
 
-  const handleEnter = async () => {
-    if (!user) return;
-    setLoading(true);
-    await supabase
-      .from("profiles")
-      .update({ core_orientation_seen: true } as any)
-      .eq("id", user.id);
+  const handleEnter = () => {
+    setOrientationSeen(true);
     navigate("/", { replace: true });
   };
 
