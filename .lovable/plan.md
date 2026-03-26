@@ -1,20 +1,47 @@
 
 
-## Plan: Update Anchor Library Empty State
+## Plan: Fix Core Orientation to Only Show Once Per Login Session
 
-### Changes in `src/pages/Anchors.tsx` (lines 181–192)
+### Problem
+Currently, `orientationSeen` is stored as React state and resets on every `onAuthStateChange` event (line 34 in auth.tsx sets it to `false`). This means orientation can re-trigger during the session unexpectedly. The redirect logic lives inside `Index.tsx` (lines 70-74), coupling the Home screen to onboarding.
 
-**1. Update heading** from "No anchors yet" to "Create an Anchor"
+### Changes
 
-**2. Replace body copy** with four paragraphs:
-- "Anchors are memories and phrases that help your nervous system learn steadiness."
-- "Anchors are created during The Daily Formation."
-- "Your library will grow over time as you create new anchors."
-- "Each time you return to an anchor, the pathway becomes easier to access and safety is reinforced."
+**1. `src/lib/auth.tsx` — Use `sessionStorage` instead of React state for the flag**
 
-**3. Update CTA button** text to "Create an Anchor"
+- Replace `useState(false)` for `orientationSeen` with a getter that reads `sessionStorage.getItem('orientation_seen_this_session')`
+- `setOrientationSeen(true)` writes to sessionStorage
+- On `signOut`, clear the sessionStorage flag
+- In `onAuthStateChange`, only reset the flag on `SIGNED_OUT` events (not on every auth change), so token refreshes don't re-trigger orientation
 
-**4. Match button styling** to the "Create new anchor" button in the list view (line 218–223): `variant="outline"` with `className="w-full border-primary text-primary hover:bg-primary/10"`
+**2. `src/pages/Index.tsx` — Remove the orientation redirect**
 
-All changes are within the empty-state block only. No layout or spacing changes outside the icon container and text area.
+- Delete lines 70-74 (the `if (!orientationSeen)` redirect block)
+- Home screen always renders normally for authenticated users
+
+**3. `src/App.tsx` — Move orientation gate to route level**
+
+- Create an `OrientationGate` wrapper component that checks `orientationSeen`:
+  - If false → redirect to `/onboarding`
+  - If true → render children
+- Wrap only the `"/"` route with this gate (so completing flows that navigate to `/` triggers the check once)
+- Other protected routes (`/activated`, `/daily-formation`, `/anchors`) do NOT use this gate, so completing those flows never triggers orientation
+
+This ensures:
+- Orientation shows exactly once per login session
+- Completing any flow (formation, reorientation, anchors) navigates to `/` and lands on Home
+- Logging out and back in resets the flag via sessionStorage clearing
+
+### Technical Detail
+
+```text
+Login → / → OrientationGate (sessionStorage check)
+                ↓ not seen          ↓ seen
+           /onboarding           Home screen
+                ↓ "Begin"
+          sessionStorage set → navigate("/") → Home screen
+
+All other routes → no orientation gate
+Sign out → clear sessionStorage
+```
 
