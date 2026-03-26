@@ -43,8 +43,8 @@ const CoreOrientation = () => {
 
         <p className="leading-relaxed text-text-body">Just begin where you are.</p>
 
-        <Button onClick={handleEnter} disabled={loading} className="w-full h-12 text-base" size="lg">
-          {loading ? "Loading…" : "Enter"}
+        <Button onClick={handleEnter} className="w-full h-12 text-base" size="lg">
+          Enter
         </Button>
       </div>
     </div>
