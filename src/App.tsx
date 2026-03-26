@@ -23,6 +23,12 @@ function ProtectedRoute({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
 
+function OrientationGate({ children }: { children: React.ReactNode }) {
+  const { orientationSeen } = useAuth();
+  if (!orientationSeen) return <Navigate to="/onboarding" replace />;
+  return <>{children}</>;
+}
+
 function AuthRoute({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
   if (loading) return null;
