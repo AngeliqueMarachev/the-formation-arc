@@ -1,27 +1,20 @@
 
 
-## Plan: Show Core Orientation on every login
+## Plan: Update Anchor Library Empty State
 
-### What changes
+### Changes in `src/pages/Anchors.tsx` (lines 181–192)
 
-**1. Track "orientation seen this session" in memory, not in the database** 
+**1. Update heading** from "No anchors yet" to "Create an Anchor"
 
-Use React state (via context or a simple flag) to track whether the user has seen the Core Orientation screen during this browser session. On every fresh login/page load, the flag starts as `false`, so the user always sees CoreOrientation first.
+**2. Replace body copy** with four paragraphs:
+- "Anchors are memories and phrases that help your nervous system learn steadiness."
+- "Anchors are created during The Daily Formation."
+- "Your library will grow over time as you create new anchors."
+- "Each time you return to an anchor, the pathway becomes easier to access and safety is reinforced."
 
-**2. File changes**
+**3. Update CTA button** text to "Create an Anchor"
 
-**`src/lib/auth.tsx`** — Add an `orientationSeen` boolean + setter to the auth context. Initialize to `false`. Reset to `false` whenever the session changes (new login).
+**4. Match button styling** to the "Create new anchor" button in the list view (line 218–223): `variant="outline"` with `className="w-full border-primary text-primary hover:bg-primary/10"`
 
-**`src/pages/Index.tsx`** (line ~70) — Replace the `core_orientation_seen` profile check with the context flag:
-```
-if (!orientationSeen) { navigate("/onboarding", { replace: true }); return null; }
-```
-Remove the profile-loading dependency for this redirect.
-
-**`src/pages/CoreOrientation.tsx`** — Replace the database update with setting the context flag to `true`, then navigating to `/`. Remove the Supabase import and update call.
-
-### What stays the same
-- The `core_orientation_seen` database column is left untouched.
-- All other routing, protected routes, and navigation remain unchanged.
-- No redirect loops: the context flag flips to `true` after tapping "Enter", so `/` renders the Home screen.
+All changes are within the empty-state block only. No layout or spacing changes outside the icon container and text area.
 
