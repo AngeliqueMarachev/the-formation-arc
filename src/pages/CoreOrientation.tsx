@@ -31,10 +31,8 @@ const CoreOrientation = () => {
           </p>
         </div>
 
-        {/* Section title */}
-        <p className="text-lg font-medium tracking-tight text-text-heading sm:text-xl">
-          Where to begin
-        </p>
+
+
 
         {/* Path cards */}
         <div className="space-y-4">
