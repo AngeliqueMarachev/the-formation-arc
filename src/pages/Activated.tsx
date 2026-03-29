@@ -374,7 +374,7 @@ const Activated = () => {
                   className="font-semibold text-text-heading text-xl font-serif mb-8"
                   style={{ fontFamily: "'Fraunces', serif" }}
                 >
-                  You interrupted the spiral.
+                  You interrupted the spiral
                 </p>
 
                 {/* Section 1 */}
