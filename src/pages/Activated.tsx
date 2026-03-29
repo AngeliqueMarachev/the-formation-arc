@@ -379,9 +379,7 @@ const Activated = () => {
 
                 {/* Section 1 */}
                 <div className="mb-9 space-y-1.5">
-                  <p className="text-text-body text-base leading-relaxed">
-                    Fear tried to take over the moment.
-                  </p>
+                  <p className="text-text-body text-base leading-relaxed">Fear tried to take over the moment.</p>
                   <p className="text-text-body text-base leading-relaxed">
                     Instead of letting it lead,
                     <br />
@@ -394,19 +392,21 @@ const Activated = () => {
                   <p className="text-primary text-base leading-relaxed font-thin mb-4">
                     Your nervous system just experienced a different response.
                   </p>
-                  <p className="text-text-body text-base leading-relaxed mb-3">
-                    Each time you return:
-                  </p>
+                  <p className="text-text-body text-base leading-relaxed mb-3">Each time you return:</p>
                   <div className="space-y-2.5">
                     <p className="text-text-body text-base leading-relaxed">Recovery becomes faster.</p>
                     <p className="text-text-body text-base leading-relaxed">Your system learns steadiness.</p>
-                    <p className="text-text-body text-base leading-relaxed">Your identity becomes more stable than the moment.</p>
+                    <p className="text-text-body text-base leading-relaxed">
+                      Your identity becomes more stable than the moment.
+                    </p>
                   </div>
                 </div>
 
                 {/* Section 3 */}
                 <div>
-                  <p className="text-primary text-base leading-relaxed font-thin mb-1.5">This is how formation happens.</p>
+                  <p className="text-primary text-base leading-relaxed font-thin mb-1.5">
+                    This is how formation happens.
+                  </p>
                   <p className="text-text-body text-base leading-relaxed mb-1.5">Not in dramatic breakthroughs.</p>
                   <p className="text-text-body text-base leading-relaxed">But in quiet returns like this.</p>
                 </div>
@@ -443,32 +443,27 @@ const Activated = () => {
         <main className="flex flex-1 flex-col justify-center px-6 py-12 content-container">
           <h1 className="tracking-tight mb-8">When activation rises</h1>
           <div className="space-y-4 leading-relaxed">
+            <p className="text-text-body">Fear can accelerate perception.</p>
+
+            <p>Your mind begins predicting danger.</p>
+
+            <p>Your body prepares for survival.</p>
+
+            <p>This can feel intense, especially when it appears suddenly.</p>
             <p className="text-text-body">
-              Fear can accelerate perception.
-              <br />
-              Your mind begins predicting danger.
-              <br />
-              Your body prepares for survival.
-              <br />
-              This can feel frightening, especially when it appears suddenly.
+              Often, what you are experiencing is often a learned protection pattern, not a present threat.
             </p>
             <p className="text-text-body">
-              But what you are experiencing is often a learned protection pattern, not a present threat.
+              The Reorientation Engine helps you interrupt the spiral and retrain how your brain interprets these
+              moments.
             </p>
-            <p className="text-text-body">You are not here to calm your body.</p>
-            <p className="text-text-heading font-medium">
-              You are here to retrain how your brain interprets these moments.
-            </p>
+
             <p className="text-text-body">
               Each time you move through this sequence you:
-              <br />
-              interrupt reinforcement;
-              <br />
-              update prediction;
-              <br />
-              strengthen internal authority;
-              <br />
-              stabilize your identity over time.
+              <p> interrupt reinforcement;</p>
+              <p> update prediction;</p>
+              <p>strengthen internal authority;</p>
+              <p>and stabilize your identity over time.</p>
             </p>
             <p className="text-text-body">You do not need to rush.</p>
             <p className="text-text-body">Just begin.</p>
