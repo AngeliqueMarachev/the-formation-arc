@@ -16,7 +16,7 @@ const CoreOrientation = () => {
       <div className="content-container space-y-12">
         {/* Header */}
         <h1 className="font-fraunces text-3xl font-semibold tracking-tight text-text-heading sm:text-4xl">
-          The journey that reshapes your inner world
+          The journey that reshapes the world
         </h1>
 
         {/* Intro text */}
