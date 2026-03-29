@@ -31,7 +31,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
 
             <div className="space-y-1">
               <p>We wonder if God has abandoned us. </p>
-              <p>We scrutinize ourselves. We must have done something wrong. </p>
+              <p>We scrutinize ourselves. What did I do wrong? </p>
               <p>We fall into self-pity, depression, addiction, spiralling into hopelessness. </p>
             </div>
 
