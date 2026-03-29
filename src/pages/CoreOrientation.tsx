@@ -22,14 +22,22 @@ const CoreOrientation = () => {
         {/* Intro text */}
         <div className="space-y-4 text-base leading-relaxed text-text-body sm:text-lg">
           <p>Your nervous system is always learning.</p>
-          <p>Across your life, experiences shape how your mind interprets the world: what feels safe, what feels urgent, what feels uncertain.</p>
+          <p>
+            Across your life, experiences shape how your mind interprets the world: what feels safe, what feels urgent,
+            what feels uncertain.
+          </p>
           <p>Over time, repeated stress can train your system to expect tension, even when danger is not present.</p>
           <p>This does not mean you are broken.</p>
           <p>It means your nervous system adapted to protect you.</p>
-          <p className="text-primary">What was shaped through repetition can be reshaped through repetition. Through neuroplasticity, the brain updates its predictions based on lived experience.</p>
+          <p>What was shaped through repetition can be reshaped through repetition. </p>
+          <p className="text-primary">
+            Through neuroplasticity, the brain updates its predictions based on lived experience.
+          </p>
           <p>When prediction changes, perception changes.</p>
           <p>When perception changes, the body follows.</p>
-          <p className="text-primary">This space helps you reshape your world, through repetition, clarity, and return.</p>
+          <p className="text-primary">
+            This space helps you reshape your world, through repetition, clarity, and return.
+          </p>
           <p>Over time, steadiness becomes more familiar than fear.</p>
         </div>
 
@@ -38,7 +46,9 @@ const CoreOrientation = () => {
           <p className="text-base leading-relaxed text-text-body">There are two ways to begin:</p>
           {/* Card 1 */}
           <div className="rounded-lg border bg-card p-5 sm:p-6 border-secondary">
-            <p className="mb-2 font-fraunces text-lg font-medium text-text-heading text-primary">When fear or urgency rises</p>
+            <p className="mb-2 font-fraunces text-lg font-medium text-text-heading text-primary">
+              When fear or urgency rises
+            </p>
             <p className="text-base leading-relaxed text-text-body font-medium">
               Use <span className="text-text-heading font-normal">The Reorientation Engine</span>
             </p>
@@ -56,7 +66,8 @@ const CoreOrientation = () => {
               Use <span className="text-text-heading font-normal">The Daily Formation</span>
             </p>
             <p className="mt-1.5 leading-relaxed text-text-supporting text-base">
-              A daily process that strengthens the pathways of safety so steadiness becomes easier to access in daily life.
+              A daily process that strengthens the pathways of safety so steadiness becomes easier to access in daily
+              life.
             </p>
           </div>
         </div>
@@ -64,7 +75,11 @@ const CoreOrientation = () => {
         {/* Closing reassurance */}
         <div className="space-y-1.5 text-base leading-relaxed text-text-body">
           <p>You do not need to do everything today.</p>
-          <p>Begin where you are.<br />Return often.</p>
+          <p>
+            Begin where you are.
+            <br />
+            Return often.
+          </p>
           <p>Formation is cumulative.</p>
         </div>
 
