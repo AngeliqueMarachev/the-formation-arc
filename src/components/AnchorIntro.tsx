@@ -52,7 +52,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
 
             <p className="text-primary">Daily Formation gently trains the nervous system to become familiar with steadiness again.</p>
 
-            <p className="text-secondary-foreground">The Anchor Layer guides you through this process.</p>
+            <p className="text-secondary-foreground mb-12">The Anchor Layer guides you through this process.</p>
 
           
           </div>
