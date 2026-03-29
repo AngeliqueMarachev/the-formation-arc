@@ -218,7 +218,7 @@ const DailyFormation = () => {
 
               <div className="pt-4 space-y-6">
                 <div className="text-center">
-                  <p className="text-text-body mb-1 font-serif text-xl font-bold">Your system has settled.</p>
+                  <p className="text-text-body mb-1 font-serif text-xl font-bold">Your system has settled</p>
                   <div className="h-2" />
                   <p className="text-text-body mt-3 text-base">
                     You are steady enough to continue. Now you will expand your memories and strengthen your
