@@ -150,9 +150,9 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             perceives.
           </p>
 
-          <p className="text-primary">This means imagined moments can still train the nervous system.</p>
+          <p className="text-primary">This means imagined moments can also train the nervous system.</p>
 
-          <p>Look for access to one small moment that carries even a trace of ease, enjoyment, or aliveness.</p>
+          <p>Look for access to one small moment that carries even a trace of ease, enjoyment, connection or aliveness.</p>
 
           <div>
             <p className="mb-2">It might be:</p>
