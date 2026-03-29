@@ -581,7 +581,7 @@ const Activated = () => {
               onClick={handleCustomToggle}
               className="text-xs text-text-supporting hover:text-text-heading transition-colors"
             >
-              + {phase.customLabel}.
+              + {phase.customLabel}
             </button>
           )}
         </div>
