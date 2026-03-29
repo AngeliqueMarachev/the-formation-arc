@@ -88,10 +88,10 @@ const PHASES = [
     ],
     customLabel: "Write your true identity",
     options: [
-      "I am a child of God.",
-      "I belong to God. Fear is not my master.",
-      "I am not defined by this state.",
-      "The Spirit of God dwells in me.",
+      "I am a chosen people, a royal priesthood, a holy nation, God’s special possession.",
+      "I am created in the image of God.",
+      "God chose me before the foundations of the world.",
+      "My body is a temple of the Holy Spirit who lives in me.",
     ],
   },
 ];
