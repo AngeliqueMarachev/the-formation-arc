@@ -29,7 +29,7 @@ const CoreOrientation = () => {
           <p className="text-primary">What was shaped through repetition can be reshaped through repetition. Through neuroplasticity, the brain updates its predictions based on lived experience.</p>
           <p>When prediction changes, perception changes.</p>
           <p>When perception changes, the body follows.</p>
-          <p>This space helps you reshape your world, through repetition, clarity, and return.</p>
+          <p className="text-primary">This space helps you reshape your world, through repetition, clarity, and return.</p>
           <p>Over time, steadiness becomes more familiar than fear.</p>
           <p>There are two ways to begin:</p>
         </div>
