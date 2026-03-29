@@ -31,11 +31,11 @@ const CoreOrientation = () => {
           <p>When perception changes, the body follows.</p>
           <p className="text-primary">This space helps you reshape your world, through repetition, clarity, and return.</p>
           <p>Over time, steadiness becomes more familiar than fear.</p>
-          <p>There are two ways to begin:</p>
         </div>
 
         {/* Path cards */}
         <div className="space-y-4">
+          <p className="text-base leading-relaxed text-text-body">There are two ways to begin:</p>
           {/* Card 1 */}
           <div className="rounded-lg border bg-card p-5 sm:p-6 border-secondary">
             <p className="mb-2 font-fraunces text-lg font-medium text-text-heading">When fear or urgency rises</p>
