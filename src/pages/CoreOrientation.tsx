@@ -22,11 +22,11 @@ const CoreOrientation = () => {
         {/* Intro text */}
         <div className="space-y-4 text-base leading-relaxed text-text-body sm:text-lg">
           <p>Your nervous system is always learning.</p>
-          <p>Across your life, experiences shaped how your mind interprets the world: what feels safe, what feels urgent, what feels uncertain.</p>
+          <p>Across your life, experiences shape how your mind interprets the world: what feels safe, what feels urgent, what feels uncertain.</p>
           <p>Over time, repeated stress can train your system to expect tension, even when danger is not present.</p>
           <p>This does not mean you are broken.</p>
           <p>It means your nervous system adapted to protect you.</p>
-          <p className="text-primary">Through neuroplasticity, it can also be retrained to live from safety instead of fear, as the brain updates its predictions based on lived experience.</p>
+          <p className="text-inherit">And what was shaped through repetition can be reshaped through repetition. Through neuroplasticity, the brain updates its predictions based on lived experience.</p>
           <p>When prediction changes, perception changes.</p>
           <p>When perception changes, the body follows.</p>
           <p>This space helps you participate in that change,<br />through repetition,<br />clarity,<br />and return.</p>
