@@ -149,16 +149,35 @@ const DailyFormation = () => {
           <div className="mb-6" />
 
           <div className="space-y-4 leading-relaxed mb-10">
-            <p className="text-primary text-base">Stabilise before you build. Settle your system before training.</p>
-            <p className="text-text-body text-base">
-              Before entering The Anchor Layer, rehearse your Reorientation Engine. This immediately signals safety,
-              allowing your body to settle.
-            </p>
-            <p className="text-text-body text-base">
-              After this sequence, you will move into The Anchor Layer, where we strengthen new expectations of
-              steadiness.
-            </p>
-            
+            {hasLines ? (
+              <>
+                <p className="text-primary text-base">Stabilise before you build. Settle your system before training.</p>
+                <p className="text-text-body text-base">
+                  Before entering The Anchor Layer, rehearse your Reorientation Engine. This immediately signals safety,
+                  allowing your body to settle.
+                </p>
+                <p className="text-text-body text-base">
+                  After this sequence, you will move into The Anchor Layer, where we strengthen new expectations of
+                  steadiness.
+                </p>
+              </>
+            ) : (
+              <>
+                <p className="text-primary text-base">Stabilize before you build. Settle your system before starting.</p>
+                <p className="text-text-body text-base">
+                  The Anchor Layer is where we strengthen our expectation for steadiness.
+                </p>
+                <p className="text-text-body text-base">
+                  Every Daily Formation begins with Reorientation.
+                </p>
+                <p className="text-text-body text-base">
+                  Reorientation signals safety, allowing your body to settle before building.
+                </p>
+                <p className="text-text-body text-base">
+                  Create your Reorientation Engine to enter The Anchor Layer.
+                </p>
+              </>
+            )}
           </div>
 
           {hasLines ? (
@@ -222,11 +241,8 @@ const DailyFormation = () => {
             </>
           ) : (
             <>
-              <p className="text-supporting italic mb-10">
-                No saved reorientation yet. Build your Reorientation Engine to begin.
-              </p>
               <Button className="w-full" size="lg" onClick={() => navigate("/activated")}>
-                Begin Reorientation Engine
+                Create Reorientation
               </Button>
             </>
           )}
