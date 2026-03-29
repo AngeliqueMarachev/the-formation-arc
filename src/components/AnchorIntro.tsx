@@ -113,7 +113,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
               able to recognise steadiness.
             </p>
 
-            <div className="h-6 text-secondary-foreground">
+            <div className="text-secondary-foreground">
               <p>We are not trying to change the past.</p>
 
               <p>We are allowing the brain to experience something more supportive in the present.</p>
