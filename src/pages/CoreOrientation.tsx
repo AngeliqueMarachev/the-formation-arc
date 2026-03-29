@@ -42,7 +42,7 @@ const CoreOrientation = () => {
             <p className="text-base leading-relaxed text-text-body font-medium">
               Use <span className="text-text-heading font-normal">The Reorientation Engine</span>
             </p>
-            <p className="mt-1.5 text-sm leading-relaxed text-text-supporting">
+            <p className="mt-1.5 leading-relaxed text-text-supporting text-base">
               A short, structured sequence that interrupts escalation and restores internal authority.
             </p>
           </div>
@@ -55,7 +55,7 @@ const CoreOrientation = () => {
             <p className="text-base leading-relaxed text-text-body font-medium">
               Use <span className="text-text-heading font-normal">The Daily Formation</span>
             </p>
-            <p className="mt-1.5 text-sm leading-relaxed text-text-supporting">
+            <p className="mt-1.5 leading-relaxed text-text-supporting text-base">
               A daily process that strengthens the pathways of safety so steadiness becomes easier to access in daily life.
             </p>
           </div>
