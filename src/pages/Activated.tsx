@@ -60,10 +60,10 @@ const PHASES = [
     ],
     customLabel: "Write your own statement",
     options: [
-      "I recognize this as a stress response and align with God instead of fear.",
-      "My body is activated but I belong to a Kingdom of peace.",
-      "This is a trauma loop, not a prophecy.",
-      "I release agreement with threat and align with truth.",
+      "I choose to align with God instead of fear.",
+      "I belong to a Kingdom of peace.",
+      "No weapon formed against me shall prosper.",
+      "The Lord God is with me! I have a sound mind and not a spirit of fear.",
     ],
   },
   {
