@@ -91,40 +91,31 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             </div>
 
             <div className="space-y-1">
-              <p>
-                Those conclusions became prediction templates. This conditioned your nervous system to prepare for life
-                according to this negativity bias.​ Memory plays an important role in how those expectations are
-                maintained.{" "}
-              </p>
+              <p>Over time, these conclusions shaped what your nervous system expects from life.</p>
             </div>
 
             <p className="text-secondary-foreground">
-              When a memory is recalled with attention, the neural network connected to it briefly becomes
-              flexible.{" "}
+              Memory plays an important role in how those expectations are maintained.
             </p>
 
             <p>
-              As new meanings attach to memories over time, the brain gradually updates what it expects from life.
-              Experiences that once trained the body to expect threat lose their influence as steadier pathways are
-              repeated.
+              When a memory is recalled with attention, the neural network connected to it becomes open to new
+              association.
             </p>
 
             <p>
-              As a memory widens in meaning, your body releases chemistry associated with safety and connection, which
-              helps strengthen new emotional associations.
+              As meaning expands, the brain begins to register signals of safety and connection, coupled by a release of
+              chemicals that help strengthen new emotional associations.
             </p>
 
             <p className="text-primary">
-              This process anchors the nervous system, as it learns to anticipate steadiness rather than contraction
-              over time.
+              Repeated exposure to these signals helps the nervous system become less oriented toward threat and more
+              able to recognise steadiness.
             </p>
 
             <div className="h-6 text-secondary-foreground">
-              <p>
-                {" "}
-                This does not rewrite the past. But it allows the memory to hold more than the conclusion it formed at
-                the time.
-              </p>
+              <p>We are not trying to change the past.</p>
+              <p>We are allowing the brain to experience something more supportive in the present.</p>
             </div>
           </div>
         </main>
