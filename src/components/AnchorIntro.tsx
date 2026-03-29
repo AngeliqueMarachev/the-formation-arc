@@ -21,40 +21,37 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
           <p className="leading-relaxed text-primary my-[9px] mx-0 mb-0 mt-[15px]">
             Build and strengthen the memories that anchor you.
           </p>
-          <p className="leading-relaxed text-primary mb-[20px]">
-            Train your nervous system to expect steadiness.
-          </p>
+          <p className="leading-relaxed text-primary mb-[20px]">Train your nervous system to expect steadiness.</p>
 
           <div className="space-y-5 leading-relaxed text-text-body mb-12">
             <div className="space-y-1">
               <p>Many people experience seasons where life feels heavier than it should.</p>
               <p>We know the Truth. Personally, even. </p>
-              <p>But then we enter a season where we feel overwhelmed, guarded, or distant from the sense of clarity we once had.</p>
+              <p>
+                But then we enter a season where we feel overwhelmed, guarded, or distant from the sense of clarity we
+                once had.
+              </p>
             </div>
 
             <div className="space-y-1">
               <p>We may question ourselves, or feel as though something has gone wrong. </p>
-    
             </div>
 
-            <p>
-             Often this is not a failure of faith or effort.</p>
-            <p>It is the result of patterns the nervous system learned during times when life required vigilance.
-            </p>
+            <p>Often this is not a failure of faith or effort.</p>
+            <p>It is the result of patterns the nervous system learned during times when life required vigilance.</p>
 
             <p>
-              When the body expects difficulty, it becomes harder to experience ease, even when circumstances change.</p>
-            <p>Over time this expectation quietly shapes how the body
-              responds to life.
+              When the body expects difficulty, it becomes harder to experience ease, even when circumstances change.
             </p>
+            <p>Over time this expectation quietly shapes how the body responds to life.</p>
 
             <p>​But these expectations are not permanent.​The brain can update what it predicts.</p>
 
-            <p className="text-primary">Daily Formation gently trains the nervous system to become familiar with steadiness again.</p>
+            <p className="text-primary">
+              Daily Formation gently trains the nervous system to become familiar with steadiness again.
+            </p>
 
-            <p className="text-secondary-foreground mb-12">The Anchor Layer guides you through this process.</p>
-
-          
+            <p className="text-secondary-foreground mb-25">The Anchor Layer guides you through this process.</p>
           </div>
         </main>
 
