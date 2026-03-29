@@ -18,46 +18,41 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col px-6 pt-10 pb-12 content-container">
           <h1 className="tracking-tight mb-3">Daily Formation is for anchoring</h1>
-          <p className="leading-relaxed mb-4 text-primary">
-            Build and strengthen the memories that anchor you. Train your nervous system to expect steadiness.
+          <p className="leading-relaxed mb-8 text-primary">
+            Build and strengthen the memories that anchor you.</p>
+          <p></p>Train your nervous system to expect steadiness.
           </p>
 
           <div className="space-y-5 leading-relaxed text-text-body mb-12">
             <div className="space-y-1">
-              <p>Every believer experiences the challenge at some point: </p>
+              <p>Many people experience seasons where life feels heavier than it should.</p>
               <p>We know the Truth. Personally, even. </p>
-              <p>But then we enter a season where we feel overwhelmed, guarded, lost.</p>
+              <p>But then we enter a season where we feel overwhelmed, guarded, or distant from the sense of clarity we once had.</p>
             </div>
 
             <div className="space-y-1">
-              <p>We wonder if God has abandoned us. </p>
-              <p>We scrutinize ourselves. What did I do wrong? </p>
-              <p>We fall into self-pity, depression, addiction, spiralling into hopelessness. </p>
+              <p>We may question ourselves, or feel as though something has gone wrong. </p>
+    
             </div>
 
             <p>
-              But this is not a question of displaced faith. This is how your nervous system learned to operate. At some
-              point in the past, your body learned that life requires vigilance: stay alert, brace for difficulty,
-              anticipate danger. And those patterns can continue long after the original circumstances ended.
+             Often this is not a failure of faith or effort.</p>
+            <p>It is the result of patterns the nervous system learned during times when life required vigilance.
             </p>
 
             <p>
-              ​When the nervous system stays oriented toward threat, it becomes difficult to experience flow, as the
-              brain constantly scans for signs of danger. Over time this expectation quietly shapes how the body
+              When the body expects difficulty, it becomes harder to experience ease, even when circumstances change.</p>
+            <p>Over time this expectation quietly shapes how the body
               responds to life.
             </p>
 
-            <p>​But these expectations are not permanent.</p>
+            <p>​But these expectations are not permanent.​The brain can update what it predicts.</p>
 
-            <p className="text-primary">​The brain can update what it predicts.</p>
+            <p className="text-primary">Daily Formation gently trains the nervous system to become familiar with steadiness again.</p>
 
-            <p className="text-secondary-foreground">​The Anchor Layer facilitates you in this process.</p>
+            <p className="text-secondary-foreground">The Anchor Layer guides you through this process.</p>
 
-            <p>​</p>
-
-            <div className="h-6" />
-            <div className="h-6" />
-            <div className="h-6" />
+          
           </div>
         </main>
 
