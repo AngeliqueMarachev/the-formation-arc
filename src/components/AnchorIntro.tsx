@@ -26,9 +26,9 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
           <div className="space-y-5 leading-relaxed text-text-body mb-12">
             <div className="space-y-1">
               <p>Many people experience seasons where life feels heavier than it should.</p>
-              <p>We know the Truth. Personally, even. </p>
+              <p>​We know the Truth. Personally, even. </p>
               <p>
-                But then we enter a season where we feel overwhelmed, guarded, or distant from the sense of clarity we
+                ​But then we enter a season where we feel overwhelmed, guarded, or distant from the sense of clarity we
                 once had.
               </p>
             </div>
@@ -51,7 +51,8 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
               Daily Formation gently trains the nervous system to become familiar with steadiness again.
             </p>
 
-            <p className="text-secondary-foreground mb-25">The Anchor Layer guides you through this process.</p>
+            <p className="text-secondary-foreground mb-12">The Anchor Layer guides you through this process.</p>
+            <p>​</p>
           </div>
         </main>
 
