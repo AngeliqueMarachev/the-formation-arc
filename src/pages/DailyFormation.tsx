@@ -145,39 +145,19 @@ const DailyFormation = () => {
     return (
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col px-6 pt-10 pb-12 content-container">
-          <h1 className="tracking-tight mb-1">The Daily Formation requires flow </h1>
+          <h1 className="tracking-tight mb-1">The Daily Formation begins with stability </h1>
           <div className="mb-6" />
 
           <div className="space-y-4 leading-relaxed mb-10">
-            {hasLines ? (
-              <>
-                <p className="text-primary text-base">Stabilise before you build. Settle your system before training.</p>
-                <p className="text-text-body text-base">
-                  Before entering The Anchor Layer, rehearse your Reorientation Engine. This immediately signals safety,
-                  allowing your body to settle.
-                </p>
-                <p className="text-text-body text-base">
-                  After this sequence, you will move into The Anchor Layer, where we strengthen new expectations of
-                  steadiness.
-                </p>
-              </>
-            ) : (
-              <>
-                <p className="text-primary text-base">Stabilize before you build. Settle your system before starting.</p>
-                <p className="text-text-body text-base">
-                  The Anchor Layer is where we strengthen our expectation for steadiness.
-                </p>
-                <p className="text-text-body text-base">
-                  Every Daily Formation begins with Reorientation.
-                </p>
-                <p className="text-text-body text-base">
-                  Reorientation signals safety, allowing your body to settle before building.
-                </p>
-                <p className="text-text-body text-base">
-                  Create your Reorientation Engine to enter The Anchor Layer.
-                </p>
-              </>
-            )}
+            <p className="text-primary text-base">Stabilise before you build. Settle your system before training.</p>
+            <p className="text-text-body text-base">
+              Before entering The Anchor Layer, rehearse your Reorientation Engine. This immediately signals safety,
+              allowing your body to settle.
+            </p>
+            <p className="text-text-body text-base">
+              After this sequence, you will move into The Anchor Layer, where we strengthen new expectations of
+              steadiness.
+            </p>
           </div>
 
           {hasLines ? (
@@ -241,9 +221,17 @@ const DailyFormation = () => {
             </>
           ) : (
             <>
-              <Button className="w-full" size="lg" onClick={() => navigate("/activated")}>
-                Create Reorientation
-              </Button>
+              <p className="text-supporting italic mb-10">
+                No saved reorientation yet. Complete a reorientation in the Activated tab first.
+              </p>
+              <div className="space-y-3">
+                <Button className="w-full" size="lg" onClick={() => setScreen("create-anchor")}>
+                  Find a Memory
+                </Button>
+                <Button className="w-full" size="lg" variant="secondary" onClick={() => navigate("/anchors")}>
+                  Browse Anchors
+                </Button>
+              </div>
             </>
           )}
         </main>
@@ -350,8 +338,8 @@ const DailyFormation = () => {
 
               <h2 className="font-semibold tracking-tight text-3xl">Consider presence</h2>
               <p className="text-supporting leading-relaxed">
-                If God felt near in this moment, what might that have been like? How would you feel if you sensed Him in that moment?
-                Is there any kind of exchange between the two of you? Do you want to ask Him anything?
+                If God felt near in this moment, what might that have been like? How would you feel if you sensed Him in
+                that moment? Is there any kind of exchange between the two of you? Do you want to ask Him anything?
               </p>
               <Textarea
                 placeholder="e.g. I saw Jesus thanking God for me!"
@@ -513,9 +501,7 @@ const DailyFormation = () => {
               </div>
 
               {/* HOW TO USE IT */}
-              <div
-                className="mt-10 rounded-2xl p-6 border border-solid bg-muted border-secondary"
-              >
+              <div className="mt-10 rounded-2xl p-6 border border-solid bg-muted border-secondary">
                 <p className="text-muted-foreground font-semibold text-base mb-5">IN THAT MOMENT</p>
                 <div className="text-text-body space-y-4" style={{ lineHeight: "1.7" }}>
                   <p className="font-medium">Pause for 10 seconds.</p>
