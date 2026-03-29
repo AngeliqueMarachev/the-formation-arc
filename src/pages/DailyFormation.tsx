@@ -148,6 +148,7 @@ const DailyFormation = () => {
           <h1 className="tracking-tight mb-1">The Daily Formation begins with stability </h1>
           <div className="mb-6" />
 
+          {hasLines ? (
           <div className="space-y-4 leading-relaxed mb-10">
             <p className="text-primary text-base">Stabilise before you build. Settle your system before training.</p>
             <p className="text-text-body text-base">
@@ -159,6 +160,21 @@ const DailyFormation = () => {
               steadiness.
             </p>
           </div>
+          ) : (
+          <div className="space-y-4 leading-relaxed mb-10">
+            <p className="text-primary text-base">Stabilize before you build.<br />Settle your system before starting.</p>
+            <p className="text-text-body text-base">
+              The Anchor Layer strengthens your nervous system's expectation of steadiness.
+            </p>
+            <p className="text-text-body text-base">
+              Every Daily Formation begins with Reorientation.
+              Reorientation signals safety, allowing your body to settle before training.
+            </p>
+            <p className="text-text-body text-base">
+              Create your Reorientation Engine to enter the Anchor Layer.
+            </p>
+          </div>
+          )}
 
           {hasLines ?
           <>
@@ -221,15 +237,9 @@ const DailyFormation = () => {
             </> :
 
           <>
-              <p className="text-supporting italic mb-10">
-                No saved reorientation yet. Complete a reorientation in the Activated tab first.
-              </p>
               <div className="space-y-3">
-                <Button className="w-full" size="lg" onClick={() => setScreen("create-anchor")}>
-                  Find a Memory
-                </Button>
-                <Button className="w-full" size="lg" variant="secondary" onClick={() => navigate("/anchors")}>
-                  Browse Anchors
+                <Button className="w-full" size="lg" onClick={() => navigate("/activated")}>
+                  Create Reorientation
                 </Button>
               </div>
             </>
