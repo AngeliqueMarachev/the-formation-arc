@@ -18,9 +18,11 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col px-6 pt-10 pb-12 content-container">
           <h1 className="tracking-tight mb-3">Daily Formation is for anchoring</h1>
+          <p className="leading-relaxed mb-4 text-primary">
+            Build and strengthen the memories that anchor you.
+          </p>
           <p className="leading-relaxed mb-8 text-primary">
-            Build and strengthen the memories that anchor you.</p>
-          <p></p>Train your nervous system to expect steadiness.
+            Train your nervous system to expect steadiness.
           </p>
 
           <div className="space-y-5 leading-relaxed text-text-body mb-12">
