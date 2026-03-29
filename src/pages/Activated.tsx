@@ -453,7 +453,7 @@ const Activated = () => {
             <p className="text-text-body">
               Often, what you are experiencing is often a learned protection pattern, not a present threat.
             </p>
-            <p className="text-text-body">
+            <p className="text-text-body text-primary">
               The Reorientation Engine helps you interrupt the spiral and retrain how your brain interprets these
               moments.
             </p>
