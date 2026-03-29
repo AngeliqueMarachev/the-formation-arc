@@ -100,12 +100,11 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
 
             <p>
               When a memory is recalled with attention, the neural network connected to it becomes open to new
-              association.
+              association, reinforced by a release of happy chemicals.
             </p>
 
             <p>
-              As meaning expands, the brain begins to register signals of safety and connection, coupled by a release of
-              chemicals that help strengthen new emotional associations.
+              As meaning expands, the brain begins to register signals of safety and connection.
             </p>
 
             <p className="text-primary">
