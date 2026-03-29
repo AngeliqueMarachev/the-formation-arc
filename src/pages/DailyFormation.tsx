@@ -223,16 +223,11 @@ const DailyFormation = () => {
           ) : (
             <>
               <p className="text-supporting italic mb-10">
-                No saved reorientation yet. Complete a reorientation in the Activated tab first.
+                No saved reorientation yet. Build your Reorientation Engine to begin.
               </p>
-              <div className="space-y-3">
-                <Button className="w-full" size="lg" onClick={() => setScreen("create-anchor")}>
-                  Find a Memory
-                </Button>
-                <Button className="w-full" size="lg" variant="secondary" onClick={() => navigate("/anchors")}>
-                  Browse Anchors
-                </Button>
-              </div>
+              <Button className="w-full" size="lg" onClick={() => navigate("/activated")}>
+                Begin Reorientation Engine
+              </Button>
             </>
           )}
         </main>
