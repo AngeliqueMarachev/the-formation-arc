@@ -26,7 +26,7 @@ const CoreOrientation = () => {
           <p>Over time, repeated stress can train your system to expect tension, even when danger is not present.</p>
           <p>This does not mean you are broken.</p>
           <p>It means your nervous system adapted to protect you.</p>
-          <p className="text-inherit">What was shaped through repetition can be reshaped through repetition. Through neuroplasticity, the brain updates its predictions based on lived experience.</p>
+          <p className="text-primary">What was shaped through repetition can be reshaped through repetition. Through neuroplasticity, the brain updates its predictions based on lived experience.</p>
           <p>When prediction changes, perception changes.</p>
           <p>When perception changes, the body follows.</p>
           <p>This space helps you reshape your world, through repetition, clarity, and return.</p>
