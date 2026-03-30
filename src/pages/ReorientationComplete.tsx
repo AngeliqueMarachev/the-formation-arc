@@ -21,7 +21,7 @@ const ReorientationComplete = () => {
         </div>
 
         <div className="mt-10 space-y-3">
-          <Button className="w-full" size="lg" onClick={() => navigate("/daily-formation")}>
+          <Button className="w-full" size="lg" onClick={() => navigate("/daily-formation?skip_intro=true")}>
             Continue to Daily Formation
           </Button>
           <Button className="w-full" size="lg" variant="secondary" onClick={() => navigate("/activated")}>

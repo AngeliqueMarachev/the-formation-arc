@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { useAuth } from "@/lib/auth";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
@@ -31,8 +31,10 @@ interface AnchorEntry {
 
 const DailyFormation = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const { user } = useAuth();
-  const [screen, setScreen] = useState<Screen>("anchor-intro");
+  const skipIntro = searchParams.get("skip_intro") === "true";
+  const [screen, setScreen] = useState<Screen>(skipIntro ? "reorientation" : "anchor-intro");
   const [loading, setLoading] = useState(true);
   const [glowingLine, setGlowingLine] = useState<number | null>(null);
 
