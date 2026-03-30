@@ -9,7 +9,7 @@ const ReorientationComplete = () => {
     <div className="flex min-h-screen flex-col pb-20">
       <main className="flex flex-1 flex-col justify-center px-6 py-12 content-container">
         <div className="text-center max-w-md mx-auto space-y-6">
-          <h1 className="tracking-tight">Your Reorientation Engine is ready.</h1>
+          <h1 className="tracking-tight">Your Reorientation Engine is ready</h1>
           <div className="space-y-4 leading-relaxed">
             <p className="text-text-body text-base">
               Each time activation rises, this sequence helps your system settle more quickly.
@@ -22,7 +22,7 @@ const ReorientationComplete = () => {
 
         <div className="mt-10 space-y-3">
           <Button className="w-full" size="lg" onClick={() => navigate("/daily-formation")}>
-            Continue Daily Formation
+            Continue to Daily Formation
           </Button>
           <Button className="w-full" size="lg" variant="secondary" onClick={() => navigate("/activated")}>
             Edit Reorientation
