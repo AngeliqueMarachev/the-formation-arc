@@ -235,7 +235,13 @@ const Activated = () => {
       .eq("user_id", user.id);
 
     setSaving(false);
-    navigate("/");
+
+    const flowSource = sessionStorage.getItem("flow_source");
+    if (flowSource === "daily_formation") {
+      navigate("/daily-formation/reorientation-complete");
+    } else {
+      navigate("/");
+    }
   };
 
   // LOADING

@@ -240,9 +240,12 @@ const DailyFormation = () => {
           ) : (
             <>
               <div className="space-y-3">
-                <Button className="w-full" size="lg" onClick={() => navigate("/activated")}>
-                  Create Reorientation
-                </Button>
+                <Button className="w-full" size="lg" onClick={() => {
+                  sessionStorage.setItem("flow_source", "daily_formation");
+                  navigate("/activated");
+                }}>
+                   Create Reorientation
+                 </Button>
               </div>
             </>
           )}
