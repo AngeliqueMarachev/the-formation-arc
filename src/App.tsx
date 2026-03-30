@@ -13,6 +13,7 @@ import DailyFormation from "./pages/DailyFormation";
 import Anchors from "./pages/Anchors";
 import NotFound from "./pages/NotFound";
 import ResetPassword from "./pages/ResetPassword";
+import ReorientationComplete from "./pages/ReorientationComplete";
 
 const queryClient = new QueryClient();
 
