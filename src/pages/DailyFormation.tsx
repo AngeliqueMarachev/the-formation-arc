@@ -240,9 +240,12 @@ const DailyFormation = () => {
           ) : (
             <>
               <div className="space-y-3">
-                <Button className="w-full" size="lg" onClick={() => navigate("/activated")}>
-                  Create Reorientation
-                </Button>
+                <Button className="w-full" size="lg" onClick={() => {
+                  sessionStorage.setItem("flow_source", "daily_formation");
+                  navigate("/activated");
+                }}>
+                   Create Reorientation
+                 </Button>
               </div>
             </>
           )}
@@ -564,9 +567,12 @@ const DailyFormation = () => {
             <p className="text-text-body">Small returns create lasting formation.</p>
           </div>
 
-          <Button className="mt-10 w-full" size="lg" onClick={() => navigate("/")}>
-            Carry this forward
-          </Button>
+          <Button className="mt-10 w-full" size="lg" onClick={() => {
+            sessionStorage.removeItem("flow_source");
+            navigate("/");
+          }}>
+             Carry this forward
+           </Button>
         </main>
         <BottomNav />
       </div>
