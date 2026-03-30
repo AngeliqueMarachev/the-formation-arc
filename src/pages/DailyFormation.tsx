@@ -567,9 +567,12 @@ const DailyFormation = () => {
             <p className="text-text-body">Small returns create lasting formation.</p>
           </div>
 
-          <Button className="mt-10 w-full" size="lg" onClick={() => navigate("/")}>
-            Carry this forward
-          </Button>
+          <Button className="mt-10 w-full" size="lg" onClick={() => {
+            sessionStorage.removeItem("flow_source");
+            navigate("/");
+          }}>
+             Carry this forward
+           </Button>
         </main>
         <BottomNav />
       </div>
