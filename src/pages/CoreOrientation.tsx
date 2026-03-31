@@ -30,15 +30,16 @@ const CoreOrientation = () => {
             Over time, repeated stress can train your system to expect danger, resulting in coping mechanisms and unseen
             emotional walls that keep you stuck.
           </p>
-          <p>This does not mean you are broken.</p>
-          <p>It means your nervous system adapted to protect you.</p>
           <p>
-            Since the brain has an innate capacity for change, what was once established through repetition,
-            can be reshaped through repetition.
+            This does not mean you are broken.
+            <br />
+            It means your nervous system adapted to protect you.
           </p>
-          <p className="text-primary">
-            The brain updates its predictions based on lived experience, real or imagined.
+          <p>
+            Since the brain has an innate capacity for change, what was once established through repetition, can be
+            reshaped through repetition.
           </p>
+          <p className="text-primary">The brain updates its predictions based on lived experience, real or imagined.</p>
           <p>When prediction changes, perception changes.</p>
           <p className="mt-0">When perception changes, the body follows.</p>
           <p className="text-primary">
@@ -52,9 +53,7 @@ const CoreOrientation = () => {
           <p className="text-base leading-relaxed text-text-body">There are two ways to use this space:</p>
           {/* Card 1 */}
           <div className="rounded-lg border bg-card p-5 sm:p-6 border-secondary">
-            <p className="mb-2 font-fraunces text-lg font-medium text-text-heading text-primary">
-              When you feel unsettled
-            </p>
+            <p className="mb-2 text-lg font-medium text-text-heading text-primary">When you feel unsettled</p>
             <p className="text-base leading-relaxed text-text-body font-medium">
               Use <span className="text-text-heading font-normal">The Reorientation Engine</span>
             </p>
@@ -65,7 +64,7 @@ const CoreOrientation = () => {
 
           {/* Card 2 */}
           <div className="rounded-lg border bg-card p-5 sm:p-6 border-secondary">
-            <p className="mb-2 font-fraunces text-lg font-medium text-text-heading text-primary">
+            <p className="mb-2 text-lg font-medium text-text-heading text-primary">
               When you feel steady enough to strengthen
             </p>
             <p className="text-base leading-relaxed text-text-body font-medium">
@@ -81,11 +80,8 @@ const CoreOrientation = () => {
         {/* Closing reassurance */}
         <div className="space-y-1.5 text-base leading-relaxed text-text-body">
           <p>You do not need to do everything today.</p>
-          <p>
-            Begin where you are.
-            <br />
-            Return often.
-          </p>
+          <p>Begin where you are.</p>
+          <p>Return often.</p>
           <p>Formation is cumulative.</p>
         </div>
 
