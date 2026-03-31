@@ -36,7 +36,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             <p>
               When the body expects difficulty, it becomes harder to experience ease, even when circumstances change.
             </p>
-            <p>Over time this expectation quietly shapes how the body responds to life.</p>
+            <p>Over time this expectation quietly shapes how the body perceives and responds to life.</p>
 
             <p>​But these expectations are not permanent.​The brain can update what it predicts.</p>
 
