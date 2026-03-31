@@ -53,7 +53,7 @@ const CoreOrientation = () => {
           {/* Card 1 */}
           <div className="rounded-lg border bg-card p-5 sm:p-6 border-secondary">
             <p className="mb-2 font-fraunces text-lg font-medium text-text-heading text-primary">
-              When fear or urgency rises
+              When you feel unsettled
             </p>
             <p className="text-base leading-relaxed text-text-body font-medium">
               Use <span className="text-text-heading font-normal">The Reorientation Engine</span>
