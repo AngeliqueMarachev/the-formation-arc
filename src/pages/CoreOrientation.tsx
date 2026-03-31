@@ -49,7 +49,7 @@ const CoreOrientation = () => {
 
         {/* Path cards */}
         <div className="space-y-4">
-          <p className="text-base leading-relaxed text-text-body">There are two ways to begin:</p>
+          <p className="text-base leading-relaxed text-text-body">There are two ways to use this space:</p>
           {/* Card 1 */}
           <div className="rounded-lg border bg-card p-5 sm:p-6 border-secondary">
             <p className="mb-2 font-fraunces text-lg font-medium text-text-heading text-primary">
