@@ -33,8 +33,8 @@ const CoreOrientation = () => {
           <p>This does not mean you are broken.</p>
           <p>It means your nervous system adapted to protect you.</p>
           <p>
-            Since the brain has an innate capacity for change, what was once established through experience can be
-            reshaped through repetition.
+            Since the brain has an innate capacity for change, what was once established through repetition,
+            can be reshaped through repetition.
           </p>
           <p className="text-primary">
             The brain updates its predictions based on lived experience.
