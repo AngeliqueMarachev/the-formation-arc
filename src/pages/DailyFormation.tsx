@@ -153,7 +153,7 @@ const DailyFormation = () => {
           {hasLines ? (
             <div className="space-y-4 leading-relaxed mb-10">
               <p className="text-primary text-base">Stabilise before you build. Settle your system before training.</p>
-              <p className="text-text-body text-base">Daily Formation has two parts.</p>
+              <p className="text-text-body text-base">Daily Formation has three parts.</p>
               <p>First, we settle the nervous system so your body feels safe enough to learn.</p>
               <p>
                 Then, we create Anchors by recalling and expanding memories that help the brain expect steadiness more
@@ -169,7 +169,7 @@ const DailyFormation = () => {
           ) : (
             <div className="space-y-4 leading-relaxed mb-10">
               <p className="text-primary text-base">Stabilise before you build. Settle your system before training.</p>
-              <p className="text-text-body text-base">Daily Formation has two parts.</p>
+              <p className="text-text-body text-base">Daily Formation has three parts.</p>
               <p>First, we settle the nervous system so your body feels safe enough to learn.</p>
               <p>
                 Then, we create Anchors by recalling and expanding memories that help the brain expect steadiness more
