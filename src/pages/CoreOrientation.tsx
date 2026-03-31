@@ -37,7 +37,7 @@ const CoreOrientation = () => {
             can be reshaped through repetition.
           </p>
           <p className="text-primary">
-            The brain updates its predictions based on lived experience.
+            The brain updates its predictions based on lived experience, real or imagined.
           </p>
           <p>When prediction changes, perception changes.</p>
           <p>When perception changes, the body follows.</p>
