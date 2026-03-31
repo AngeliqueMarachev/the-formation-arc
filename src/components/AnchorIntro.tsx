@@ -26,12 +26,11 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
           <div className="space-y-5 leading-relaxed text-text-body mb-12">
             <div className="space-y-1">
               <p>Many people experience seasons where life feels heavier than it should.</p>
-              <p>​We know the Truth. Personally, even. </p>
-            </div>
 
-            <div className="space-y-1">
-              <p>We may feel overwhelmed, guarded, or distant from the sense of clarity we once had.</p>
-              <p>We may question ourselves, or feel as though something has gone wrong.</p>
+              <p>
+                But then we enter a season where we feel overwhelmed, guarded, or distant from the sense of clarity we
+                once had.
+              </p>
             </div>
 
             <p>Often this is not a failure of faith or effort.</p>
@@ -149,7 +148,9 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
 
           <p className="text-primary">This means imagined moments can also train the nervous system.</p>
 
-          <p>Look for access to one small moment that carries even a trace of ease, enjoyment, connection or aliveness.</p>
+          <p>
+            Look for access to one small moment that carries even a trace of ease, enjoyment, connection or aliveness.
+          </p>
 
           <div>
             <p className="mb-2">It might be:</p>
