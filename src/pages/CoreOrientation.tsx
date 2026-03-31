@@ -59,7 +59,7 @@ const CoreOrientation = () => {
               Use <span className="text-text-heading font-normal">The Reorientation Engine</span>
             </p>
             <p className="mt-1.5 leading-relaxed text-text-supporting text-base">
-              A short, structured sequence that interrupts escalation and restores internal authority.
+              A short, structured sequence that quickly interrupts escalation and restores internal authority.
             </p>
           </div>
 
