@@ -66,7 +66,7 @@ const CoreOrientation = () => {
           {/* Card 2 */}
           <div className="rounded-lg border bg-card p-5 sm:p-6 border-secondary">
             <p className="mb-2 font-fraunces text-lg font-medium text-text-heading text-primary">
-              When you feel steady enough to build
+              When you feel steady enough to strengthen
             </p>
             <p className="text-base leading-relaxed text-text-body font-medium">
               Use <span className="text-text-heading font-normal">The Daily Formation</span>
