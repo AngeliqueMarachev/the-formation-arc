@@ -153,30 +153,35 @@ const DailyFormation = () => {
           {hasLines ? (
             <div className="space-y-4 leading-relaxed mb-10">
               <p className="text-primary text-base">Stabilise before you build. Settle your system before training.</p>
-              <p className="text-text-body text-base">
-                Before entering The Anchor Layer, rehearse your Reorientation Engine. This immediately signals safety,
-                allowing your body to settle.
+              <p className="text-text-body text-base">Daily Formation has two parts.</p>
+              <p>First, we settle the nervous system so your body feels safe enough to learn.</p>
+              <p>
+                Then, we create Anchors by recalling and expanding memories that help the brain expect steadiness more
+                often.
               </p>
-              <p className="text-text-body text-base">
-                After this sequence, you will move into The Anchor Layer, where we strengthen new expectations of
-                steadiness.
+              <p> We begin with The Reorientation Engine.</p>
+              <p>This short sequence helps interrupt urgency and restore clarity.</p>
+              <p>
+                After reorientation, you will enter The Anchor Layer, where we strengthen new expectations of safety
+                over time.
               </p>
             </div>
           ) : (
             <div className="space-y-4 leading-relaxed mb-10">
-              <p className="text-primary text-base">
-                Stabilize before you build.
-                <br />
-                Settle your system before starting.
+              <p className="text-primary text-base">Stabilise before you build. Settle your system before training.</p>
+              <p className="text-text-body text-base">Daily Formation has two parts.</p>
+              <p>First, we settle the nervous system so your body feels safe enough to learn.</p>
+              <p>
+                Then, we create Anchors by recalling and expanding memories that help the brain expect steadiness more
+                often..
               </p>
-              <p className="text-text-body text-base">
-                The Anchor Layer strengthens your nervous system's expectation of steadiness.
+              <p> We begin with The Reorientation Engine.</p>
+              <p>This short sequence helps interrupt urgency and restore clarity.</p>
+              <p>
+                After reorientation, you will enter The Anchor Layer, where we strengthen new expectations of safety
+                over time.
               </p>
-              <p className="text-text-body text-base">
-                Every Daily Formation begins with Reorientation. Reorientation signals safety, allowing your body to
-                settle before training.
-              </p>
-              <p className="text-text-body text-base">Create your Reorientation Engine to enter the Anchor Layer.</p>
+              <p>Create your Reorientation Engine to enter the Anchor Layer.</p>
             </div>
           )}
 
@@ -242,12 +247,16 @@ const DailyFormation = () => {
           ) : (
             <>
               <div className="space-y-3">
-                <Button className="w-full" size="lg" onClick={() => {
-                  sessionStorage.setItem("flow_source", "daily_formation");
-                  navigate("/activated");
-                }}>
-                   Create Reorientation
-                 </Button>
+                <Button
+                  className="w-full"
+                  size="lg"
+                  onClick={() => {
+                    sessionStorage.setItem("flow_source", "daily_formation");
+                    navigate("/activated");
+                  }}
+                >
+                  Create Reorientation
+                </Button>
               </div>
             </>
           )}
@@ -569,12 +578,16 @@ const DailyFormation = () => {
             <p className="text-text-body">Small returns create lasting formation.</p>
           </div>
 
-          <Button className="mt-10 w-full" size="lg" onClick={() => {
-            sessionStorage.removeItem("flow_source");
-            navigate("/");
-          }}>
-             Carry this forward
-           </Button>
+          <Button
+            className="mt-10 w-full"
+            size="lg"
+            onClick={() => {
+              sessionStorage.removeItem("flow_source");
+              navigate("/");
+            }}
+          >
+            Carry this forward
+          </Button>
         </main>
         <BottomNav />
       </div>
