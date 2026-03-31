@@ -37,7 +37,7 @@ const CoreOrientation = () => {
             reshaped through repetition.
           </p>
           <p className="text-primary">
-            Through neuroplasticity, the brain updates its predictions based on lived experience.
+            The brain updates its predictions based on lived experience.
           </p>
           <p>When prediction changes, perception changes.</p>
           <p>When perception changes, the body follows.</p>
