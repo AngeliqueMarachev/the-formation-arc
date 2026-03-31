@@ -153,35 +153,30 @@ const DailyFormation = () => {
           {hasLines ? (
             <div className="space-y-4 leading-relaxed mb-10">
               <p className="text-primary text-base">Stabilise before you build. Settle your system before training.</p>
-              <p className="text-text-body text-base">Daily Formation has three parts.</p>
-              <p>First, we settle the nervous system so your body feels safe enough to learn.</p>
-              <p>
-                Then, we create Anchors by recalling and expanding memories that help the brain expect steadiness more
-                often.
-              </p>
-              <p> We begin with The Reorientation Engine.</p>
-              <p>This short sequence helps interrupt urgency and restore clarity.</p>
-              <p>
-                After reorientation, you will enter The Anchor Layer, where we strengthen new expectations of safety
-                over time.
-              </p>
+              <p className="text-text-body text-base">Daily Formation follows a simple rhythm:</p>
+              <p>Pray</p>
+              <p>Stop for a minute and give God your outcomes. Entrust the process to Him.</p>
+              <p>Reorient</p>
+              <p>Rehearse your Reorientation to communicate safety to your nervous system.</p>
+              <p>Anchor</p>
+              <p>Recall and gently expand a memory that strengthens your expectation of steadiness.</p>
+              <p>Nothing needs to be forced.</p>
+              <p>Simply remain open and begin.</p>
             </div>
           ) : (
             <div className="space-y-4 leading-relaxed mb-10">
               <p className="text-primary text-base">Stabilise before you build. Settle your system before training.</p>
               <p className="text-text-body text-base">Daily Formation has three parts.</p>
-              <p>First, we settle the nervous system so your body feels safe enough to learn.</p>
+              <p>First, we begin in prayer.</p>
+              <p>We lift our lives up to God, trusting Him to lead us. Nothing needs to be forced or performed.</p>
+              <p>Then, we settle the nervous system through reorientation.</p>
               <p>
-                Then, we create Anchors by recalling and expanding memories that help the brain expect steadiness more
-                often..
+                This short sequence helps to interrupt urgency and restores clarity, allowing the body to feel safe
+                enough to learn.
               </p>
-              <p> We begin with The Reorientation Engine.</p>
-              <p>This short sequence helps interrupt urgency and restore clarity.</p>
-              <p>
-                After reorientation, you will enter The Anchor Layer, where we strengthen new expectations of safety
-                over time.
-              </p>
-              <p>Create your Reorientation Engine to enter the Anchor Layer.</p>
+              <p>Finally, we create Anchors by recalling and gently expanding memories that support steadiness.</p>
+              <p>Over time, the brain learns to expect steadiness more easily.</p>
+              <p>Enter Reorientation to begin.</p>
             </div>
           )}
 
