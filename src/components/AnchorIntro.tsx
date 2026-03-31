@@ -27,11 +27,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             <div className="space-y-1">
               <p>Many people experience seasons where life feels heavier than it should.</p>
 
-              <p>
-                We may feel overwhelmed, guarded, or distant from the sense of clarity we once had.
-                <br />
-                We may question ourselves, or feel as though something has gone wrong.
-              </p>
+              <p>We may feel overwhelmed, guarded, or distant from the sense of clarity we once had.</p>
             </div>
 
             <p>Often this is not a failure of faith or effort.</p>
