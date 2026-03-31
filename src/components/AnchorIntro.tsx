@@ -162,7 +162,9 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
           </p>
 
           <p className="text-secondary-foreground">We are not trying to escape reality or recreate the past.</p>
-          <p>We are allowing the brain to experience something steady, so it can update what it predicts.</p>
+          <p className="text-primary">
+            We are providing the brain with a more supportive experience in the present, so it can update expectations.
+          </p>
 
           <p>For now, simply allow one moment to appear.</p>
         </div>
