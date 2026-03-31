@@ -41,7 +41,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             <p>​But these expectations are not permanent.​ The brain can update what it predicts.</p>
 
             <p className="text-primary">
-              Daily Formation gently trains the nervous system to become familiar with steadiness again.
+              The Daily Formation practice gently trains the nervous system to become familiar with steadiness again.
             </p>
 
             <p className="text-secondary-foreground mb-12">The Anchor Layer guides you through this process.</p>
