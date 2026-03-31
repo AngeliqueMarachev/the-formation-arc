@@ -105,9 +105,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
               able to recognise steadiness.
             </p>
 
-            <p className="text-secondary-foreground">
-              We are not trying to change the past.
-            </p>
+            <p className="text-secondary-foreground">We are not trying to change the past.</p>
 
             <p>We are allowing the brain to experience something more supportive in the present.</p>
           </div>
@@ -142,11 +140,11 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             perceives.
           </p>
 
-          <p className="text-primary">This means remembered moments can still influence how the nervous system responds to life.</p>
+          <p className="text-primary">This means imagined moments can also train the nervous system.</p>
 
-          <p>
-            Allow one small moment to come to mind that carries a sense of ease, joy, connection or vitality.
-          </p>
+          <p>We begin gently. Something simple is enough.</p>
+
+          <p>Here, we look for access to one small moment that carries a sense of ease, joy, connection or vitality.</p>
 
           <div>
             <p className="mb-2">It might be:</p>
