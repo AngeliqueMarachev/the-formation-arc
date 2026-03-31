@@ -144,7 +144,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
 
           <p>We begin gently. Something simple is enough.</p>
 
-          <p>Here, we look for access to one small moment that carries a sense of ease, joy, connection or vitality.</p>
+          <p>Allow one small moment to come to mind that carries a sense of ease, joy, connection or vitality.</p>
 
           <div>
             <p className="mb-2">It might be:</p>
