@@ -96,8 +96,8 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             </p>
 
             <p>
-              As meaning expands, the brain begins to register signals of safety and connection, reinforced by a release of
-              happy hormones.
+              As meaning expands, the brain begins to register signals of safety and connection, coupled by a release of
+              chemicals that help strengthen new emotional associations.
             </p>
 
             <p className="text-primary">
@@ -105,11 +105,11 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
               able to recognise steadiness.
             </p>
 
-            <div className="text-secondary-foreground">
-              <p>We are not trying to change the past.</p>
+            <p className="text-secondary-foreground">
+             We are not trying to change the past.</p>
 
               <p>We are allowing the brain to experience something more supportive in the present.</p>
-            </div>
+            </p>
           </div>
         </main>
 
