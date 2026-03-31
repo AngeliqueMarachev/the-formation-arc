@@ -142,7 +142,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             perceives.
           </p>
 
-          <p className="text-primary">This means imagined moments can also train the nervous system.</p>
+          <p className="text-primary">This means remembered moments can still influence how the nervous system responds to life.</p>
 
           <p>
             Here, we look for access to one small moment that carries a sense of ease, joy, connection or vitality.
