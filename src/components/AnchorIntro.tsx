@@ -161,10 +161,8 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             When the nervous system has been under strain, access to memory can narrow. With practice, access widens.
           </p>
 
-          <p className="text-secondary-foreground">
-            We are not trying to escape reality or recreate the past. We are allowing the brain to experience something
-            steady, so it can update what it predicts.
-          </p>
+          <p className="text-secondary-foreground">We are not trying to escape reality or recreate the past.</p>
+          <p>We are allowing the brain to experience something steady, so it can update what it predicts.</p>
 
           <p>For now, simply allow one moment to appear.</p>
         </div>
