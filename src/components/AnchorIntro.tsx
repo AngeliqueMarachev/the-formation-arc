@@ -152,13 +152,13 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
               <li>a place you once enjoyed</li>
               <li>a quiet moment from childhood</li>
               <li>an activity that once felt natural</li>
-              <li>a time where your body felt more like itself</li>
+              <li>a time where you felt connected</li>
             </ul>
           </div>
 
           <p>
-            If nothing comes immediately, that is normal. When the nervous system has been under strain, access to
-            memory can narrow. With practice, access widens.
+            If nothing appears immediately, it is perfectly normal. When the nervous system has been under strain,
+            access to memory can narrow. With practice, access widens.
           </p>
 
           <p className="text-secondary-foreground">
