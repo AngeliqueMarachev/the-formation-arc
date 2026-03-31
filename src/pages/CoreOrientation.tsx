@@ -26,7 +26,7 @@ const CoreOrientation = () => {
             Across your life, experiences shape how your mind interprets the world: what feels safe, what feels urgent,
             what feels uncertain.
           </p>
-          <p>Over time, repeated stress can train your system to expect tension, even when danger is not present.</p>
+          <p>Over time, repeated stress can train your system to expect tension, even when no danger is present.</p>
           <p>This does not mean you are broken.</p>
           <p>It means your nervous system adapted to protect you.</p>
           <p>What was shaped through repetition can be reshaped through repetition. </p>
