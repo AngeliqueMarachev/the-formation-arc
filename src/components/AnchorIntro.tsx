@@ -74,7 +74,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             <p className="text-primary">Your brain stores experiences as networks of meaning.</p>
 
             <div>
-              <p className="mb-2">Moments in life quietly taught your body things like:</p>
+              <p className="mb-2">Complicated moments in life quietly taught your body things like:</p>
               <ul className="list-disc pl-5 space-y-1">
                 <li>I am alone.</li>
                 <li>I must hold everything together.</li>
