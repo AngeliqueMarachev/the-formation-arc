@@ -106,10 +106,10 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             </p>
 
             <p className="text-secondary-foreground">
-             We are not trying to change the past.</p>
-
-              <p>We are allowing the brain to experience something more supportive in the present.</p>
+              We are not trying to change the past.
             </p>
+
+            <p>We are allowing the brain to experience something more supportive in the present.</p>
           </div>
         </main>
 
