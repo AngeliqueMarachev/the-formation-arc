@@ -305,153 +305,146 @@ const DailyFormation = () => {
               </p>
 
               {/* Vertical pathway container */}
-              <div className="relative pl-8">
-                {/* Vertical line */}
-                <div
-                  className="absolute left-[7px] top-[8px] bottom-[8px] w-[1.5px]"
-                  style={{ backgroundColor: "hsl(var(--primary) / 0.2)" }}
-                />
-
+              <div className="relative">
                 {/* Section 1: EXPANSION */}
-                <div className="relative pb-8">
-                  <div
-                    className="absolute -left-8 top-[3px] w-[15px] h-[15px] rounded-full"
-                    style={{
-                      border: "1.5px solid hsl(var(--primary) / 0.6)",
-                      backgroundColor: "hsl(var(--primary) / 0.1)",
-                      boxShadow: "0 0 6px hsl(var(--primary) / 0.15)",
-                    }}
-                  />
-                  <h2 className="font-medium text-primary font-sans text-base">EXPANSION</h2>
-                  <p className="text-supporting leading-relaxed mt-2">
-                    Widen your experience. Is there something in this scene, maybe even something about yourself, that you
-                    didn't notice before?
-                  </p>
-                  <Textarea
-                    placeholder="e.g. I thought I was a sad child, but I was full of life."
-                    value={meaningConclusion}
-                    onChange={(e) => setMeaningConclusion(e.target.value)}
-                    className="min-h-[80px] text-sm text-muted-foreground mt-2"
-                  />
+                <div className="relative flex gap-4">
+                  <div className="flex flex-col items-center">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10 text-xs font-semibold text-primary/60">
+                      1
+                    </div>
+                    <div className="w-px flex-1 bg-border/40 my-1" />
+                  </div>
+                  <div className="pb-8 flex-1">
+                    <h2 className="font-medium text-primary font-sans text-base">EXPANSION</h2>
+                    <p className="text-supporting leading-relaxed mt-2">
+                      Widen your experience. Is there something in this scene, maybe even something about yourself, that you
+                      didn't notice before?
+                    </p>
+                    <Textarea
+                      placeholder="e.g. I thought I was a sad child, but I was full of life."
+                      value={meaningConclusion}
+                      onChange={(e) => setMeaningConclusion(e.target.value)}
+                      className="min-h-[80px] text-sm text-muted-foreground mt-2"
+                    />
+                  </div>
                 </div>
 
                 {/* Section 2: PRESENCE */}
-                <div className="relative pb-8">
-                  <div
-                    className="absolute -left-8 top-[3px] w-[15px] h-[15px] rounded-full"
-                    style={{
-                      border: "1.5px solid hsl(var(--primary) / 0.6)",
-                      backgroundColor: "hsl(var(--primary) / 0.1)",
-                      boxShadow: "0 0 6px hsl(var(--primary) / 0.15)",
-                    }}
-                  />
-                  <h2 className="font-medium text-primary font-sans text-base">PRESENCE</h2>
-                  <p className="text-supporting leading-relaxed mt-2">
-                    If God felt near in this moment, what might that have been like? How would you feel if you sensed Him? Is there any kind of exchange? Do you want to ask Him anything?
-                  </p>
-                  <Textarea
-                    placeholder="e.g. I saw Jesus thanking God for me!"
-                    value={widenedMeaning}
-                    onChange={(e) => setWidenedMeaning(e.target.value)}
-                    className="min-h-[80px] text-sm mt-2"
-                  />
+                <div className="relative flex gap-4">
+                  <div className="flex flex-col items-center">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10 text-xs font-semibold text-primary/60">
+                      2
+                    </div>
+                    <div className="w-px flex-1 bg-border/40 my-1" />
+                  </div>
+                  <div className="pb-8 flex-1">
+                    <h2 className="font-medium text-primary font-sans text-base">PRESENCE</h2>
+                    <p className="text-supporting leading-relaxed mt-2">
+                      If God felt near in this moment, what might that have been like? How would you feel if you sensed Him? Is there any kind of exchange? Do you want to ask Him anything?
+                    </p>
+                    <Textarea
+                      placeholder="e.g. I saw Jesus thanking God for me!"
+                      value={widenedMeaning}
+                      onChange={(e) => setWidenedMeaning(e.target.value)}
+                      className="min-h-[80px] text-sm mt-2"
+                    />
+                  </div>
                 </div>
 
                 {/* Section 3: NEARNESS */}
-                <div className="relative pb-8">
-                  <div
-                    className="absolute -left-8 top-[3px] w-[15px] h-[15px] rounded-full"
-                    style={{
-                      border: "1.5px solid hsl(var(--primary) / 0.6)",
-                      backgroundColor: "hsl(var(--primary) / 0.1)",
-                      boxShadow: "0 0 6px hsl(var(--primary) / 0.15)",
-                    }}
-                  />
-                  <h2 className="font-medium text-primary font-sans text-base">NEARNESS</h2>
-                  <p className="text-supporting leading-relaxed mt-2">
-                    How present did you feel God's nearness while recalling this scene?
-                  </p>
-                  <div className="mt-2">
-                    <div className="relative flex items-center justify-between px-4 w-full">
-                      <div
-                        className="absolute top-1/2 -translate-y-1/2"
-                        style={{
-                          height: "2px",
-                          backgroundColor: "rgba(248,247,242,0.25)",
-                          left: "calc(1rem + 16px)",
-                          right: "calc(1rem + 16px)",
-                        }}
-                      />
-                      {communionAwareness && Number(communionAwareness) >= 1 && (
+                <div className="relative flex gap-4">
+                  <div className="flex flex-col items-center">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10 text-xs font-semibold text-primary/60">
+                      3
+                    </div>
+                    <div className="w-px flex-1 bg-border/40 my-1" />
+                  </div>
+                  <div className="pb-8 flex-1">
+                    <h2 className="font-medium text-primary font-sans text-base">NEARNESS</h2>
+                    <p className="text-supporting leading-relaxed mt-2">
+                      How present did you feel God's nearness while recalling this scene?
+                    </p>
+                    <div className="mt-2">
+                      <div className="relative flex items-center justify-between px-4 w-full">
                         <div
-                          className="absolute top-1/2 -translate-y-1/2 transition-all duration-300"
+                          className="absolute top-1/2 -translate-y-1/2"
                           style={{
                             height: "2px",
-                            backgroundColor: "hsl(var(--primary) / 0.9)",
+                            backgroundColor: "rgba(248,247,242,0.25)",
                             left: "calc(1rem + 16px)",
-                            width: `calc((100% - 2rem - 32px) * ${(Number(communionAwareness) - 1) / 9})`,
+                            right: "calc(1rem + 16px)",
                           }}
                         />
-                      )}
-                      {Array.from({ length: 10 }, (_, i) => {
-                        const value = i + 1;
-                        const isFilled = communionAwareness !== "" && value <= Number(communionAwareness);
-                        return (
-                          <button
-                            key={value}
-                            type="button"
-                            onClick={() => setCommunionAwareness(String(value))}
-                            className="relative z-10 flex items-center justify-center w-8 h-8"
-                          >
-                            <span
-                              className={`block rounded-full transition-all duration-200 ${
-                                isFilled ? "bg-primary border-2 border-primary" : "bg-background border-2"
-                              }`}
-                              style={{
-                                width: "18px",
-                                height: "18px",
-                                ...(!isFilled ? { borderColor: "rgba(248,247,242,0.45)" } : {}),
-                              }}
-                            />
-                          </button>
-                        );
-                      })}
-                    </div>
-                    <div className="flex justify-between px-4 mt-2">
-                      <span className="text-sm text-text-supporting">Distant</span>
-                      <span className="text-sm text-text-supporting">Deeply present</span>
+                        {communionAwareness && Number(communionAwareness) >= 1 && (
+                          <div
+                            className="absolute top-1/2 -translate-y-1/2 transition-all duration-300"
+                            style={{
+                              height: "2px",
+                              backgroundColor: "hsl(var(--primary) / 0.9)",
+                              left: "calc(1rem + 16px)",
+                              width: `calc((100% - 2rem - 32px) * ${(Number(communionAwareness) - 1) / 9})`,
+                            }}
+                          />
+                        )}
+                        {Array.from({ length: 10 }, (_, i) => {
+                          const value = i + 1;
+                          const isFilled = communionAwareness !== "" && value <= Number(communionAwareness);
+                          return (
+                            <button
+                              key={value}
+                              type="button"
+                              onClick={() => setCommunionAwareness(String(value))}
+                              className="relative z-10 flex items-center justify-center w-8 h-8"
+                            >
+                              <span
+                                className={`block rounded-full transition-all duration-200 ${
+                                  isFilled ? "bg-primary border-2 border-primary" : "bg-background border-2"
+                                }`}
+                                style={{
+                                  width: "18px",
+                                  height: "18px",
+                                  ...(!isFilled ? { borderColor: "rgba(248,247,242,0.45)" } : {}),
+                                }}
+                              />
+                            </button>
+                          );
+                        })}
+                      </div>
+                      <div className="flex justify-between px-4 mt-2">
+                        <span className="text-sm text-text-supporting">Distant</span>
+                        <span className="text-sm text-text-supporting">Deeply present</span>
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Section 4: INTEGRATION */}
-                <div className="relative">
-                  <div
-                    className="absolute -left-8 top-[3px] w-[15px] h-[15px] rounded-full"
-                    style={{
-                      border: "1.5px solid hsl(var(--primary) / 0.6)",
-                      backgroundColor: "hsl(var(--primary) / 0.1)",
-                      boxShadow: "0 0 6px hsl(var(--primary) / 0.15)",
-                    }}
-                  />
-                  <h2 className="font-medium text-primary font-sans text-base">INTEGRATION</h2>
-                  <p className="text-supporting leading-relaxed mt-2">
-                    Stay with the feeling of this moment.
-                    <br />
-                    Imagine this experience as a texture, color, or form.
-                  </p>
-                  <Textarea
-                    placeholder="e.g. Warm gold light, cool water, soft air, gentle warmth"
-                    value={flowText}
-                    onChange={(e) => setFlowText(e.target.value)}
-                    className="min-h-[80px] text-sm mt-2"
-                  />
-                  <p className="text-supporting leading-relaxed mt-2">
-                    Imagine this sense of steadiness slowly moving through your body from head to toe.
-                  </p>
-                  <p className="text-supporting leading-relaxed mt-1">
-                    Allow the body to recognise this experience.
-                  </p>
+                <div className="relative flex gap-4">
+                  <div className="flex flex-col items-center">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10 text-xs font-semibold text-primary/60">
+                      4
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h2 className="font-medium text-primary font-sans text-base">INTEGRATION</h2>
+                    <p className="text-supporting leading-relaxed mt-2">
+                      Stay with the feeling of this moment.
+                      <br />
+                      Imagine this experience as a texture, color, or form.
+                    </p>
+                    <Textarea
+                      placeholder="e.g. Warm gold light, cool water, soft air, gentle warmth"
+                      value={flowText}
+                      onChange={(e) => setFlowText(e.target.value)}
+                      className="min-h-[80px] text-sm mt-2"
+                    />
+                    <p className="text-supporting leading-relaxed mt-2">
+                      Imagine this sense of steadiness slowly moving through your body from head to toe.
+                    </p>
+                    <p className="text-supporting leading-relaxed mt-1">
+                      Allow the body to recognise this experience.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
