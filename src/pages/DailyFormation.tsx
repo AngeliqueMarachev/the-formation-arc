@@ -415,9 +415,8 @@ const DailyFormation = () => {
                 {/* Section 4: INTEGRATION */}
                 <div className="relative flex gap-4">
                   <div className="flex flex-col items-center">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary/30 bg-primary/10 text-xs font-semibold text-primary/60">
-                      4
-                    </div>
+                    <div className="h-3.5 w-3.5 shrink-0 rounded-full border-[1.5px] border-primary/50 bg-primary/10 mt-[3px]" />
+                    <div className="w-[2px] flex-1 bg-primary/40 my-1" />
                   </div>
                   <div className="flex-1">
                     <h2 className="font-medium text-primary font-sans text-base">INTEGRATION</h2>
