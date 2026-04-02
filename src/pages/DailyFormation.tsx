@@ -353,7 +353,7 @@ const DailyFormation = () => {
                     <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
-                  <div className="pb-8 flex-1 relative z-10">
+                  <div className="pb-8 flex-1">
                     <h2 className="font-medium text-primary font-sans text-base">NEARNESS</h2>
                     <p className="text-supporting leading-relaxed mt-2">
                       How present did you feel God's nearness while recalling this scene?
