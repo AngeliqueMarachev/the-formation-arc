@@ -388,7 +388,7 @@ const DailyFormation = () => {
                               key={value}
                               type="button"
                               onClick={() => setCommunionAwareness(String(value))}
-                              className="relative flex items-center justify-center w-8 h-8
+                              className="relative flex items-center justify-center w-8 h-8"
                             >
                               <span
                                 className={`block rounded-full transition-all duration-200 ${
