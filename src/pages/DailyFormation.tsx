@@ -53,6 +53,7 @@ const DailyFormation = () => {
   const [anchorTitle, setAnchorTitle] = useState("");
   const [communionAwareness, setCommunionAwareness] = useState("");
   const [whereIsGod, setWhereIsGod] = useState("");
+  const [flowText, setFlowText] = useState("");
   const [createStep, setCreateStep] = useState(0);
   const [saving, setSaving] = useState(false);
 
