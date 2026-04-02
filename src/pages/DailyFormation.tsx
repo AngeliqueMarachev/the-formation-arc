@@ -36,7 +36,7 @@ const DailyFormation = () => {
   const skipIntro = searchParams.get("skip_intro") === "true";
   const screenParam = searchParams.get("screen");
   const [screen, setScreen] = useState<Screen>(
-    screenParam === "create-anchor" ? "create-anchor" : skipIntro ? "reorientation" : "anchor-intro"
+    screenParam === "create-anchor" ? "create-anchor" : skipIntro ? "reorientation" : "anchor-intro",
   );
   const [loading, setLoading] = useState(true);
   const [glowingLine, setGlowingLine] = useState<number | null>(null);
@@ -156,10 +156,11 @@ const DailyFormation = () => {
           {hasLines ? (
             <div className="space-y-4 leading-relaxed mb-10">
               <p className="text-text-body text-lg">
-                Your system responds to signals of safety before conscious thoughts fully form.
+                Your body responds to signals of safety before conscious thoughts fully form.
               </p>
               <p>
-                Much of what shapes fear or peace happens below awareness, in systems designed to protect you.
+                Much of what determines whether you feel fear or peace happens below conscious awareness, in systems
+                designed to keep you safe.
               </p>
               <p>The nervous system responds strongly to perceived:</p>
               <ul className="list-disc list-inside space-y-1 pl-2">
@@ -174,8 +175,7 @@ const DailyFormation = () => {
                 When the system senses support, internal pressure often decreases.
                 <br />
                 Reduced pressure allows the system to soften.
-                <br />
-                A softened system becomes more receptive to change.
+                <br />A softened system becomes more receptive to change.
               </p>
               <p>You do not need the right words.</p>
               <p>You do not need the right feeling.</p>
