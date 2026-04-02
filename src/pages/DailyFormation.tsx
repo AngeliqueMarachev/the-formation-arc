@@ -313,7 +313,7 @@ const DailyFormation = () => {
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="pb-8 flex-1">
-                    <h2 className="font-medium text-primary font-sans text-base">EXPANSION</h2>
+                    <h2 className="font-medium text-primary font-sans text-base leading-8">EXPANSION</h2>
                     <p className="text-supporting leading-relaxed mt-2">
                       Widen your experience. Is there something in this scene, maybe even something about yourself, that you
                       didn't notice before?
@@ -334,7 +334,7 @@ const DailyFormation = () => {
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="pb-8 flex-1">
-                    <h2 className="font-medium text-primary font-sans text-base">PRESENCE</h2>
+                    <h2 className="font-medium text-primary font-sans text-base leading-8">PRESENCE</h2>
                     <p className="text-supporting leading-relaxed mt-2">
                       If God felt near in this moment, what might that have been like? How would you feel if you sensed Him? Is there any kind of exchange? Do you want to ask Him anything?
                     </p>
@@ -354,7 +354,7 @@ const DailyFormation = () => {
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="pb-8 flex-1">
-                    <h2 className="font-medium text-primary font-sans text-base">NEARNESS</h2>
+                    <h2 className="font-medium text-primary font-sans text-base leading-8">NEARNESS</h2>
                     <p className="text-supporting leading-relaxed mt-2">
                       How present did you feel God's nearness while recalling this scene?
                     </p>
@@ -419,7 +419,7 @@ const DailyFormation = () => {
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="flex-1">
-                    <h2 className="font-medium text-primary font-sans text-base">INTEGRATION</h2>
+                    <h2 className="font-medium text-primary font-sans text-base leading-8">INTEGRATION</h2>
                     <p className="text-supporting leading-relaxed mt-2">
                       Stay with the feeling of this moment.
                       <br />
