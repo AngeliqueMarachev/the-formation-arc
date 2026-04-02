@@ -308,8 +308,7 @@ const DailyFormation = () => {
 
               <h2 className="font-semibold tracking-tight text-3xl">Consider presence</h2>
               <p className="text-supporting leading-relaxed">
-                If God felt near in this moment, what might that have been like? How would you feel if you sensed Him in
-                that moment? Is there any kind of exchange between the two of you? Do you want to ask Him anything?
+                If God felt near in this moment, what might that have been like? How would you feel if you sensed Him? Is there any kind of exchange? Do you want to ask Him anything?
               </p>
               <Textarea
                 placeholder="e.g. I saw Jesus thanking God for me!"
