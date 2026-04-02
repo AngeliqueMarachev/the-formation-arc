@@ -304,7 +304,7 @@ const DailyFormation = () => {
                 Widen this moment gently. Notice what changes as you reflect, consider God's presence, and tangibly experience the moment.
               </p>
 
-              <h2 className="font-medium text-primary font-sans text-base">EXPAND</h2>
+              <h2 className="font-medium text-primary font-sans text-base">EXPANSION</h2>
               <p className="text-supporting leading-relaxed">
                 Widen your experience. Is there something in this scene, maybe even something about yourself, that you
                 didn't notice before?
@@ -383,7 +383,7 @@ const DailyFormation = () => {
                 </div>
               </div>
 
-              <h2 className="font-medium text-primary font-sans text-base">INTEGRATE</h2>
+              <h2 className="font-medium text-primary font-sans text-base">INTEGRATION</h2>
               <p className="text-supporting leading-relaxed">
                 Stay with the feeling of this moment.
                 <br />
