@@ -1,13 +1,16 @@
 
 
-## Plan: Single CTA for new users on Daily Formation "requires flow" screen
+## Plan: Add introductory text lines to Reorientation Rehearsal page
 
-**What changes**: In the `else` branch (lines 223-236 of `DailyFormation.tsx`) where `hasLines` is false (new users with no reorientation), replace the two buttons ("Find a Memory" and "Browse Anchors") with a single CTA that navigates to `/activated` to start the Reorientation Engine.
+### What changes
+In `src/pages/ReorientationRehearsal.tsx`, insert three `text-text-body` paragraphs between the title (line 65) and the existing spacer `<div className="mb-6" />` (line 66).
 
-**File**: `src/pages/DailyFormation.tsx`
+### Lines to add (after line 65):
+```tsx
+<p className="text-text-body text-sm mt-4">Before the brain can update expectations, it must first register safety.</p>
+<p className="text-text-body text-sm mt-3">Rehearsing your Reorientation signals stability to the nervous system, allowing the mind to become receptive.</p>
+<p className="text-text-body text-sm mt-3">A receptive system forms steadier expectations more easily.</p>
+```
 
-### Changes (lines 223-236):
-- Update the message text to guide users toward building their Reorientation Engine first
-- Replace the two buttons with one: **"Begin Reorientation Engine"** that calls `navigate("/activated")`
-- Keep the same `w-full` + `size="lg"` button styling for consistency
+Single file change, no other modifications needed.
 
