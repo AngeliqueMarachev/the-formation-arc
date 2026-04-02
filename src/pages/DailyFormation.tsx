@@ -169,7 +169,7 @@ const DailyFormation = () => {
                 <li>protection</li>
                 <li>meaning</li>
               </ul>
-              <p>Prayer functions as a powerful signal that you are not alone.</p>
+              <p className="text-primary">The act of prayer a powerful signal that you are not alone.</p>
               <p>
                 When the system senses support, internal pressure often decreases.
                 <br />
