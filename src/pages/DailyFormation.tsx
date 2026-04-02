@@ -152,98 +152,38 @@ const DailyFormation = () => {
 
           {hasLines ? (
             <div className="space-y-4 leading-relaxed mb-10">
-              <p className="text-primary text-base">Stabilise before you build. Settle your system before training.</p>
-              <p className="text-text-body text-base">Daily Formation follows a simple rhythm:</p>
-              <p>Pray</p>
-              <p>Stop for a minute and give God your outcomes. Entrust the process to Him.</p>
-              <p>Reorient</p>
-              <p>Rehearse your Reorientation to communicate safety to your nervous system.</p>
-              <p>Anchor</p>
-              <p>Recall and gently expand a memory that strengthens your expectation of steadiness.</p>
-              <p>Nothing needs to be forced.</p>
-              <p>Simply remain open and begin.</p>
-            </div>
-          ) : (
-            <div className="space-y-4 leading-relaxed mb-10">
-              <p className="text-primary text-base">Stabilise before you build. Settle your system before training.</p>
-              <p className="text-text-body text-base">Daily Formation has three parts.</p>
-              <p>First, we begin in prayer.</p>
-              <p>We lift our lives up to God, trusting Him to lead us.</p>
-
+              <p className="text-text-body text-base">
+                Your system responds to signals of safety before conscious thoughts fully form.
+              </p>
               <p>
-                Prayer helps the nervous system register that we are not alone. This support allows the system to
-                soften.
+                Much of what shapes fear or peace happens below awareness, in systems designed to protect you.
               </p>
-              <p>Next, we settle the nervous system through reorientation.</p>
+              <p>The nervous system responds strongly to perceived:</p>
+              <ul className="list-disc list-inside space-y-1 pl-2">
+                <li>safety</li>
+                <li>connection</li>
+                <li>support</li>
+                <li>protection</li>
+                <li>meaning</li>
+              </ul>
+              <p>Prayer functions as a powerful signal that you are not alone.</p>
               <p>
-                This short sequence helps to interrupt urgency and restores clarity, allowing the body to feel safe
-                enough to learn.
+                When the system senses support, internal pressure often decreases.
+                <br />
+                Reduced pressure allows the system to soften.
+                <br />
+                A softened system becomes more receptive to change.
               </p>
-              <p>Finally, we create Anchors by recalling and gently expanding memories that support steadiness.</p>
-              <p>Over time, the brain learns to expect steadiness more easily.</p>
-              <p>Enter Reorientation to begin.</p>
+              <p>You do not need the right words.</p>
+              <p>You do not need the right feeling.</p>
+              <p className="text-primary font-medium">Simply give God this moment.</p>
+
+              <div className="pt-6">
+                <Button className="w-full" size="lg" onClick={() => navigate("/reorientation-rehearsal")}>
+                  Rehearse Reorientation
+                </Button>
+              </div>
             </div>
-          )}
-
-          {hasLines ? (
-            <>
-              <p className="font-semibold tracking-widest uppercase mb-1 text-sm text-primary">
-                Your Reorientation Engine
-              </p>
-              <p className="text-text-supporting mb-6 text-sm">Tap each step. Read it slowly.</p>
-
-              <div className="space-y-6 mb-12">
-                {phases.map((phase) => {
-                  const line = Object.values(lines!)[phase.lineIndex];
-                  if (!line) return null;
-
-                  const isReturnPhase = phase.lineIndex === 5;
-
-                  return (
-                    <button
-                      key={phase.lineIndex}
-                      onClick={() => {
-                        setGlowingLine(phase.lineIndex);
-                        setTimeout(() => setGlowingLine((prev) => (prev === phase.lineIndex ? null : prev)), 800);
-                      }}
-                      className={`w-full text-left rounded-lg border p-5 transition-all duration-300 ${
-                        glowingLine === phase.lineIndex
-                          ? isReturnPhase
-                            ? "border-primary bg-primary/15 text-text-heading shadow-lg shadow-primary/20"
-                            : "border-primary/50 bg-primary/10 text-text-heading shadow-lg shadow-primary/10"
-                          : isReturnPhase
-                            ? "border-primary/40 bg-primary/8 text-text-heading"
-                            : "border-border/50 bg-card/50 text-text-body hover:border-primary/20"
-                      }`}
-                    >
-                      <p className="text-[10px] font-semibold tracking-widest uppercase mb-2 text-primary">
-                        {phase.title}
-                      </p>
-                      <p className="text-sm leading-relaxed text-text-heading">{line}</p>
-                    </button>
-                  );
-                })}
-              </div>
-
-              <div className="pt-4 space-y-6">
-                <div className="text-center">
-                  <p className="text-text-body mb-1 font-serif text-xl font-bold">You are ready to continue</p>
-                  <div className="h-2" />
-                  <p className="text-text-body mt-3 text-base">
-                    You are steady enough to continue. Now you will expand your memories and strengthen your
-                    expectations of safety.
-                  </p>
-                </div>
-                <div className="space-y-3">
-                  <Button className="w-full" size="lg" onClick={() => setScreen("create-anchor")}>
-                    Find a Memory
-                  </Button>
-                  <Button className="w-full" size="lg" variant="secondary" onClick={() => navigate("/anchors")}>
-                    Browse Anchors
-                  </Button>
-                </div>
-              </div>
-            </>
           ) : (
             <>
               <div className="space-y-3">
