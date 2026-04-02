@@ -63,17 +63,12 @@ const ReorientationRehearsal = () => {
     <div className="flex min-h-screen flex-col pb-20">
       <main className="flex flex-1 flex-col px-6 pt-10 pb-12 content-container">
         <h1 className="tracking-tight mb-1">Rehearse your Reorientation</h1>
-        <p className="text-text-body text-sm mt-4">
-          Before the brain can update expectations, it must first register safety.
-        </p>
-        <p className="text-primary text-sm mt-3">
-          Rehearsing your Reorientation signals stability to the nervous system, allowing the mind to become receptive.
-        </p>
+        <p className="text-text-body text-sm mt-4">Before the brain can update expectations, it must first register safety.</p>
+        <p className="text-primary text-sm mt-3">Rehearsing your Reorientation signals stability to the nervous system, allowing the mind to become receptive.</p>
         <p className="text-text-body text-sm mt-3">A receptive system forms steadier expectations more easily.</p>
         <div className="mb-6" />
 
-        <p className="text-text-supporting text-sm mb-1">Tap each step.</p>
-        <p>Read it slowly.</p>
+        <p className="text-text-supporting text-sm mb-1">Tap each step. Read it slowly.</p>
         <p className="text-text-supporting text-sm mb-8">Allow the words to settle.</p>
 
         <div className="space-y-6 mb-12">
@@ -100,7 +95,9 @@ const ReorientationRehearsal = () => {
                       : "border-border/50 bg-card/50 text-text-body hover:border-primary/20"
                 }`}
               >
-                <p className="text-[10px] font-semibold tracking-widest uppercase mb-2 text-primary">{phase.title}</p>
+                <p className="text-[10px] font-semibold tracking-widest uppercase mb-2 text-primary">
+                  {phase.title}
+                </p>
                 <p className="text-sm leading-relaxed text-text-heading">{line}</p>
               </button>
             );
@@ -112,8 +109,8 @@ const ReorientationRehearsal = () => {
             <p className="text-text-body mb-1 font-serif text-xl font-bold">You are ready to continue</p>
             <div className="h-2" />
             <p className="text-text-body mt-3 text-base">
-              You are steady enough to continue. Now you will expand your memories and strengthen your expectations of
-              safety.
+              You are steady enough to continue. Now you will expand your memories and strengthen your
+              expectations of safety.
             </p>
           </div>
           <div className="space-y-3">
