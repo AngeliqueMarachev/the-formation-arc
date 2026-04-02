@@ -34,7 +34,10 @@ const DailyFormation = () => {
   const [searchParams] = useSearchParams();
   const { user } = useAuth();
   const skipIntro = searchParams.get("skip_intro") === "true";
-  const [screen, setScreen] = useState<Screen>(skipIntro ? "reorientation" : "anchor-intro");
+  const screenParam = searchParams.get("screen");
+  const [screen, setScreen] = useState<Screen>(
+    screenParam === "create-anchor" ? "create-anchor" : skipIntro ? "reorientation" : "anchor-intro"
+  );
   const [loading, setLoading] = useState(true);
   const [glowingLine, setGlowingLine] = useState<number | null>(null);
 
