@@ -383,7 +383,7 @@ const DailyFormation = () => {
                 </div>
               </div>
 
-              <h2 className="font-medium text-primary text-lg">Flow</h2>
+              <h2 className="font-medium text-primary font-sans text-base">FLOW</h2>
               <p className="text-supporting leading-relaxed">
                 Stay with the feeling of this moment.
                 <br />
