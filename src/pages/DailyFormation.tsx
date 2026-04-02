@@ -419,7 +419,7 @@ const DailyFormation = () => {
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="flex-1">
-                    <h2 className="font-medium text-primary font-sans text-base">INTEGRATION</h2>
+                    <h2 className="font-medium text-primary font-sans text-base leading-8">INTEGRATION</h2>
                     <p className="text-supporting leading-relaxed mt-2">
                       Stay with the feeling of this moment.
                       <br />
