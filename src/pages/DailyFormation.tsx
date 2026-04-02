@@ -174,11 +174,10 @@ const DailyFormation = () => {
                 The act of prayer is a powerful signal to your system that you are seen, held and supported.
               </p>
               <p>
-                When the system senses support, internal pressure often decreases.</p>
-               <p>Reduced pressure allows the system to soften.</p>
-                
-                <p> A softened system becomes more receptive to change.</p>
+                When the system senses support, internal pressure often decreases.
               </p>
+              <p>Reduced pressure allows the system to soften.</p>
+              <p>A softened system becomes more receptive to change.</p>
               <p>You do not need the right words.
               <br />You do not need the right feeling.</p>
               <p className="text-primary font-medium">Pause and entrust God with the outcomes of this moment.</p>
