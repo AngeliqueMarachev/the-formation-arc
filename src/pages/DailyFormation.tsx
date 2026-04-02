@@ -327,7 +327,7 @@ const DailyFormation = () => {
                 className="min-h-[80px] text-sm"
               />
 
-              <h2 className="font-medium text-primary text-lg">Nearness</h2>
+              <h2 className="font-medium text-primary font-sans text-base">NEARNESS</h2>
               <p className="text-supporting leading-relaxed">
                 How present did you feel God's nearness while recalling this scene?
               </p>
