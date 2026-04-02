@@ -171,21 +171,21 @@ const DailyFormation = () => {
                 <li>meaning</li>
               </ul>
               <p className="text-primary">
-                The act of prayer is a powerful signal to your system that you supported and held.
+                The act of prayer is a powerful signal to your system that you are seen, held and supported.
               </p>
               <p>
-                When the system senses support, internal pressure often decreases.
-                <br />
-                Reduced pressure allows the system to soften.
-                <br />A softened system becomes more receptive to change.
+                When the system senses support, internal pressure often decreases.</p>
+               <p>Reduced pressure allows the system to soften.</p>
+                
+                <p> A softened system becomes more receptive to change.</p>
               </p>
-              <p>You do not need the right words.</p>
-              <p>You do not need the right feeling.</p>
+              <p>You do not need the right words.
+              <br />You do not need the right feeling.</p>
               <p className="text-primary font-medium">Pause and entrust God with the outcomes of this moment.</p>
 
               <div className="pt-6">
                 <Button className="w-full" size="lg" onClick={() => navigate("/reorientation-rehearsal")}>
-                  I've given this to God
+                  Rehearse Reorientation
                 </Button>
               </div>
             </div>
