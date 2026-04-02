@@ -304,7 +304,7 @@ const DailyFormation = () => {
                 Widen this moment gently. Notice what changes as you reflect, consider God's presence, and tangibly experience the moment.
               </p>
 
-              <h2 className="font-medium text-primary text-lg">Expand</h2>
+              <h2 className="font-medium text-primary font-sans text-base">EXPAND</h2>
               <p className="text-supporting leading-relaxed">
                 Widen your experience. Is there something in this scene, maybe even something about yourself, that you
                 didn't notice before?
@@ -316,7 +316,7 @@ const DailyFormation = () => {
                 className="min-h-[80px] text-sm text-muted-foreground"
               />
 
-              <h2 className="font-medium text-primary text-lg">Presence</h2>
+              <h2 className="font-medium text-primary font-sans text-base">​PRESENCE</h2>
               <p className="text-supporting leading-relaxed">
                 If God felt near in this moment, what might that have been like? How would you feel if you sensed Him? Is there any kind of exchange? Do you want to ask Him anything?
               </p>
@@ -327,7 +327,7 @@ const DailyFormation = () => {
                 className="min-h-[80px] text-sm"
               />
 
-              <h2 className="font-medium text-primary text-lg">Nearness</h2>
+              <h2 className="font-medium text-primary font-sans text-base">NEARNESS</h2>
               <p className="text-supporting leading-relaxed">
                 How present did you feel God's nearness while recalling this scene?
               </p>
@@ -383,7 +383,7 @@ const DailyFormation = () => {
                 </div>
               </div>
 
-              <h2 className="font-medium text-primary text-lg">Flow</h2>
+              <h2 className="font-medium text-primary font-sans text-base">FLOW</h2>
               <p className="text-supporting leading-relaxed">
                 Stay with the feeling of this moment.
                 <br />
