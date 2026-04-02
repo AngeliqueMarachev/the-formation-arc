@@ -68,9 +68,9 @@ const ReorientationRehearsal = () => {
         <p className="text-text-body text-sm mt-3">A receptive system forms steadier expectations more easily.</p>
         <div className="mb-6" />
 
-        <p className="text-text-supporting text-sm mb-1">Tap each step.</p>
-        <p className="text-text-supporting text-sm mb-1">Read it slowly.</p>
-        <p className="text-text-supporting text-sm mb-8">Allow the words to settle.</p>
+        <p className="text-text-supporting text-sm mb-0">Tap each step.</p>
+        <p className="text-text-supporting text-sm mb-0">Read it slowly.</p>
+        <p className="text-text-supporting text-sm mb-4">Allow the words to settle.</p>
 
         <div className="space-y-6 mb-12">
           {phases.map((phase) => {
