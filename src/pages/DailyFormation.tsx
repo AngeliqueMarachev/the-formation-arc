@@ -185,7 +185,7 @@ const DailyFormation = () => {
 
               <div className="pt-6">
                 <Button className="w-full" size="lg" onClick={() => navigate("/reorientation-rehearsal")}>
-                  Rehearse Reorientation
+                  I've given this to God
                 </Button>
               </div>
             </div>
