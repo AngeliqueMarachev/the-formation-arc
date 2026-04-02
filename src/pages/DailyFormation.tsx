@@ -294,7 +294,7 @@ const DailyFormation = () => {
           {/* Step 1: Meaning */}
           {createStep === 1 && (
             <div className="space-y-4">
-              <h2 className="font-semibold tracking-tight text-3xl">Expand your conclusion</h2>
+              <h2 className="font-semibold tracking-tight text-3xl">Expand</h2>
               <p className="text-supporting leading-relaxed">
                 Widen your experience. Is there something in this scene, maybe even something about yourself, that you
                 didn't notice before?
@@ -306,7 +306,7 @@ const DailyFormation = () => {
                 className="min-h-[80px] text-sm text-muted-foreground"
               />
 
-              <h2 className="font-semibold tracking-tight text-3xl">Consider presence</h2>
+              <h2 className="font-semibold tracking-tight text-3xl">Presence</h2>
               <p className="text-supporting leading-relaxed">
                 If God felt near in this moment, what might that have been like? How would you feel if you sensed Him? Is there any kind of exchange? Do you want to ask Him anything?
               </p>
@@ -317,7 +317,7 @@ const DailyFormation = () => {
                 className="min-h-[80px] text-sm"
               />
 
-              <h2 className="font-semibold tracking-tight text-3xl">Sense of nearness</h2>
+              <h2 className="font-semibold tracking-tight text-3xl">Nearness</h2>
               <p className="text-supporting leading-relaxed">
                 How present did you feel God's nearness while recalling this scene?
               </p>
