@@ -170,7 +170,9 @@ const DailyFormation = () => {
                 <li>protection</li>
                 <li>meaning</li>
               </ul>
-              <p className="text-primary">The act of prayer a powerful signal that you are not alone.</p>
+              <p className="text-primary">
+                The act of prayer is a powerful signal to your system that you supported and held.
+              </p>
               <p>
                 When the system senses support, internal pressure often decreases.
                 <br />
@@ -179,7 +181,7 @@ const DailyFormation = () => {
               </p>
               <p>You do not need the right words.</p>
               <p>You do not need the right feeling.</p>
-              <p className="text-primary font-medium">Simply give God this moment.</p>
+              <p className="text-primary font-medium">Pause and entrust God with the outcomes of this moment.</p>
 
               <div className="pt-6">
                 <Button className="w-full" size="lg" onClick={() => navigate("/reorientation-rehearsal")}>
