@@ -58,6 +58,10 @@ const DailyFormation = () => {
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [createStep]);
+
+  useEffect(() => {
     if (!user) return;
     const fetchData = async () => {
       const { data: templates } = await supabase
