@@ -53,8 +53,13 @@ const DailyFormation = () => {
   const [anchorTitle, setAnchorTitle] = useState("");
   const [communionAwareness, setCommunionAwareness] = useState("");
   const [whereIsGod, setWhereIsGod] = useState("");
+  const [flowText, setFlowText] = useState("");
   const [createStep, setCreateStep] = useState(0);
   const [saving, setSaving] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [createStep]);
 
   useEffect(() => {
     if (!user) return;
@@ -294,7 +299,12 @@ const DailyFormation = () => {
           {/* Step 1: Meaning */}
           {createStep === 1 && (
             <div className="space-y-4">
-              <h2 className="font-semibold tracking-tight text-3xl">Expand</h2>
+              <h1 className="tracking-tight">Expand your conclusion</h1>
+              <p className="text-supporting leading-relaxed">
+                Widen this moment gently. Notice what changes as you reflect, consider God's presence, and tangibly experience the moment.
+              </p>
+
+              <h2 className="font-medium text-primary text-lg">Expand</h2>
               <p className="text-supporting leading-relaxed">
                 Widen your experience. Is there something in this scene, maybe even something about yourself, that you
                 didn't notice before?
@@ -306,7 +316,7 @@ const DailyFormation = () => {
                 className="min-h-[80px] text-sm text-muted-foreground"
               />
 
-              <h2 className="font-semibold tracking-tight text-3xl">Presence</h2>
+              <h2 className="font-medium text-primary text-lg">Presence</h2>
               <p className="text-supporting leading-relaxed">
                 If God felt near in this moment, what might that have been like? How would you feel if you sensed Him? Is there any kind of exchange? Do you want to ask Him anything?
               </p>
@@ -317,13 +327,12 @@ const DailyFormation = () => {
                 className="min-h-[80px] text-sm"
               />
 
-              <h2 className="font-semibold tracking-tight text-3xl">Nearness</h2>
+              <h2 className="font-medium text-primary text-lg">Nearness</h2>
               <p className="text-supporting leading-relaxed">
                 How present did you feel God's nearness while recalling this scene?
               </p>
               <div>
                 <div className="relative flex items-center justify-between px-4 w-full">
-                  {/* Background line - center to center of first/last circles */}
                   <div
                     className="absolute top-1/2 -translate-y-1/2"
                     style={{
@@ -333,8 +342,6 @@ const DailyFormation = () => {
                       right: "calc(1rem + 16px)",
                     }}
                   />
-
-                  {/* Active fill line */}
                   {communionAwareness && Number(communionAwareness) >= 1 && (
                     <div
                       className="absolute top-1/2 -translate-y-1/2 transition-all duration-300"
@@ -375,6 +382,25 @@ const DailyFormation = () => {
                   <span className="text-sm text-text-supporting">Deeply present</span>
                 </div>
               </div>
+
+              <h2 className="font-medium text-primary text-lg">Flow</h2>
+              <p className="text-supporting leading-relaxed">
+                Stay with the feeling of this moment.
+                <br />
+                Imagine this experience as a texture, color, or form.
+              </p>
+              <Textarea
+                placeholder="e.g. Warm gold light, cool water, soft air, gentle warmth"
+                value={flowText}
+                onChange={(e) => setFlowText(e.target.value)}
+                className="min-h-[80px] text-sm"
+              />
+              <p className="text-supporting leading-relaxed">
+                Imagine this sense of steadiness slowly moving through your body from head to toe.
+              </p>
+              <p className="text-supporting leading-relaxed">
+                Allow the body to recognise this experience.
+              </p>
             </div>
           )}
 
