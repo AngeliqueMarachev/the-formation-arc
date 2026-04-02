@@ -63,6 +63,9 @@ const ReorientationRehearsal = () => {
     <div className="flex min-h-screen flex-col pb-20">
       <main className="flex flex-1 flex-col px-6 pt-10 pb-12 content-container">
         <h1 className="tracking-tight mb-1">Rehearse your Reorientation</h1>
+        <p className="text-text-body text-sm mt-4">Before the brain can update expectations, it must first register safety.</p>
+        <p className="text-text-body text-sm mt-3">Rehearsing your Reorientation signals stability to the nervous system, allowing the mind to become receptive.</p>
+        <p className="text-text-body text-sm mt-3">A receptive system forms steadier expectations more easily.</p>
         <div className="mb-6" />
 
         <p className="text-text-supporting text-sm mb-1">Tap each step. Read slowly.</p>
