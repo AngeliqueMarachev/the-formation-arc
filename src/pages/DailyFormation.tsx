@@ -168,8 +168,13 @@ const DailyFormation = () => {
               <p className="text-primary text-base">Stabilise before you build. Settle your system before training.</p>
               <p className="text-text-body text-base">Daily Formation has three parts.</p>
               <p>First, we begin in prayer.</p>
-              <p>We lift our lives up to God, trusting Him to lead us. Nothing needs to be forced or performed.</p>
-              <p>Then, we settle the nervous system through reorientation.</p>
+              <p>We lift our lives up to God, trusting Him to lead us.</p>
+
+              <p>
+                Prayer helps the nervous system register that we are not alone. This support allows the system to
+                soften.
+              </p>
+              <p>Next, we settle the nervous system through reorientation.</p>
               <p>
                 This short sequence helps to interrupt urgency and restores clarity, allowing the body to feel safe
                 enough to learn.
