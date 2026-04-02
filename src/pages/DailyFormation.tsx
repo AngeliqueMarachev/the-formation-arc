@@ -313,7 +313,7 @@ const DailyFormation = () => {
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="pb-8 flex-1">
-                    <h2 className="font-medium text-primary font-sans text-base">EXPANSION</h2>
+                    <h2 className="font-medium text-primary font-sans text-base leading-8">EXPANSION</h2>
                     <p className="text-supporting leading-relaxed mt-2">
                       Widen your experience. Is there something in this scene, maybe even something about yourself, that you
                       didn't notice before?
