@@ -316,7 +316,7 @@ const DailyFormation = () => {
                 className="min-h-[80px] text-sm text-muted-foreground"
               />
 
-              <h2 className="font-medium text-primary text-lg">Presence</h2>
+              <h2 className="font-medium text-primary font-sans text-base">​PRESENCE</h2>
               <p className="text-supporting leading-relaxed">
                 If God felt near in this moment, what might that have been like? How would you feel if you sensed Him? Is there any kind of exchange? Do you want to ask Him anything?
               </p>
