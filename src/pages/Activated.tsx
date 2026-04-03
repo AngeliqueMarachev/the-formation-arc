@@ -289,7 +289,7 @@ const Activated = () => {
 
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col px-6 pt-10 pb-12 content-container">
+        <main className="flex flex-1 flex-col px-5 pt-10 pb-12 content-container">
           <h1 className="tracking-tight mb-2">Your Reorientation</h1>
           <p className="text-supporting leading-relaxed mb-10">
             Read each line slowly.
@@ -446,7 +446,7 @@ const Activated = () => {
   if (screen === "entry") {
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col justify-center px-6 py-12 content-container">
+        <main className="flex flex-1 flex-col justify-center px-5 py-12 content-container">
           <h1 className="tracking-tight mb-8">When activation rises</h1>
           <div className="space-y-4 leading-relaxed">
             <p className="text-text-body">Fear can accelerate perception.</p>
@@ -498,7 +498,7 @@ const Activated = () => {
 
     return (
       <div className="flex min-h-screen flex-col pb-40">
-        <main className="flex flex-1 flex-col px-6 pt-10 pb-12 content-container">
+        <main className="flex flex-1 flex-col px-5 pt-10 pb-12 content-container">
           <h1 className="tracking-tight mb-2">Your Reorientation Engine</h1>
           <div className="space-y-4 leading-relaxed mb-8">
             <p className="text-primary">You built a sequence that helps interrupt fear and restore steadiness.</p>
@@ -525,7 +525,7 @@ const Activated = () => {
           </div>
         </main>
 
-        <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border px-6 py-4 space-y-3 z-10">
+        <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border px-5 py-4 space-y-3 z-10">
           <div className="content-container">
             <Button className="w-full" size="lg" onClick={handleSave} disabled={saving}>
               {saving ? "Saving…" : "Save Reorientation"}
@@ -544,7 +544,7 @@ const Activated = () => {
 
   return (
     <div className="flex min-h-screen flex-col pb-20">
-      <header className="px-6 pt-8 pb-2 content-container">
+      <header className="px-5 pt-8 pb-2 content-container">
         <p className="text-xs text-text-supporting mb-2">Step {phaseIndex + 1} of 6</p>
         <Progress value={((phaseIndex + 1) / 6) * 100} className="h-1.5 mb-6" />
         <h2 className="font-semibold tracking-tight">{phase.title}</h2>
@@ -555,7 +555,7 @@ const Activated = () => {
         ))}
       </header>
 
-      <main className="flex-1 px-6 pt-4 space-y-3 content-container">
+      <main className="flex-1 px-5 pt-4 space-y-3 content-container">
         {phase.options.map((option) => {
           const isSelected = !useCustom[phaseIndex] && selections[phaseIndex] === option;
           return (
@@ -593,7 +593,7 @@ const Activated = () => {
         </div>
       </main>
 
-      <div className="px-6 pb-4 pt-2 content-container">
+      <div className="px-5 pb-4 pt-2 content-container">
         <Button className="w-full" size="lg" disabled={!canContinue} onClick={handleContinue}>
           Continue
         </Button>

@@ -16,7 +16,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
   if (step === 0) {
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col px-6 pt-10 pb-12 content-container">
+        <main className="flex flex-1 flex-col px-5 pt-10 pb-12 content-container">
           <h1 className="tracking-tight mb-1">Daily Formation is for anchoring</h1>
           <p className="leading-relaxed text-primary my-[9px] mx-0 mb-0 mt-[15px]">
             Build and strengthen the memories that anchor you.
@@ -48,7 +48,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
           </div>
         </main>
 
-        <div className="fixed bottom-16 left-0 right-0 px-6 pb-4 pt-2 bg-background/95 backdrop-blur-sm">
+        <div className="fixed bottom-16 left-0 right-0 px-5 pb-4 pt-2 bg-background/95 backdrop-blur-sm">
           <div className="content-container space-y-2">
             <Button className="w-full" size="lg" onClick={() => setStep(1)}>
               Continue
@@ -67,7 +67,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
   if (step === 1) {
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col px-6 pt-10 pb-32 content-container">
+        <main className="flex flex-1 flex-col px-5 pt-10 pb-32 content-container">
           <h1 className="tracking-tight mb-8">Anchors retrain the nervous system</h1>
 
           <div className="space-y-5 leading-relaxed text-text-body">
@@ -111,7 +111,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
           </div>
         </main>
 
-        <div className="fixed bottom-16 left-0 right-0 px-6 pb-4 pt-2 bg-background/95 backdrop-blur-sm">
+        <div className="fixed bottom-16 left-0 right-0 px-5 pb-4 pt-2 bg-background/95 backdrop-blur-sm">
           <div className="content-container">
             <Button className="w-full" size="lg" onClick={() => setStep(2)}>
               Continue
@@ -127,7 +127,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
   // Step 2 — Screen 3
   return (
     <div className="flex min-h-screen flex-col pb-20">
-      <main className="flex flex-1 flex-col px-6 pt-10 pb-32 content-container">
+      <main className="flex flex-1 flex-col px-5 pt-10 pb-32 content-container">
         <h1 className="tracking-tight mb-8">The nervous system responds to experience, real or remembered</h1>
 
         <div className="space-y-5 leading-relaxed text-text-body">
@@ -170,7 +170,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
         </div>
       </main>
 
-      <div className="fixed bottom-16 left-0 right-0 px-6 pb-4 pt-2 bg-background/95 backdrop-blur-sm">
+      <div className="fixed bottom-16 left-0 right-0 px-5 pb-4 pt-2 bg-background/95 backdrop-blur-sm">
         <div className="content-container">
           <Button className="w-full" size="lg" onClick={onComplete}>
             Continue

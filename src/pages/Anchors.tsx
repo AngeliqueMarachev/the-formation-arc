@@ -60,7 +60,7 @@ const Anchors = () => {
   if (view === "recall-prompt" && selected) {
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col items-center justify-center px-6 text-center content-container">
+        <main className="flex flex-1 flex-col items-center justify-center px-5 text-center content-container">
           <div>
             <p className="text-supporting leading-relaxed max-w-xs">Take 10–20 seconds to return to this moment.</p>
             <p className="text-supporting leading-relaxed max-w-xs">Let the feeling become familiar again.</p>
@@ -84,7 +84,7 @@ const Anchors = () => {
 
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <header className="px-6 pt-8 pb-2 content-container">
+        <header className="px-5 pt-8 pb-2 content-container">
           <button
             onClick={() => {
               setView("list");
@@ -97,7 +97,7 @@ const Anchors = () => {
           </button>
         </header>
 
-        <ScrollArea className="flex-1 px-6">
+        <ScrollArea className="flex-1 px-5">
           <div className="pb-8 content-container">
             {/* Title */}
             <h1 className="tracking-tight font-serif text-primary">{selected.anchor_title || "Anchor"}</h1>
@@ -167,7 +167,7 @@ const Anchors = () => {
 
   return (
     <div className="flex min-h-screen flex-col pb-20">
-      <header className="px-6 pt-8 pb-2 content-container">
+      <header className="px-5 pt-8 pb-2 content-container">
         <h1 className="tracking-tight font-serif">The Anchor Library</h1>
         <p className="text-supporting mt-1 text-primary">Return to anchors that help you expect steadiness.</p>
         <p className="text-supporting mt-1">Anchors deepen with repetition. Tap an anchor to revisit the memory. </p>
@@ -175,7 +175,7 @@ const Anchors = () => {
       </header>
 
       {isEmpty ? (
-        <main className="flex flex-1 flex-col items-center justify-center px-6 text-center space-y-4 content-container">
+        <main className="flex flex-1 flex-col items-center justify-center px-5 text-center space-y-4 content-container">
           <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-secondary/60">
             <LibraryBig className="h-7 w-7 text-primary" />
           </div>
@@ -197,7 +197,7 @@ const Anchors = () => {
           </Button>
         </main>
       ) : (
-        <ScrollArea className="flex-1 px-6">
+        <ScrollArea className="flex-1 px-5">
           <div className="space-y-4 pt-1 pb-4 content-container">
             {anchors.map((anchor) => (
               <Card

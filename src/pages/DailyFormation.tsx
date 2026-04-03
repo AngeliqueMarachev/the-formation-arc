@@ -154,7 +154,7 @@ const DailyFormation = () => {
 
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col px-6 pt-10 pb-12 content-container">
+        <main className="flex flex-1 flex-col px-5 pt-10 pb-12 content-container">
           <h1 className="tracking-tight mb-1">Daily Formation begins with stability </h1>
           <div className="mb-6" />
 
@@ -225,7 +225,7 @@ const DailyFormation = () => {
     }
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col justify-center px-6 py-12 content-container">
+        <main className="flex flex-1 flex-col justify-center px-5 py-12 content-container">
           <h1 className="tracking-tight mb-8">Daily Anchor Loop</h1>
 
           <div className="rounded-lg border bg-card p-5 mb-6 border-secondary">
@@ -289,14 +289,14 @@ const DailyFormation = () => {
 
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <header className="px-6 pt-8 pb-2 content-container">
+        <header className="px-5 pt-8 pb-2 content-container">
           <p className="text-xs text-text-supporting mb-2">
             Step {createStep + 1} of {totalSteps}
           </p>
           <Progress value={((createStep + 1) / totalSteps) * 100} className="h-1.5 mb-6" />
         </header>
 
-        <main className="flex-1 px-6 pt-2 content-container">
+        <main className="flex-1 px-5 pt-2 content-container">
           {/* Step 1: Meaning */}
           {createStep === 1 && (
             <div className="space-y-4">
@@ -546,7 +546,7 @@ const DailyFormation = () => {
           )}
         </main>
 
-        <div className="px-6 pb-4 pt-2 space-y-2 content-container">
+        <div className="px-5 pb-4 pt-2 space-y-2 content-container">
           <Button className="w-full" size="lg" variant="secondary" onClick={() => setCreateStep(createStep - 1)}>
             Back
           </Button>
@@ -564,7 +564,7 @@ const DailyFormation = () => {
   if (screen === "completion") {
     return (
       <div className="flex min-h-screen flex-col pb-20">
-        <main className="flex flex-1 flex-col justify-center px-6 py-12 content-container">
+        <main className="flex flex-1 flex-col justify-center px-5 py-12 content-container">
           <h1 className="tracking-tight mb-8 text-lg">You strengthened steadiness today</h1>
           <div className="space-y-4 leading-relaxed">
             <p className="text-text-body text-base text-secondary-foreground">Today you:</p>
