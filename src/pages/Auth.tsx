@@ -81,7 +81,7 @@ const Auth = () => {
     <div className="flex min-h-screen flex-col items-center justify-center px-5 pb-12">
       <div className="w-full max-w-sm space-y-6">
         <div className="text-center space-y-6">
-          <img src={logo} alt="The Formation Arc" className="h-32 w-auto mx-auto mt-[22px]" />
+          <img src={logo} alt="The Formation Arc" className="h-32 w-auto mx-auto mt-[7px]" />
           <div className="space-y-1.5 text-supporting italic leading-relaxed">
             <p className="text-primary not-italic font-light">Overcome Fear. Restore identity.</p>
             <p></p>
