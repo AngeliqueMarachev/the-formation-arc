@@ -40,7 +40,7 @@ const ResetPassword = () => {
 
   if (!isRecovery) {
     return (
-      <div className="flex min-h-screen flex-col items-center justify-center px-6">
+      <div className="flex min-h-screen flex-col items-center justify-center px-5">
         <p className="text-muted-foreground">Verifying reset link…</p>
       </div>
     );
