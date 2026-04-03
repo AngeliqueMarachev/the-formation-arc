@@ -6,7 +6,7 @@ import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/ca
 import { Compass, AudioLines, LibraryBig } from "lucide-react";
 import BottomNav from "@/components/BottomNav";
 import { formatDistanceToNow } from "date-fns";
-import Logo from "@/assets/logo.svg?react";
+import formationArcLogo from "@/assets/formation-arc-logo.png";
 
 const Index = () => {
   const navigate = useNavigate();
