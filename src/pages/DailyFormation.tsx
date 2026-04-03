@@ -430,7 +430,7 @@ const DailyFormation = () => {
                     </p>
 
                     <p className="text-supporting leading-relaxed mt-2">
-                      Imagine this sense of steadiness slowly moving through your body from head to toe.
+                      Let it slowly move from the top of your head, down through your body, down to your toes. Imagine it touching every part of you.
                     </p>
                     <p className="text-supporting leading-relaxed mt-1">Allow the body to recognise this experience.</p>
                   </div>
