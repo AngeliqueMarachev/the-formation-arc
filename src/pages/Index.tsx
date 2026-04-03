@@ -97,14 +97,14 @@ const Index = () => {
 
   return (
     <div className="flex min-h-screen flex-col pb-20">
-      <header className="flex items-center justify-between px-6 pt-12 pb-8 content-container">
+      <header className="flex items-center justify-between px-5 pt-12 pb-8 content-container">
         <span className="text-text-heading" style={{ fontFamily: "'Fraunces', serif", fontSize: '26px', fontWeight: 600, letterSpacing: '-0.015em' }}>The Formation Arc</span>
         <button onClick={signOut} className="text-xs text-text-supporting hover:text-primary/65 transition-colors">
           Sign out
         </button>
       </header>
 
-      <main className="flex-1 px-6 space-y-5 content-container">
+      <main className="flex-1 px-5 space-y-6 content-container">
         {cards.map((card) =>
         <Card
           key={card.path}
