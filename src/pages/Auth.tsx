@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logo from "@/assets/formation-arc-logo.png";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -80,7 +81,7 @@ const Auth = () => {
     <div className="flex min-h-screen flex-col items-center justify-center px-5">
       <div className="w-full max-w-sm space-y-10">
         <div className="text-center space-y-6">
-          <h1 className="text-4xl font-semibold tracking-tight">The Formation Arc</h1>
+          <img src={logo} alt="The Formation Arc" className="h-10 w-auto mx-auto" />
           <div className="space-y-1.5 text-supporting italic leading-relaxed">
             <p className="text-primary not-italic font-light">Overcome Fear. Restore identity.</p>
             <p></p>
