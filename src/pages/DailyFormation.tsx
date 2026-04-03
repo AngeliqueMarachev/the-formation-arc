@@ -160,7 +160,7 @@ const DailyFormation = () => {
 
           {hasLines ? (
             <div className="space-y-4 leading-relaxed mb-10">
-              <p className="text-text-body text-lg">
+              <p className="text-text-body text-base">
                 Your body responds to signals of safety before conscious thoughts fully form.
               </p>
               <p>
