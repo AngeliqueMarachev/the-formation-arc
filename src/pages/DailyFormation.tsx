@@ -429,7 +429,7 @@ const DailyFormation = () => {
                     <p className="text-supporting leading-relaxed mt-2">
                       Imagine this experience as a texture, color, or form.
                     </p>
-                    <p>
+                    <p className="text-sm text-muted-foreground">
                       Let it slowly move from the top of your head, down through your body, down to your toes, touching
                       every part of you.
                     </p>
