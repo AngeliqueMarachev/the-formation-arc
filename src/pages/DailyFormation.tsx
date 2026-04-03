@@ -423,14 +423,15 @@ const DailyFormation = () => {
                   </div>
                   <div className="flex-1">
                     <h2 className="font-medium text-primary font-sans text-base leading-8">INTEGRATION</h2>
+                    <p className="text-supporting leading-relaxed mt-2">Stay with the feeling of this moment.</p>
+                    <p className="text-supporting leading-relaxed mt-1">Allow the body to recognise this experience.</p>
+
                     <p className="text-supporting leading-relaxed mt-2">
-                      Stay with the feeling of this moment.
-                      <br />
                       Imagine this experience as a texture, color, or form.
                     </p>
-                    <p className="text-supporting leading-relaxed mt-1">Allow the body to recognise this experience.</p>
-                    <p className="text-supporting leading-relaxed mt-2">
-                      Imagine this sense of steadiness slowly moving through your body from head to toe.
+                    <p>
+                      Let it slowly move from the top of your head, down through your body, down to your toes, touching
+                      every part of you.
                     </p>
                   </div>
                 </div>
