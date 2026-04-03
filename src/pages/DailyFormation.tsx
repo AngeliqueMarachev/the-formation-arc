@@ -178,13 +178,14 @@ const DailyFormation = () => {
               <p className="text-primary">
                 The act of prayer is a powerful signal to your system that you are seen, held and supported.
               </p>
-              <p>
-                When the system senses support, internal pressure often decreases.
-              </p>
+              <p>When the system senses support, internal pressure often decreases.</p>
               <p>Reduced pressure allows the system to soften.</p>
               <p>A softened system becomes more receptive to change.</p>
-              <p>You do not need the right words.
-              <br />You do not need the right feeling.</p>
+              <p>
+                You do not need the right words.
+                <br />
+                You do not need the right feeling.
+              </p>
               <p className="text-primary font-medium">Pause and entrust God with the outcomes of this moment.</p>
 
               <div className="pt-6">
@@ -301,7 +302,8 @@ const DailyFormation = () => {
             <div className="space-y-4">
               <h1 className="tracking-tight">Expand your conclusion</h1>
               <p className="text-supporting leading-relaxed">
-                Widen this moment gently. Notice what changes as you reflect, consider God's presence, and tangibly experience the moment.
+                Widen this moment gently. Notice what changes as you reflect, consider God's presence, and tangibly
+                experience the moment.
               </p>
 
               {/* Vertical pathway container */}
@@ -315,8 +317,8 @@ const DailyFormation = () => {
                   <div className="pb-8 flex-1">
                     <h2 className="font-medium text-primary font-sans text-base leading-8">EXPANSION</h2>
                     <p className="text-supporting leading-relaxed mt-2">
-                      Widen your experience. Is there something in this scene, maybe even something about yourself, that you
-                      didn't notice before?
+                      Widen your experience. Is there something in this scene, maybe even something about yourself, that
+                      you didn't notice before?
                     </p>
                     <Textarea
                       placeholder="e.g. I thought I was a sad child, but I was full of life."
@@ -336,7 +338,8 @@ const DailyFormation = () => {
                   <div className="pb-8 flex-1">
                     <h2 className="font-medium text-primary font-sans text-base leading-8">PRESENCE</h2>
                     <p className="text-supporting leading-relaxed mt-2">
-                      If God felt near in this moment, what might that have been like? How would you feel if you sensed Him? Is there any kind of exchange? Do you want to ask Him anything?
+                      If God felt near in this moment, what might that have been like? How would you feel if you sensed
+                      Him? Is there any kind of exchange? Do you want to ask Him anything?
                     </p>
                     <Textarea
                       placeholder="e.g. I saw Jesus thanking God for me!"
@@ -425,18 +428,11 @@ const DailyFormation = () => {
                       <br />
                       Imagine this experience as a texture, color, or form.
                     </p>
-                    <Textarea
-                      placeholder="e.g. Warm gold light, cool water, soft air, gentle warmth"
-                      value={flowText}
-                      onChange={(e) => setFlowText(e.target.value)}
-                      className="min-h-[80px] text-sm mt-2"
-                    />
+
                     <p className="text-supporting leading-relaxed mt-2">
                       Imagine this sense of steadiness slowly moving through your body from head to toe.
                     </p>
-                    <p className="text-supporting leading-relaxed mt-1">
-                      Allow the body to recognise this experience.
-                    </p>
+                    <p className="text-supporting leading-relaxed mt-1">Allow the body to recognise this experience.</p>
                   </div>
                 </div>
               </div>
