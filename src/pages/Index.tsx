@@ -6,7 +6,7 @@ import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/ca
 import { Compass, AudioLines, LibraryBig } from "lucide-react";
 import BottomNav from "@/components/BottomNav";
 import { formatDistanceToNow } from "date-fns";
-import Logo from "@/assets/logo.svg?react";
+import formationArcLogo from "@/assets/formation-arc-logo.png";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -98,7 +98,7 @@ const Index = () => {
   return (
     <div className="flex min-h-screen flex-col pb-20">
       <header className="flex items-center justify-between px-5 pt-12 pb-8 content-container">
-        <span className="text-text-heading" style={{ fontFamily: "'Fraunces', serif", fontSize: '26px', fontWeight: 600, letterSpacing: '-0.015em' }}>The Formation Arc</span>
+        <img src={formationArcLogo} alt="Formation Arc" className="h-8 w-8 max-h-10" />
         <button onClick={signOut} className="text-xs text-text-supporting hover:text-primary/65 transition-colors">
           Sign out
         </button>
