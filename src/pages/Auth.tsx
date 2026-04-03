@@ -161,7 +161,7 @@ const Auth = () => {
             </button>
           </p>
         ) : (
-          <p className="text-center text-sm text-text-supporting">
+          <p className="text-center text-sm text-text-supporting pb-8">
             {isSignUp ? "Already have an account?" : "Don't have an account?"}{" "}
             <button
               type="button"
