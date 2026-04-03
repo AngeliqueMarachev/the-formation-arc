@@ -99,7 +99,7 @@ const Index = () => {
   return (
     <div className="flex min-h-screen flex-col pb-20">
       <header className="flex items-center justify-between px-5 pt-12 pb-8 content-container">
-        <span className="text-text-heading" style={{ fontFamily: "'Fraunces', serif", fontSize: '26px', fontWeight: 600, letterSpacing: '-0.015em' }}>The Formation Arc</span>
+        <img src={logo} alt="The Formation Arc" className="h-8 w-auto" />
         <button onClick={signOut} className="text-xs text-text-supporting hover:text-primary/65 transition-colors">
           Sign out
         </button>
