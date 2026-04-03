@@ -67,7 +67,7 @@ const Anchors = () => {
           </div>
           <p className="font-serif text-lg italic text-text-heading max-w-sm mt-8">"{selected.anchor_phrase}"</p>
           <p className="text-sm text-text-supporting mt-4">Each return makes this pathway easier to access.</p>
-          <p>You are strengthening steadiness.</p>
+          <p className="text-sm text-text-supporting mt-4">You are strengthening steadiness.</p>
           <Button onClick={handleRecallDone} className="w-full max-w-xs mt-7">
             Return to today
           </Button>
