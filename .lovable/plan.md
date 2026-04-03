@@ -1,9 +1,17 @@
 
 
-## Plan: Increase logo size 4×
+## Plan: Set Up Cascading Deletes for User Data
 
-### Changes
+When a user is deleted from Cloud, their data currently remains orphaned. We'll add foreign key constraints with `ON DELETE CASCADE` to all four tables that reference `auth.users`.
 
-1. **`src/pages/Index.tsx`** — Change logo from `h-8` (32px) to `h-12` (48px) in the header
-2. **`src/pages/Auth.tsx`** — Change logo from `h-10` (40px) to `h-16` (64px) on the auth page
+### Database Migration
+
+A single migration will:
+
+1. Add FK constraint on `profiles.id` → `auth.users(id)` with `ON DELETE CASCADE`
+2. Add FK constraint on `anchor_entries.user_id` → `auth.users(id)` with `ON DELETE CASCADE`
+3. Add FK constraint on `reorient_templates.user_id` → `auth.users(id)` with `ON DELETE CASCADE`
+4. Add FK constraint on `usage_stats.user_id` → `auth.users(id)` with `ON DELETE CASCADE`
+
+No code changes needed — this is purely a schema change.
 
