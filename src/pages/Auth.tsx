@@ -81,7 +81,7 @@ const Auth = () => {
     <div className="flex min-h-screen flex-col items-center justify-center px-5">
       <div className="w-full max-w-sm space-y-10">
         <div className="text-center space-y-6">
-          <img src={logo} alt="The Formation Arc" className="h-16 w-auto mx-auto" />
+          <img src={logo} alt="The Formation Arc" className="h-24 w-auto mx-auto" />
           <div className="space-y-1.5 text-supporting italic leading-relaxed">
             <p className="text-primary not-italic font-light">Overcome Fear. Restore identity.</p>
             <p></p>
@@ -105,9 +105,7 @@ const Auth = () => {
               spellCheck={false}
               inputMode="email"
             />
-            {emailTouched && emailError && (
-              <p className="text-sm text-muted-foreground mt-1">{emailError}</p>
-            )}
+            {emailTouched && emailError && <p className="text-sm text-muted-foreground mt-1">{emailError}</p>}
           </div>
 
           {!isForgotPassword && (
@@ -138,13 +136,7 @@ const Auth = () => {
           )}
 
           <Button type="submit" className="w-full" disabled={loading}>
-            {loading
-              ? "..."
-              : isForgotPassword
-              ? "Send Reset Link"
-              : isSignUp
-              ? "Create Account"
-              : "Sign In"}
+            {loading ? "..." : isForgotPassword ? "Send Reset Link" : isSignUp ? "Create Account" : "Sign In"}
           </Button>
 
           {!isForgotPassword && !isSignUp && (
