@@ -362,14 +362,14 @@ const DailyFormation = () => {
                       How present did you feel God's nearness while recalling this scene?
                     </p>
                     <div className="mt-2">
-                      <div className="relative flex items-center justify-between px-4 w-full">
+                      <div className="relative flex items-center justify-between px-1 sm:px-4 w-full">
                         <div
                           className="absolute top-1/2 -translate-y-1/2"
                           style={{
                             height: "2px",
                             backgroundColor: "rgba(248,247,242,0.25)",
-                            left: "calc(1rem + 16px)",
-                            right: "calc(1rem + 16px)",
+                            left: "calc(0.25rem + 12px)",
+                            right: "calc(0.25rem + 12px)",
                           }}
                         />
                         {communionAwareness && Number(communionAwareness) >= 1 && (
@@ -378,8 +378,8 @@ const DailyFormation = () => {
                             style={{
                               height: "2px",
                               backgroundColor: "hsl(var(--primary) / 0.9)",
-                              left: "calc(1rem + 16px)",
-                              width: `calc((100% - 2rem - 32px) * ${(Number(communionAwareness) - 1) / 9})`,
+                              left: "calc(0.25rem + 12px)",
+                              width: `calc((100% - 0.5rem - 24px) * ${(Number(communionAwareness) - 1) / 9})`,
                             }}
                           />
                         )}
@@ -391,15 +391,15 @@ const DailyFormation = () => {
                               key={value}
                               type="button"
                               onClick={() => setCommunionAwareness(String(value))}
-                              className="relative flex items-center justify-center w-8 h-8"
+                              className="relative flex items-center justify-center w-6 h-10 sm:w-8 sm:h-8"
                             >
                               <span
                                 className={`block rounded-full transition-all duration-200 ${
                                   isFilled ? "bg-primary border-2 border-primary" : "bg-background border-2"
                                 }`}
                                 style={{
-                                  width: "18px",
-                                  height: "18px",
+                                  width: "16px",
+                                  height: "16px",
                                   ...(!isFilled ? { borderColor: "rgba(248,247,242,0.45)" } : {}),
                                 }}
                               />
@@ -407,9 +407,9 @@ const DailyFormation = () => {
                           );
                         })}
                       </div>
-                      <div className="flex justify-between px-4 mt-2">
-                        <span className="text-sm text-text-supporting">Distant</span>
-                        <span className="text-sm text-text-supporting">Deeply present</span>
+                      <div className="flex justify-between px-1 sm:px-4 mt-2">
+                        <span className="text-xs sm:text-sm text-text-supporting">Distant</span>
+                        <span className="text-xs sm:text-sm text-text-supporting">Deeply present</span>
                       </div>
                     </div>
                   </div>
