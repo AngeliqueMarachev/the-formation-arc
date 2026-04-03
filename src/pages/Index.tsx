@@ -98,7 +98,7 @@ const Index = () => {
   return (
     <div className="flex min-h-screen flex-col pb-20">
       <header className="flex items-center justify-between px-5 pt-10 pb-8 content-container">
-        <img src={formationArcLogo} alt="Formation Arc" className="h-12 w-12" />
+        <img src={formationArcLogo} alt="Formation Arc" className="h-14 w-14" />
         <button onClick={signOut} className="text-xs text-text-supporting hover:text-primary/65 transition-colors">
           Sign out
         </button>
