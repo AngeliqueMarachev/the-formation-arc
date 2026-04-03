@@ -62,17 +62,14 @@ const Anchors = () => {
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col items-center justify-center px-6 text-center content-container">
           <div>
-            <p className="text-supporting leading-relaxed max-w-xs">
-              Take 10–20 seconds to return to this moment.
-            </p>
-            <p className="text-supporting leading-relaxed max-w-xs">
-              Let the feeling become familiar again.
-            </p>
+            <p className="text-supporting leading-relaxed max-w-xs">Take 10–20 seconds to return to this moment.</p>
+            <p className="text-supporting leading-relaxed max-w-xs">Let the feeling become familiar again.</p>
           </div>
           <p className="font-serif text-lg italic text-text-heading max-w-sm mt-8">"{selected.anchor_phrase}"</p>
           <p className="text-sm text-text-supporting mt-4">Each return makes this pathway easier to access.</p>
+          <p>You are strengthening steadiness.</p>
           <Button onClick={handleRecallDone} className="w-full max-w-xs mt-7">
-            Done
+            Return to today
           </Button>
         </main>
         <BottomNav />
@@ -188,8 +185,16 @@ const Anchors = () => {
           </p>
           <p className="max-w-xs text-supporting">Anchors are created during The Daily Formation.</p>
           <p className="max-w-xs text-supporting">Your library will grow over time as you create new anchors.</p>
-          <p className="max-w-xs text-supporting">Each time you return to an anchor, the pathway becomes easier to access and safety is reinforced.</p>
-          <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/10" onClick={() => navigate("/daily-formation")}>Create an Anchor</Button>
+          <p className="max-w-xs text-supporting">
+            Each time you return to an anchor, the pathway becomes easier to access and safety is reinforced.
+          </p>
+          <Button
+            variant="outline"
+            className="w-full border-primary text-primary hover:bg-primary/10"
+            onClick={() => navigate("/daily-formation")}
+          >
+            Create an Anchor
+          </Button>
         </main>
       ) : (
         <ScrollArea className="flex-1 px-6">
