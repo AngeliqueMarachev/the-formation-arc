@@ -85,7 +85,7 @@ const Auth = () => {
           <div className="space-y-1.5 text-supporting italic leading-relaxed">
             <p className="text-primary not-italic font-light">Overcome Fear. Restore identity.</p>
             <p></p>
-            <p className="text-base">A practice for retraining distress and strengthening stability.</p>
+            <p className="text-base not-italic">A practice for retraining distress and strengthening stability.</p>
           </div>
         </div>
 
