@@ -86,14 +86,18 @@ const Index = () => {
 
   return (
     <div className="flex min-h-screen flex-col pb-20">
-      <header className="relative px-5 pt-12 pb-8 content-container">
-        <img src={logo} alt="The Formation Arc" className="h-32 w-auto" />
-        <button
-          onClick={signOut}
-          className="absolute top-12 right-4 min-[481px]:right-5 text-xs text-text-supporting hover:text-primary/65 transition-colors"
-        >
-          Sign out
-        </button>
+      <header className="relative px-5 pt-6 pb-8 content-container">
+        <div className="flex justify-end">
+          <button
+            onClick={signOut}
+            className="text-xs text-text-supporting hover:text-primary/65 transition-colors mr-[-1px]"
+          >
+            Sign out
+          </button>
+        </div>
+        <div className="flex justify-center mt-2">
+          <img src={logo} alt="The Formation Arc" className="h-32 w-auto" />
+        </div>
       </header>
 
       <main className="flex-1 px-5 space-y-6 content-container">
