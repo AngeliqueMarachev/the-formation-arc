@@ -148,30 +148,30 @@ const Auth = () => {
               Forgot password?
             </button>
           )}
-        </form>
 
-        {isForgotPassword ? (
-          <p className="text-center text-sm text-text-supporting">
-            <button
-              type="button"
-              onClick={() => setIsForgotPassword(false)}
-              className="text-primary underline-offset-4 hover:underline"
-            >
-              Back to sign in
-            </button>
-          </p>
-        ) : (
-          <p className="text-center text-sm text-text-supporting">
-            {isSignUp ? "Already have an account?" : "Don't have an account?"}{" "}
-            <button
-              type="button"
-              onClick={() => setIsSignUp(!isSignUp)}
-              className="text-primary underline-offset-4 hover:underline"
-            >
-              {isSignUp ? "Sign in" : "Sign up"}
-            </button>
-          </p>
-        )}
+          {isForgotPassword ? (
+            <p className="text-center text-sm text-text-supporting mt-2">
+              <button
+                type="button"
+                onClick={() => setIsForgotPassword(false)}
+                className="text-primary underline-offset-4 hover:underline"
+              >
+                Back to sign in
+              </button>
+            </p>
+          ) : (
+            <p className="text-center text-sm text-text-supporting mt-2">
+              {isSignUp ? "Already have an account?" : "Don't have an account?"}{" "}
+              <button
+                type="button"
+                onClick={() => setIsSignUp(!isSignUp)}
+                className="text-primary underline-offset-4 hover:underline"
+              >
+                {isSignUp ? "Sign in" : "Sign up"}
+              </button>
+            </p>
+          )}
+        </form>
       </div>
     </div>
   );
