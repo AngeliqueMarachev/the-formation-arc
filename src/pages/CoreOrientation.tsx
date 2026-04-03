@@ -12,7 +12,7 @@ const CoreOrientation = () => {
   };
 
   return (
-    <div className="flex min-h-screen flex-col justify-center px-6 py-16 sm:px-8">
+    <div className="flex min-h-screen flex-col justify-center px-5 py-16">
       <div className="content-container space-y-12">
         {/* Header */}
         <h1 className="font-fraunces text-3xl font-semibold tracking-tight text-text-heading sm:text-4xl">

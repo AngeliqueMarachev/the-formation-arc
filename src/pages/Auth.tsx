@@ -77,7 +77,7 @@ const Auth = () => {
   };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center px-6">
+    <div className="flex min-h-screen flex-col items-center justify-center px-5">
       <div className="w-full max-w-sm space-y-10">
         <div className="text-center space-y-6">
           <h1 className="text-4xl font-semibold tracking-tight">The Formation Arc</h1>

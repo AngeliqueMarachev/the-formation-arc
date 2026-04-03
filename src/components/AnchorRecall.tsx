@@ -117,13 +117,13 @@ const AnchorRecall = ({
 
   return (
     <div className="flex min-h-screen flex-col pb-20 text-secondary-foreground">
-      <header className="px-6 pt-8 pb-2 content-container">
+      <header className="px-5 pt-8 pb-2 content-container">
         <div className="mb-2 h-8" />
         <p className="text-xs text-text-supporting mb-2">Step 1 of {totalSteps}</p>
         <Progress value={(1 / totalSteps) * 100} className="h-1.5 mb-6" />
       </header>
 
-      <main className="flex-1 px-6 pt-2 space-y-8 pb-4 content-container">
+      <main className="flex-1 px-5 pt-2 space-y-8 pb-4 content-container">
         {/* Header */}
         <div>
           <h1 className="tracking-tight">
@@ -279,7 +279,7 @@ const AnchorRecall = ({
 
       {/* Back + Continue */}
       {selectedScene && (
-        <div className="px-6 pb-4 pt-2 content-container space-y-2">
+        <div className="px-5 pb-4 pt-2 content-container space-y-2">
           <Button className="w-full" size="lg" variant="secondary" onClick={() => setSelectedScene(null)}>
             Back
           </Button>
