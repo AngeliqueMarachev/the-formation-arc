@@ -193,24 +193,26 @@ const DailyFormation = () => {
             </div>
           ) : (
             // NEW USERS
-            <div className="space-y-4 leading-relaxed mb-10">
+            <div className="leading-relaxed mb-10">
               <p className="text-primary text-base">Stabilise before you build. Settle your system before training.</p>
+              <p className="text-text-body text-base mt-4">Daily Formation follows a simple rhythm:</p>
 
-              <p className="text-text-body text-base">Daily Formation follows a simple rhythm:</p>
+              <div className="mt-6 space-y-6">
+                <div>
+                  <p className="font-medium text-primary font-sans text-base uppercase tracking-wide">Pray</p>
+                  <p className="mt-1">Give God the outcomes of this process. Entrust what happens next.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-primary font-sans text-base uppercase tracking-wide">Reorient</p>
+                  <p className="mt-1">Rehearse a short Reorientation to communicate safety to your nervous system.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-primary font-sans text-base uppercase tracking-wide">Anchor</p>
+                  <p className="mt-1">Recall and gently expand a memory that strengthens your expectation of steadiness.</p>
+                </div>
+              </div>
 
-              <p className="font-medium">Pray</p>
-
-              <p>Give God the outcomes of this process. Entrust what happens next.</p>
-
-              <p className="font-medium">Reorient</p>
-
-              <p>Rehearse a short Reorientation to communicate safety to your nervous system.</p>
-
-              <p className="font-medium">Anchor</p>
-
-              <p>Recall and gently expand a memory that strengthens your expectation of steadiness.</p>
-
-              <p>Nothing needs to be forced. Simply remain open and begin.</p>
+              <p className="mt-6">Nothing needs to be forced. Simply remain open and begin.</p>
 
               <div className="pt-6">
                 <Button
@@ -218,7 +220,6 @@ const DailyFormation = () => {
                   size="lg"
                   onClick={() => {
                     sessionStorage.setItem("flow_source", "daily_formation");
-
                     navigate("/activated");
                   }}
                 >
