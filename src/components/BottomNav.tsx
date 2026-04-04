@@ -19,6 +19,7 @@ const BottomNav = () => {
       style={{
         backdropFilter: "blur(14px)",
         background: "rgba(12, 70, 81, 0.6)",
+        paddingBottom: "env(safe-area-inset-bottom)",
       }}
     >
       <div className="flex h-16 items-center justify-around">
