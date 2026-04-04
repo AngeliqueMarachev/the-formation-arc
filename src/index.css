@@ -58,6 +58,10 @@
     @apply border-border;
   }
 
+  html {
+    background: #082E36;
+  }
+
   body {
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
@@ -65,6 +69,9 @@
     background: linear-gradient(135deg, #0C4651 0%, #082E36 100%);
     position: relative;
     color: hsl(var(--text-body));
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    padding-top: env(safe-area-inset-top);
   }
 
   body::before {
