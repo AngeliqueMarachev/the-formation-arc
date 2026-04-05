@@ -200,7 +200,7 @@ const DailyFormation = () => {
               <div className="mt-6 space-y-6">
                 <div>
                   <p className="font-medium text-primary font-sans text-base uppercase tracking-wide">Pray</p>
-                  <p className="mt-1">Give God the outcomes of this process. Entrust what happens next.</p>
+                  <p className="mt-1">Give God the outcomes of this process. Trust Him to lead you.</p>
                 </div>
                 <div>
                   <p className="font-medium text-primary font-sans text-base uppercase tracking-wide">Reorient</p>
