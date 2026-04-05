@@ -204,7 +204,7 @@ const DailyFormation = () => {
                 </div>
                 <div>
                   <p className="font-medium text-primary font-sans text-base uppercase tracking-wide">Reorient</p>
-                  <p className="mt-1">Rehearse a short Reorientation to communicate safety to your nervous system.</p>
+                  <p className="mt-1">Reorient to communicate safety to your nervous system.</p>
                 </div>
                 <div>
                   <p className="font-medium text-primary font-sans text-base uppercase tracking-wide">Anchor</p>
