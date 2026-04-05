@@ -168,6 +168,8 @@ const DailyFormation = () => {
 
               <p className="text-primary">Prayer communicates support to your system.</p>
 
+              <p>It signals that you are not alone in this moment.</p>
+
               <p>When the system senses support, internal pressure decreases.</p>
 
               <p>Reduced pressure allows the system to soften.</p>
