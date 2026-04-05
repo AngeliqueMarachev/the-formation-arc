@@ -151,15 +151,14 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
               <li>a time where your body felt more like itself</li>
             </ul>
           </div>
-
-          <p>If nothing comes immediately, it is perfectly normal.</p>
-          <p>
-            When the nervous system has been under strain, access to memory can narrow. With practice, access widens.
-          </p>
-
           <p className="text-secondary-foreground">We are not trying to escape reality or recreate the past.</p>
           <p className="text-primary">
             We are providing the brain with a more supportive experience in the present, so it can update expectations.
+          </p>
+
+          <p>If nothing comes immediately, that is normal.</p>
+          <p>
+            When the nervous system has been under strain, access to memory can narrow. With practice, access widens.
           </p>
 
           <p>For now, simply allow one moment to appear.</p>
