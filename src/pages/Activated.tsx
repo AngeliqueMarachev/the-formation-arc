@@ -499,7 +499,7 @@ const Activated = () => {
     return (
       <div className="flex min-h-screen flex-col pb-40">
         <main className="flex flex-1 flex-col px-5 pt-10 pb-12 content-container">
-          <h1 className="tracking-tight mb-2">Your Reorientation Engine</h1>
+          <h1 className="tracking-tight mb-2">You have established reorientation</h1>
           <div className="space-y-4 leading-relaxed mb-8">
             <p className="text-primary">You built a sequence that helps interrupt fear and restore steadiness.</p>
             <p className="text-text-body">When activation rises, return to this script and read each line slowly.</p>
