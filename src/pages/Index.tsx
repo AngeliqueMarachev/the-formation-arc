@@ -68,7 +68,7 @@ const Index = () => {
     {
       title: "The Reorientation Engine",
       subtitle:
-        "When fear or anxiety rises, use The Reorientation Engine to interrupt the spiral and regain steadiness.",
+        "When fear or anxiety rises, use this quick method to interrupt the spiral and regain steadiness.",
       icon: Compass,
       path: "/activated",
     },
