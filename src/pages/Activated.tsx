@@ -32,7 +32,7 @@ const PHASES = [
     ],
     customLabel: "Write your own explanation",
     options: [
-      "My nervous system has shifted into hyper-vigilance.",
+      "My nervous system has shifted into survival mode.",
       "My brain is running an old trauma prediction loop.",
       "This is a protective pattern, not a present danger.",
       "My body is misreading this moment as danger.",
