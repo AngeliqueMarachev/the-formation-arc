@@ -176,12 +176,14 @@ const DailyFormation = () => {
                 <br />A softened system becomes more receptive to change.
               </p>
 
-              <p className="text-primary font-medium">Pause and entrust God with the outcomes of this moment.</p>
-
               <p>
                 You do not need the right words.
                 <br />
                 You do not need the right feeling.
+              </p>
+
+              <p className="text-primary font-medium">
+                You just need to pause and entrust God with the outcomes of this moment.
               </p>
 
               <div className="pt-6">
