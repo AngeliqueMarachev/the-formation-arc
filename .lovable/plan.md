@@ -1,52 +1,23 @@
 
 
-## Plan: Visually Group the Three Rhythm Steps on New-User Screen
+## Plan: Restore Missing Anchor Creation Steps
 
-### What Changes
+### Problem
+The anchor creation flow (steps 1–3) was replaced with a placeholder comment at line 332, leaving users on a blank screen. The buttons div also lost its `content-container` class.
 
-Replace the flat list of paragraphs (lines 196-228) with a structured layout that groups each rhythm item (Pray, Reorient, Anchor) into visually distinct blocks.
+### Changes (single file: `src/pages/DailyFormation.tsx`)
 
-### Implementation (single file: `src/pages/DailyFormation.tsx`)
+**1. Replace line 332** — swap the placeholder `<main>` with the full original content containing:
+- **Step 1 (`createStep === 1`)**: "Expand your conclusion" — vertical pathway with four sections (EXPANSION, PRESENCE, NEARNESS, INTEGRATION) including textareas for `meaningConclusion` and `widenedMeaning`, the 1–10 nearness scale for `communionAwareness`, and integration guidance text
+- **Step 2 (`createStep === 2`)**: "Create an Anchor Phrase" — explanatory copy about how anchor phrases work, examples, and a textarea for `anchorPhrase`
+- **Step 3 (`createStep === 3`)**: "Use your Anchor Phrase" — three usage contexts (Daily Moment, During Moments of Contraction, When Old Thoughts Return) with an "In That Moment" instruction card
 
-Replace lines 196-228 with:
-
+**2. Restore `content-container` class on line 334** — add the missing class to the buttons `<div>`:
 ```tsx
-<div className="leading-relaxed mb-10">
-  {/* Intro */}
-  <p className="text-primary text-base">Stabilise before you build. Settle your system before training.</p>
-  <p className="text-text-body text-base mt-4">Daily Formation follows a simple rhythm:</p>
-
-  {/* Three grouped steps */}
-  <div className="mt-6 space-y-6">
-    <div>
-      <p className="font-medium text-primary font-sans text-base uppercase tracking-wide">Pray</p>
-      <p className="mt-1">Give God the outcomes of this process. Entrust what happens next.</p>
-    </div>
-    <div>
-      <p className="font-medium text-primary font-sans text-base uppercase tracking-wide">Reorient</p>
-      <p className="mt-1">Rehearse a short Reorientation to communicate safety to your nervous system.</p>
-    </div>
-    <div>
-      <p className="font-medium text-primary font-sans text-base uppercase tracking-wide">Anchor</p>
-      <p className="mt-1">Recall and gently expand a memory that strengthens your expectation of steadiness.</p>
-    </div>
-  </div>
-
-  {/* Closing */}
-  <p className="mt-6">Nothing needs to be forced. Simply remain open and begin.</p>
-
-  {/* CTA (unchanged behavior) */}
-  <div className="pt-6">
-    <Button ...>Create Reorientation</Button>
-  </div>
-</div>
+<div className="px-5 pb-4 pt-2 space-y-2 content-container">
 ```
 
-### Key design decisions
+This restores the Back and Continue/Save Anchor CTAs with their existing behavior (`setCreateStep` for navigation, `handleSaveAnchor` on final step).
 
-- **Section titles** use `text-primary font-sans uppercase tracking-wide` matching the project's established section-title pattern from the style memory
-- **`mt-1`** between title and description keeps them tightly coupled
-- **`space-y-6`** between blocks creates clear visual separation between steps
-- **`mt-6`** separates the intro from the steps, and the steps from the closing
-- No wording, routing, or button behavior changes
+No state variables, routing, or button logic need changing — only the JSX content inside `<main>` and the missing class are affected.
 
