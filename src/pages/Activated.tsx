@@ -464,7 +464,7 @@ const Activated = () => {
 
             <p className="text-text-body">
               Each time you move through this sequence you:
-              <ul>
+              <ul className="list-disc list-inside space-y-1 pl-2">
                 <li> interrupt reinforcement;</li>
                 <li> update prediction;</li>
                 <li>strengthen internal authority;</li>
