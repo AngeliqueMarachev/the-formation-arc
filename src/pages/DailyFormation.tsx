@@ -231,7 +231,7 @@ const DailyFormation = () => {
                     navigate("/activated");
                   }}
                 >
-                  Create Reorientation
+                  Create my Reorientation
                 </Button>
               </div>
             </div>
