@@ -61,7 +61,7 @@ const Index = () => {
     {
       title: "The Daily Formation",
       subtitle:
-        "When you are calm enough, use The Daily Formation to settle your system and strengthen new patterns of safety.",
+        "When you are calm enough, use this practice to settle your system and strengthen new patterns of safety.",
       icon: AudioLines,
       path: "/daily-formation",
     },
