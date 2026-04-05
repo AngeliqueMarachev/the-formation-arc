@@ -39,7 +39,10 @@ const CoreOrientation = () => {
             Since the brain has capacity for change, what was once established through repetition, can be reshaped
             through repetition.
           </p>
-          <p className="text-primary">The brain updates its predictions based on lived experience, real or imagined.</p>
+          <p className="text-primary">
+            Neuroscience shows the brain updates its predictions based on lived experience, whether real, remembered or
+            imagined.
+          </p>
           <p>When prediction changes, perception changes.</p>
           <p className="mt-0">When perception changes, the body follows.</p>
           <p className="text-primary">
