@@ -455,19 +455,21 @@ const Activated = () => {
 
             <p>This can feel intense, especially when it appears suddenly.</p>
             <p className="text-text-body">
-              What you are experiencing is often a learned protection pattern, not a present threat.
+              Often, what you are experiencing is often a learned protection pattern, not a present threat.
             </p>
             <p className="text-primary">
-              The Reorientation process helps you interrupt the spiral and retrain how your brain interprets these
+              The Reorientation Engine helps you interrupt the spiral and retrain how your brain interprets these
               moments.
             </p>
 
             <p className="text-text-body">
               Each time you move through this sequence you:
-              <p> interrupt reinforcement;</p>
-              <p> update prediction;</p>
-              <p>strengthen internal authority;</p>
-              <p>and stabilize your identity over time.</p>
+              <ul>
+                <li> interrupt reinforcement;</li>
+                <li> update prediction;</li>
+                <li>strengthen internal authority;</li>
+                <li>and stabilize your identity over time.</li>
+              </ul>
             </p>
             <p className="text-text-body">You do not need to rush.</p>
             <p className="text-text-body">Just begin.</p>
