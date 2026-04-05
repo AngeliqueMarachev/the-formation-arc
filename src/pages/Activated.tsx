@@ -63,7 +63,7 @@ const PHASES = [
       "I choose to align with God instead of fear.",
       "I belong to a Kingdom of peace.",
       "No weapon formed against me shall prosper.",
-      "The Lord God is with me! I have a sound mind and not a spirit of fear.",
+      "I have a sound mind and not a spirit of fear.",
     ],
   },
   {
