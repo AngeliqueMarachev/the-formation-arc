@@ -35,7 +35,7 @@ const PHASES = [
       "My nervous system has shifted into survival mode.",
       "My brain is running an old trauma prediction loop.",
       "This is a protective pattern, not a present danger.",
-      "My body is misreading this moment as danger.",
+      "My mind and body are receiving false messages from my brain.",
     ],
   },
   {
