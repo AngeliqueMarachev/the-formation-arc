@@ -525,7 +525,7 @@ const Activated = () => {
 
           <div className="space-y-4 leading-relaxed mb-10 text-center">
             <p className="text-text-heading font-serif font-semibold text-xl">You have established reorientation</p>
-            <p className="text-text-body text-primary">
+            <p className="text-text-body">
               Over time, returning becomes more natural.
               <br />
               Steadiness becomes more familiar.
