@@ -455,7 +455,7 @@ const Activated = () => {
 
             <p>This can feel intense, especially when it appears suddenly.</p>
             <p className="text-text-body">
-              Often, what you are experiencing is often a learned protection pattern, not a present threat.
+              What you are experiencing is often a learned protection pattern, not a present threat.
             </p>
             <p className="text-primary">
               The Reorientation Engine helps you interrupt the spiral and retrain how your brain interprets these
