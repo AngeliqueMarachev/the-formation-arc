@@ -451,9 +451,7 @@ const Activated = () => {
           <div className="space-y-4 leading-relaxed">
             <p className="text-text-body">Fear can accelerate perception.</p>
 
-            <p>Your mind begins predicting danger.</p>
-
-            <p>Your body prepares for survival.</p>
+            <p>As your mind begins predicting danger, your body prepares for survival.</p>
 
             <p>This can feel intense, especially when it appears suddenly.</p>
             <p className="text-text-body">
