@@ -501,10 +501,16 @@ const Activated = () => {
         <main className="flex flex-1 flex-col px-5 pt-10 pb-12 content-container">
           <h1 className="tracking-tight mb-2">You have established reorientation</h1>
           <div className="space-y-4 leading-relaxed mb-8">
-            <p className="text-primary">You built a sequence that helps interrupt fear and restore steadiness.</p>
-            <p className="text-text-body">When activation rises, return to this script and read each line slowly.</p>
+            <p className="text-primary">These words create a reliable pathway back to steadiness.</p>
             <p className="text-text-body">
-              Over time, repeated returns help your brain expect steadiness instead of escalation.
+              When fear, urgency, or inner pressure rises,
+              <br />
+              return to reorient, moving through each line slowly.
+            </p>
+            <p className="text-text-body">
+              Repetition teaches your nervous system
+              <br />
+              that this moment is safe to experience.
             </p>
           </div>
 
@@ -520,7 +526,9 @@ const Activated = () => {
           <div className="space-y-4 leading-relaxed mb-10 text-center">
             <p className="text-text-heading font-serif font-semibold text-xl">You have established reorientation</p>
             <p className="text-text-body text-primary">
-              Each time you return to these words, you strengthen the pathway that restores steadiness.
+              Over time, returning becomes more natural.
+              <br />
+              Steadiness becomes more familiar.
             </p>
           </div>
         </main>
