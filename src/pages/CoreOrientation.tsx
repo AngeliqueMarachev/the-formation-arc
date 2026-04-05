@@ -23,8 +23,8 @@ const CoreOrientation = () => {
         <div className="space-y-4 text-base leading-relaxed text-text-body sm:text-lg">
           <p>Your nervous system is always learning.</p>
           <p>
-            Across your life, experiences shape how your mind interprets the world: what feels safe, what feels urgent,
-            what feels uncertain.
+            Across the span of your life, your experiences shape how your mind interprets the world: what feels safe, what
+            feels urgent, what feels uncertain.
           </p>
           <p>
             Over time, repeated stress can train your system to expect danger, resulting in coping mechanisms and unseen
