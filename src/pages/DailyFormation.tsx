@@ -154,7 +154,7 @@ const DailyFormation = () => {
                 Your body responds to signals of safety before conscious thoughts fully form.
               </p>
 
-              <p className="text-primary">
+              <p className="text-secondary-foreground">
                 Much of what shapes fear or peace happens below conscious awareness, in systems designed to protect you.
               </p>
 
