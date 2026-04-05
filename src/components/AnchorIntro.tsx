@@ -97,17 +97,13 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
 
             <p>
               As meaning expands, the brain begins to register signals of safety and connection, coupled by a release of
-              chemicals that help strengthen this new emotional pathway.
+              chemicals that help strengthen new emotional associations.
             </p>
 
             <p className="text-primary">
               Repeated exposure to these signals helps the nervous system become less oriented toward threat and more
               able to recognise steadiness.
             </p>
-
-            <p className="text-secondary-foreground">We are not trying to change the past.</p>
-
-            <p>We are allowing the brain to experience something more supportive in the present.</p>
           </div>
         </main>
 
