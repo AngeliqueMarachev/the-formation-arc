@@ -152,7 +152,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             </ul>
           </div>
 
-          <p>If nothing comes immediately, that is normal.</p>
+          <p>If nothing comes immediately, it is perfectly normal.</p>
           <p>
             When the nervous system has been under strain, access to memory can narrow. With practice, access widens.
           </p>
