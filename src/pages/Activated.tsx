@@ -48,8 +48,8 @@ const PHASES = [
     options: [
       "The season that trained this response is in the past.",
       "I survived that chapter. This is a different moment.",
-      "My nervous system is remembering, but I am safe now.",
-      "I am not back there. I am here.",
+      "My nervous system is remembering the past, but I am safe now.",
+      "In the past, I believed the lies, but now I know I can align with Truth.",
     ],
   },
   {
