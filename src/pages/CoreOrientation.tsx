@@ -23,8 +23,8 @@ const CoreOrientation = () => {
         <div className="space-y-4 text-base leading-relaxed text-text-body sm:text-lg">
           <p>Your nervous system is always learning.</p>
           <p>
-            Across the span of your life, your experiences shape how your mind interprets the world: what feels safe, what
-            feels urgent, what feels uncertain.
+            Across the span of your life, your experiences shape how your mind interprets the world: what feels safe,
+            what feels urgent, what feels uncertain.
           </p>
           <p>
             Over time, repeated stress can train your system to expect danger, resulting in coping mechanisms and unseen
@@ -36,13 +36,10 @@ const CoreOrientation = () => {
             It means your nervous system adapted to protect you.
           </p>
           <p>
-            Since the brain has capacity for change, what was once established through repetition, can be reshaped
-            through repetition.
+            Since the brain has an innate capacity for change, what was once established through repetition, can be
+            reshaped through repetition.
           </p>
-          <p className="text-primary">
-            Neuroscience shows the brain updates its predictions based on lived experience, whether real, remembered or
-            imagined.
-          </p>
+          <p className="text-primary">The brain updates its predictions based on lived experience, real or imagined.</p>
           <p>When prediction changes, perception changes.</p>
           <p className="mt-0">When perception changes, the body follows.</p>
           <p className="text-primary">
@@ -57,9 +54,7 @@ const CoreOrientation = () => {
           {/* Card 1 */}
           <div className="rounded-lg border bg-card p-5 sm:p-6 border-secondary">
             <p className="mb-2 text-lg font-medium text-text-heading text-primary">When you feel unsettled</p>
-            <p className="text-base leading-relaxed text-text-body font-medium">
-              Use <span className="text-text-heading font-normal">The Reorientation Engine</span>
-            </p>
+            <p className="text-base leading-relaxed text-text-body font-medium">Use The Reorientation Engine</p>
             <p className="mt-1.5 leading-relaxed text-text-supporting text-base">
               A short, structured sequence that quickly interrupts escalation and restores internal authority.
             </p>
@@ -70,9 +65,7 @@ const CoreOrientation = () => {
             <p className="mb-2 text-lg font-medium text-text-heading text-primary">
               When you feel steady enough to strengthen
             </p>
-            <p className="text-base leading-relaxed text-text-body font-medium">
-              Use <span className="text-text-heading font-normal">The Daily Formation</span>
-            </p>
+            <p className="text-base leading-relaxed text-text-body font-medium">Use The Daily Formation</p>
             <p className="mt-1.5 leading-relaxed text-text-supporting text-base">
               A daily process that strengthens the pathways of safety so steadiness becomes easier to access in daily
               life.
