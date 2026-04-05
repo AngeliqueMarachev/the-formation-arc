@@ -74,7 +74,7 @@ const Index = () => {
     },
     {
       title: "The Anchor Library",
-      subtitle: "When you want to reinforce stability, return to Anchors and revisit what you have built.",
+      subtitle: "When you want to reinforce stability, return here to revisit established moments of safety.",
       icon: LibraryBig,
       path: "/anchors",
     },
