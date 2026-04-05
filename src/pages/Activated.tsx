@@ -458,7 +458,7 @@ const Activated = () => {
               What you are experiencing is often a learned protection pattern, not a present threat.
             </p>
             <p className="text-primary">
-              The Reorientation Engine helps you interrupt the spiral and retrain how your brain interprets these
+              The Reorientation process helps you interrupt the spiral and retrain how your brain interprets these
               moments.
             </p>
 
