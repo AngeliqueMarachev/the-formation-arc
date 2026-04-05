@@ -216,7 +216,8 @@ const DailyFormation = () => {
 
               <p className="mt-6">Nothing needs to be forced.</p>
               <p>Simply remain open and begin.</p>
-              <p className="mt-1">First we’ll create your Reorientation.</p>
+              <hr></hr>
+              <p>First we’ll create your Reorientation.</p>
               <p>You’ll then be brought back here to continue the Daily Formation.</p>
 
               <div className="pt-6">
