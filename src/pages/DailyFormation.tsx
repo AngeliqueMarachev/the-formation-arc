@@ -154,9 +154,9 @@ const DailyFormation = () => {
                 Your body responds to signals of safety before conscious thoughts fully form.
               </p>
 
-              <p>
-                Much of what determines whether you feel fear or peace happens below conscious awareness, in systems
-                designed to keep you safe.
+              <p className="text-primary">
+                Much of what shapes fear or peace happens below conscious awareness, in systems
+                designed to protect you.
               </p>
 
               <p>The nervous system responds strongly to perceived:</p>
