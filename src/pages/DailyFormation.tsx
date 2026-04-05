@@ -207,7 +207,7 @@ const DailyFormation = () => {
                   <p className="mt-1">Rehearse a short Reorientation to communicate safety to your nervous system.</p>
                 </div>
                 <div>
-                  <p className="font-medium text-primary font-sans text-base uppercase tracking-wide">Anchor</p>
+                  <p className="font-medium text-primary font-sans text-base uppercase tracking-wide">Anchor Memory</p>
                   <p className="mt-1">
                     Recall and gently expand a memory that strengthens your expectation of steadiness.
                   </p>
