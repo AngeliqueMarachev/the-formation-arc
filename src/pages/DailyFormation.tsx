@@ -171,10 +171,10 @@ const DailyFormation = () => {
               <p>It signals that you are not alone in this moment.</p>
 
               <p>When the system senses support, internal pressure decreases.</p>
-
-              <p>Reduced pressure allows the system to soften.</p>
-
-              <p>A softened system becomes more receptive to change.</p>
+  <br />
+             Reduced pressure allows the system to soften.
+  <br />
+              A softened system becomes more receptive to change.</p>
 
               <p>
                 You do not need the right words.
