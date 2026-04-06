@@ -216,7 +216,8 @@ const AnchorRecall = ({
           <>
             <div className="flex flex-col gap-2.5 leading-relaxed">
               <p className="text-text-body text-base">
-                Notice where you are. Notice your age, and if you are there alone or with someone else. Notice the
+                Notice where you are. Notice your age, and if you are there alone or with someone else.</p>
+              p className="text-text-body text-base">Notice the
                 light, and the temperature, the sounds around you.{" "}
               </p>
               <p className="text-text-body text-base">
