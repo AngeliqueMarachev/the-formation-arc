@@ -229,7 +229,7 @@ const AnchorRecall = ({
             <div className="space-y-2">
               <label className="text-sm font-medium text-text-heading text-primary">Describe the scene</label>
               <Textarea
-                placeholder={`e.g. I'm standing in my grandmother's garden.\nThe sun is warm and the air smells like soil and roses.`}
+                placeholder="e.g. I’m in my gran’s garden. It’s so peaceful here. I can feel the cool of the the damp, rich soil, and the lush, green grass on my skin… I'm literally absorbing all this goodness. My heart feels deep and free. There’s no one here to bother me here. No one taunting me. No one telling me I’m not enough. I take a deep breath in. I’m at peace here."
                 value={sceneText}
                 onChange={(e) => onSceneTextChange(e.target.value)}
                 className="min-h-[140px]"
@@ -242,7 +242,7 @@ const AnchorRecall = ({
               </label>
               <p className="text-xs text-text-supporting">A few words that help you recognize this moment later.</p>
               <Input
-                placeholder="Seeing the ocean for the first time"
+                placeholder="He lays me down in green pastures"
                 value={anchorTitle}
                 onChange={(e) => onAnchorTitleChange(e.target.value.slice(0, 60))}
                 maxLength={60}
