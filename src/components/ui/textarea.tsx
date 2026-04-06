@@ -4,7 +4,18 @@ import { cn } from "@/lib/utils";
 
 export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
 
-const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(({ className, ...props }, ref) => {
+const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(({ className, onInput, ...props }, ref) => {
+  const innerRef = React.useRef<HTMLTextAreaElement | null>(null);
+
+  const resize = (el: HTMLTextAreaElement) => {
+    el.style.height = "auto";
+    el.style.height = el.scrollHeight + "px";
+  };
+
+  React.useEffect(() => {
+    if (innerRef.current) resize(innerRef.current);
+  }, [props.value, props.defaultValue]);
+
   return (
     <textarea
       className={cn(
@@ -15,6 +26,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(({ classNa
         border: "1px solid rgba(168, 192, 168, 0.35)",
         backgroundColor: "rgba(12, 70, 81, 0.35)",
         color: "hsl(var(--foreground))",
+        overflow: "hidden",
       }}
       onFocus={(e) => {
         (e.target as HTMLTextAreaElement).style.borderColor = "rgba(168, 192, 168, 0.6)";
@@ -22,7 +34,15 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(({ classNa
       onBlur={(e) => {
         (e.target as HTMLTextAreaElement).style.borderColor = "rgba(168, 192, 168, 0.35)";
       }}
-      ref={ref}
+      onInput={(e) => {
+        resize(e.target as HTMLTextAreaElement);
+        onInput?.(e);
+      }}
+      ref={(node) => {
+        innerRef.current = node;
+        if (typeof ref === "function") ref(node);
+        else if (ref) (ref as React.MutableRefObject<HTMLTextAreaElement | null>).current = node;
+      }}
       {...props}
     />
   );
