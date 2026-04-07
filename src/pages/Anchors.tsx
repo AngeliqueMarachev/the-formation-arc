@@ -36,6 +36,17 @@ const Anchors = () => {
   const [view, setView] = useState<View>("list");
   const [selected, setSelected] = useState<AnchorEntry | null>(null);
   const [sceneExpanded, setSceneExpanded] = useState(false);
+  const wakeLock = useWakeLock();
+  const [wakeLockToggle, setWakeLockToggle] = useState(true);
+
+  const handleWakeLockToggle = (value: boolean) => {
+    setWakeLockToggle(value);
+    if (value) {
+      wakeLock.enable();
+    } else {
+      wakeLock.disable();
+    }
+  };
   useEffect(() => {
     if (!user) return;
     supabase
@@ -55,6 +66,7 @@ const Anchors = () => {
       .from("anchor_entries")
       .update({ session_count: selected.session_count + 1 })
       .eq("id", selected.id);
+    wakeLock.disable();
     navigate("/");
   };
 
