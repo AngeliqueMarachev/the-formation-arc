@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Progress } from "@/components/ui/progress";
 import BottomNav from "@/components/BottomNav";
+import { useWakeLock } from "@/hooks/use-wake-lock";
+import WakeLockToggle from "@/components/WakeLockToggle";
 
 const PHASES = [
   {
@@ -125,6 +127,17 @@ const Activated = () => {
   const [revealedCount, setRevealedCount] = useState(1);
   const [justRevealed, setJustRevealed] = useState<number | null>(null);
   const [scriptComplete, setScriptComplete] = useState(false);
+  const wakeLock = useWakeLock();
+  const [wakeLockToggle, setWakeLockToggle] = useState(true);
+
+  const handleWakeLockToggle = (value: boolean) => {
+    setWakeLockToggle(value);
+    if (value) {
+      wakeLock.enable();
+    } else {
+      wakeLock.disable();
+    }
+  };
 
   useEffect(() => {
     if (scriptLoading) return;
@@ -235,6 +248,7 @@ const Activated = () => {
       .eq("user_id", user.id);
 
     setSaving(false);
+    wakeLock.disable();
 
     const flowSource = sessionStorage.getItem("flow_source");
     if (flowSource === "daily_formation") {
@@ -275,6 +289,7 @@ const Activated = () => {
         .eq("user_id", user.id);
 
       setSaving(false);
+      wakeLock.disable();
       navigate("/");
     };
 
@@ -291,11 +306,18 @@ const Activated = () => {
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col px-5 pt-10 pb-12 content-container">
           <h1 className="tracking-tight mb-2">Your Reorientation</h1>
-          <p className="text-supporting leading-relaxed mb-10">
+          <p className="text-supporting leading-relaxed mb-6">
             Read each line slowly.
             <br />
             Let each statement interrupt the fear loop and reorient you to steadiness.
           </p>
+
+          <WakeLockToggle
+            enabled={wakeLockToggle}
+            onToggle={handleWakeLockToggle}
+            isSupported={wakeLock.isSupported}
+            className="mb-6"
+          />
 
           <div className="relative mb-12">
             {lines.map((line, i) => {
@@ -336,6 +358,9 @@ const Activated = () => {
                   <button
                     onClick={() => {
                       if (!isTappable) return;
+                      if (revealedCount === 1 && wakeLockToggle) {
+                        wakeLock.enable();
+                      }
                       if (isLastStep) {
                         setScriptComplete(true);
                       } else {
@@ -474,7 +499,16 @@ const Activated = () => {
             <p className="text-text-body">You do not need to rush.</p>
             <p className="text-text-body">Just begin.</p>
           </div>
-          <Button className="mt-10 w-full" size="lg" onClick={() => setScreen("phase")}>
+          <WakeLockToggle
+            enabled={wakeLockToggle}
+            onToggle={handleWakeLockToggle}
+            isSupported={wakeLock.isSupported}
+            className="mb-6"
+          />
+          <Button className="mt-10 w-full" size="lg" onClick={() => {
+            if (wakeLockToggle) wakeLock.enable();
+            setScreen("phase");
+          }}>
             Begin Reorientation
           </Button>
         </main>

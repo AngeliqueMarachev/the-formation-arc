@@ -9,6 +9,8 @@ import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import BottomNav from "@/components/BottomNav";
 import { formatDistanceToNow } from "date-fns";
+import { useWakeLock } from "@/hooks/use-wake-lock";
+import WakeLockToggle from "@/components/WakeLockToggle";
 
 interface AnchorEntry {
   id: string;
@@ -34,6 +36,17 @@ const Anchors = () => {
   const [view, setView] = useState<View>("list");
   const [selected, setSelected] = useState<AnchorEntry | null>(null);
   const [sceneExpanded, setSceneExpanded] = useState(false);
+  const wakeLock = useWakeLock();
+  const [wakeLockToggle, setWakeLockToggle] = useState(true);
+
+  const handleWakeLockToggle = (value: boolean) => {
+    setWakeLockToggle(value);
+    if (value) {
+      wakeLock.enable();
+    } else {
+      wakeLock.disable();
+    }
+  };
   useEffect(() => {
     if (!user) return;
     supabase
@@ -53,6 +66,7 @@ const Anchors = () => {
       .from("anchor_entries")
       .update({ session_count: selected.session_count + 1 })
       .eq("id", selected.id);
+    wakeLock.disable();
     navigate("/");
   };
 
@@ -61,6 +75,12 @@ const Anchors = () => {
     return (
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col items-center justify-center px-5 text-center content-container">
+          <WakeLockToggle
+            enabled={wakeLockToggle}
+            onToggle={handleWakeLockToggle}
+            isSupported={wakeLock.isSupported}
+            className="mb-8 w-full"
+          />
           <div>
             <p className="text-supporting leading-relaxed max-w-xs">Take 10–20 seconds to return to this moment.</p>
             <p className="text-supporting leading-relaxed max-w-xs">Let the feeling become familiar again.</p>
@@ -151,7 +171,10 @@ const Anchors = () => {
 
             {/* CTA */}
             <div className="mt-8">
-              <Button onClick={() => setView("recall-prompt")} className="w-full">
+              <Button onClick={() => {
+                if (wakeLockToggle) wakeLock.enable();
+                setView("recall-prompt");
+              }} className="w-full">
                 Recall This Anchor
               </Button>
             </div>
