@@ -508,7 +508,7 @@ const DailyFormation = () => {
                 <div className="space-y-1 text-text-body">
                    <ul className="list-disc list-inside space-y-1 pl-2">
                   <li>I am alone.</li>
-                  <li>I am not supported.</li>>
+                  <li>I am not supported.</li>
                   <li>I am not enough.</li>
                    </ul>
                 </div>
