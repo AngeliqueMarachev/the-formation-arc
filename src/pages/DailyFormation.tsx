@@ -518,11 +518,11 @@ const DailyFormation = () => {
               </div>
 
               <div className="pt-2">
-                <div className="space-y-2 text-xs text-text-supporting mb-4">
+                <div className="space-y-2 text-text-supporting mb-4">
                   <ul className="list-disc list-inside space-y-1 pl-2">
-                  <li>I believed I was forgotten, but I was not as alone.</li>
-                  <li>I felt afraid, yet I endured.</li>
-                  <li>I felt abandoned, but I was being championed.</li>
+                  <li className="text-base">I believed I was forgotten, but I was not as alone.</li>
+                  <li className="text-base">I felt afraid, yet I endured.</li>
+                  <li className="text-base">I felt abandoned, but I was being championed.</li>
                   </ul>
                 </div>
                 <Textarea
