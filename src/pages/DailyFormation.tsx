@@ -157,7 +157,7 @@ const DailyFormation = () => {
     const hasLines = lines && Object.values(lines).some((v) => v);
 
     return (
-      <div className="flex min-h-screen flex-col pb-20">
+      <div className="flex min-h-screen flex-col pb-20 border-0 border-inherit">
         <main className="flex flex-1 flex-col px-5 pt-10 pb-12 content-container">
           <h1 className="tracking-tight mb-1">Daily formation begins with stability</h1>
 
@@ -165,7 +165,7 @@ const DailyFormation = () => {
             enabled={wakeLockToggle}
             onToggle={handleWakeLockToggle}
             isSupported={wakeLock.isSupported}
-            className="mt-4"
+            className="mt-4 pt-0 pb-[20px]"
           />
 
           {hasLines ? (
