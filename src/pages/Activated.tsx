@@ -288,6 +288,7 @@ const Activated = () => {
         .eq("user_id", user.id);
 
       setSaving(false);
+      wakeLock.disable();
       navigate("/");
     };
 
