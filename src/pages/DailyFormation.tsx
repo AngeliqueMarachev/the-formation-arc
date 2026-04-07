@@ -646,7 +646,7 @@ const DailyFormation = () => {
             size="lg"
             onClick={() => {
               sessionStorage.removeItem("flow_source");
-
+              wakeLock.disable();
               navigate("/");
             }}
           >
