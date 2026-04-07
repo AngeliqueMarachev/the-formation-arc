@@ -489,12 +489,17 @@ const DailyFormation = () => {
                   <div className="flex-1">
                     <h2 className="font-medium text-primary font-sans text-base leading-8">INTEGRATION</h2>
                     <p className="text-supporting leading-relaxed mt-2">Stay with the feeling of this moment.</p>
-                    <p className="text-supporting leading-relaxed mt-2">Allow the body to recognise this experience.</p>
-
                     <p className="text-supporting leading-relaxed mt-2">
-                      Imagine this experience as a texture, color, or form. Let it slowly move from the top of your
-                      head, through your body, down to your toes, touching every part of you.
+                      Imagine this experience as a warmth, a color, or a gentle current.
                     </p>
+                    <p className="text-supporting leading-relaxed mt-2">
+                      Let it slowly move through you, from the top of your head, through your chest, down into your legs
+                      and feet.
+                    </p>
+                    <p className="text-supporting leading-relaxed mt-2">
+                      Allow your body to recognize this experience.
+                    </p>
+                    <p className="text-supporting leading-relaxed mt-2">Take one slow breath here.</p>
                   </div>
                 </div>
               </div>
@@ -525,11 +530,9 @@ const DailyFormation = () => {
 
               <div className="pt-2">
                 <div className="space-y-1 text-text-body">
-                  
-                    <p>I believed I was forgotten, but I was not as alone.</p>
-                    <p>I felt afraid, yet I endured.</p>
-                    <p className="pb-[25px]">I felt abandoned, but I was being championed.</p>
-                  
+                  <p>I believed I was forgotten, but I was not as alone.</p>
+                  <p>I felt afraid, yet I endured.</p>
+                  <p className="pb-[25px]">I felt abandoned, but I was being championed.</p>
                 </div>
                 <Textarea
                   placeholder="Write your anchor phrase…"
