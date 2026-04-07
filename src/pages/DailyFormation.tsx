@@ -157,7 +157,7 @@ const DailyFormation = () => {
     const hasLines = lines && Object.values(lines).some((v) => v);
 
     return (
-      <div className="flex min-h-screen flex-col pb-20 border-0 border-inherit">
+      <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col px-5 pt-10 pb-12 content-container">
           <h1 className="tracking-tight mb-1">Daily formation begins with stability</h1>
 
@@ -165,7 +165,7 @@ const DailyFormation = () => {
             enabled={wakeLockToggle}
             onToggle={handleWakeLockToggle}
             isSupported={wakeLock.isSupported}
-            className="mt-4 pt-[5px] pb-[25px]"
+            className="mt-4"
           />
 
           {hasLines ? (
@@ -506,9 +506,11 @@ const DailyFormation = () => {
                 <p className="text-text-body">​Many memories trained your nervous system to expect something.</p>
                 <p className="text-text-body"></p>
                 <div className="space-y-1 text-text-body">
-                  <p className="text-text-body">I am alone.</p>
-                  <p className="text-text-body">I am not supported.</p>
-                  <p className="text-text-body">I am not enough.</p>
+                   <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li>I am alone.</li>
+                  <li>I am not supported.</li>>
+                  <li>I am not enough.</li>
+                   </ul>
                 </div>
                 <p className="font-normal text-primary">Your Anchor Phrase updates that template.</p>
                 <p className="text-text-body">It does not erase the memory. It widens the meaning. </p>
