@@ -10,6 +10,8 @@ import { Progress } from "@/components/ui/progress";
 import BottomNav from "@/components/BottomNav";
 import AnchorRecall from "@/components/AnchorRecall";
 import AnchorIntro from "@/components/AnchorIntro";
+import { useWakeLock } from "@/hooks/use-wake-lock";
+import WakeLockToggle from "@/components/WakeLockToggle";
 
 type Screen = "anchor-intro" | "reorientation" | "daily-loop" | "create-anchor" | "completion";
 
@@ -56,6 +58,17 @@ const DailyFormation = () => {
   const [whereIsGod, setWhereIsGod] = useState("");
   const [createStep, setCreateStep] = useState(0);
   const [saving, setSaving] = useState(false);
+  const wakeLock = useWakeLock();
+  const [wakeLockToggle, setWakeLockToggle] = useState(true);
+
+  const handleWakeLockToggle = (value: boolean) => {
+    setWakeLockToggle(value);
+    if (value) {
+      wakeLock.enable();
+    } else {
+      wakeLock.disable();
+    }
+  };
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
@@ -133,7 +146,10 @@ const DailyFormation = () => {
 
   // ANCHOR INTRO
   if (screen === "anchor-intro") {
-    return <AnchorIntro onComplete={() => setScreen("reorientation")} />;
+    return <AnchorIntro onComplete={() => {
+      if (wakeLockToggle) wakeLock.enable();
+      setScreen("reorientation");
+    }} />;
   }
 
   // REORIENTATION ENTRY
@@ -145,7 +161,12 @@ const DailyFormation = () => {
         <main className="flex flex-1 flex-col px-5 pt-10 pb-12 content-container">
           <h1 className="tracking-tight mb-1">Daily formation begins with stability</h1>
 
-          <div className="mb-6" />
+          <WakeLockToggle
+            enabled={wakeLockToggle}
+            onToggle={handleWakeLockToggle}
+            isSupported={wakeLock.isSupported}
+            className="mt-4"
+          />
 
           {hasLines ? (
             // EXISTING USERS
