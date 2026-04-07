@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { House, Compass, AudioLines, LibraryBig } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useKeyboardVisible } from "@/hooks/use-keyboard-visible";
 
 const tabs = [
   { label: "Home", icon: House, path: "/" },
@@ -12,6 +13,9 @@ const tabs = [
 const BottomNav = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const keyboardVisible = useKeyboardVisible();
+
+  if (keyboardVisible) return null;
 
   return (
     <nav
