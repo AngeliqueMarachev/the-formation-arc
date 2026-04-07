@@ -572,9 +572,7 @@ const DailyFormation = () => {
                 </div>
 
                 <div className="mb-8">
-                  <p className="text-primary font-semibold text-base uppercase mt-8 mb-3">
-                    DURING MOMENTS OF CONTRACTION
-                  </p>
+                  <p className="text-primary font-semibold text-base uppercase mt-8 mb-3">DURING A SPIKE</p>
                   <p className="text-text-body leading-relaxed mb-4">
                     Use your phrase when your system begins to tighten, for example:
                   </p>
