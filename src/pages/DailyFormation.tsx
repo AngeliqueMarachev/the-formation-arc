@@ -508,7 +508,7 @@ const DailyFormation = () => {
                 <div className="space-y-1 text-text-body">
                    <ul className="list-disc list-inside space-y-1 pl-2">
                   <li>I am alone.</li>
-                  <li>I am not supported.</li>
+                  <li>I am not supported.</li>>
                   <li>I am not enough.</li>
                    </ul>
                 </div>
@@ -519,9 +519,11 @@ const DailyFormation = () => {
 
               <div className="pt-2">
                 <div className="space-y-2 text-xs text-text-supporting mb-4">
-                  <p className="text-text-body">I believed I was forgotten, but I was not as alone.</p>
-                  <p className="text-text-body">I felt afraid, yet I endured.</p>
-                  <p className="text-text-body">I felt abandoned, but I was being championed.</p>
+                  <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li>I believed I was forgotten, but I was not as alone.</li>
+                  <li>I felt afraid, yet I endured.</li>
+                  <li>I felt abandoned, but I was being championed.</li>
+                  </ul>
                 </div>
                 <Textarea
                   placeholder="Write your anchor phrase…"
