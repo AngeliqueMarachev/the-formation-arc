@@ -146,10 +146,14 @@ const DailyFormation = () => {
 
   // ANCHOR INTRO
   if (screen === "anchor-intro") {
-    return <AnchorIntro onComplete={() => {
-      if (wakeLockToggle) wakeLock.enable();
-      setScreen("reorientation");
-    }} />;
+    return (
+      <AnchorIntro
+        onComplete={() => {
+          if (wakeLockToggle) wakeLock.enable();
+          setScreen("reorientation");
+        }}
+      />
+    );
   }
 
   // REORIENTATION ENTRY
@@ -399,7 +403,8 @@ const DailyFormation = () => {
                   <div className="pb-8 flex-1">
                     <h2 className="font-medium text-primary font-sans text-base leading-8">PRESENCE</h2>
                     <p className="text-supporting leading-relaxed mt-2">
-                      Widen the meaning in this moment. If God was with you in this moment, what might that have been like?
+                      Widen the meaning in this moment. If God was with you in this moment, what might that have been
+                      like?
                     </p>
                     <Textarea
                       placeholder="e.g. I saw Jesus thanking God for me!"
@@ -487,7 +492,8 @@ const DailyFormation = () => {
                     <p className="text-supporting leading-relaxed mt-2">Allow the body to recognise this experience.</p>
 
                     <p className="text-supporting leading-relaxed mt-2">
-                      Imagine this experience as a texture, color, or form. Let it slowly move from the top of your head, through your body, down to your toes, touching every part of you.
+                      Imagine this experience as a texture, color, or form. Let it slowly move from the top of your
+                      head, through your body, down to your toes, touching every part of you.
                     </p>
                   </div>
                 </div>
@@ -506,11 +512,11 @@ const DailyFormation = () => {
                 <p className="text-text-body">​Many memories trained your nervous system to expect something.</p>
                 <p className="text-text-body"></p>
                 <div className="space-y-1 text-text-body">
-                   <ul className="list-disc list-inside space-y-1 pl-2">
-                  <li>I am alone.</li>
-                  <li>I am not supported.</li>
-                  <li>I am not enough.</li>
-                   </ul>
+                  <ul className="list-disc list-inside space-y-1 pl-2">
+                    <li>I am alone.</li>
+                    <li>I am not supported.</li>
+                    <li>I am not enough.</li>
+                  </ul>
                 </div>
                 <p className="font-normal text-primary">Your Anchor Phrase updates that template.</p>
                 <p className="text-text-body">It does not erase the memory. It widens the meaning. </p>
@@ -518,10 +524,12 @@ const DailyFormation = () => {
               </div>
 
               <div className="pt-2">
-                <div className="space-y-2 text-xs text-text-supporting mb-4">
-                  <p className="text-text-body">I believed I was forgotten, but I was not as alone.</p>
-                  <p className="text-text-body">I felt afraid, yet I endured.</p>
-                  <p className="text-text-body">I felt abandoned, but I was being championed.</p>
+                <div className="space-y-1 text-text-body">
+                  
+                    <p>I believed I was forgotten, but I was not as alone.</p>
+                    <p>I felt afraid, yet I endured.</p>
+                    <p>I felt abandoned, but I was being championed.</p>>
+                  
                 </div>
                 <Textarea
                   placeholder="Write your anchor phrase…"
