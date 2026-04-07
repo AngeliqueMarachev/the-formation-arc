@@ -248,6 +248,7 @@ const Activated = () => {
       .eq("user_id", user.id);
 
     setSaving(false);
+    wakeLock.disable();
 
     const flowSource = sessionStorage.getItem("flow_source");
     if (flowSource === "daily_formation") {
