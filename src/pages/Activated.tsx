@@ -356,6 +356,9 @@ const Activated = () => {
                   <button
                     onClick={() => {
                       if (!isTappable) return;
+                      if (revealedCount === 1 && wakeLockToggle) {
+                        wakeLock.enable();
+                      }
                       if (isLastStep) {
                         setScriptComplete(true);
                       } else {
