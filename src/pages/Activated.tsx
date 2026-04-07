@@ -316,7 +316,7 @@ const Activated = () => {
             enabled={wakeLockToggle}
             onToggle={handleWakeLockToggle}
             isSupported={wakeLock.isSupported}
-            className="mb-6"
+            className="mb-6 pb-[20px]"
           />
 
           <div className="relative mb-12">
@@ -503,7 +503,7 @@ const Activated = () => {
             enabled={wakeLockToggle}
             onToggle={handleWakeLockToggle}
             isSupported={wakeLock.isSupported}
-            className="mb-6"
+            className="mb-6 pb-[20px]"
           />
           <Button className="mt-10 w-full" size="lg" onClick={() => {
             if (wakeLockToggle) wakeLock.enable();
