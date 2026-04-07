@@ -528,7 +528,7 @@ const DailyFormation = () => {
                   
                     <p>I believed I was forgotten, but I was not as alone.</p>
                     <p>I felt afraid, yet I endured.</p>
-                    <p>I felt abandoned, but I was being championed.</p>>
+                    <p>I felt abandoned, but I was being championed.</p>
                   
                 </div>
                 <Textarea
