@@ -61,6 +61,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const signOut = async () => {
     sessionStorage.removeItem(SESSION_KEY);
+    localStorage.removeItem("last_route");
+    localStorage.removeItem("last_route_ts");
     await supabase.auth.signOut();
   };
 
