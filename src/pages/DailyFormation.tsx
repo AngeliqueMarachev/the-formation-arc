@@ -558,40 +558,61 @@ const DailyFormation = () => {
                 </p>
               </div>
 
-              <div className="mb-10">
-                <div className="mb-8">
-                  <p className="text-primary font-semibold text-base uppercase mt-8 mb-3">DAILY MOMENT</p>
-                  <p className="text-text-body leading-relaxed mb-4">
-                    Attach it to one daily moment that already happens, for example:
-                  </p>
-                  <div className="text-text-body text-sm space-y-1 pl-1">
-                    <p>– Before you brush your teeth</p>
-                    <p>– When you close your laptop</p>
-                    <p>– After you get into bed</p>
+              {/* Vertical pathway container */}
+              <div className="relative mb-10">
+                {/* Section 1: DAILY MOMENT */}
+                <div className="relative flex gap-4">
+                  <div className="flex flex-col items-center">
+                    <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
+                    <div className="w-px flex-1 bg-border/40 my-1" />
+                  </div>
+                  <div className="pb-8 flex-1">
+                    <h2 className="font-medium text-primary font-sans text-base leading-8">DAILY MOMENT</h2>
+                    <p className="text-text-body leading-relaxed mt-2">
+                      Attach it to one daily moment that already happens, for example:
+                    </p>
+                    <div className="text-text-body text-sm space-y-1 pl-1 mt-2">
+                      <p>– Before you brush your teeth</p>
+                      <p>– When you close your laptop</p>
+                      <p>– After you get into bed</p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="mb-8">
-                  <p className="text-primary font-semibold text-base uppercase mt-8 mb-3">DURING A SPIKE</p>
-                  <p className="text-text-body leading-relaxed mb-4">
-                    Use your phrase when your system begins to tighten, for example:
-                  </p>
-                  <div className="text-text-body text-sm space-y-1 pl-1">
-                    <p>– Tension</p>
-                    <p>– Shame</p>
-                    <p>– Fear</p>
+                {/* Section 2: DURING MOMENTS OF CONTRACTION */}
+                <div className="relative flex gap-4">
+                  <div className="flex flex-col items-center">
+                    <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
+                    <div className="w-px flex-1 bg-border/40 my-1" />
+                  </div>
+                  <div className="pb-8 flex-1">
+                    <h2 className="font-medium text-primary font-sans text-base leading-8">DURING MOMENTS OF CONTRACTION</h2>
+                    <p className="text-text-body leading-relaxed mt-2">
+                      Use your phrase when your system begins to tighten, for example:
+                    </p>
+                    <div className="text-text-body text-sm space-y-1 pl-1 mt-2">
+                      <p>– Tension</p>
+                      <p>– Shame</p>
+                      <p>– Fear</p>
+                    </div>
                   </div>
                 </div>
 
-                <div>
-                  <p className="text-primary font-semibold text-base uppercase mt-8 mb-3">WHEN OLD THOUGHTS RETURN</p>
-                  <p className="text-text-body leading-relaxed mb-4">
-                    Use your phrase when old thinking patterns arise, for example:
-                  </p>
-                  <div className="text-text-body text-sm space-y-1 pl-1">
-                    <p>– I am alone.</p>
-                    <p>– I am not enough.</p>
-                    <p>– This will end badly.</p>
+                {/* Section 3: OLD THOUGHT PATTERNS */}
+                <div className="relative flex gap-4">
+                  <div className="flex flex-col items-center">
+                    <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
+                  </div>
+                  <div className="flex-1">
+                    <h2 className="font-medium text-primary font-sans text-base leading-8">OLD THOUGHT PATTERNS</h2>
+                    <p className="text-text-body leading-relaxed mt-2">
+                      Use your phrase when familiar internal narratives begin to surface, for example:
+                    </p>
+                    <div className="text-text-body text-sm space-y-1 pl-1 mt-2">
+                      <p>– I am alone.</p>
+                      <p>– I am not enough.</p>
+                      <p>– This will end badly.</p>
+                    </div>
                   </div>
                 </div>
               </div>
