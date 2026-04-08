@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
 import { AuthProvider, useAuth } from "@/lib/auth";
+import { useRoutePersistence, useRouteRestoration } from "@/hooks/use-route-persistence";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import CoreOrientation from "./pages/CoreOrientation";
@@ -38,6 +39,18 @@ function AuthRoute({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
 
+/** Tracks current route + handles restoration on app reopen */
+function RoutePersistenceManager() {
+  useRoutePersistence();
+  return null;
+}
+
+/** Restores saved route on first authenticated load (within 6h) */
+function RouteRestorationGate({ children }: { children: React.ReactNode }) {
+  useRouteRestoration();
+  return <>{children}</>;
+}
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -46,10 +59,11 @@ const App = () => (
       <BrowserRouter>
         <AuthProvider>
           <ScrollToTop />
+          <RoutePersistenceManager />
           <Routes>
             <Route path="/auth" element={<AuthRoute><Auth /></AuthRoute>} />
             <Route path="/onboarding" element={<ProtectedRoute><CoreOrientation /></ProtectedRoute>} />
-            <Route path="/" element={<ProtectedRoute><OrientationGate><Index /></OrientationGate></ProtectedRoute>} />
+            <Route path="/" element={<ProtectedRoute><OrientationGate><RouteRestorationGate><Index /></RouteRestorationGate></OrientationGate></ProtectedRoute>} />
             <Route path="/activated" element={<ProtectedRoute><Activated /></ProtectedRoute>} />
             <Route path="/daily-formation" element={<ProtectedRoute><DailyFormation /></ProtectedRoute>} />
             <Route path="/anchors" element={<ProtectedRoute><Anchors /></ProtectedRoute>} />

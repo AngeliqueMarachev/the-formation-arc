@@ -1,1 +1,5 @@
 project_id = "uahoagsmrqoztcfddxxb"
+
+[auth]
+# 30-day session: 2592000 seconds
+jwt_expiry = 2592000
