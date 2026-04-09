@@ -31,31 +31,6 @@ const Index = () => {
     enabled: !!user,
   });
 
-  const { data: lastActivity } = useQuery({
-    queryKey: ["last_activity", user?.id],
-    queryFn: async () => {
-      const [{ data: anchors }, { data: templates }] = await Promise.all([
-        supabase
-          .from("anchor_entries")
-          .select("created_at")
-          .eq("user_id", user!.id)
-          .order("created_at", { ascending: false })
-          .limit(1),
-        supabase
-          .from("reorient_templates")
-          .select("created_at")
-          .eq("user_id", user!.id)
-          .order("created_at", { ascending: false })
-          .limit(1),
-      ]);
-
-      const dates = [anchors?.[0]?.created_at, templates?.[0]?.created_at].filter(Boolean) as string[];
-
-      if (dates.length === 0) return null;
-      return dates.sort().reverse()[0];
-    },
-    enabled: !!user,
-  });
 
   const cards = [
     {
@@ -82,7 +57,7 @@ const Index = () => {
   const reorientations = stats?.reorient_return_count ?? 0;
   const anchorsCreated = stats?.anchors_created ?? 0;
   const recalls = (stats as any)?.anchor_recall_count ?? 0;
-  const lastActivityLabel = lastActivity ? formatDistanceToNow(new Date(lastActivity), { addSuffix: true }) : "—";
+  const lastActivityLabel = stats?.last_active_at ? formatDistanceToNow(new Date(stats.last_active_at), { addSuffix: true }) : "—";
 
   return (
     <div className="flex min-h-screen flex-col pb-20">
@@ -128,8 +103,8 @@ const Index = () => {
             <div className="px-5 pb-4 pt-3">
               <div className="flex justify-center gap-6">
                 {[
-                  { value: String(reorientations), label: "Reorientations" },
                   { value: String(anchorsCreated), label: "Anchors" },
+                  { value: String(reorientations), label: "Reorientations" },
                   { value: String(recalls), label: "Recalls" },
                 ].map((metric) => (
                   <div key={metric.label} className="flex flex-col items-center gap-1.5">

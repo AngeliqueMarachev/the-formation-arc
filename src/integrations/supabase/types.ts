@@ -123,18 +123,21 @@ export type Database = {
         Row: {
           anchor_recall_count: number
           anchors_created: number
+          last_active_at: string | null
           reorient_return_count: number
           user_id: string
         }
         Insert: {
           anchor_recall_count?: number
           anchors_created?: number
+          last_active_at?: string | null
           reorient_return_count?: number
           user_id: string
         }
         Update: {
           anchor_recall_count?: number
           anchors_created?: number
+          last_active_at?: string | null
           reorient_return_count?: number
           user_id?: string
         }
