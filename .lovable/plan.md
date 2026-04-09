@@ -1,62 +1,56 @@
 
 
-## Revised Plan: Screen Wake Lock for Guided Practice Screens
+## Plan: Track Formation Behaviors with Atomic Increments
 
-### 1. New file: `src/hooks/use-wake-lock.ts`
+### Task 1 — Database migration
 
-Custom hook exposing `{ isActive, isSupported, enable, disable }`.
+Add column and create RPC function:
 
-- `enable()`: calls `navigator.wakeLock.request('screen')`, catches errors silently
-- Listens to `visibilitychange` — reacquires if enabled and page becomes visible
-- `disable()`: releases the sentinel, clears enabled state
-- Cleanup on unmount releases lock
-- `isSupported = 'wakeLock' in navigator`
-- Does NOT auto-activate — requires explicit `enable()` call
+```sql
+-- New column
+ALTER TABLE public.usage_stats
+  ADD COLUMN anchor_recall_count integer NOT NULL DEFAULT 0;
 
-### 2. New file: `src/components/WakeLockToggle.tsx`
+-- Atomic increment with allow-list validation
+CREATE OR REPLACE FUNCTION public.increment_stat(stat_name text, user_id_input uuid)
+RETURNS void
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public
+AS $$
+BEGIN
+  IF stat_name NOT IN ('reorient_return_count', 'anchors_created', 'anchor_recall_count') THEN
+    RAISE EXCEPTION 'Invalid stat name: %', stat_name;
+  END IF;
 
-Presentational toggle. Returns `null` if `!isSupported`.
+  EXECUTE format(
+    'UPDATE public.usage_stats SET %I = %I + 1 WHERE user_id = $1',
+    stat_name, stat_name
+  ) USING user_id_input;
+END;
+$$;
+```
 
-- Uses existing `Switch` component
-- Props: `enabled` (controlled boolean), `onToggle` callback, optional `className`
-- **Does NOT own the hook** — parent manages the hook and passes state down
-- **Does NOT call disable() on unmount** — wake lock lifecycle is managed by the parent page
-- Label: "Keep screen awake" — `text-sm text-text-heading` (readable, not muted)
-- Helper: "Prevents screen from sleeping during this session" — `text-xs text-text-supporting` (muted)
-- Layout: right-aligned row with label + switch, helper text below
+### Task 2 — Increment logic
 
-### 3. Integration
+| File | Where | Call |
+|---|---|---|
+| `src/pages/DailyFormation.tsx` | After successful `anchor_entries.insert()` in `handleSaveAnchor` (new anchors only) | `supabase.rpc('increment_stat', { stat_name: 'anchors_created', user_id_input: user.id })` |
+| `src/pages/Anchors.tsx` | In `handleRecallDone`, after `session_count` update | `supabase.rpc('increment_stat', { stat_name: 'anchor_recall_count', user_id_input: user.id })` |
+| `src/pages/Activated.tsx` | Replace existing read-then-write with same RPC pattern | `supabase.rpc('increment_stat', { stat_name: 'reorient_return_count', user_id_input: user.id })` |
 
-The hook (`useWakeLock`) is called at the **page component level** so the lock persists across all screens within a flow. The toggle is rendered only on the first guided screen. The session-start CTA calls `enable()` alongside the screen transition.
+### Task 3 — Progress card UI (`src/pages/Index.tsx`)
 
-**`src/pages/Activated.tsx`**
-- Call `useWakeLock()` at the top of the component
-- Track toggle state with `useState(true)` (default ON)
-- On the `"entry"` screen: render `<WakeLockToggle />` below the header. The "Begin Reorientation" button calls `enable()` (if toggle is ON) then `setScreen("phase")`
-- On the `"use-script"` screen: render `<WakeLockToggle />` below the header. The first tap-to-reveal interaction calls `enable()` (if toggle is ON)
-- Toggle not shown on `"phase"` or `"complete"` screens
-- Call `disable()` inside `handleUseComplete` (Return home) and when navigating away from completion
+- Add `anchor_recall_count` to the fetched fields (query already selects `*`).
+- Display 3 horizontal metrics: **Reorientations**, **Anchors**, **Recalls** — same circle-indicator style, adjusted gap.
 
-**`src/pages/DailyFormation.tsx`**
-- Call `useWakeLock()` at the top of the component
-- Track toggle state with `useState(true)` (default ON)
-- The trigger: inside `AnchorIntro`'s `onComplete` callback (the "Continue" button on the last intro screen), call `enable()` (if toggle is ON) then transition to `"reorientation"`
-- Render `<WakeLockToggle />` on the `"reorientation"` screen only, below the header
-- Call `disable()` on completion or navigation away
+### Files changed
 
-**`src/pages/Anchors.tsx`**
-- Call `useWakeLock()` at the top of the component
-- Track toggle state with `useState(true)` (default ON)
-- Render `<WakeLockToggle />` on `view === "recall-prompt"`
-- The "Recall This Anchor" button (on the detail view) calls `enable()` (if toggle is ON) then transitions to `"recall-prompt"`
-- Call `disable()` inside `handleRecallDone`
-
-### 4. Key behavioral notes
-
-- **No auto-enable on mount**: The switch appears ON but `enable()` is only called on explicit user action (Begin, Continue, Recall)
-- **No disable on toggle unmount**: The toggle only renders on the first screen; the lock persists across subsequent screens because the hook lives at the page level
-- **Toggle OFF mid-session**: Calls `disable()` immediately
-- **Toggle ON mid-session**: Calls `enable()` immediately
-- **Unsupported browsers**: Toggle hidden entirely, no messages
-- **Session-only**: State resets on page unmount (navigating away from the route)
+| File | Change |
+|---|---|
+| Migration (new) | Add column + `increment_stat` RPC with allow-list |
+| `src/pages/DailyFormation.tsx` | Increment `anchors_created` after insert |
+| `src/pages/Anchors.tsx` | Increment `anchor_recall_count` in `handleRecallDone` |
+| `src/pages/Activated.tsx` | Migrate to atomic RPC |
+| `src/pages/Index.tsx` | Show 3 metrics |
 
