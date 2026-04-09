@@ -66,7 +66,7 @@ const Index = () => {
       path: "/daily-formation",
     },
     {
-      title: "The Reorientation Engine",
+      title: "The Reorientation Flow",
       subtitle:
         "When fear or anxiety rises, use this quick method to interrupt the spiral and regain steadiness.",
       icon: Compass,
