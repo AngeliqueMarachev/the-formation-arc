@@ -31,31 +31,6 @@ const Index = () => {
     enabled: !!user,
   });
 
-  const { data: lastActivity } = useQuery({
-    queryKey: ["last_activity", user?.id],
-    queryFn: async () => {
-      const [{ data: anchors }, { data: templates }] = await Promise.all([
-        supabase
-          .from("anchor_entries")
-          .select("created_at")
-          .eq("user_id", user!.id)
-          .order("created_at", { ascending: false })
-          .limit(1),
-        supabase
-          .from("reorient_templates")
-          .select("created_at")
-          .eq("user_id", user!.id)
-          .order("created_at", { ascending: false })
-          .limit(1),
-      ]);
-
-      const dates = [anchors?.[0]?.created_at, templates?.[0]?.created_at].filter(Boolean) as string[];
-
-      if (dates.length === 0) return null;
-      return dates.sort().reverse()[0];
-    },
-    enabled: !!user,
-  });
 
   const cards = [
     {
