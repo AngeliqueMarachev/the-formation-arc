@@ -57,7 +57,7 @@ const Index = () => {
   const reorientations = stats?.reorient_return_count ?? 0;
   const anchorsCreated = stats?.anchors_created ?? 0;
   const recalls = (stats as any)?.anchor_recall_count ?? 0;
-  const lastActivityLabel = lastActivity ? formatDistanceToNow(new Date(lastActivity), { addSuffix: true }) : "—";
+  const lastActivityLabel = stats?.last_active_at ? formatDistanceToNow(new Date(stats.last_active_at), { addSuffix: true }) : "—";
 
   return (
     <div className="flex min-h-screen flex-col pb-20">
