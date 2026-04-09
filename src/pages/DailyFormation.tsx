@@ -123,7 +123,7 @@ const DailyFormation = () => {
 
     setSaving(true);
 
-    await supabase.from("anchor_entries").insert({
+    const { error } = await supabase.from("anchor_entries").insert({
       user_id: user.id,
       anchor_title: anchorTitle.trim() || null,
       scene_text: sceneText.trim(),
@@ -134,6 +134,10 @@ const DailyFormation = () => {
       communion_awareness: communionAwareness ? parseInt(communionAwareness) : null,
       where_is_god: whereIsGod.trim() || null,
     });
+
+    if (!error) {
+      await supabase.rpc('increment_stat', { stat_name: 'anchors_created', user_id_input: user.id });
+    }
 
     setSaving(false);
 
