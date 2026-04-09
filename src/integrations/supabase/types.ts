@@ -121,16 +121,19 @@ export type Database = {
       }
       usage_stats: {
         Row: {
+          anchor_recall_count: number
           anchors_created: number
           reorient_return_count: number
           user_id: string
         }
         Insert: {
+          anchor_recall_count?: number
           anchors_created?: number
           reorient_return_count?: number
           user_id: string
         }
         Update: {
+          anchor_recall_count?: number
           anchors_created?: number
           reorient_return_count?: number
           user_id?: string
@@ -142,7 +145,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      increment_stat: {
+        Args: { stat_name: string; user_id_input: string }
+        Returns: undefined
+      }
     }
     Enums: {
       [_ in never]: never
