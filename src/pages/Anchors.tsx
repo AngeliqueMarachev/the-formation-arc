@@ -66,6 +66,7 @@ const Anchors = () => {
       .from("anchor_entries")
       .update({ session_count: selected.session_count + 1 })
       .eq("id", selected.id);
+    await supabase.rpc('increment_stat', { stat_name: 'anchor_recall_count', user_id_input: user.id });
     wakeLock.disable();
     navigate("/");
   };

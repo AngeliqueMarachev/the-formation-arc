@@ -82,6 +82,7 @@ const Index = () => {
 
   const reorientations = stats?.reorient_return_count ?? 0;
   const anchorsCreated = stats?.anchors_created ?? 0;
+  const recalls = (stats as any)?.anchor_recall_count ?? 0;
   const lastActivityLabel = lastActivity ? formatDistanceToNow(new Date(lastActivity), { addSuffix: true }) : "—";
 
   return (
@@ -126,10 +127,11 @@ const Index = () => {
               </h3>
             </div>
             <div className="px-5 pb-4 pt-3">
-              <div className="flex justify-center gap-8">
+              <div className="flex justify-center gap-6">
                 {[
                   { value: String(reorientations), label: "Returns" },
                   { value: String(anchorsCreated), label: "Anchors" },
+                  { value: String(recalls), label: "Recalls" },
                 ].map((metric) => (
                   <div key={metric.label} className="flex flex-col items-center gap-1.5">
                     <div

@@ -236,16 +236,7 @@ const Activated = () => {
       updated_at: new Date().toISOString(),
     });
 
-    const { data: stats } = await supabase
-      .from("usage_stats")
-      .select("reorient_return_count")
-      .eq("user_id", user.id)
-      .single();
-
-    await supabase
-      .from("usage_stats")
-      .update({ reorient_return_count: (stats?.reorient_return_count ?? 0) + 1 })
-      .eq("user_id", user.id);
+    await supabase.rpc('increment_stat', { stat_name: 'reorient_return_count', user_id_input: user.id });
 
     setSaving(false);
     wakeLock.disable();
@@ -277,16 +268,7 @@ const Activated = () => {
     const handleUseComplete = async () => {
       if (!user) return;
       setSaving(true);
-      const { data: stats } = await supabase
-        .from("usage_stats")
-        .select("reorient_return_count")
-        .eq("user_id", user.id)
-        .single();
-
-      await supabase
-        .from("usage_stats")
-        .update({ reorient_return_count: (stats?.reorient_return_count ?? 0) + 1 })
-        .eq("user_id", user.id);
+      await supabase.rpc('increment_stat', { stat_name: 'reorient_return_count', user_id_input: user.id });
 
       setSaving(false);
       wakeLock.disable();
