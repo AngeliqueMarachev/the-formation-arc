@@ -136,7 +136,7 @@ const DailyFormation = () => {
     });
 
     if (!error) {
-      await supabase.rpc('increment_stat', { stat_name: 'anchors_created', user_id_input: user.id });
+      await supabase.rpc("increment_stat", { stat_name: "anchors_created", user_id_input: user.id });
     }
 
     setSaving(false);
@@ -179,6 +179,7 @@ const DailyFormation = () => {
           {hasLines ? (
             // EXISTING USERS
             <div className="space-y-4 leading-relaxed mb-10">
+              <h2 className="text-xs font-medium uppercase tracking-widest text-primary font-sans mb-2">PRAYER</h2>
               <p className="text-text-body text-base">
                 Your body responds to signals of safety before conscious thoughts fully form.
               </p>
@@ -590,7 +591,9 @@ const DailyFormation = () => {
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="pb-8 flex-1">
-                    <h2 className="font-medium text-primary font-sans text-base leading-8">DURING MOMENTS OF CONTRACTION</h2>
+                    <h2 className="font-medium text-primary font-sans text-base leading-8">
+                      DURING MOMENTS OF CONTRACTION
+                    </h2>
                     <p className="text-text-body leading-relaxed mt-2">
                       Use your phrase when your system begins to tighten, for example:
                     </p>
