@@ -433,22 +433,21 @@ const DailyFormation = () => {
                     </p>
                     <div className="mt-2">
                       <div className="relative flex items-center justify-between px-1 sm:px-4 w-full">
+                        {/* Background connector line — spans center of first circle to center of last */}
                         <div
-                          className="absolute top-1/2 -translate-y-1/2"
+                          className="absolute top-1/2 -translate-y-1/2 left-[calc(0.25rem+12px)] right-[calc(0.25rem+12px)] sm:left-[calc(1rem+16px)] sm:right-[calc(1rem+16px)]"
                           style={{
                             height: "2px",
                             backgroundColor: "rgba(248,247,242,0.25)",
-                            left: "calc(0.25rem + 12px)",
-                            right: "calc(0.25rem + 12px)",
                           }}
                         />
+                        {/* Active connector line */}
                         {communionAwareness && Number(communionAwareness) >= 1 && (
                           <div
-                            className="absolute top-1/2 -translate-y-1/2 transition-all duration-300"
+                            className="absolute top-1/2 -translate-y-1/2 transition-all duration-300 left-[calc(0.25rem+12px)] sm:left-[calc(1rem+16px)]"
                             style={{
                               height: "2px",
                               backgroundColor: "hsl(var(--primary) / 0.9)",
-                              left: "calc(0.25rem + 12px)",
                               width: `calc((100% - 0.5rem - 24px) * ${(Number(communionAwareness) - 1) / 9})`,
                             }}
                           />
@@ -461,7 +460,7 @@ const DailyFormation = () => {
                               key={value}
                               type="button"
                               onClick={() => setCommunionAwareness(String(value))}
-                              className="relative flex items-center justify-center w-6 h-10 sm:w-8 sm:h-8"
+                              className="relative z-10 flex items-center justify-center w-6 h-10 sm:w-8 sm:h-8"
                             >
                               <span
                                 className={`block rounded-full transition-all duration-200 ${
