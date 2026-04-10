@@ -96,8 +96,8 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             </p>
 
             <p>
-              As meaning expands, the brain begins to register signals of safety and connection, coupled by a release of
-              chemicals that help strengthen new emotional associations.
+              As meaning expands, the brain begins to register signals of safety and connection, coupled with a release of
+              chemicals that help to strengthen it.
             </p>
 
             <p className="text-primary">
