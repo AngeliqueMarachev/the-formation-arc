@@ -40,7 +40,7 @@ const CoreOrientation = () => {
             reshaped through repetition.
           </p>
           <p className="text-primary">The brain updates its predictions based on lived experience, real, remembered, or imagined.</p>
-          <p>When prediction changes, perception changes.</p>
+          <p>When expectation changes, perception changes.</p>
           <p className="mt-0">When perception changes, the body follows.</p>
           <p className="text-primary">
             This space helps you reshape your inner world through awareness, alignment, and steady reinforcement.
