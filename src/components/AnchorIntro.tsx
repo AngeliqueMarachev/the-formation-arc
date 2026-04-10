@@ -150,7 +150,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
               <li>a place you once enjoyed</li>
               <li>a quiet moment from childhood</li>
               <li>an activity that once felt natural</li>
-              <li>a time where your body felt more like itself</li>
+              <li>a time where you felt more connected</li>
             </ul>
           </div>
 
