@@ -136,7 +136,7 @@ const AnchorRecall = ({
           {/* Screen 1 — Category selection */}
           {!selectedScene && !selectedCategory && (
             <>
-              <h2 className="text-xs font-medium uppercase tracking-widest text-primary font-sans mb-2">ANCHOR</h2>
+              <h2 className="font-medium uppercase tracking-widest text-primary font-sans mb-2 text-base pt-[10px]">ANCHOR</h2>
               <p className="text-supporting leading-relaxed mt-3 text-destructive-foreground">
                 Bring to mind a moment that feels meaningful.
               </p>
