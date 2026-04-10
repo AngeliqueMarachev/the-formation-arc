@@ -42,7 +42,7 @@ const Index = () => {
     },
     {
       title: "The Reorientation Flow",
-      subtitle: "When fear or anxiety rises, use this quick method to interrupt the spiral and regain steadiness.",
+      subtitle: "When fear or anxiety rises, use this method to quickly interrupt the spiral and regain steadiness.",
       icon: Compass,
       path: "/activated",
     },
