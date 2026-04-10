@@ -173,7 +173,7 @@ const DailyFormation = () => {
             enabled={wakeLockToggle}
             onToggle={handleWakeLockToggle}
             isSupported={wakeLock.isSupported}
-            className="mt-4 pb-[25px]"
+            className="mt-4 pt-[15px] pb-[28px]"
           />
 
           {hasLines ? (
