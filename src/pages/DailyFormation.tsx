@@ -179,7 +179,7 @@ const DailyFormation = () => {
           {hasLines ? (
             // EXISTING USERS
             <div className="space-y-4 leading-relaxed mb-10">
-              <h2 className="text-xs font-medium uppercase tracking-widest text-primary font-sans mb-2">PRAYER</h2>
+              <h2 className="font-medium uppercase tracking-widest text-primary font-sans mb-2 text-base">PRAYER</h2>
               <p className="text-text-body text-base">
                 Your body responds to signals of safety before conscious thoughts fully form.
               </p>
@@ -196,7 +196,7 @@ const DailyFormation = () => {
                 <li>support</li>
               </ul>
 
-              <p className="text-primary">Prayer communicates support to your system.</p>
+              <p className="text-primary font-normal">Prayer communicates support to your system.</p>
 
               <p>It signals that you are not alone in this moment.</p>
 
@@ -212,8 +212,8 @@ const DailyFormation = () => {
                 You do not need the right feeling.
               </p>
 
-              <p className="text-primary font-medium">
-                You just need to pause and entrust God with the outcomes of this moment.
+              <p className="text-primary font-normal">
+                Pause, give thanks, and entrust God with the outcomes of this moment.
               </p>
 
               <div className="pt-6">
@@ -385,13 +385,13 @@ const DailyFormation = () => {
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="pb-8 flex-1">
-                    <<h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2">EXPANSION</h2>
+                    <h2 className="font-medium text-primary font-sans text-base leading-8">EXPANSION</h2>
                     <p className="text-supporting leading-relaxed mt-2">
                       Widen your experience. Is there something in this scene, maybe even something about yourself, that
                       you didn't notice before?
                     </p>
                     <Textarea
-                      placeholder="e.g. I thought I was a sad child, but I was full of life."
+                      placeholder="e.g. Creation celebrates me. "
                       value={meaningConclusion}
                       onChange={(e) => setMeaningConclusion(e.target.value)}
                       className="min-h-[80px] text-muted-foreground mt-2"
@@ -406,13 +406,13 @@ const DailyFormation = () => {
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="pb-8 flex-1">
-                    <<h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2">PRESENCE</h2>
+                    <h2 className="font-medium text-primary font-sans text-base leading-8">PRESENCE</h2>
                     <p className="text-supporting leading-relaxed mt-2">
                       Widen the meaning in this moment. If God was with you in this moment, what might that have been
                       like?
                     </p>
                     <Textarea
-                      placeholder="e.g. I saw Jesus thanking God for me!"
+                      placeholder="e.g. We were full of joy and I saw Jesus thanking God for me! e.g. I’m in my gran’s garden again. I can feel the cool of the garden on my skin: the damp, rich soil, the lush, green leaves and grass… My skin, my soul, my cheeks are literally absorbing all this goodness. And my heart feels deep and free. There’s no one to bother me here. No one taunting me. No one telling me I’m not enough. N I take a deep breath in. I’m at peace here."
                       value={widenedMeaning}
                       onChange={(e) => setWidenedMeaning(e.target.value)}
                       className="min-h-[80px] mt-2"
@@ -427,7 +427,7 @@ const DailyFormation = () => {
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="pb-8 flex-1">
-                    <<h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2">NEARNESS</h2>
+                    <h2 className="font-medium text-primary font-sans text-base leading-8">NEARNESS</h2>
                     <p className="text-supporting leading-relaxed mt-2">
                       How present did you feel God's nearness while recalling this scene?
                     </p>
@@ -492,7 +492,7 @@ const DailyFormation = () => {
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="flex-1">
-                    <<h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2">INTEGRATION</h2>
+                    <h2 className="font-medium text-primary font-sans text-base leading-8">INTEGRATION</h2>
                     <p className="text-supporting leading-relaxed mt-2">Stay with the feeling of this moment.</p>
                     <p className="text-supporting leading-relaxed mt-2">
                       Imagine this experience as a warmth, a color, or a gentle current.
