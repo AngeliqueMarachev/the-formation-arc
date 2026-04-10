@@ -63,7 +63,7 @@ const ReorientationRehearsal = () => {
     <div className="flex min-h-screen flex-col pb-20">
       <main className="flex flex-1 flex-col px-5 pt-10 pb-12 content-container">
         <h1 className="tracking-tight mb-1">Rehearse your Reorientation</h1>
-        <h2 className="text-xs font-medium uppercase tracking-widest text-primary font-sans mb-2">REORIENTATION</h2>
+        <h2 className="font-medium uppercase tracking-widest text-primary font-sans mb-2 text-base pt-[22px]">REORIENTATION</h2>
         <p className="text-text-body text-sm mt-4">
           Before the brain can update expectations, it must first register safety.
         </p>
