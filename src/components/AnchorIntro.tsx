@@ -38,7 +38,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             </p>
             <p>Over time, this expectation quietly shapes how the body perceives and responds to life.</p>
 
-            <p>​But these expectations are not permanent.​ The brain can update what it predicts.</p>
+            <p>​But these expectations are not permanent.​ The brain can update what it expects.</p>
 
             <p className="text-primary">
               The Daily Formation practice gently trains the nervous system to become familiar with steadiness again.
