@@ -196,7 +196,7 @@ const DailyFormation = () => {
                 <li>support</li>
               </ul>
 
-              <p className="text-primary">Prayer communicates support to your system.</p>
+              <p className="text-primary font-normal">Prayer communicates support to your system.</p>
 
               <p>It signals that you are not alone in this moment.</p>
 
@@ -212,8 +212,8 @@ const DailyFormation = () => {
                 You do not need the right feeling.
               </p>
 
-              <p className="text-primary font-medium">
-                You just need to pause and entrust God with the outcomes of this moment.
+              <p className="text-primary font-normal">
+                Pause, give thanks, and entrust God with the outcomes of this moment.
               </p>
 
               <div className="pt-6">
