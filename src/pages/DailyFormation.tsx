@@ -391,7 +391,7 @@ const DailyFormation = () => {
                       you didn't notice before?
                     </p>
                     <Textarea
-                      placeholder="e.g. I thought I was a sad child, but I was full of life."
+                      placeholder="e.g. Creation celebrates me. "
                       value={meaningConclusion}
                       onChange={(e) => setMeaningConclusion(e.target.value)}
                       className="min-h-[80px] text-muted-foreground mt-2"
