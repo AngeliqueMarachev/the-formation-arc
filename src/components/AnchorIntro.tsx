@@ -137,7 +137,8 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
           </p>
 
           <p className="text-primary">
-            This means we can train the nervous system on experiences, whether they are real, remembered or imagined.
+            This means we can train the nervous system on lived experiences regardless of whether
+            they are real, remembered or imagined.
           </p>
 
           <hr></hr>
