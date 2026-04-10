@@ -45,7 +45,7 @@ const CoreOrientation = () => {
           <p className="text-primary">
             This space helps you reshape your inner world through awareness, alignment, and steady support.
           </p>
-          <p>Over time, steadiness becomes more familiar than fear.</p>
+          <p>With repetition over time, steadiness becomes more familiar than fear.</p>
         </div>
 
         {/* Path cards */}
