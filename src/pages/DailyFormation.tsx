@@ -412,7 +412,7 @@ const DailyFormation = () => {
                       like?
                     </p>
                     <Textarea
-                      placeholder="e.g. I saw Jesus thanking God for me!"
+                      placeholder="e.g. We were full of joy and I saw Jesus thanking God for me! e.g. I’m in my gran’s garden again. I can feel the cool of the garden on my skin: the damp, rich soil, the lush, green leaves and grass… My skin, my soul, my cheeks are literally absorbing all this goodness. And my heart feels deep and free. There’s no one to bother me here. No one taunting me. No one telling me I’m not enough. N I take a deep breath in. I’m at peace here."
                       value={widenedMeaning}
                       onChange={(e) => setWidenedMeaning(e.target.value)}
                       className="min-h-[80px] mt-2"
