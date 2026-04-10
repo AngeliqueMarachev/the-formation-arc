@@ -179,7 +179,7 @@ const DailyFormation = () => {
           {hasLines ? (
             // EXISTING USERS
             <div className="space-y-4 leading-relaxed mb-10">
-              <h2 className="text-xs font-medium uppercase tracking-widest text-primary font-sans mb-2">PRAYER</h2>
+              <h2 className="font-medium uppercase tracking-widest text-primary font-sans mb-2 text-base">PRAYER</h2>
               <p className="text-text-body text-base">
                 Your body responds to signals of safety before conscious thoughts fully form.
               </p>
