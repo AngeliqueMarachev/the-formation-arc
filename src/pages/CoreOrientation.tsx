@@ -43,7 +43,7 @@ const CoreOrientation = () => {
           <p>When expectation changes, perception changes.</p>
           <p className="mt-0">When perception changes, the body follows.</p>
           <p className="text-primary">
-            This space helps you reshape your inner world through awareness, alignment, and steady reinforcement.
+            This space helps you reshape your inner world through awareness, alignment, and steady support.
           </p>
           <p>Over time, steadiness becomes more familiar than fear.</p>
         </div>
