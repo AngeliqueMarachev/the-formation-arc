@@ -27,8 +27,8 @@ const CoreOrientation = () => {
             what feels urgent, what feels uncertain.
           </p>
           <p>
-            Over time, repeated stress can train your system to expect danger, resulting in coping mechanisms and unseen
-            emotional walls that keep you stuck.
+            Over time, repeated stress can train your system to expect danger, resulting in coping mechanisms, unseen
+            emotional walls, and even physical symptoms that keep you stuck.
           </p>
           <p>
             This does not mean you are broken.
