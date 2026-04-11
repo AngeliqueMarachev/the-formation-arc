@@ -8,8 +8,11 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(({ classNa
   const innerRef = React.useRef<HTMLTextAreaElement | null>(null);
 
   const resize = (el: HTMLTextAreaElement) => {
+    const savedMinHeight = el.style.minHeight;
+    el.style.minHeight = "0px";
     el.style.height = "auto";
     el.style.height = el.scrollHeight + "px";
+    el.style.minHeight = savedMinHeight;
   };
 
   React.useEffect(() => {
