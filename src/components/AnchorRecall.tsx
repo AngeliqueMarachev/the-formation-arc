@@ -70,7 +70,7 @@ const SCENE_SUGGESTIONS: Record<string, string[]> = {
 
 const EMOTION_OPTIONS = [
   "Relaxed",
-  "Peaceful",
+  "Peaceful"
   "Safe",
   "Connected",
   "Loved",
@@ -233,6 +233,10 @@ const AnchorRecall = ({
               <p className="text-text-body text-base">
                 Immerse yourself in the scene, allowing your body to experience it.
               </p>
+ <p className="text-text-body text-base">
+                 There is no need to describe everything perfectly. Let what stands out come naturally.
+              </p>
+             
             </div>
 
             <div className="space-y-2">
