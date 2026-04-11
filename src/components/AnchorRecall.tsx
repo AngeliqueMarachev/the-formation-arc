@@ -127,7 +127,7 @@ const AnchorRecall = ({
         {/* Header */}
         <div>
           <h1 className="tracking-tight">
-            Recall a scene
+            Return to a moment
             {selectedScene && selectedScene !== "Something else" && (
               <span className="block font-normal text-text-supporting mt-1 text-primary text-2xl">{selectedScene}</span>
             )}
@@ -136,7 +136,9 @@ const AnchorRecall = ({
           {/* Screen 1 — Category selection */}
           {!selectedScene && !selectedCategory && (
             <>
-              <h2 className="font-medium uppercase tracking-widest text-primary font-sans mb-2 text-base pt-[10px]">ANCHOR</h2>
+              <h2 className="font-medium uppercase tracking-widest text-primary font-sans mb-2 text-base pt-[10px]">
+                ANCHOR
+              </h2>
               <p className="text-supporting leading-relaxed mt-3 text-destructive-foreground">
                 Bring to mind a moment that feels meaningful.
               </p>
@@ -217,9 +219,9 @@ const AnchorRecall = ({
           <>
             <div className="flex flex-col gap-2.5 leading-relaxed">
               <p className="text-text-body text-base">
-                Notice where you are.  Draw your attention to your age.  Discern if you are there alone or with someone else.
+                Notice where you are. Notice your age, and if you are there alone or with someone else.
               </p>
-              <p className="text-text-body text-base">Observe the light, and the temperature, the sounds around you. </p>
+              <p className="text-text-body text-base">Notice the light, and the temperature, the sounds around you. </p>
               <p className="text-text-body text-base">
                 You may see yourself from a birds eye view, or perhaps you are right there in the action.{" "}
               </p>
