@@ -231,6 +231,7 @@ const DailyFormation = () => {
               <div className="mt-6 space-y-6">
                 <div>
                   <p className="font-medium text-primary font-sans text-base uppercase tracking-wide">Pray</p>
+                  <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2">Pray</h2>
                   <p className="mt-1">Give God the outcomes of this process. Entrust what happens next.</p>
                 </div>
                 <div>
