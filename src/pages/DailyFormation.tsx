@@ -587,11 +587,11 @@ const DailyFormation = () => {
                     <p className="text-text-body leading-relaxed mt-2">
                       Attach it to one daily moment that already happens, for example:
                     </p>
-                    <div className="text-text-body text-sm space-y-1 pl-1 mt-2">
-                      <p>– Before you brush your teeth</p>
-                      <p>– When you close your laptop</p>
-                      <p>– After you get into bed</p>
-                    </div>
+                    <ul className="list-disc list-inside space-y-1 pl-2">
+                      <li>– Before you brush your teeth</li>
+                      <li>– When you close your laptop</li>
+                      <li>– After you get into bed</li>
+                    </ul>
                   </div>
                 </div>
 
