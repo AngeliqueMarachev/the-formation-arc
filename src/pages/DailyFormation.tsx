@@ -230,17 +230,17 @@ const DailyFormation = () => {
 
               <div className="mt-6 space-y-6">
                 <div>
-                  <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2 text-base">PRAY</h2>
+                  <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2">PRAY</h2>
                   <p className="mt-1">Give God the outcomes of this process. Entrust what happens next.</p>
                 </div>
                 <div>
-                  <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2 text-base">
+                  <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2">
                     REORIENT
                   </h2>
                   <p className="mt-1">Rehearse a short Reorientation to communicate safety to your nervous system.</p>
                 </div>
                 <div>
-                  <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2 text-base">
+                  <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2">
                     ANCHOR MEMORY
                   </h2>
                   <p className="mt-1">
@@ -376,8 +376,11 @@ const DailyFormation = () => {
             <div className="space-y-4">
               <h1 className="tracking-tight">Expand your conclusion</h1>
               <p className="text-supporting leading-relaxed">
-                Widen this moment gently. Notice what changes as you reflect, consider God's presence, and tangibly
-                experience the moment.
+                Let the meaning of this moment gently unfold.
+                <br />
+                Sometimes a memory holds more than we first noticed.
+                <br />
+                Allow new understanding to emerge naturally
               </p>
 
               {/* Vertical pathway container */}
@@ -391,8 +394,12 @@ const DailyFormation = () => {
                   <div className="pb-8 flex-1">
                     <h2 className="font-medium text-primary font-sans text-base leading-8">EXPANSION</h2>
                     <p className="text-supporting leading-relaxed mt-2">
-                      Widen your experience. Is there something in this scene, maybe even something about yourself, that
-                      you didn't notice before?
+                      You may notice new meaning emerging as you stay with the memory.
+                    </p>
+                    <p className="text-supporting leading-relaxed mt-2">
+                      What else becomes visible as you remain in this scene?
+                      <br />
+                      Is there something about this moment, or about yourself, that feels clearer now?
                     </p>
                     <Textarea
                       placeholder="e.g. Creation celebrates me. "
@@ -412,8 +419,9 @@ const DailyFormation = () => {
                   <div className="pb-8 flex-1">
                     <h2 className="font-medium text-primary font-sans text-base leading-8">PRESENCE</h2>
                     <p className="text-supporting leading-relaxed mt-2">
-                      Widen the meaning in this moment. If God was with you in this moment, what might that have been
-                      like?
+                      If God were present with you in this moment, how might that have felt?
+                      <br />
+                      What changes when the moment is experienced with support?
                     </p>
                     <Textarea
                       placeholder="e.g. We were full of joy and I saw Jesus thanking God for me! e.g. I’m in my gran’s garden again. I can feel the cool of the garden on my skin: the damp, rich soil, the lush, green leaves and grass… My skin, my soul, my cheeks are literally absorbing all this goodness. And my heart feels deep and free. There’s no one to bother me here. No one taunting me. No one telling me I’m not enough. N I take a deep breath in. I’m at peace here."
@@ -432,9 +440,7 @@ const DailyFormation = () => {
                   </div>
                   <div className="pb-8 flex-1">
                     <h2 className="font-medium text-primary font-sans text-base leading-8">NEARNESS</h2>
-                    <p className="text-supporting leading-relaxed mt-2">
-                      How present did you feel God's nearness while recalling this scene?
-                    </p>
+                    <p className="text-supporting leading-relaxed mt-2">How present did God feel in this moment?</p>
                     <div className="mt-2">
                       <div className="relative flex items-center justify-between px-1 sm:px-4 w-full">
                         {/* Background connector line — spans center of first circle to center of last */}
@@ -496,13 +502,12 @@ const DailyFormation = () => {
                   </div>
                   <div className="flex-1">
                     <h2 className="font-medium text-primary font-sans text-base leading-8">INTEGRATION</h2>
-                    <p className="text-supporting leading-relaxed mt-2">Stay with the feeling of this moment.</p>
+                    <p className="text-supporting leading-relaxed mt-2">Stay with the feeling this moment carries.</p>
                     <p className="text-supporting leading-relaxed mt-2">
                       Imagine this experience as a warmth, a color, or a gentle current.
                     </p>
                     <p className="text-supporting leading-relaxed mt-2">
-                      Let it slowly move through you, from the top of your head, through your chest, down into your legs
-                      and feet.
+                      Allow it to move slowly through you, from your head, through your chest, into your body.
                     </p>
                     <p className="text-supporting leading-relaxed mt-2">
                       Allow your body to recognize this experience.
