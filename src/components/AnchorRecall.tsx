@@ -278,8 +278,9 @@ const AnchorRecall = ({
               <div className="relative flex gap-4">
                 <div className="flex flex-col items-center">
                   <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
+                  <div className="w-px flex-1 bg-border/40 my-1" />
                 </div>
-                <div className="flex-1">
+                <div className="pb-8 flex-1">
                   <h2 className="text-sm font-medium uppercase tracking-widest text-primary font-sans mb-2">EMBODIMENT</h2>
                   <p className="text-text-body text-base leading-relaxed">Allow the scene to become tangible.</p>
                   <p className="text-text-body text-base leading-relaxed">Let your body experience the moment as if it is happening now.</p>
