@@ -236,7 +236,7 @@ const Activated = () => {
       updated_at: new Date().toISOString(),
     });
 
-    await supabase.rpc('increment_stat', { stat_name: 'reorient_return_count', user_id_input: user.id });
+    await supabase.rpc("increment_stat", { stat_name: "reorient_return_count", user_id_input: user.id });
 
     setSaving(false);
     wakeLock.disable();
@@ -268,7 +268,7 @@ const Activated = () => {
     const handleUseComplete = async () => {
       if (!user) return;
       setSaving(true);
-      await supabase.rpc('increment_stat', { stat_name: 'reorient_return_count', user_id_input: user.id });
+      await supabase.rpc("increment_stat", { stat_name: "reorient_return_count", user_id_input: user.id });
 
       setSaving(false);
       wakeLock.disable();
@@ -288,11 +288,6 @@ const Activated = () => {
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col px-5 pt-10 pb-12 content-container">
           <h1 className="tracking-tight mb-2">Your Reorientation</h1>
-          <p className="text-supporting leading-relaxed mb-6">
-            Read each line slowly.
-            <br />
-            Let each statement interrupt the fear loop and reorient you to steadiness.
-          </p>
 
           <WakeLockToggle
             enabled={wakeLockToggle}
@@ -300,6 +295,9 @@ const Activated = () => {
             isSupported={wakeLock.isSupported}
             className="mb-6 pb-[20px]"
           />
+
+          <p className="text-supporting leading-relaxed mb-6">Read each line slowly.</p>
+          <p>Let each statement interrupt the fear loop and reorient you to steadiness.</p>
 
           <div className="relative mb-12">
             {lines.map((line, i) => {
@@ -487,10 +485,14 @@ const Activated = () => {
             isSupported={wakeLock.isSupported}
             className="mb-6 pb-[20px]"
           />
-          <Button className="mt-10 w-full" size="lg" onClick={() => {
-            if (wakeLockToggle) wakeLock.enable();
-            setScreen("phase");
-          }}>
+          <Button
+            className="mt-10 w-full"
+            size="lg"
+            onClick={() => {
+              if (wakeLockToggle) wakeLock.enable();
+              setScreen("phase");
+            }}
+          >
             Begin Reorientation
           </Button>
         </main>
