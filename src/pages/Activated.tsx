@@ -296,8 +296,10 @@ const Activated = () => {
             className="mb-6 pb-[20px]"
           />
 
-          <p className="text-supporting leading-relaxed mb-6">Read each line slowly.</p>
-          <p>Let each statement interrupt the fear loop and reorient you to steadiness.</p>
+          <p className="text-supporting leading-relaxed mb-6">
+            Read each line slowly.
+            <br /> Let each statement interrupt the fear loop and reorient you to steadiness.
+          </p>
 
           <div className="relative mb-12">
             {lines.map((line, i) => {
