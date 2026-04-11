@@ -631,10 +631,12 @@ const DailyFormation = () => {
                     <p className="text-text-body leading-relaxed mt-2">
                       Use your phrase when familiar internal narratives begin to surface, for example:
                     </p>
-                    <div className="text-text-body text-sm space-y-1 pl-1 mt-2">
-                      <p>– I am alone.</p>
-                      <p>– I am not enough.</p>
-                      <p>– This will end badly.</p>
+                    <<div className="text-text-body text-medium space-y-1 pl-1 mt-2">
+                      <ul className="list-disc list-inside space-y-1 pl-2">
+                      <li>I am alone</li>
+                      <li>I am not enough</li>
+                      <li>This will end badly</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
