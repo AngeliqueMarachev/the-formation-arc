@@ -70,7 +70,7 @@ const SCENE_SUGGESTIONS: Record<string, string[]> = {
 
 const EMOTION_OPTIONS = [
   "Relaxed",
-  "Peaceful"
+  "Peaceful",
   "Safe",
   "Connected",
   "Loved",
