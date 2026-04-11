@@ -610,10 +610,12 @@ const DailyFormation = () => {
                     <p className="text-text-body leading-relaxed mt-2">
                       Use your phrase when your system begins to tighten, for example:
                     </p>
-                    <div className="text-text-body text-sm space-y-1 pl-1 mt-2">
-                      <p>– Tension</p>
-                      <p>– Shame</p>
-                      <p>– Fear</p>
+                    <div className="text-text-body text-medium space-y-1 pl-1 mt-2">
+                      <ul className="list-disc list-inside space-y-1 pl-2">
+                        <li>Tension</li>
+                        <li>Shame</li>
+                        <li>Fear</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
