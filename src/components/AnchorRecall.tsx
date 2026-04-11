@@ -218,25 +218,73 @@ const AnchorRecall = ({
         {/* Visualization guidance + writing field */}
         {selectedScene && (
           <>
-            <div className="flex flex-col gap-2.5 leading-relaxed">
-              <p className="text-text-body text-base">
-                Notice where you are. Notice your age, and if you are there alone or with someone else.
-              </p>
-              <p className="text-text-body text-base">Notice the light, and the temperature, the sounds around you. </p>
-              <p className="text-text-body text-base">
-                You may see yourself from a birds eye view, or perhaps you are right there in the action.{" "}
-              </p>
-              <p className="text-text-body text-base">
-                Take note of what you're doing, thinking, and feeling in this moment.
-              </p>
+            <p className="text-text-body text-base leading-relaxed">
+              Let the scene come into focus gently. Use your senses to allow the moment to become vivid.
+            </p>
 
-              <p className="text-text-body text-base">
-                Immerse yourself in the scene, allowing your body to experience it.
-              </p>
- <p className="text-text-body text-base">
-                 There is no need to describe everything perfectly. Let what stands out come naturally.
-              </p>
-             
+            {/* Vertical step structure */}
+            <div className="relative">
+              {/* OBSERVATION */}
+              <div className="relative flex gap-4">
+                <div className="flex flex-col items-center">
+                  <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
+                  <div className="w-px flex-1 bg-border/40 my-1" />
+                </div>
+                <div className="pb-8 flex-1">
+                  <h2 className="text-sm font-medium uppercase tracking-widest text-primary font-sans mb-2">OBSERVATION</h2>
+                  <p className="text-text-body text-base leading-relaxed">Notice where you are.</p>
+                  <p className="text-text-body text-base leading-relaxed">Notice your age in this moment.</p>
+                  <p className="text-text-body text-base leading-relaxed">Notice whether you are alone or with someone else.</p>
+                </div>
+              </div>
+
+              {/* ENVIRONMENT */}
+              <div className="relative flex gap-4">
+                <div className="flex flex-col items-center">
+                  <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
+                  <div className="w-px flex-1 bg-border/40 my-1" />
+                </div>
+                <div className="pb-8 flex-1">
+                  <h2 className="text-sm font-medium uppercase tracking-widest text-primary font-sans mb-2">ENVIRONMENT</h2>
+                  <p className="text-text-body text-base leading-relaxed">Observe the light, the temperature, and the sounds around you.</p>
+                </div>
+              </div>
+
+              {/* PERSPECTIVE */}
+              <div className="relative flex gap-4">
+                <div className="flex flex-col items-center">
+                  <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
+                  <div className="w-px flex-1 bg-border/40 my-1" />
+                </div>
+                <div className="pb-8 flex-1">
+                  <h2 className="text-sm font-medium uppercase tracking-widest text-primary font-sans mb-2">PERSPECTIVE</h2>
+                  <p className="text-text-body text-base leading-relaxed">You may see the moment from a bird's-eye view, or you may find yourself inside the scene.</p>
+                </div>
+              </div>
+
+              {/* INNER EXPERIENCE */}
+              <div className="relative flex gap-4">
+                <div className="flex flex-col items-center">
+                  <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
+                  <div className="w-px flex-1 bg-border/40 my-1" />
+                </div>
+                <div className="pb-8 flex-1">
+                  <h2 className="text-sm font-medium uppercase tracking-widest text-primary font-sans mb-2">INNER EXPERIENCE</h2>
+                  <p className="text-text-body text-base leading-relaxed">Notice what you are doing, thinking, and feeling.</p>
+                </div>
+              </div>
+
+              {/* EMBODIMENT */}
+              <div className="relative flex gap-4">
+                <div className="flex flex-col items-center">
+                  <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
+                </div>
+                <div className="flex-1">
+                  <h2 className="text-sm font-medium uppercase tracking-widest text-primary font-sans mb-2">EMBODIMENT</h2>
+                  <p className="text-text-body text-base leading-relaxed">Allow the scene to become tangible.</p>
+                  <p className="text-text-body text-base leading-relaxed">Let your body experience the moment as if it is happening now.</p>
+                </div>
+              </div>
             </div>
 
             <div className="space-y-2">
