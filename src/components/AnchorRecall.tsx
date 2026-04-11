@@ -253,7 +253,7 @@ const AnchorRecall = ({
               <label className="text-sm font-medium text-text-heading text-primary">
                 Give this memory a short title
               </label>
-              <p className="text-xs text-text-supporting">A few words that help you recognize this moment later.</p>
+              <p className="text-xs text-text-supporting">A few words to help you recognize this moment later</p>
               <Input
                 placeholder="He lays me down in green pastures"
                 value={anchorTitle}
