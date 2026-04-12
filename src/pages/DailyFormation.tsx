@@ -507,7 +507,7 @@ const DailyFormation = () => {
                       <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-[28px] pointer-events-none">
                         {/* Outer halo */}
                         <div
-                          className="absolute left-1/2 -translate-x-1/2 w-[24px] h-[24px] rounded-full motion-safe:animate-[integrationGlow_5.5s_ease-in-out_infinite]"
+                          className="absolute left-1/2 -translate-x-1/2 w-[24px] h-[24px] rounded-full motion-safe:animate-[integrationGlow_12s_ease-in-out_infinite]"
                           style={{
                             background: "hsl(var(--primary) / 0.30)",
                             filter: "blur(10px)",
@@ -517,7 +517,7 @@ const DailyFormation = () => {
 
                         {/* Mid glow */}
                         <div
-                          className="absolute left-1/2 -translate-x-1/2 w-[14px] h-[14px] rounded-full motion-safe:animate-[integrationGlow_5.5s_ease-in-out_infinite]"
+                          className="absolute left-1/2 -translate-x-1/2 w-[14px] h-[14px] rounded-full motion-safe:animate-[integrationGlow_12s_ease-in-out_infinite]"
                           style={{
                             background: "hsl(var(--primary) / 0.65)",
                             filter: "blur(2px)",
@@ -527,7 +527,7 @@ const DailyFormation = () => {
 
                         {/* Bright core */}
                         <div
-                          className="absolute left-1/2 -translate-x-1/2 w-[8px] h-[8px] rounded-full motion-safe:animate-[integrationGlow_5.5s_ease-in-out_infinite]"
+                          className="absolute left-1/2 -translate-x-1/2 w-[8px] h-[8px] rounded-full motion-safe:animate-[integrationGlow_12s_ease-in-out_infinite]"
                           style={{
                             background: "hsl(var(--primary))",
                             boxShadow: "0 0 10px 2px hsl(var(--primary) / 0.55)",
