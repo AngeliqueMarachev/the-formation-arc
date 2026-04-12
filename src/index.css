@@ -194,3 +194,20 @@
     transition: background-color 5000s ease-in-out 0s;
   }
 }
+
+@keyframes integrationGlow {
+  0% {
+    top: -10%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
