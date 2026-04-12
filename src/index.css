@@ -197,7 +197,7 @@
 
 @keyframes integrationGlow {
   0% {
-    top: -15%;
+    top: -20%;
     opacity: 0;
   }
   10% {
@@ -207,7 +207,7 @@
     opacity: 1;
   }
   100% {
-    top: 115%;
+    top: 120%;
     opacity: 0;
   }
 }
