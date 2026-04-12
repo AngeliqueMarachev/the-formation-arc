@@ -520,8 +520,8 @@ const DailyFormation = () => {
                           className="absolute left-1/2 -translate-x-1/2 w-[14px] h-[14px] rounded-full motion-safe:animate-[integrationGlow_12s_ease-in-out_infinite]"
                           style={{
                             background: "hsl(var(--primary) / 0.65)",
-                            filter: "blur(2px)",
-                            top: "-24px",
+                            filter: "blur(3px)",
+                            top: "-32px",
                           }}
                         />
 
@@ -529,8 +529,8 @@ const DailyFormation = () => {
                         <div
                           className="absolute left-1/2 -translate-x-1/2 w-[8px] h-[8px] rounded-full motion-safe:animate-[integrationGlow_12s_ease-in-out_infinite]"
                           style={{
-                            background: "hsl(var(--primary))",
-                            boxShadow: "0 0 10px 2px hsl(var(--primary) / 0.55)",
+                            background: "hsl(var(--primary) / 0.9)",
+                            boxShadow: "0 0 12px 3px hsl(var(--primary) / 0.55)",
                             top: "-24px",
                           }}
                         />
