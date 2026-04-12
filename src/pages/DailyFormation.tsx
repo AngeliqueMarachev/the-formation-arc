@@ -499,11 +499,11 @@ const DailyFormation = () => {
                   <div className="flex flex-col items-center">
                     <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
                     <div className="relative w-px flex-1 my-1 overflow-hidden">
-                      <div className="absolute inset-0 bg-border/40" />
+                      <div className="absolute inset-0 bg-border/35" />
                       <div
-                        className="absolute inset-x-0 h-8 motion-safe:animate-[integrationGlow_5s_ease-in-out_infinite]"
+                        className="absolute inset-x-0 h-[12px] blur-[10px] motion-safe:animate-[integrationGlow_5.5s_ease-in-out_infinite]"
                         style={{
-                          background: "linear-gradient(to bottom, transparent, hsl(var(--primary) / 0.25), transparent)",
+                          background: "linear-gradient(to bottom, transparent, hsl(var(--primary) / 0.7), transparent)",
                           top: "0%",
                         }}
                       />
