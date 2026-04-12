@@ -509,9 +509,9 @@ const DailyFormation = () => {
                         <div
                           className="absolute left-1/2 -translate-x-1/2 w-[24px] h-[24px] rounded-full motion-safe:animate-[integrationGlow_5.5s_ease-in-out_infinite]"
                           style={{
-                            background: "hsl(var(--primary) / 0.32)",
-                            filter: "blur(102px)",
-                            top: "-32px",
+                            background: "hsl(var(--primary) / 0.30)",
+                            filter: "blur(10px)",
+                            top: "-24px",
                           }}
                         />
 
@@ -519,24 +519,25 @@ const DailyFormation = () => {
                         <div
                           className="absolute left-1/2 -translate-x-1/2 w-[14px] h-[14px] rounded-full motion-safe:animate-[integrationGlow_5.5s_ease-in-out_infinite]"
                           style={{
-                            background: "hsl(var(--primary) / 0.72)",
-                            filter: "blur(3px)",
-                            top: "-32px",
+                            background: "hsl(var(--primary) / 0.65)",
+                            filter: "blur(2px)",
+                            top: "-24px",
                           }}
                         />
 
                         {/* Bright core */}
                         <div
-                          className="absolute left-1/2 -translate-x-1/2 w-[10px] h-[10px] rounded-full motion-safe:animate-[integrationGlow_5.5s_ease-in-out_infinite]"
+                          className="absolute left-1/2 -translate-x-1/2 w-[8px] h-[8px] rounded-full motion-safe:animate-[integrationGlow_5.5s_ease-in-out_infinite]"
                           style={{
-                            background: "hsl(var(--primary) / 0.9)",
-                            boxShadow: "0 0 8px 2px hsl(var(--primary) / 0.45)",
-                            top: "-32px",
+                            background: "hsl(var(--primary))",
+                            boxShadow: "0 0 10px 2px hsl(var(--primary) / 0.55)",
+                            top: "-24px",
                           }}
                         />
                       </div>
                     </div>
                   </div>
+
                   <div className="flex-1">
                     <h2 className="font-medium text-primary font-sans text-base leading-8">INTEGRATION</h2>
                     <p className="text-supporting leading-relaxed mt-2">Stay with the feeling this moment carries.</p>
