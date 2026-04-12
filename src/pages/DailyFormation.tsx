@@ -501,22 +501,23 @@ const DailyFormation = () => {
                     <div className="relative w-px flex-1 my-1">
                       {/* Static base line */}
                       <div className="absolute inset-0 bg-border/35" />
-                      {/* Halo: soft outer glow */}
+                      {/* Animated glowing orb - centered on the line, with soft halo */}
                       <div
-                        className="absolute left-1/2 -translate-x-1/2 w-[30px] h-[30px] rounded-full motion-safe:animate-[integrationGlow_5.5s_ease-in-out_infinite]"
+                        className="absolute left-1/2 -translate-x-1/2 w-[10px] h-[10px] rounded-full motion-safe:animate-[integrationGlow_5.5s_linear_infinite]"
                         style={{
-                          background: "radial-gradient(circle, hsl(var(--primary) / 0.6) 0%, hsl(var(--secondary) / 0.25) 45%, transparent 75%)",
-                          filter: "blur(16px)",
-                          top: "0%",
+                          background: "hsl(var(--primary))",
+                          boxShadow: "0 0 22px 6px hsl(var(--primary) / 0.5)",
+                          filter: "blur(0px)",
+                          top: "-20%",
                         }}
                       />
-                      {/* Core: bright center */}
+                      {/* Soft outer glow layer */}
                       <div
-                        className="absolute left-1/2 -translate-x-1/2 w-[4px] h-[10px] rounded-full motion-safe:animate-[integrationGlow_5.5s_ease-in-out_infinite]"
+                        className="absolute left-1/2 -translate-x-1/2 w-[22px] h-[22px] rounded-full motion-safe:animate-[integrationGlow_5.5s_linear_infinite]"
                         style={{
-                          background: "radial-gradient(circle, hsl(var(--primary) / 0.95) 0%, hsl(var(--primary) / 0.5) 60%, transparent 100%)",
-                          filter: "blur(1px)",
-                          top: "0%",
+                          background: "hsl(var(--primary) / 0.45)",
+                          filter: "blur(12px)",
+                          top: "-20%",
                         }}
                       />
                     </div>
