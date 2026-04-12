@@ -496,14 +496,17 @@ const DailyFormation = () => {
 
                 {/* Section 4: INTEGRATION */}
                 <div className="relative flex gap-4">
-                  <div className="flex flex-col items-center">
+                  <div className="flex flex-col items-center relative">
                     <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
-                    <div className="relative w-px flex-1 my-1 overflow-hidden">
+                    <div className="relative w-px flex-1 my-1">
+                      {/* Layer 1: thin static line */}
                       <div className="absolute inset-0 bg-border/35" />
+                      {/* Layer 2: wide animated glow, not clipped */}
                       <div
-                        className="absolute inset-x-0 h-[12px] blur-[10px] motion-safe:animate-[integrationGlow_5.5s_ease-in-out_infinite]"
+                        className="absolute left-1/2 -translate-x-1/2 w-[24px] h-[24px] rounded-full motion-safe:animate-[integrationGlow_5.5s_ease-in-out_infinite]"
                         style={{
-                          background: "linear-gradient(to bottom, transparent, hsl(var(--primary) / 0.7), transparent)",
+                          background: "radial-gradient(circle, hsl(var(--primary) / 0.9) 0%, hsl(var(--primary) / 0.3) 40%, transparent 70%)",
+                          filter: "blur(14px)",
                           top: "0%",
                         }}
                       />
