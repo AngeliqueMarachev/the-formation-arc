@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -59,14 +59,14 @@
   }
 
   html {
-    background: #082e36;
+    background: #082E36;
   }
 
   body {
-    font-family: "Nunito", sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-weight: 400;
     line-height: 1.6;
-    background: linear-gradient(135deg, #0c4651 0%, #082e36 100%);
+    background: linear-gradient(135deg, #0C4651 0%, #082E36 100%);
     position: relative;
     color: hsl(var(--text-body));
     min-height: 100vh;
@@ -75,13 +75,14 @@
   }
 
   body::before {
-    content: "";
+    content: '';
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' seed='2' /%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+    background-image: 
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' seed='2' /%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
     pointer-events: none;
     z-index: 0;
   }
@@ -91,13 +92,8 @@
     z-index: 1;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Fraunces", serif;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fraunces', serif;
     font-weight: 600;
     letter-spacing: -0.01em;
     color: hsl(var(--text-heading));
@@ -119,7 +115,7 @@
   }
 
   p {
-    font-family: "Nunito", sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.6;
@@ -201,17 +197,17 @@
 
 @keyframes integrationGlow {
   0% {
-    transform: translateY(0);
+    top: -20%;
     opacity: 0;
   }
-  8% {
+  10% {
     opacity: 1;
   }
-  85% {
+  90% {
     opacity: 1;
   }
   100% {
-    transform: translateY(calc(100% + 24px));
+    top: 120%;
     opacity: 0;
   }
 }

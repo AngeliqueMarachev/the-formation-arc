@@ -498,43 +498,28 @@ const DailyFormation = () => {
                 <div className="relative flex gap-4">
                   <div className="flex flex-col items-center relative">
                     <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
-
-                    <div className="relative flex-1 my-1 w-[28px]">
+                    <div className="relative w-px flex-1 my-1">
                       {/* Static base line */}
-                      <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-px bg-border/35" />
-
-                      {/* Glow wrapper */}
-                      <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-[28px] pointer-events-none">
-                        {/* Outer halo */}
-                        <div
-                          className="absolute left-1/2 -translate-x-1/2 w-[24px] h-[24px] rounded-full motion-safe:animate-[integrationGlow_5.5s_ease-in-out_infinite]"
-                          style={{
-                            background: "hsl(var(--primary) / 0.30)",
-                            filter: "blur(10px)",
-                            top: "-24px",
-                          }}
-                        />
-
-                        {/* Mid glow */}
-                        <div
-                          className="absolute left-1/2 -translate-x-1/2 w-[14px] h-[14px] rounded-full motion-safe:animate-[integrationGlow_5.5s_ease-in-out_infinite]"
-                          style={{
-                            background: "hsl(var(--primary) / 0.65)",
-                            filter: "blur(2px)",
-                            top: "-24px",
-                          }}
-                        />
-
-                        {/* Bright core */}
-                        <div
-                          className="absolute left-1/2 -translate-x-1/2 w-[8px] h-[8px] rounded-full motion-safe:animate-[integrationGlow_5.5s_ease-in-out_infinite]"
-                          style={{
-                            background: "hsl(var(--primary))",
-                            boxShadow: "0 0 10px 2px hsl(var(--primary) / 0.55)",
-                            top: "-24px",
-                          }}
-                        />
-                      </div>
+                      <div className="absolute inset-0 bg-border/35" />
+                      {/* Animated glowing orb - centered on the line, with soft halo */}
+                      <div
+                        className="absolute left-1/2 -translate-x-1/2 w-[10px] h-[10px] rounded-full motion-safe:animate-[integrationGlow_5.5s_linear_infinite]"
+                        style={{
+                          background: "hsl(var(--primary))",
+                          boxShadow: "0 0 22px 6px hsl(var(--primary) / 0.5)",
+                          filter: "blur(0px)",
+                          top: "-20%",
+                        }}
+                      />
+                      {/* Soft outer glow layer */}
+                      <div
+                        className="absolute left-1/2 -translate-x-1/2 w-[22px] h-[22px] rounded-full motion-safe:animate-[integrationGlow_5.5s_linear_infinite]"
+                        style={{
+                          background: "hsl(var(--primary) / 0.45)",
+                          filter: "blur(12px)",
+                          top: "-20%",
+                        }}
+                      />
                     </div>
                   </div>
                   <div className="flex-1">
