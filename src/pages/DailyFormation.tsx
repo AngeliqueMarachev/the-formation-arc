@@ -498,7 +498,16 @@ const DailyFormation = () => {
                 <div className="relative flex gap-4">
                   <div className="flex flex-col items-center">
                     <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
-                    <div className="w-px flex-1 bg-border/40 my-1" />
+                    <div className="relative w-px flex-1 my-1 overflow-hidden">
+                      <div className="absolute inset-0 bg-border/40" />
+                      <div
+                        className="absolute inset-x-0 h-8 motion-safe:animate-[integrationGlow_5s_ease-in-out_infinite]"
+                        style={{
+                          background: "linear-gradient(to bottom, transparent, hsl(var(--primary) / 0.25), transparent)",
+                          top: "0%",
+                        }}
+                      />
+                    </div>
                   </div>
                   <div className="flex-1">
                     <h2 className="font-medium text-primary font-sans text-base leading-8">INTEGRATION</h2>
@@ -516,6 +525,7 @@ const DailyFormation = () => {
                   </div>
                 </div>
               </div>
+              <div className="h-8" />
             </div>
           )}
 
