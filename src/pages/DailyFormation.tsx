@@ -499,14 +499,23 @@ const DailyFormation = () => {
                   <div className="flex flex-col items-center relative">
                     <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
                     <div className="relative w-px flex-1 my-1">
-                      {/* Layer 1: thin static line */}
+                      {/* Static base line */}
                       <div className="absolute inset-0 bg-border/35" />
-                      {/* Layer 2: wide animated glow, not clipped */}
+                      {/* Halo: soft outer glow */}
                       <div
-                        className="absolute left-1/2 -translate-x-1/2 w-[24px] h-[24px] rounded-full motion-safe:animate-[integrationGlow_5.5s_ease-in-out_infinite]"
+                        className="absolute left-1/2 -translate-x-1/2 w-[30px] h-[30px] rounded-full motion-safe:animate-[integrationGlow_5.5s_ease-in-out_infinite]"
                         style={{
-                          background: "radial-gradient(circle, hsl(var(--primary) / 0.9) 0%, hsl(var(--primary) / 0.3) 40%, transparent 70%)",
-                          filter: "blur(14px)",
+                          background: "radial-gradient(circle, hsl(var(--primary) / 0.6) 0%, hsl(var(--secondary) / 0.25) 45%, transparent 75%)",
+                          filter: "blur(16px)",
+                          top: "0%",
+                        }}
+                      />
+                      {/* Core: bright center */}
+                      <div
+                        className="absolute left-1/2 -translate-x-1/2 w-[4px] h-[10px] rounded-full motion-safe:animate-[integrationGlow_5.5s_ease-in-out_infinite]"
+                        style={{
+                          background: "radial-gradient(circle, hsl(var(--primary) / 0.95) 0%, hsl(var(--primary) / 0.5) 60%, transparent 100%)",
+                          filter: "blur(1px)",
                           top: "0%",
                         }}
                       />
