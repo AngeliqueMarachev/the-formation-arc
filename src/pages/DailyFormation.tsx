@@ -503,18 +503,35 @@ const DailyFormation = () => {
                       {/* Static base line */}
                       <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-px bg-border/35" />
 
-                      {/* Glow track */}
-                      <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-[20px] pointer-events-none">
-                        {/* Visible connector line */}
-                        <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-[3px] rounded-full bg-primary/35 shadow-[0_0_8px_hsl(var(--primary)/0.35)]" />
-
-                        {/* Moving light */}
+                      {/* Glow wrapper */}
+                      <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-[28px] pointer-events-none">
+                        {/* Outer halo */}
                         <div
-                          className="absolute left-1/2 -translate-x-1/2 w-[16px] h-[16px] rounded-full"
+                          className="absolute left-1/2 -translate-x-1/2 w-[24px] h-[24px] rounded-full motion-safe:animate-[integrationGlow_12s_ease-in-out_infinite]"
                           style={{
-                            background: "white",
-                            boxShadow: "0 0 18px 6px hsl(var(--primary) / 0.45)",
-                            animation: "integrationScanner 12s ease-in-out infinite",
+                            background: "hsl(var(--primary) / 0.30)",
+                            filter: "blur(10px)",
+                            top: "-24px",
+                          }}
+                        />
+
+                        {/* Mid glow */}
+                        <div
+                          className="absolute left-1/2 -translate-x-1/2 w-[14px] h-[14px] rounded-full motion-safe:animate-[integrationGlow_12s_ease-in-out_infinite]"
+                          style={{
+                            background: "hsl(var(--primary) / 0.65)",
+                            filter: "blur(3px)",
+                            top: "-32px",
+                          }}
+                        />
+
+                        {/* Bright core */}
+                        <div
+                          className="absolute left-1/2 -translate-x-1/2 w-[8px] h-[8px] rounded-full motion-safe:animate-[integrationGlow_12s_ease-in-out_infinite]"
+                          style={{
+                            background: "hsl(var(--primary) / 0.9)",
+                            boxShadow: "0 0 12px 3px hsl(var(--primary) / 0.55)",
+                            top: "-24px",
                           }}
                         />
                       </div>
