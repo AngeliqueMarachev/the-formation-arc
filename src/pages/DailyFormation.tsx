@@ -224,7 +224,7 @@ const DailyFormation = () => {
           ) : (
             // NEW USERS
             <div className="leading-relaxed mb-10">
-              <p className="text-primary text-base">Stabilise before you build. Settle your system before training.</p>
+              <p className="text-primary text-base pt-[10px]">Stabilise before you build. Settle your system before training.</p>
               <p className="text-text-body text-base mt-4">Daily Formation follows a simple rhythm:</p>
 
               <div className="mt-6 space-y-6">
