@@ -385,13 +385,13 @@ const DailyFormation = () => {
               {/* Vertical pathway container */}
               <div className="relative">
                 {/* Section 1: EXPANSION */}
-                <div className="relative flex gap-4">
+                <div className="relative flex gap-3">
                   <div className="flex flex-col items-center">
                     <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="pb-8 flex-1">
-                    <h2 className="font-medium text-primary font-sans text-base leading-8">EXPANSION</h2>
+                    <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base leading-8">EXPANSION</h2>
                     <p className="text-supporting leading-relaxed mt-2">
                       You may notice new meaning emerging as you stay with the memory.
                     </p>
@@ -410,13 +410,13 @@ const DailyFormation = () => {
                 </div>
 
                 {/* Section 2: PRESENCE */}
-                <div className="relative flex gap-4">
+                <div className="relative flex gap-3">
                   <div className="flex flex-col items-center">
                     <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="pb-8 flex-1">
-                    <h2 className="font-medium text-primary font-sans text-base leading-8">PRESENCE</h2>
+                    <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base leading-8">PRESENCE</h2>
                     <p className="text-supporting leading-relaxed mt-2">
                       If God were present with you in this moment, how might that have felt?
                       <br />
@@ -432,13 +432,13 @@ const DailyFormation = () => {
                 </div>
 
                 {/* Section 3: NEARNESS */}
-                <div className="relative flex gap-4">
+                <div className="relative flex gap-3">
                   <div className="flex flex-col items-center">
                     <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="pb-8 flex-1">
-                    <h2 className="font-medium text-primary font-sans text-base leading-8">NEARNESS</h2>
+                    <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base leading-8">NEARNESS</h2>
                     <p className="text-supporting leading-relaxed mt-2">How present did God feel in this moment?</p>
                     <div className="mt-2">
                       <div className="relative flex items-center justify-between px-1 sm:px-4 w-full">
@@ -494,14 +494,13 @@ const DailyFormation = () => {
                 </div>
 
                 {/* Section 4: INTEGRATION */}
-                <div className="relative flex gap-4">
-                  <div className="flex flex-col items-center relative">
+                <div className="relative flex gap-3">
+                  <div className="flex flex-col items-center">
                     <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
                     <div className="w-px flex-1 bg-border/35 my-1" />
                   </div>
-
                   <div className="flex-1">
-                    <h2 className="font-medium text-primary font-sans text-base leading-8">INTEGRATION</h2>
+                    <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base leading-8">INTEGRATION</h2>
                     <p className="text-supporting leading-relaxed mt-2">Stay with the feeling this moment carries.</p>
                     <p className="text-supporting leading-relaxed mt-2">
                       Imagine this experience as a warmth, a color, or a gentle current.
@@ -578,13 +577,13 @@ const DailyFormation = () => {
               {/* Vertical pathway container */}
               <div className="relative mb-10">
                 {/* Section 1: DAILY MOMENT */}
-                <div className="relative flex gap-4">
+                <div className="relative flex gap-3">
                   <div className="flex flex-col items-center">
                     <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="pb-8 flex-1">
-                    <h2 className="font-medium text-primary font-sans text-base leading-8">DAILY MOMENT</h2>
+                    <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base leading-8">DAILY MOMENT</h2>
                     <p className="text-text-body leading-relaxed mt-2">
                       Attach it to one daily moment that already happens, for example:
                     </p>
@@ -599,13 +598,13 @@ const DailyFormation = () => {
                 </div>
 
                 {/* Section 2: DURING MOMENTS OF CONTRACTION */}
-                <div className="relative flex gap-4">
+                <div className="relative flex gap-3">
                   <div className="flex flex-col items-center">
                     <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="pb-8 flex-1">
-                    <h2 className="font-medium text-primary font-sans text-base leading-8">
+                    <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base leading-8">
                       DURING MOMENTS OF CONTRACTION
                     </h2>
                     <p className="text-text-body leading-relaxed mt-2">
@@ -622,13 +621,13 @@ const DailyFormation = () => {
                 </div>
 
                 {/* Section 3: OLD THOUGHT PATTERNS */}
-                <div className="relative flex gap-4">
+                <div className="relative flex gap-3">
                   <div className="flex flex-col items-center">
                     <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="flex-1">
-                    <h2 className="font-medium text-primary font-sans text-base leading-8">OLD THOUGHT PATTERNS</h2>
+                    <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base leading-8">OLD THOUGHT PATTERNS</h2>
                     <p className="text-text-body leading-relaxed mt-2">
                       Use your phrase when familiar internal narratives begin to surface, for example:
                     </p>
