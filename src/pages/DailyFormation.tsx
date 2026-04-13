@@ -230,17 +230,17 @@ const DailyFormation = () => {
 
               <div className="mt-6 space-y-6">
                 <div>
-                  <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2">PRAY</h2>
+                  <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2 text-sm">PRAY</h2>
                   <p className="mt-1">Give God the outcomes of this process. Entrust what happens next.</p>
                 </div>
                 <div>
-                  <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2">
+                  <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2 text-sm">
                     REORIENT
                   </h2>
                   <p className="mt-1">Rehearse a short Reorientation to communicate safety to your nervous system.</p>
                 </div>
                 <div>
-                  <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2">
+                  <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2 text-sm">
                     ANCHOR MEMORY
                   </h2>
                   <p className="mt-1">
