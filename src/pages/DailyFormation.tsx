@@ -169,16 +169,15 @@ const DailyFormation = () => {
         <main className="flex flex-1 flex-col px-5 pt-10 pb-12 content-container">
           <h1 className="tracking-tight mb-1">Daily formation begins with stability</h1>
 
-          <WakeLockToggle
-            enabled={wakeLockToggle}
-            onToggle={handleWakeLockToggle}
-            isSupported={wakeLock.isSupported}
-            className="mt-4 pt-[15px] pb-[28px]"
-          />
-
           {hasLines ? (
             // EXISTING USERS
             <div className="space-y-4 leading-relaxed mb-10">
+              <WakeLockToggle
+                enabled={wakeLockToggle}
+                onToggle={handleWakeLockToggle}
+                isSupported={wakeLock.isSupported}
+                className="mt-4 pt-[15px] pb-[28px]"
+              />
               <h2 className="font-medium uppercase tracking-widest text-primary font-sans mb-2 text-base">PRAYER</h2>
               <p className="text-text-body text-base">
                 Your body responds to signals of safety before conscious thoughts fully form.
@@ -230,17 +229,17 @@ const DailyFormation = () => {
 
               <div className="mt-6 space-y-6">
                 <div>
-                  <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2 text-sm">PRAY</h2>
+                  <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2">PRAY</h2>
                   <p className="mt-1">Give God the outcomes of this process. Entrust what happens next.</p>
                 </div>
                 <div>
-                  <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2 text-sm">
+                  <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2">
                     REORIENT
                   </h2>
                   <p className="mt-1">Rehearse a short Reorientation to communicate safety to your nervous system.</p>
                 </div>
                 <div>
-                  <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2 text-sm">
+                  <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2">
                     ANCHOR MEMORY
                   </h2>
                   <p className="mt-1">
@@ -496,9 +495,46 @@ const DailyFormation = () => {
 
                 {/* Section 4: INTEGRATION */}
                 <div className="relative flex gap-4">
-                  <div className="flex flex-col items-center">
+                  <div className="flex flex-col items-center relative">
                     <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
-                    <div className="w-px flex-1 bg-border/35 my-1" />
+
+                    <div className="relative flex-1 my-1 w-[28px]">
+                      {/* Static base line */}
+                      <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-px bg-border/35" />
+
+                      {/* Glow wrapper */}
+                      <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-[28px] pointer-events-none">
+                        {/* Outer halo */}
+                        <div
+                          className="absolute left-1/2 -translate-x-1/2 w-[24px] h-[24px] rounded-full motion-safe:animate-[integrationGlow_12s_ease-in-out_infinite]"
+                          style={{
+                            background: "hsl(var(--primary) / 0.30)",
+                            filter: "blur(10px)",
+                            top: "-24px",
+                          }}
+                        />
+
+                        {/* Mid glow */}
+                        <div
+                          className="absolute left-1/2 -translate-x-1/2 w-[14px] h-[14px] rounded-full motion-safe:animate-[integrationGlow_12s_ease-in-out_infinite]"
+                          style={{
+                            background: "hsl(var(--primary) / 0.65)",
+                            filter: "blur(3px)",
+                            top: "-32px",
+                          }}
+                        />
+
+                        {/* Bright core */}
+                        <div
+                          className="absolute left-1/2 -translate-x-1/2 w-[8px] h-[8px] rounded-full motion-safe:animate-[integrationGlow_12s_ease-in-out_infinite]"
+                          style={{
+                            background: "hsl(var(--primary) / 0.9)",
+                            boxShadow: "0 0 12px 3px hsl(var(--primary) / 0.55)",
+                            top: "-24px",
+                          }}
+                        />
+                      </div>
+                    </div>
                   </div>
 
                   <div className="flex-1">
