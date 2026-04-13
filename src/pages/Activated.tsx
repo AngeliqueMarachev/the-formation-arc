@@ -481,12 +481,7 @@ const Activated = () => {
             <p className="text-text-body">You do not need to rush.</p>
             <p className="text-text-body">Just begin.</p>
           </div>
-          <WakeLockToggle
-            enabled={wakeLockToggle}
-            onToggle={handleWakeLockToggle}
-            isSupported={wakeLock.isSupported}
-            className="mb-6 pb-[20px] pt-[20px]"
-          />
+
           <Button
             className="mt-10 w-full"
             size="lg"
