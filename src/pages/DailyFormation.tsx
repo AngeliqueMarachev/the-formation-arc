@@ -499,39 +499,39 @@ const DailyFormation = () => {
                   <div className="flex flex-col items-center relative">
                     <div className="h-8 w-8 shrink-0 rounded-full border border-primary/30 bg-primary/10" />
 
-                    <div className="relative flex-1 my-1 w-[28px]">
+                    <div className="relative flex-1 my-1 w-[48px]">
                       {/* Static base line */}
                       <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-px bg-border/35" />
 
-                      {/* Glow wrapper */}
-                      <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-[28px] pointer-events-none">
-                        {/* Outer halo */}
+                      {/* Glow wrapper - larger centered container */}
+                      <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-[48px] pointer-events-none overflow-visible">
+                        {/* Wide outer halo */}
                         <div
-                          className="absolute left-1/2 -translate-x-1/2 w-[24px] h-[24px] rounded-full motion-safe:animate-[integrationGlow_12s_ease-in-out_infinite]"
+                          className="absolute left-1/2 -translate-x-1/2 w-[44px] h-[44px] rounded-full motion-safe:animate-[integrationGlow_5.5s_linear_infinite]"
                           style={{
-                            background: "hsl(var(--primary) / 0.30)",
-                            filter: "blur(10px)",
-                            top: "-24px",
+                            background: "radial-gradient(circle, hsl(var(--primary) / 0.4) 0%, hsl(var(--primary) / 0.15) 50%, transparent 75%)",
+                            filter: "blur(14px)",
+                            top: "-44px",
                           }}
                         />
 
-                        {/* Mid glow */}
+                        {/* Mid glow ring */}
                         <div
-                          className="absolute left-1/2 -translate-x-1/2 w-[14px] h-[14px] rounded-full motion-safe:animate-[integrationGlow_12s_ease-in-out_infinite]"
+                          className="absolute left-1/2 -translate-x-1/2 w-[28px] h-[28px] rounded-full motion-safe:animate-[integrationGlow_5.5s_linear_infinite]"
                           style={{
-                            background: "hsl(var(--primary) / 0.65)",
-                            filter: "blur(3px)",
+                            background: "radial-gradient(circle, hsl(var(--primary) / 0.65) 0%, hsl(var(--primary) / 0.3) 60%, transparent 85%)",
+                            filter: "blur(6px)",
+                            top: "-40px",
+                          }}
+                        />
+
+                        {/* Bright inner core */}
+                        <div
+                          className="absolute left-1/2 -translate-x-1/2 w-[12px] h-[12px] rounded-full motion-safe:animate-[integrationGlow_5.5s_linear_infinite]"
+                          style={{
+                            background: "hsl(var(--primary) / 0.95)",
+                            boxShadow: "0 0 20px 8px hsl(var(--primary) / 0.6), 0 0 40px 16px hsl(var(--primary) / 0.25)",
                             top: "-32px",
-                          }}
-                        />
-
-                        {/* Bright core */}
-                        <div
-                          className="absolute left-1/2 -translate-x-1/2 w-[8px] h-[8px] rounded-full motion-safe:animate-[integrationGlow_12s_ease-in-out_infinite]"
-                          style={{
-                            background: "hsl(var(--primary) / 0.9)",
-                            boxShadow: "0 0 12px 3px hsl(var(--primary) / 0.55)",
-                            top: "-24px",
                           }}
                         />
                       </div>
