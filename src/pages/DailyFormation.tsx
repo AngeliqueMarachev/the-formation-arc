@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useAuth } from "@/lib/auth";
 import { supabase } from "@/integrations/supabase/client";
+import { sanitizeText } from "@/lib/sanitize";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -125,14 +126,14 @@ const DailyFormation = () => {
 
     const { error } = await supabase.from("anchor_entries").insert({
       user_id: user.id,
-      anchor_title: anchorTitle.trim() || null,
-      scene_text: sceneText.trim(),
+      anchor_title: sanitizeText(anchorTitle, { maxLength: 60 }),
+      scene_text: sanitizeText(sceneText, { maxLength: 5000, nullable: false, multiline: true }) || "",
       emotion_tags: emotionTags,
-      meaning_conclusion: meaningConclusion.trim() || null,
-      widened_meaning: widenedMeaning.trim() || null,
-      anchor_phrase: anchorPhrase.trim(),
-      communion_awareness: communionAwareness ? parseInt(communionAwareness) : null,
-      where_is_god: whereIsGod.trim() || null,
+      meaning_conclusion: sanitizeText(meaningConclusion, { maxLength: 2000, multiline: true }),
+      widened_meaning: sanitizeText(widenedMeaning, { maxLength: 2000, multiline: true }),
+      anchor_phrase: sanitizeText(anchorPhrase, { maxLength: 500, nullable: false }) || "",
+      communion_awareness: communionAwareness ? Math.min(Math.max(parseInt(communionAwareness) || 0, 0), 10) : null,
+      where_is_god: sanitizeText(whereIsGod, { maxLength: 2000, multiline: true }),
     });
 
     if (!error) {

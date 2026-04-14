@@ -2,6 +2,7 @@ import { useState } from "react";
 import logo from "@/assets/formation-arc-logo.png";
 import { supabase } from "@/integrations/supabase/client";
 import { lovable } from "@/integrations/lovable/index";
+import { sanitizeEmail } from "@/lib/sanitize";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -42,7 +43,7 @@ const Auth = () => {
   };
 
   const handleEmailChange = (value: string) => {
-    const lower = value.toLowerCase();
+    const lower = sanitizeEmail(value);
     setEmail(lower);
     if (emailTouched) setEmailError(validateEmail(lower));
   };
