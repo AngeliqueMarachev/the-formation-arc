@@ -117,7 +117,7 @@ const Auth = () => {
         <div className="text-center space-y-6">
           <img src={logo} alt="The Formation Arc" className="h-32 w-auto mx-auto mt-[7px]" />
           <div className="space-y-1.5 text-supporting italic leading-relaxed">
-            <p className="text-primary not-italic font-light">Overcome Fear. Restore identity.</p>
+            <p className="text-primary not-italic font-normal">Overcome Fear. Restore identity.</p>
             <p></p>
             <p className="text-base not-italic">A practice for retraining distress and strengthening stability.</p>
           </div>
