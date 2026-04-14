@@ -43,7 +43,7 @@ const Auth = () => {
   };
 
   const handleEmailChange = (value: string) => {
-    const lower = value.toLowerCase();
+    const lower = sanitizeEmail(value);
     setEmail(lower);
     if (emailTouched) setEmailError(validateEmail(lower));
   };
