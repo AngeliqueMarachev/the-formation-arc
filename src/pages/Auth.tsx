@@ -78,8 +78,9 @@ const Auth = () => {
     setLoading(true);
 
     if (isForgotPassword) {
+      const liveDomain = "https://theformationarc.lovable.app";
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: `${window.location.origin}/reset-password`,
+        redirectTo: `${liveDomain}/reset-password`,
       });
       if (error) {
         toast({ title: "Error", description: error.message, variant: "destructive" });
