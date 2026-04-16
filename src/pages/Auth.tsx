@@ -211,7 +211,10 @@ const Auth = () => {
           {!isForgotPassword && !isSignUp && (
             <button
               type="button"
-              onClick={() => setIsForgotPassword(true)}
+              onClick={() => {
+                setAuthMessage("");
+                setIsForgotPassword(true);
+              }}
               className="w-full text-center text-xs text-muted-foreground hover:text-primary transition-colors underline-offset-4 hover:underline mt-3"
             >
               Forgot password?
@@ -222,7 +225,10 @@ const Auth = () => {
             <p className="text-center text-sm text-text-supporting mt-2">
               <button
                 type="button"
-                onClick={() => setIsForgotPassword(false)}
+                onClick={() => {
+                  setAuthMessage("");
+                  setIsForgotPassword(false);
+                }}
                 className="text-primary underline-offset-4 hover:underline"
               >
                 Back to sign in
@@ -233,7 +239,10 @@ const Auth = () => {
               {isSignUp ? "Already have an account?" : "Don't have an account?"}{" "}
               <button
                 type="button"
-                onClick={() => setIsSignUp(!isSignUp)}
+                onClick={() => {
+                  setAuthMessage("");
+                  setIsSignUp(!isSignUp);
+                }}
                 className="text-primary underline-offset-4 hover:underline"
               >
                 {isSignUp ? "Sign in" : "Sign up"}
