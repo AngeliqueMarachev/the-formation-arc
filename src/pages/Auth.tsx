@@ -134,7 +134,11 @@ const Auth = () => {
             type="button"
             onClick={handleGoogleLogin}
             disabled={googleLoading}
-            className="flex w-full items-center justify-center gap-2 rounded-md border border-[#DADCE0] bg-white h-[44px] px-4 text-sm font-medium text-[#1F1F1F] transition-all duration-200 hover:bg-gray-50 active:scale-95 disabled:opacity-50 disabled:pointer-events-none"
+            className="flex w-full items-center justify-center gap-2 rounded-md h-10 px-3 text-sm font-medium text-foreground transition-all duration-200 hover:brightness-110 active:scale-95 disabled:opacity-50 disabled:pointer-events-none"
+            style={{
+              border: "1px solid rgba(168, 192, 168, 0.35)",
+              backgroundColor: "rgba(12, 70, 81, 0.35)",
+            }}
           >
             <GoogleIcon />
             <span>{googleLoading ? "..." : "Continue with Google"}</span>
