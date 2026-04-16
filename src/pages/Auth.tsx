@@ -28,6 +28,7 @@ const Auth = () => {
   const [googleLoading, setGoogleLoading] = useState(false);
   const [emailTouched, setEmailTouched] = useState(false);
   const [emailError, setEmailError] = useState("");
+  const [authMessage, setAuthMessage] = useState("");
   const { toast } = useToast();
 
   const validateEmail = (value: string): string => {
@@ -50,20 +51,21 @@ const Auth = () => {
 
   const handleGoogleLogin = async () => {
     setGoogleLoading(true);
+    setAuthMessage("");
     try {
       const result = await lovable.auth.signInWithOAuth("google", {
         redirect_uri: window.location.origin,
       });
 
       if (result.error) {
-        toast({ title: "Error", description: String(result.error), variant: "destructive" });
+        setAuthMessage("We couldn't sign you in with Google. Please try again.");
       }
 
       if (result.redirected) {
         return;
       }
     } catch (err: any) {
-      toast({ title: "Error", description: err.message || "Google sign-in failed", variant: "destructive" });
+      setAuthMessage("We couldn't sign you in with Google. Please try again.");
     } finally {
       setGoogleLoading(false);
     }
@@ -72,6 +74,7 @@ const Auth = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setEmailTouched(true);
+    setAuthMessage("");
     const error = validateEmail(email);
     setEmailError(error);
     if (error) return;
@@ -83,7 +86,7 @@ const Auth = () => {
         redirectTo: `${liveDomain}/reset-password`,
       });
       if (error) {
-        toast({ title: "Error", description: error.message, variant: "destructive" });
+        setAuthMessage("We couldn't send the reset link. Please check your email and try again.");
       } else {
         toast({ title: "Check your email", description: "We sent you a password reset link." });
       }
@@ -98,14 +101,16 @@ const Auth = () => {
         options: { emailRedirectTo: "https://theformationarc.lovable.app" },
       });
       if (error) {
-        toast({ title: "Error", description: error.message, variant: "destructive" });
+        setAuthMessage("We couldn't create your account. Please check your email or password.");
       } else {
         toast({ title: "Check your email", description: "We sent you a confirmation link." });
       }
     } else {
       const { error } = await supabase.auth.signInWithPassword({ email, password });
       if (error) {
-        toast({ title: "Error", description: error.message, variant: "destructive" });
+        setAuthMessage("We couldn't sign you in. Please check your email or password.");
+      } else {
+        setAuthMessage("");
       }
     }
     setLoading(false);
@@ -192,6 +197,16 @@ const Auth = () => {
           <Button type="submit" className="w-full" disabled={loading}>
             {loading ? "..." : isForgotPassword ? "Send Reset Link" : isSignUp ? "Create Account" : "Sign In"}
           </Button>
+
+          {authMessage && (
+            <div
+              role="status"
+              aria-live="polite"
+              className="rounded-md border border-border/40 bg-muted/40 px-3 py-2 text-sm text-muted-foreground text-center"
+            >
+              {authMessage}
+            </div>
+          )}
 
           {!isForgotPassword && !isSignUp && (
             <button
