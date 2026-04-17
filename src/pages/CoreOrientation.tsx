@@ -21,56 +21,18 @@ const CoreOrientation = () => {
 
         {/* Intro text */}
         <div className="space-y-4 text-base leading-relaxed text-text-body sm:text-lg">
-          <p>Your nervous system is always learning.</p>
+          <p>Your nervous system learns from experience.</p>
+          <p>Prolonged or extreme stress can train the body to expect difficulty, even when circumstances change.</p>
           <p>
-            Across the span of your life, your experiences shape how your mind interprets the world: what feels safe,
-            what feels urgent, what feels uncertain.
+            This can shape how you experience yourself, others, the world, and even God, resulting in coping mechanisms,
+            unseen emotional walls, and physical symptoms that keep you stuck.
           </p>
           <p>
-            Over time, repeated stress can train your system to expect danger, resulting in coping mechanisms, unseen
-            emotional walls, and even physical symptoms that keep you stuck.
-          </p>
-          <p>
-            This does not mean you are broken.
+            But learned patterns are not permanent.
             <br />
-            It means your nervous system adapted to protect you.
+            With gentle repetition, steadiness can become more familiar again.
           </p>
-          <p>
-            Since the brain has an innate capacity for change, what was once established through repetition, can be
-            reshaped through repetition.
-          </p>
-          <p className="text-primary">The brain updates its predictions based on lived experience, real, remembered, or imagined.</p>
-          <p>When expectation changes, perception changes.</p>
-          <p className="mt-0">When perception changes, the body follows.</p>
-          <p className="text-primary">
-            This space helps you reshape your inner world through awareness, alignment, and steady support.
-          </p>
-          <p>With repetition over time, steadiness becomes more familiar than fear.</p>
-        </div>
-
-        {/* Path cards */}
-        <div className="space-y-4">
-          <p className="text-base leading-relaxed text-text-body">There are two ways to use this space:</p>
-          {/* Card 1 */}
-          <div className="rounded-lg border bg-card p-5 sm:p-6 border-secondary">
-            <p className="mb-2 text-lg font-medium text-text-heading text-primary">When you feel unsettled</p>
-            <p className="text-base leading-relaxed text-text-body font-medium">Use The Reorientation Flow</p>
-            <p className="mt-1.5 leading-relaxed text-text-supporting text-base">
-              A short, structured sequence that quickly interrupts escalation and restores internal authority.
-            </p>
-          </div>
-
-          {/* Card 2 */}
-          <div className="rounded-lg border bg-card p-5 sm:p-6 border-secondary">
-            <p className="mb-2 text-lg font-medium text-text-heading text-primary">
-              When you feel steady enough to strengthen
-            </p>
-            <p className="text-base leading-relaxed text-text-body font-medium">Use The Daily Formation</p>
-            <p className="mt-1.5 leading-relaxed text-text-supporting text-base">
-              A daily process that strengthens the pathways of safety so steadiness becomes easier to access in daily
-              life.
-            </p>
-          </div>
+          <p>This space helps you grow in steadiness through awareness, alignment, and supportive reinforecment.</p>
         </div>
 
         {/* Closing reassurance */}
@@ -79,6 +41,31 @@ const CoreOrientation = () => {
           <p>Begin where you are.</p>
           <p>Return often.</p>
           <p>Formation is cumulative.</p>
+        </div>
+
+        {/* Path cards */}
+        <div className="space-y-4">
+          <p className="text-base leading-relaxed text-text-body">There are two ways to use this space:</p>
+
+          {/* Card 2 */}
+          <div className="rounded-lg border bg-card p-5 sm:p-6 border-secondary">
+            <p className="mb-2 text-lg font-medium text-text-heading text-primary">
+              When you feel steady enough to strengthen
+            </p>
+            <p className="text-base leading-relaxed text-text-body font-medium">Use the Daily Formation</p>
+            <p className="mt-1.5 leading-relaxed text-text-supporting text-base">
+              A daily practice that helps steadiness become easier to access.
+            </p>
+          </div>
+
+          {/* Card 1 */}
+          <div className="rounded-lg border bg-card p-5 sm:p-6 border-secondary">
+            <p className="mb-2 text-lg font-medium text-text-heading text-primary">When you feel unsettled</p>
+            <p className="text-base leading-relaxed text-text-body font-medium">Use The Reorientation Flow</p>
+            <p className="mt-1.5 leading-relaxed text-text-supporting text-base">
+              A short sequence that quickly interrupts escalation and restores internal authority.
+            </p>
+          </div>
         </div>
 
         {/* CTA */}
