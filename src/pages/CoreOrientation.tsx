@@ -32,15 +32,7 @@ const CoreOrientation = () => {
             <br />
             With gentle repetition, steadiness can become more familiar again.
           </p>
-          <p className="text-primary">This space helps you grow in steadiness through awareness, alignment, and supportive reinforecment.</p>
-        </div>
-
-        {/* Closing reassurance */}
-        <div className="space-y-1.5 text-base leading-relaxed text-text-body">
-          <p>You do not need to do everything today.</p>
-          <p>Begin where you are.</p>
-          <p>Return often.</p>
-          <p>Formation is cumulative.</p>
+          <p>This space helps you grow in steadiness through awareness, alignment, and supportive reinforecment.</p>
         </div>
 
         {/* Path cards */}
@@ -66,6 +58,14 @@ const CoreOrientation = () => {
               A short sequence that quickly interrupts escalation and restores internal authority.
             </p>
           </div>
+        </div>
+
+        {/* Closing reassurance */}
+        <div className="space-y-1.5 text-base leading-relaxed text-text-body">
+          <p>You do not need to do everything today.</p>
+          <p>Begin where you are.</p>
+          <p>Return often.</p>
+          <p>Formation is cumulative.</p>
         </div>
 
         {/* CTA */}
