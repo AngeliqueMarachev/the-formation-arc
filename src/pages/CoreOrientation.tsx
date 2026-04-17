@@ -32,7 +32,7 @@ const CoreOrientation = () => {
             <br />
             With gentle repetition, steadiness can become more familiar again.
           </p>
-          <p>This space helps you grow in steadiness through awareness, alignment, and supportive reinforecment.</p>
+          <p className="text-primary">This space helps you grow in steadiness through awareness, alignment, and supportive reinforecment.</p>
         </div>
 
         {/* Closing reassurance */}
