@@ -84,8 +84,11 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             </p>
             <p>
               Repeated exposure to these signals retrains the nervous system to update expectations as we begin to
-              surrender to God’s will for us. We begin to embody joy, health and grace with greater ease, until
-              eventually, we are separated from trauma, disconnected from old patterns, and established on Truth.
+              surrender to God’s will for us.
+            </p>
+            <p>
+              We begin to embody joy, health and grace with greater ease, until eventually, we are separated from
+              trauma, disconnected from old patterns, and established on Truth.
             </p>
 
             <p>
