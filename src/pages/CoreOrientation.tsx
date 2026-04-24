@@ -29,8 +29,11 @@ const CoreOrientation = () => {
           <p>
             Traumatic or repeated stressful experiences can program your system to be on constant alert searching for
             recognized patterns to shield you in the future. Over time, these patterns become physical structures in the
-            brain and strongholds in our lives. Coping mechanisms, limiting beliefs, emotional walls, and even physical
-            symptoms are survival strategies that the body erects in an effort to ensure your survival.
+            brain and strongholds in our lives.{" "}
+          </p>
+          <p>
+            Coping mechanisms, limiting beliefs, emotional walls, and even physical symptoms are survival strategies
+            that the body erects in an effort to ensure your survival.
           </p>
           <p>
             But learned prediction patterns are not permanent. With reassuring repetition, the brain can update
