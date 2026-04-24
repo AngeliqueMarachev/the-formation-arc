@@ -59,7 +59,7 @@ const CoreOrientation = () => {
             <p className="mb-2 text-lg font-medium text-text-heading text-primary">When you want to expand slowly</p>
 
             <p className="mt-1.5 leading-relaxed text-text-supporting text-base">
-              The Daily formation is a thoughtful, daily practice that strengthens pathways of safety and deepens your
+              Daily Formation is a thoughtful, daily practice that strengthens pathways of safety and deepens your
               sense of agency.
             </p>
           </div>
