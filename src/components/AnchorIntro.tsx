@@ -20,7 +20,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
           <h1 className="tracking-tight mb-8">The science behind daily formation</h1>
 
           <div className="space-y-4 text-base leading-relaxed text-text-body sm:text-lg">
-            <p className="text-primary">
+            <p className="text-secondary-foreground">
               Every time you have a feeling, good or bad, a chemical is released into your system. This creates an
               emotional signature, a measurable frequency, that changes the body over time.
             </p>
@@ -65,7 +65,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
           <h1 className="tracking-tight mb-8">Reframing your story</h1>
 
           <div className="space-y-5 leading-relaxed text-text-body">
-            <p className="text-primary">
+            <p className="text-secondary-foreground">
               Your brain stores experiences as networks of meaning, making memory vital for setting and maintaining
               expectations.
             </p>
@@ -120,7 +120,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
         <h1 className="tracking-tight mb-8">Practicing formation daily</h1>
 
         <div className="space-y-5 leading-relaxed text-text-body">
-          <p className="text-primary">There are three principles to neuroplasticity:</p>
+          <p className="text-secondary-foreground">There are three principles to neuroplasticity:</p>
 
           <div className="space-y-4">
             <div>
