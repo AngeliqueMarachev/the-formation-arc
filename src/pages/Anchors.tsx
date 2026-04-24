@@ -193,8 +193,8 @@ const Anchors = () => {
     <div className="flex min-h-screen flex-col pb-20">
       <header className="px-5 pt-8 pb-2 content-container">
         <h1 className="tracking-tight font-serif">Anchor Recall</h1>
-        <p className="text-supporting mt-1 text-primary">Return to anchors that help you expect steadiness.</p>
-        <p className="text-supporting mt-1">Anchors deepen with repetition. Tap an anchor to revisit the memory. </p>
+        <p className="text-supporting mt-1 text-primary">Return to formations that help you expect steadiness.</p>
+        <p className="text-supporting mt-1">Formations deepen with repetition. Tap a formation to revisit the memory. </p>
         <p className="text-supporting mt-1 text-xs">​</p>
       </header>
 
@@ -203,21 +203,21 @@ const Anchors = () => {
           <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-secondary/60">
             <LibraryBig className="h-7 w-7 text-primary" />
           </div>
-          <h2 className="font-semibold">Create an Anchor</h2>
+          <h2 className="font-semibold">Create a Formation</h2>
           <p className="max-w-xs text-supporting">
-            Anchors are memories and phrases that help your nervous system learn steadiness.
+            Formations are memories and phrases that help your nervous system learn steadiness.
           </p>
-          <p className="max-w-xs text-supporting">Anchors are created during The Daily Formation.</p>
-          <p className="max-w-xs text-supporting">Your library will grow over time as you create new anchors.</p>
+          <p className="max-w-xs text-supporting">Formations are created during Daily Formation.</p>
+          <p className="max-w-xs text-supporting">Your library will grow over time as you create new formations.</p>
           <p className="max-w-xs text-supporting">
-            Each time you return to an anchor, the pathway becomes easier to access and safety is reinforced.
+            Each time you return to a formation, the pathway becomes easier to access and safety is reinforced.
           </p>
           <Button
             variant="outline"
             className="w-full border-primary text-primary hover:bg-primary/10"
             onClick={() => navigate("/daily-formation")}
           >
-            Create an Anchor
+            Create a Formation
           </Button>
         </main>
       ) : (
