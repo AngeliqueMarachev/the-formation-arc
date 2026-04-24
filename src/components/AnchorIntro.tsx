@@ -18,32 +18,27 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col px-5 pt-10 pb-12 content-container">
           <h1 className="tracking-tight mb-1">The science behind daily formation</h1>
-          <p className="leading-relaxed text-primary my-[9px] mx-0 mb-0 mt-[15px]">
-            Build and strengthen the memories that anchor you.
-          </p>
-          <p className="leading-relaxed text-primary mb-[20px]">Train your nervous system to expect steadiness.</p>
 
           <div className="space-y-4 text-base leading-relaxed text-text-body sm:text-lg">
-           
-              <p>
-                Every time you have a feeling, good or bad, a chemical is released into your system. This creates an
-                emotional signature, a measurable frequency, that changes the body over time.
-              </p>
+            <p>
+              Every time you have a feeling, good or bad, a chemical is released into your system. This creates an
+              emotional signature, a measurable frequency, that changes the body over time.
+            </p>
 
-              <p>
-                Cortisol, adrenaline, and norepinephrine (CAN chemistry) are the stress hormones released into the body
-                when we experience disorder. They create low frequency emotional signatures, which deplete our
-                resources, often leading to a weakened immune system and eventually, chronic symptoms.
-              </p>
-              <p>
-                Dopamine, oxytocin, serotonin, and endorphins (DOSE chemistry) are the feel-good hormones released into
-                the body when we experience alignment. They create high frequency emotional signatures, which support
-                and heal the body, and help us feel safe.
-              </p>
-              <p>
-                The Daily Formation practice is designed to provide the nervous system with new, positive information to
-                produce life-giving DOSE chemistry, which counteracts the effects of CAN chemistry stored in the body.
-              </p>
+            <p>
+              Cortisol, adrenaline, and norepinephrine (CAN chemistry) are the stress hormones released into the body
+              when we experience disorder. They create low frequency emotional signatures, which deplete our resources,
+              often leading to a weakened immune system and eventually, chronic symptoms.
+            </p>
+            <p>
+              Dopamine, oxytocin, serotonin, and endorphins (DOSE chemistry) are the feel-good hormones released into
+              the body when we experience alignment. They create high frequency emotional signatures, which support and
+              heal the body, and help us feel safe.
+            </p>
+            <p>
+              The Daily Formation practice is designed to provide the nervous system with new, positive information to
+              produce life-giving DOSE chemistry, which counteracts the effects of CAN chemistry stored in the body.
+            </p>
           </div>
         </main>
 
