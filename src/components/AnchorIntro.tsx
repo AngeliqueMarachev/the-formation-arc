@@ -124,7 +124,6 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
           <p>There are three principles to neuroplasticity:</p>
 
           <div>
-            <p className="mb-2">It might be:</p>
             <ul className="list-disc pl-5 space-y-1">
               <li>
                 Focus: Focus on God and His promises. You are healed, accepted, whole, anointed, and precious in His
