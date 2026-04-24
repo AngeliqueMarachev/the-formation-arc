@@ -20,7 +20,7 @@ const CoreOrientation = () => {
         </h1>
 
         {/* Intro text */}
-        <div className="space-y-4 text-base leading-relaxed text-text-body sm:text-lg">
+        <div className="space-y-4 text-base leading-relaxed text-text-body sm:text-lg mb-0 pb-0">
           <p>
             Your interpretation of the world was shaped over time by your life experiences. This unique interpretation
             is upheld by your thoughts, creating your reality today.

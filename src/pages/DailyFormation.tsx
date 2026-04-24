@@ -168,7 +168,7 @@ const DailyFormation = () => {
     return (
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col px-5 pt-10 pb-12 content-container">
-          <h1 className="tracking-tight mb-1">Daily formation begins with stability</h1>
+          <h1 className="tracking-tight mb-[20px] mx-0 mt-[20px]">Daily formation begins with stability</h1>
 
           {hasLines ? (
             // EXISTING USERS
