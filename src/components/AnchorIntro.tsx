@@ -23,8 +23,8 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
           </p>
           <p className="leading-relaxed text-primary mb-[20px]">Train your nervous system to expect steadiness.</p>
 
-          <div className="space-y-5 leading-relaxed text-text-body mb-12">
-            <div className="space-y-1">
+          <div className="space-y-4 text-base leading-relaxed text-text-body sm:text-lg">
+           
               <p>
                 Every time you have a feeling, good or bad, a chemical is released into your system. This creates an
                 emotional signature, a measurable frequency, that changes the body over time.
