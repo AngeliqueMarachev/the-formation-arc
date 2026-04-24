@@ -16,23 +16,35 @@ const CoreOrientation = () => {
       <div className="content-container space-y-12">
         {/* Header */}
         <h1 className="font-fraunces text-3xl font-semibold tracking-tight text-text-heading sm:text-4xl">
-          The journey that reshapes the world
+          The journey that reshapes reality
         </h1>
 
         {/* Intro text */}
         <div className="space-y-4 text-base leading-relaxed text-text-body sm:text-lg">
-          <p>Your nervous system learns from experience.</p>
-          <p>Prolonged or extreme stress can train the body to expect difficulty, even when circumstances change.</p>
           <p>
-            This can shape how you experience yourself, others, the world, and even God, resulting in coping mechanisms,
-            unseen emotional walls, and physical symptoms that keep you stuck.
+            Your interpretation of the world was shaped over time by your life experiences. This unique interpretation
+            is upheld by your thoughts, creating your reality today.
           </p>
           <p>
-            But learned patterns are not permanent.
-            <br />
-            With gentle repetition, steadiness can become more familiar again.
+            To keep you safe, the brain scans for patterns that signal danger. Traumatic or repeated stressful
+            experiences can program your system to be on constant alert searching for recognized patterns to shield you
+            in the future. Over time, these patterns become physical structures in the brain and strongholds in our
+            lives. Coping mechanisms, limiting beliefs, emotional walls, and even physical symptoms are survival
+            strategies that the body erects in an effort to ensure your survival.
           </p>
-          <p className="text-primary">This space helps you grow in steadiness through awareness, alignment, and supportive reinforecment.</p>
+          <p>
+            But learned prediction patterns are not permanent. With reassuring repetition, the brain can update
+            expectations and safety can be restored.
+          </p>
+          <p>
+            This process is known as neuroplasticity, and when we align our thoughts with Truth, the renewing of the
+            mind touches all areas of our lives.
+          </p>
+
+          <p className="text-primary">
+            The Formation Arc is designed to help you retrain your system on Truth through awareness, alignment, and
+            reinforcement.
+          </p>
         </div>
 
         {/* Path cards */}
@@ -41,21 +53,22 @@ const CoreOrientation = () => {
 
           {/* Card 2 */}
           <div className="rounded-lg border bg-card p-5 sm:p-6 border-secondary">
-            <p className="mb-2 text-lg font-medium text-text-heading text-primary">
-              When you feel steady enough to strengthen
-            </p>
-            <p className="text-base leading-relaxed text-text-body font-medium">Use the Daily Formation</p>
+            <p className="mb-2 text-lg font-medium text-text-heading text-primary">When you want to expand slowly</p>
+
             <p className="mt-1.5 leading-relaxed text-text-supporting text-base">
-              A daily practice that helps steadiness become easier to access.
+              The Daily formation is a thoughtful, daily practice that strengthens pathways of safety and deepens your
+              sense of agency.
             </p>
           </div>
 
           {/* Card 1 */}
           <div className="rounded-lg border bg-card p-5 sm:p-6 border-secondary">
-            <p className="mb-2 text-lg font-medium text-text-heading text-primary">When you feel unsettled</p>
-            <p className="text-base leading-relaxed text-text-body font-medium">Use The Reorientation Flow</p>
+            <p className="mb-2 text-lg font-medium text-text-heading text-primary">
+              When you want to return to safety quickly
+            </p>
             <p className="mt-1.5 leading-relaxed text-text-supporting text-base">
-              A short sequence that quickly interrupts escalation and restores internal authority.
+              The Reorientation flow is a short sequence that quickly interrupts destructive thinking and restores
+              internal authority.
             </p>
           </div>
         </div>
@@ -65,12 +78,11 @@ const CoreOrientation = () => {
           <p>You do not need to do everything today.</p>
           <p>Begin where you are.</p>
           <p>Return often.</p>
-          <p className="text-primary">Formation is cumulative.</p>
         </div>
 
         {/* CTA */}
         <Button onClick={handleEnter} className="w-full" size="lg">
-          Begin
+          Enter
         </Button>
       </div>
     </div>
