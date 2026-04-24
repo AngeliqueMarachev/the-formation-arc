@@ -152,17 +152,6 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             we’ve accepted. Repeated DOSE chemistry released into the body drives changes in the brain long term, and we
             begin to experience true transformation.
           </p>
-          <p>
-            When the nervous system has been under strain, access to memory can narrow. With practice, access widens.
-          </p>
-          <p className="text-secondary-foreground">
-            This process doesn't attempt to escape reality or recreate the past.
-          </p>
-          <p className="text-primary">
-            Rather, we are providing the brain with a more supportive experience in the present, so it can update
-            expectations.
-          </p>
-          <p>For now, simply allow one moment to appear.</p>
         </div>
       </main>
 
