@@ -70,7 +70,7 @@ const CoreOrientation = () => {
               When you want to return to safety quickly
             </p>
             <p className="mt-1.5 leading-relaxed text-text-supporting text-base">
-              The Reorientation flow is a short sequence that quickly interrupts destructive thinking and restores
+              Reorientation is a short sequence that quickly interrupts destructive thinking and restores
               internal authority.
             </p>
           </div>
