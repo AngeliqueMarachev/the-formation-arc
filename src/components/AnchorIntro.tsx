@@ -92,11 +92,6 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
               It’s important to know that when the nervous system has been under strain, creativity is obscured and
               access to memory can narrow. With practice, however, access widens.
             </p>
-
-            <p>
-              This process doesn't attempt to recreate the past or escape reality. Rather, we are providing the brain
-              with a more supportive experience in the present, so it can update expectations.
-            </p>
           </div>
         </main>
 
