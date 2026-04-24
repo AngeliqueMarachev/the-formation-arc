@@ -122,29 +122,26 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
 
         <div className="space-y-5 leading-relaxed text-text-body">
           <p>There are three principles to neuroplasticity:</p>
-
-          <div className="space-y-5">
-            <div>
-              <h2 className="font-medium uppercase tracking-widest text-primary font-sans mb-2 text-base">FOCUS</h2>
+        </div>
+          <div>
+             <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base">FOCUS</h2>
               <p className="text-text-body text-base">
-                Focus on God and His promises. You are healed, accepted, whole, anointed, and precious in His sight.
+                Focus on God and His promises. You are healed, accepted, whole, anointed, and precious in His
+                sight.
               </p>
-            </div>
-
-            <div>
-              <h2 className="font-medium uppercase tracking-widest text-primary font-sans mb-2 text-base">ASSOCIATION</h2>
+            <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base">ASSOCIATION</h2>
               <p className="text-text-body text-base">
-                Replace old, unhealthy associations with Kingdom reality, by making an intentional choice to see
-                yourself as a new creation, alive in victory.
+                Replace old, unhealthy associations with Kingdom reality, by making an intentional choice
+                to see yourself as a new creation, alive in victory.
               </p>
-            </div>
-
-            <div>
-              <h2 className="font-medium uppercase tracking-widest text-primary font-sans mb-2 text-base">REPETITION</h2>
+              <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base">REPETITION</h2>
               <p className="text-text-body text-base">
-                Change requires repetition to strengthen new neural pathways. Each repetition builds on the last.
+                  <p className="text-text-body text-base">
+               Change requires repetition to strengthen new neural pathways. Each repetition builds on the last.
               </p>
-            </div>
+              </p>
+             
+           
           </div>
 
           <p>
