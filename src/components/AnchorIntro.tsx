@@ -17,7 +17,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
     return (
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col px-5 pt-10 pb-12 content-container">
-          <h1 className="tracking-tight mb-1">Daily Formation is for anchoring</h1>
+          <h1 className="tracking-tight mb-1">The science behind daily formation</h1>
           <p className="leading-relaxed text-primary my-[9px] mx-0 mb-0 mt-[15px]">
             Build and strengthen the memories that anchor you.
           </p>
@@ -25,24 +25,26 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
 
           <div className="space-y-5 leading-relaxed text-text-body mb-12">
             <div className="space-y-1">
-              <p>Many people experience seasons where life feels heavier than it should.</p>
+              <p>
+                Every time you have a feeling, good or bad, a chemical is released into your system. This creates an
+                emotional signature, a measurable frequency, that changes the body over time.
+              </p>
 
-              <p>We may feel overwhelmed, guarded, or distant from the sense of clarity and purpose we once had.</p>
+              <p>
+                Cortisol, adrenaline, and norepinephrine (CAN chemistry) are the stress hormones released into the body
+                when we experience disorder. They create low frequency emotional signatures, which deplete our
+                resources, often leading to a weakened immune system and eventually, chronic symptoms.
+              </p>
+              <p>
+                Dopamine, oxytocin, serotonin, and endorphins (DOSE chemistry) are the feel-good hormones released into
+                the body when we experience alignment. They create high frequency emotional signatures, which support
+                and heal the body, and help us feel safe.
+              </p>
+              <p>
+                The Daily Formation practice is designed to provide the nervous system with new, positive information to
+                produce life-giving DOSE chemistry, which counteracts the effects of CAN chemistry stored in the body.
+              </p>
             </div>
-
-            <p>Often this is not a failure of faith or effort.</p>
-            <p>It is the result of patterns the nervous system learned during times when life required vigilance.</p>
-
-            <p>
-              When the body expects difficulty, it becomes harder to experience ease, even when circumstances change.
-            </p>
-            <p>Over time, this expectation quietly shapes how the body perceives and responds to life.</p>
-
-            <p>​But these expectations are not permanent.​ The brain can update what it expects.</p>
-
-            <p className="text-primary">
-              The Daily Formation practice gently trains the nervous system to become familiar with steadiness again.
-            </p>
 
             <p>​</p>
           </div>
@@ -137,7 +139,8 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
           </p>
 
           <p className="text-primary">
-            This means we can train the nervous system on lived experiences regardless of whether they are real, remembered or imagined.
+            This means we can train the nervous system on lived experiences regardless of whether they are real,
+            remembered or imagined.
           </p>
 
           <hr></hr>
@@ -158,9 +161,12 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
           <p>
             When the nervous system has been under strain, access to memory can narrow. With practice, access widens.
           </p>
-          <p className="text-secondary-foreground">This process doesn't attempt to escape reality or recreate the past.</p>
+          <p className="text-secondary-foreground">
+            This process doesn't attempt to escape reality or recreate the past.
+          </p>
           <p className="text-primary">
-            Rather, we are providing the brain with a more supportive experience in the present, so it can update expectations.
+            Rather, we are providing the brain with a more supportive experience in the present, so it can update
+            expectations.
           </p>
           <p>For now, simply allow one moment to appear.</p>
         </div>
