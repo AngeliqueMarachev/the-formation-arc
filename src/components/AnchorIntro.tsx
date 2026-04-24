@@ -20,7 +20,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
           <h1 className="tracking-tight mb-8">The science behind daily formation</h1>
 
           <div className="space-y-4 text-base leading-relaxed text-text-body sm:text-lg">
-            <p>
+            <p className="text-primary">
               Every time you have a feeling, good or bad, a chemical is released into your system. This creates an
               emotional signature, a measurable frequency, that changes the body over time.
             </p>
@@ -120,7 +120,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
         <h1 className="tracking-tight mb-8">Practicing formation daily</h1>
 
         <div className="space-y-5 leading-relaxed text-text-body">
-          <p>There are three principles to neuroplasticity:</p>
+          <p className="text-primary">There are three principles to neuroplasticity:</p>
 
           <div className="space-y-4">
             <div>
