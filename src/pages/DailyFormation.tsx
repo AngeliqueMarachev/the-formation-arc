@@ -225,26 +225,32 @@ const DailyFormation = () => {
           ) : (
             // NEW USERS
             <div className="leading-relaxed mb-10">
-              <p className="text-primary text-base pt-[10px]">Stabilise before you build. Settle your system before training.</p>
+              <p className="text-primary text-base pt-[10px]">
+                Stabilise before you build. Settle your system before training.
+              </p>
               <p className="text-text-body text-base mt-4">Daily Formation follows a simple rhythm:</p>
 
               <div className="mt-6 space-y-6">
                 <div>
-                  <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2 text-sm">PRAY</h2>
-                  <p className="mt-1">Give God the outcomes of this process. Entrust what happens next.</p>
+                  <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2 text-sm">
+                    PRAY
+                  </h2>
+                  <p className="mt-1">
+                    We give thanks to God for His kindness and release the outcomes of this process into His hands.
+                  </p>
                 </div>
                 <div>
                   <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2 text-sm">
                     REORIENT
                   </h2>
-                  <p className="mt-1">Rehearse a short Reorientation to communicate safety to your nervous system.</p>
+                  <p className="mt-1">We communicate safety to the nervous system by reorienting to Truth.</p>
                 </div>
                 <div>
                   <h2 className="text-body font-medium uppercase tracking-widest text-primary font-sans mb-2 text-sm">
                     ANCHOR MEMORY
                   </h2>
                   <p className="mt-1">
-                    Recall and gently expand a memory that strengthens your expectation of steadiness.
+                    We strengthen a memory that expands expectations of safety and draws us into communion.
                   </p>
                 </div>
               </div>
@@ -392,7 +398,9 @@ const DailyFormation = () => {
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="pb-8 flex-1">
-                    <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base leading-8">EXPANSION</h2>
+                    <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base leading-8">
+                      EXPANSION
+                    </h2>
                     <p className="text-supporting leading-relaxed mt-2">
                       You may notice new meaning emerging as you stay with the memory.
                     </p>
@@ -417,7 +425,9 @@ const DailyFormation = () => {
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="pb-8 flex-1">
-                    <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base leading-8">PRESENCE</h2>
+                    <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base leading-8">
+                      PRESENCE
+                    </h2>
                     <p className="text-supporting leading-relaxed mt-2">
                       If God were present with you in this moment, how might that have felt?
                       <br />
@@ -439,7 +449,9 @@ const DailyFormation = () => {
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="pb-8 flex-1">
-                    <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base leading-8">NEARNESS</h2>
+                    <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base leading-8">
+                      NEARNESS
+                    </h2>
                     <p className="text-supporting leading-relaxed mt-2">How present did God feel in this moment?</p>
                     <div className="mt-2">
                       <div className="relative flex items-center justify-between px-1 sm:px-4 w-full">
@@ -501,7 +513,9 @@ const DailyFormation = () => {
                     <div className="w-px flex-1 bg-border/35 my-1" />
                   </div>
                   <div className="flex-1">
-                    <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base leading-8">INTEGRATION</h2>
+                    <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base leading-8">
+                      INTEGRATION
+                    </h2>
                     <p className="text-supporting leading-relaxed mt-2">Stay with the feeling this moment carries.</p>
                     <p className="text-supporting leading-relaxed mt-2">
                       Imagine this experience as a warmth, a color, or a gentle current.
@@ -584,7 +598,9 @@ const DailyFormation = () => {
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="pb-8 flex-1">
-                    <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base leading-8">DAILY MOMENT</h2>
+                    <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base leading-8">
+                      DAILY MOMENT
+                    </h2>
                     <p className="text-text-body leading-relaxed mt-2">
                       Attach it to one daily moment that already happens, for example:
                     </p>
@@ -628,7 +644,9 @@ const DailyFormation = () => {
                     <div className="w-px flex-1 bg-border/40 my-1" />
                   </div>
                   <div className="flex-1">
-                    <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base leading-8">OLD THOUGHT PATTERNS</h2>
+                    <h2 className="font-sm uppercase tracking-widest text-primary font-sans mb-2 text-base leading-8">
+                      OLD THOUGHT PATTERNS
+                    </h2>
                     <p className="text-text-body leading-relaxed mt-2">
                       Use your phrase when familiar internal narratives begin to surface, for example:
                     </p>
