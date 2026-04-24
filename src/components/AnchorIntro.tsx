@@ -44,9 +44,6 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
                 The Daily Formation practice is designed to provide the nervous system with new, positive information to
                 produce life-giving DOSE chemistry, which counteracts the effects of CAN chemistry stored in the body.
               </p>
-            </div>
-
-            <p>​</p>
           </div>
         </main>
 
