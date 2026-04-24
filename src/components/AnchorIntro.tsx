@@ -35,7 +35,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
               the body when we experience alignment. They create high frequency emotional signatures, which support and
               heal the body, and help us feel safe.
             </p>
-            <p>
+            <p className="text-primary">
               The Daily Formation practice is designed to provide the nervous system with new, positive information to
               produce life-giving DOSE chemistry, which counteracts the effects of CAN chemistry stored in the body.
             </p>
@@ -149,7 +149,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             we’ve accepted.
           </p>
 
-          <p>
+          <p className="text-primary">
             Repeated DOSE chemistry released into the body drives changes in the brain long term, and we begin to
             experience true transformation.
           </p>
