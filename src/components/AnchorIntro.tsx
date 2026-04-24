@@ -149,8 +149,9 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
 
           <p>
             When we apply this framework together with God by aligning with Truth, we break our agreements with the lies
-            we’ve accepted. Repeated DOSE chemistry released into the body drives changes in the brain long term, and we
-            begin to experience true transformation.
+            we’ve accepted. </p>
+            <p>Repeated DOSE chemistry released into the body drives changes in the brain long term, and we
+            begin to experience true transformation.</p>
           </p>
         </div>
       </main>
