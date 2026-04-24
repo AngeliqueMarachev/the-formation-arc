@@ -23,7 +23,7 @@ const CoreOrientation = () => {
         <div className="space-y-4 text-base leading-relaxed text-text-body sm:text-lg">
           <p>
             Your interpretation of the world was shaped over time by your life experiences. This unique interpretation
-            is upheld by your thoughts, creating your reality today.
+            is upheld by your thoughts that create your reality today.
           </p>
           <p>
             To keep you safe, the brain scans for patterns that signal danger. Traumatic or repeated stressful
