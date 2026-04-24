@@ -34,21 +34,21 @@ const Index = () => {
 
   const cards = [
     {
-      title: "The Daily Formation",
+      title: "Daily Formation",
       subtitle:
-        "When you are calm, use this practice to train your system and strengthen new patterns of safety.",
+        "Use this practice to train your system and strengthen new patterns of safety.",
       icon: AudioLines,
       path: "/daily-formation",
     },
     {
-      title: "The Reorientation Flow",
-      subtitle: "When fear or anxiety rises, use this method to quickly interrupt the spiral and regain steadiness.",
+      title: "Reorientation",
+      subtitle: "Use this method to quickly interrupt the spiral and regain steadiness.",
       icon: Compass,
       path: "/activated",
     },
     {
-      title: "The Anchor Library",
-      subtitle: "When you want to reinforce stability, return here to revisit established moments of safety.",
+      title: "Anchor Recall",
+      subtitle: "Return here to revisit established moments of safety.",
       icon: LibraryBig,
       path: "/anchors",
     },
@@ -97,7 +97,7 @@ const Index = () => {
                 className="font-medium tracking-tight text-base"
                 style={{ fontFamily: "'Fraunces', serif", fontSize: "16px", letterSpacing: "-0.01em" }}
               >
-                Formation Progress
+                Progress
               </h3>
             </div>
             <div className="px-5 pb-4 pt-3">

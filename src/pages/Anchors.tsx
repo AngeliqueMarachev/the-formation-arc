@@ -192,7 +192,7 @@ const Anchors = () => {
   return (
     <div className="flex min-h-screen flex-col pb-20">
       <header className="px-5 pt-8 pb-2 content-container">
-        <h1 className="tracking-tight font-serif">The Anchor Library</h1>
+        <h1 className="tracking-tight font-serif">Anchor Recall</h1>
         <p className="text-supporting mt-1 text-primary">Return to anchors that help you expect steadiness.</p>
         <p className="text-supporting mt-1">Anchors deepen with repetition. Tap an anchor to revisit the memory. </p>
         <p className="text-supporting mt-1 text-xs">​</p>
