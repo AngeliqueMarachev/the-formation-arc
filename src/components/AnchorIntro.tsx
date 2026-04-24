@@ -62,41 +62,40 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
     return (
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col px-5 pt-10 pb-32 content-container">
-          <h1 className="tracking-tight mb-8">Formations retrain the nervous system</h1>
+          <h1 className="tracking-tight mb-8">Reframing your story</h1>
 
           <div className="space-y-5 leading-relaxed text-text-body">
-            <p className="text-primary">Your brain stores experiences as networks of meaning.</p>
-
-            <div>
-              <p className="mb-2">Complicated moments in life quietly taught your body things like:</p>
-              <ul className="list-disc pl-5 space-y-1">
-                <li>I am alone.</li>
-                <li>I must hold everything together.</li>
-                <li>Something bad is going to happen.</li>
-              </ul>
-            </div>
+            <p className="text-primary">
+              Your brain stores experiences as networks of meaning, making memory vital for setting and maintaining
+              expectations.
+            </p>
 
             <div className="space-y-1">
-              <p>Over time, these conclusions shaped what your nervous system expects from life.</p>
+              <p>
+                Remembrance is a divine principle Jesus taught us. Recalling a positive memory in your life is a
+                powerful way to recall God's faithfulness into remembrance, and enter into communion with Him.
+              </p>
             </div>
 
             <p className="text-secondary-foreground">
-              Memory plays an important role in how those expectations are maintained.
+              When a memory is recalled, the neural network connected to it becomes open to new association, responding
+              in real time. As positive meaning expands, the brain registers safety and connection, producing DOSE
+              chemistry.
+            </p>
+            <p>
+              Repeated exposure to these signals retrains the nervous system to update expectations as we begin to
+              surrender to God’s will for us. We begin to embody joy, health and grace with greater ease, until
+              eventually, we are separated from trauma, disconnected from old patterns, and established on Truth.
             </p>
 
             <p>
-              When a memory is recalled with attention, the neural network connected to it becomes open to new
-              association.
+              It’s important to know that when the nervous system has been under strain, creativity is obscured and
+              access to memory can narrow. With practice, however, access widens.
             </p>
 
             <p>
-              As meaning expands, the brain begins to register signals of safety and connection. The body is flooded
-              with chemicals that promote positive emotions and reduce anxiety.
-            </p>
-
-            <p className="text-primary">
-              Repeated exposure to these signals helps the nervous system become less oriented toward threat and more
-              able to recognise steadiness.
+              This process doesn't attempt to recreate the past or escape reality. Rather, we are providing the brain
+              with a more supportive experience in the present, so it can update expectations.
             </p>
           </div>
         </main>
