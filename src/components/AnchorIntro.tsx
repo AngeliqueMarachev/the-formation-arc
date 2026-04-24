@@ -118,38 +118,34 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
   return (
     <div className="flex min-h-screen flex-col pb-20">
       <main className="flex flex-1 flex-col px-5 pt-10 pb-32 content-container">
-        <h1 className="tracking-tight mb-8">The nervous system responds to experience, real or remembered</h1>
+        <h1 className="tracking-tight mb-8">Practicing formation daily</h1>
 
         <div className="space-y-5 leading-relaxed text-text-body">
-          <p>
-            When a moment becomes vivid in your mind, the body begins to respond as if the experience is happening now.
-          </p>
-
-          <p>
-            Heart rate, muscle tone, emotional chemistry, and expectation all shift according to what the brain
-            perceives.
-          </p>
-
-          <p className="text-primary">
-            This means we can train the nervous system on lived experiences regardless of whether they are real,
-            remembered or imagined.
-          </p>
-
-          <hr></hr>
-
-          <p>Here, we look for access to one small memory that carries a sense of ease, joy, connection or vitality.</p>
+          <p>There are three principles to neuroplasticity:</p>
 
           <div>
             <p className="mb-2">It might be:</p>
             <ul className="list-disc pl-5 space-y-1">
-              <li>a place you once enjoyed</li>
-              <li>a quiet moment from childhood</li>
-              <li>an activity that once felt natural</li>
-              <li>a time where you felt more connected</li>
+              <li>
+                Focus: Focus on God and His promises. You are healed, accepted, whole, anointed, and precious in His
+                sight.{" "}
+              </li>
+              <li>
+                Association: Replace old, unhealthy associations with Kingdom reality, by making an intentional choice
+                to see yourself as a new creation, alive in victory.
+              </li>
+              <li>
+                Repetition: Change requires repetition to strengthen new neural pathways. Each repetition builds on the
+                last.
+              </li>
             </ul>
           </div>
 
-          <p>If nothing comes immediately, it's perfectly normal.</p>
+          <p>
+            When we apply this framework together with God by aligning with Truth, we break our agreements with the lies
+            we’ve accepted. Repeated DOSE chemistry released into the body drives changes in the brain long term, and we
+            begin to experience true transformation.{" "}
+          </p>
           <p>
             When the nervous system has been under strain, access to memory can narrow. With practice, access widens.
           </p>
