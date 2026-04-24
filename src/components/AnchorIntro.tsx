@@ -17,9 +17,9 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
     return (
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col px-5 pt-10 pb-12 content-container">
-          <h1 className="tracking-tight mb-1">The science behind daily formation</h1>
+          <h1 className="tracking-tight mb-[20px] mx-0 mt-[20px]">The science behind daily formation</h1>
 
-          <div className="space-y-4 text-base leading-relaxed text-text-body sm:text-lg">
+          <div className="space-y-4 text-base leading-relaxed text-text-body sm:text-lg mb-0 pb-0">
             <p>
               Every time you have a feeling, good or bad, a chemical is released into your system. This creates an
               emotional signature, a measurable frequency, that changes the body over time.
@@ -42,7 +42,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
           </div>
         </main>
 
-        <div className="fixed bottom-16 left-0 right-0 px-5 pb-4 pt-2 bg-background/95 backdrop-blur-sm">
+        <div className="fixed bottom-16 left-0 right-0 px-5 pb-4 pt-2 bg-background/95 backdrop-blur-sm mb-0 mt-0">
           <div className="content-container space-y-2">
             <Button className="w-full" size="lg" onClick={() => setStep(1)}>
               Continue
@@ -62,9 +62,9 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
     return (
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col px-5 pt-10 pb-32 content-container">
-          <h1 className="tracking-tight mb-8">Formations retrain the nervous system</h1>
+          <h1 className="tracking-tight mb-[20px] mx-0 mt-[20px]">Formations retrain the nervous system</h1>
 
-          <div className="space-y-5 leading-relaxed text-text-body">
+          <div className="space-y-5 leading-relaxed text-text-body mb-0 pb-0">
             <p className="text-primary">Your brain stores experiences as networks of meaning.</p>
 
             <div>
@@ -101,7 +101,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
           </div>
         </main>
 
-        <div className="fixed bottom-16 left-0 right-0 px-5 pb-4 pt-2 bg-background/95 backdrop-blur-sm">
+        <div className="fixed bottom-16 left-0 right-0 px-5 pb-4 pt-2 bg-background/95 backdrop-blur-sm mb-0 mt-0">
           <div className="content-container">
             <Button className="w-full" size="lg" onClick={() => setStep(2)}>
               Continue
@@ -118,9 +118,9 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
   return (
     <div className="flex min-h-screen flex-col pb-20">
       <main className="flex flex-1 flex-col px-5 pt-10 pb-32 content-container">
-        <h1 className="tracking-tight mb-8">The nervous system responds to experience, real or remembered</h1>
+        <h1 className="tracking-tight mb-[20px] mx-0 mt-[20px]">The nervous system responds to experience, real or remembered</h1>
 
-        <div className="space-y-5 leading-relaxed text-text-body">
+        <div className="space-y-5 leading-relaxed text-text-body mb-0 pb-0">
           <p>
             When a moment becomes vivid in your mind, the body begins to respond as if the experience is happening now.
           </p>
@@ -164,7 +164,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
         </div>
       </main>
 
-      <div className="fixed bottom-16 left-0 right-0 px-5 pb-4 pt-2 bg-background/95 backdrop-blur-sm">
+      <div className="fixed bottom-16 left-0 right-0 px-5 pb-4 pt-2 bg-background/95 backdrop-blur-sm mb-0 mt-0">
         <div className="content-container">
           <Button className="w-full" size="lg" onClick={onComplete}>
             Continue
