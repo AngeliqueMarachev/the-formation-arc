@@ -68,7 +68,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
     return (
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col px-5 pt-10 pb-32 content-container">
-          <h1 className="tracking-tight mb-8">Anchors retrain the nervous system</h1>
+          <h1 className="tracking-tight mb-8">Formations retrain the nervous system</h1>
 
           <div className="space-y-5 leading-relaxed text-text-body">
             <p className="text-primary">Your brain stores experiences as networks of meaning.</p>

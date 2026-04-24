@@ -7,7 +7,7 @@ const tabs = [
   { label: "Home", icon: House, path: "/" },
   { label: "Formation", icon: AudioLines, path: "/daily-formation" },
   { label: "Reorient", icon: Compass, path: "/activated" },
-  { label: "Anchors", icon: LibraryBig, path: "/anchors" },
+  { label: "Formations", icon: LibraryBig, path: "/anchors" },
 ];
 
 const BottomNav = () => {
