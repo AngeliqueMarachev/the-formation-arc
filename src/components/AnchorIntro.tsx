@@ -17,7 +17,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
     return (
       <div className="flex min-h-screen flex-col pb-20">
         <main className="flex flex-1 flex-col px-5 pt-10 pb-40 content-container">
-          <h1 className="tracking-tight mb-1">The science behind daily formation</h1>
+          <h1 className="tracking-tight mb-8">The science behind daily formation</h1>
 
           <div className="space-y-4 text-base leading-relaxed text-text-body sm:text-lg">
             <p>
