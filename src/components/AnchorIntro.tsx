@@ -122,7 +122,6 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
 
         <div className="space-y-5 leading-relaxed text-text-body">
           <p>There are three principles to neuroplasticity:</p>
-        </div>
           <div>
              <h2 className="font-medium uppercase tracking-widest text-primary font-sans mb-2 text-base">FOCUS</h2>
               <p className="text-text-body text-base">
