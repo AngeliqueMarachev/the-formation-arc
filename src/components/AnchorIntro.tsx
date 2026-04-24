@@ -125,14 +125,14 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
 
           <div className="space-y-4">
             <div>
-              <h2 className="mb-2 font-sans text-base uppercase tracking-widest text-primary">FOCUS</h2>
+              <h2 className="mb-2 font-sans uppercase tracking-widest text-primary text-sm">FOCUS</h2>
               <p className="text-base text-text-body">
                 Focus on God and His promises. You are healed, accepted, whole, anointed, and precious in His sight.
               </p>
             </div>
 
             <div>
-              <h2 className="mb-2 font-sans text-base uppercase tracking-widest text-primary">ASSOCIATION</h2>
+              <h2 className="mb-2 font-sans uppercase tracking-widest text-primary text-sm">ASSOCIATION</h2>
               <p className="text-base text-text-body">
                 Replace old, unhealthy associations with Kingdom reality, by making an intentional choice to see
                 yourself as a new creation, alive in victory.
@@ -140,7 +140,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
             </div>
 
             <div>
-              <h2 className="mb-2 font-sans text-base uppercase tracking-widest text-primary">REPETITION</h2>
+              <h2 className="mb-2 font-sans uppercase tracking-widest text-primary text-sm">REPETITION</h2>
               <p className="text-base text-text-body">
                 Change requires repetition to strengthen new neural pathways. Each repetition builds on the last.
               </p>
