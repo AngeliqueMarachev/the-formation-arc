@@ -122,6 +122,7 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
 
         <div className="space-y-5 leading-relaxed text-text-body">
           <p>There are three principles to neuroplasticity:</p>
+        </div>
           <div>
              <h2 className="font-medium uppercase tracking-widest text-primary font-sans mb-2 text-base">FOCUS</h2>
               <p className="text-text-body text-base">
@@ -135,7 +136,9 @@ const AnchorIntro = ({ onComplete }: AnchorIntroProps) => {
               </p>
               <h2 className="font-medium uppercase tracking-widest text-primary font-sans mb-2 text-base">REPETITION</h2>
               <p className="text-text-body text-base">
-                
+                  <p className="text-text-body text-base">
+               Change requires repetition to strengthen new neural pathways. Each repetition builds on the last.
+              </p>
               </p>
              
            
